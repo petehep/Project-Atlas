@@ -1,0 +1,20 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual Environment
+.venv/
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
+
+# SQLite temp files
+*.db-journal
