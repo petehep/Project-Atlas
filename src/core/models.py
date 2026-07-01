@@ -1,18 +1,21 @@
 from pydantic import BaseModel
+from typing import Optional
 
 class HeatConfig(BaseModel):
-    """The operator-defined parameters for a single heat."""
+    """The formal definition of a Heat's parameters."""
+    id: Optional[int] = None
     heat_number: str = "01"
     thermalling_dir: str = "LEFT"
     track_open: float = 0.0    # Unix timestamp
     track_close: float = 0.0   # Unix timestamp
     heat_end: float = 0.0      # Unix timestamp
+    status: str = "READY"
 
 class AtlasDisplayModel(BaseModel):
-    """The immutable snapshot of what the renderer should paint."""
+    """The snapshot used by the renderers to draw the screen."""
     local_time: str = "00:00:00"
     primary_timer: str = "--:--"
-    primary_timer_label: str = "AWAITING CONFIGURATION"
+    primary_timer_label: str = "SYSTEM IDLE"
     primary_timer_color: str = "#888888"
     band_color: str = "#333333"
     heat_number: str = "--"

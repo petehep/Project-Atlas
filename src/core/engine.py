@@ -1,108 +1,77 @@
 import time
 from PySide6.QtCore import QObject, Signal, QTimer, QDateTime
 from core.models import AtlasDisplayModel, HeatConfig
+from core.database import AtlasDatabase
 
 class AtlasStateEngine(QObject):
     model_updated = Signal(AtlasDisplayModel)
 
     def __init__(self):
         super().__init__()
+        self.db = AtlasDatabase()
         self._state = "IDLE"
-        self._config = None  # HeatConfig set by operator
+        self._config = None
+        self._active_heat_id = None
+        self.current_countdown = "--:--"
 
-        # The single heartbeat. That's all the timer does.
+        # 10Hz Heartbeat
         self._pulse = QTimer()
         self._pulse.timeout.connect(self._heartbeat)
-        self._pulse.start(100)  # 10Hz
-
-    def arm(self, config: HeatConfig):
-        """Operator has validated and submitted a heat configuration."""
-        self._config = config
-        self._state = "ARMED"
-        print(f"[ENGINE] Armed. Track opens at {config.track_open}")
-
-    def cancel(self):
-        """Operator has aborted the heat."""
-        self._config = None
-        self._state = "IDLE"
-        print("[ENGINE] Cancelled. Returning to IDLE.")
+        self._pulse.start(100)
 
     def _heartbeat(self):
-        """Called 10x per second. Asks 'what time is it?' and broadcasts."""
         now = time.time()
 
-        if self._state == "IDLE" or self._config is None:
-            self._broadcast_idle()
+        # If Idle, look for next heat in DB
+        if self._state == "IDLE":
+            schedule = self.db.get_todays_schedule()
+            for h_dict in schedule:
+                if h_dict['status'] == 'READY' and h_dict['heat_end'] > now:
+                    self._config = HeatConfig(**h_dict)
+                    self._active_heat_id = h_dict['id']
+                    self._state = "ARMED"
+                    break
+
+        if self._state == "IDLE" or not self._config:
+            self.model_updated.emit(AtlasDisplayModel(
+                local_time=QDateTime.currentDateTime().toString("HH:mm:ss")
+            ))
             return
 
+        # Timeline Logic
         cfg = self._config
-
         if now < cfg.track_open:
-            # Waiting for track to open
-            remaining = cfg.track_open - now
-            self._state = "ARMED"
-            self._broadcast(
-                timer=self._fmt(remaining),
-                label="TRACK OPENS IN",
-                timer_color="#FFA500",
-                band_color="#FFA500"
-            )
-
+            self._broadcast(cfg.track_open - now, "TRACK OPENS IN", "#FFA500")
         elif now < cfg.track_close:
-            # Insertion window is open
-            remaining = cfg.track_close - now
             self._state = "INSERTION"
-            self._broadcast(
-                timer=self._fmt(remaining),
-                label="TRACK ENTRY REMAINING",
-                timer_color="#00FF00",
-                band_color="#00FF00"
-            )
-
+            self._broadcast(cfg.track_close - now, "TRACK ENTRY REMAINING", "#00FF00")
         elif now < cfg.heat_end:
-            # Heat is running
-            remaining = cfg.heat_end - now
-            self._state = "HEAT_RUNNING"
-            self._broadcast(
-                timer=self._fmt(remaining),
-                label="HEAT TIME REMAINING",
-                timer_color="#FF4444",
-                band_color="#FF4444"
-            )
-
+            if self._state != "RUNNING":
+                self._state = "RUNNING"
+                self.db.update_heat_status(self._active_heat_id, "ACTIVE")
+            self._broadcast(cfg.heat_end - now, "HEAT TIME REMAINING", "#FF4444")
         else:
-            # Heat is complete
-            self._state = "HEAT_COMPLETE"
-            self._broadcast(
-                timer="00:00",
-                label="HEAT COMPLETE",
-                timer_color="#555555",
-                band_color="#555555"
-            )
+            self._state = "IDLE" # Return to Idle to seek next heat
+            self.db.update_heat_status(self._active_heat_id, "COMPLETED")
+            self._config = None
 
-    def _broadcast(self, timer, label, timer_color, band_color):
-        cfg = self._config
+    def _broadcast(self, rem, label, color):
+        mins, secs = divmod(int(rem), 60)
+        time_str = f"{mins:02d}:{secs:02d}"
         model = AtlasDisplayModel(
             local_time=QDateTime.currentDateTime().toString("HH:mm:ss"),
-            primary_timer=timer,
+            primary_timer=time_str,
             primary_timer_label=label,
-            primary_timer_color=timer_color,
-            band_color=band_color,
-            heat_number=cfg.heat_number,
-            thermalling_dir=cfg.thermalling_dir,
+            primary_timer_color=color,
+            band_color=color,
+            heat_number=self._config.heat_number,
+            thermalling_dir=self._config.thermalling_dir,
             is_armed=True
         )
         self.model_updated.emit(model)
 
-    def _broadcast_idle(self):
-        model = AtlasDisplayModel(
-            local_time=QDateTime.currentDateTime().toString("HH:mm:ss"),
-        )
-        self.model_updated.emit(model)
-
-    @staticmethod
-    def _fmt(seconds: float) -> str:
-        """Formats seconds into MM:SS."""
-        s = max(0, int(seconds))
-        mins, secs = divmod(s, 60)
-        return f"{mins:02d}:{secs:02d}"
+    def cancel_active_heat(self):
+        if self._active_heat_id:
+            self.db.update_heat_status(self._active_heat_id, "CANCELLED")
+            self._state = "IDLE"
+            self._config = None
