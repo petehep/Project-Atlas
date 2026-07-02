@@ -24,16 +24,16 @@ class AtlasLEDSimulator(QWidget):
         if not self.model: return
 
         # Row 1: Time (Cyan)
-        self._draw_string(p, 5, 2, self.model.local_time, "#00FFFF")
+        self._draw_string(p, 40, 2, self.model.local_time, "#00FFFF")
 
         if self.model.is_armed:
             # Row 2: Heat Info
             heat_txt = f"H{self.model.heat_number} {self.model.thermalling_dir}"
-            self._draw_string(p, 2, 12, heat_txt, "#FFFFFF")
+            self._draw_string(p, 40, 12, heat_txt, "#FFFFFF")
 
             # Row 3: Window
             win_txt = f"O {self.model.planned_open} C {self.model.planned_close}"
-            self._draw_string(p, 2, 22, win_txt, "#AAAAAA")
+            self._draw_string(p, 18, 22, win_txt, "#AAAAAA")
 
             # Row 4: Label
             self._draw_string(p, 2, 35, self.model.primary_timer_label, self.model.primary_timer_color)
