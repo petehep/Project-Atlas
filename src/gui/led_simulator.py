@@ -4,12 +4,14 @@ from PySide6.QtGui import QColor, QPainter, QBrush, QPen
 from gui.fonts import AtlasBitmapFont
 
 class AtlasLEDSimulator(QWidget):
-    def __init__(self):
+    def __init__(self, config):
         super().__init__()
-        self.cols = 128
-        self.rows = 64
-        self.scale = 8 # Size of each 'LED' on your Mac screen
-        self.setWindowTitle("ATLAS P10 VIRTUAL MATRIX (64x64)")
+        self.config = config
+        self.cols = config.display_width
+        self.rows = config.display_height
+        self.scale = config.led_scale
+        
+        self.setWindowTitle(f"ATLAS VIRTUAL LED [{self.cols}x{self.rows}]")
         self.setFixedSize(self.cols * self.scale, self.rows * self.scale)
         self.model = None
 

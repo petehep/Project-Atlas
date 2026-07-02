@@ -2,20 +2,25 @@ import sys
 from PySide6.QtWidgets import QApplication
 from core.database import AtlasDatabase
 from core.engine import AtlasEngine
+from core.config import AtlasConfig  # IMPORT THIS
 from gui.windows import OperatorWindow
 from gui.led_simulator import AtlasLEDSimulator
 
 def main():
     app = QApplication(sys.argv)
     
+    # 0. Load Configuration
+    config = AtlasConfig()
+    
+    # 1. Initialize Core
     db = AtlasDatabase()
     engine = AtlasEngine(db)
     
-    # NEW: We are phasing out the old PublicDisplay class 
-    # to focus entirely on the LED Simulator hardware logic.
+    # 2. Initialize UI (Passing config where needed)
     operator = OperatorWindow(engine)
-    led_sim = AtlasLEDSimulator()
+    led_sim = AtlasLEDSimulator(config) # Pass config here
     
+    # 3. Connections
     engine.model_updated.connect(operator.refresh)
     engine.model_updated.connect(led_sim.update_model)
     
