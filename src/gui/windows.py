@@ -7,6 +7,37 @@ from gui.themes import AtlasTheme
 from core.models import HeatConfig
 
 class OperatorWindow(QMainWindow):
+
+    def _reboot_app(self):
+        reply = QMessageBox.question(self, 'System Restart', 
+                                   "Restart Atlas to apply new hardware settings?",
+                                   QMessageBox.Yes | QMessageBox.No)
+        if reply == QMessageBox.Yes:
+            import os
+            import sys
+            # This effectively replaces the current process with a new one
+            os.execv(sys.executable, ['python3'] + sys.argv)
+
+    def _shutdown_app(self):
+        reply = QMessageBox.question(self, 'System Shutdown', 
+                    "Are you sure you want to exit Atlas?",
+                    QMessageBox.Yes | QMessageBox.No)
+        if reply == QMessageBox.Yes:
+            from PySide6.QtWidgets import QApplication
+            QApplication.quit()  # Kills ALL windows cleanly
+
+            
+    def closeEvent(self, event):
+        # Professional Cleanup
+        print("Atlas System: Initiating graceful shutdown...")
+        # If we had hardware connected, we'd send 'Clear Screen' here: HARDWARE - Send CLEAR/OFFLINE frame to LED panels here before exit
+
+
+
+
+
+
+
     def __init__(self, engine):
         super().__init__()
         self.engine = engine
@@ -167,13 +198,37 @@ class OperatorWindow(QMainWindow):
         form_layout.addRow("", self.brightness_slider)
         layout.addWidget(form_group)
 
+
+
         save_btn = QPushButton("SAVE & APPLY")
         save_btn.setStyleSheet(AtlasTheme.BTN_MASTER_ARM)
         save_btn.setFixedHeight(60)
         save_btn.clicked.connect(self._save_settings)
         layout.addWidget(save_btn)
+
+        # SYSTEM CONTROLS
+        sys_group = QFrame()
+        sys_group.setStyleSheet("background: #2A1A1A; border: 1px solid #700; border-radius: 5px; margin-top: 20px;")
+        sys_layout = QHBoxLayout(sys_group)
+
+        reboot_btn = QPushButton("RESTART ATLAS")
+        reboot_btn.setStyleSheet("background: #444; color: white; font-weight: bold; border-radius: 5px;")
+        reboot_btn.setFixedHeight(50)
+        reboot_btn.clicked.connect(self._reboot_app)
+
+        exit_btn = QPushButton("EXIT TO MACOS")
+        exit_btn.setStyleSheet("background: #900; color: white; font-weight: bold; border-radius: 5px;")
+        exit_btn.setFixedHeight(50)
+        exit_btn.clicked.connect(self._shutdown_app)
+
+        sys_layout.addWidget(reboot_btn)
+        sys_layout.addWidget(exit_btn)
+        layout.addWidget(sys_group)
+
         layout.addStretch()
         self.stack.addWidget(page)
+
+
 
     def _brightness_label(self, value):
         if value <= 20:   return f"Night ({value}%)"
