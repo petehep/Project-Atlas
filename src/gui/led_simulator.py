@@ -46,7 +46,7 @@ class AtlasLEDSimulator(QWidget):
             # Row 6: Status Band
             p.fillRect(0, 62 * self.scale, 64 * self.scale, 2 * self.scale, QColor(self.model.band_color))
         else:
-            self._draw_string(p, 2, 35, "SYSTEM IDLE", "#444444")
+            self._draw_string(p, 2, 35, "WAITING", "#888888")
 
     def _draw_char(self, p, x, y, char, color_hex, scale=1):
         bitmap = AtlasBitmapFont.FONT_5x7.get(char.upper(), AtlasBitmapFont.FONT_5x7[' '])

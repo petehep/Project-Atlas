@@ -6,28 +6,33 @@ from core.config import AtlasConfig  # IMPORT THIS
 from gui.windows import OperatorWindow
 from gui.led_simulator import AtlasLEDSimulator
 
+
 def main():
     app = QApplication(sys.argv)
     
-    # 0. Load Configuration
     config = AtlasConfig()
-    
-    # 1. Initialize Core
     db = AtlasDatabase()
     engine = AtlasEngine(db)
     
-    # 2. Initialize UI (Passing config where needed)
     operator = OperatorWindow(engine)
-    led_sim = AtlasLEDSimulator(config) # Pass config here
     
-    # 3. Connections
-    engine.model_updated.connect(operator.refresh)
-    engine.model_updated.connect(led_sim.update_model)
+    # Primary Display (Face A)
+    front_sim = AtlasLEDSimulator(config)
+    front_sim.setWindowTitle("ATLAS DISPLAY - SIDE A (FRONT)")
+    engine.model_updated.connect(front_sim.update_model)
+    front_sim.show()
+
+    # Secondary Display (Face B) - Optional
+    if config.double_sided:
+        back_sim = AtlasLEDSimulator(config)
+        back_sim.setWindowTitle("ATLAS DISPLAY - SIDE B (BACK)")
+        engine.model_updated.connect(back_sim.update_model)
+        back_sim.show()
     
     operator.show()
-    led_sim.show()
-    
     sys.exit(app.exec())
+
+
 
 if __name__ == "__main__":
     main()

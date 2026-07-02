@@ -11,7 +11,9 @@ class OperatorWindow(QMainWindow):
         super().__init__()
         self.engine = engine
         self.setWindowTitle("Atlas Operator Console")
-        self.setStyleSheet(AtlasTheme.COCKPIT_BG)
+        
+        # KEY FIX: Applying the combined background and tab CSS
+        self.setStyleSheet(AtlasTheme.COCKPIT_BG + AtlasTheme.TABS)
         self.resize(900, 850)
 
         self._selected_heat_id = None
@@ -33,7 +35,7 @@ class OperatorWindow(QMainWindow):
         self.status_header.setStyleSheet("color: #888; font-size: 14px; font-weight: bold;")
         layout.addWidget(self.status_header)
 
-        self.heat_status = QLabel("SYSTEM IDLE")
+        self.heat_status = QLabel("WAITING")
         self.heat_status.setStyleSheet("color: #00FF00; font-family: 'Courier New'; font-size: 50px; font-weight: bold; background: black; border: 2px solid #333; padding: 20px;")
         self.heat_status.setAlignment(Qt.AlignCenter)
         layout.addWidget(self.heat_status)
@@ -46,7 +48,7 @@ class OperatorWindow(QMainWindow):
         self.cancel_btn.clicked.connect(self.engine.cancel_active_heat)
         layout.addWidget(self.cancel_btn)
 
-        self.tabs.addTab(tab, "1. LIVE CONTROL")
+        self.tabs.addTab(tab, "LIVE")
 
     def _setup_schedule_tab(self):
         tab = QWidget()
@@ -103,7 +105,7 @@ class OperatorWindow(QMainWindow):
         self.schedule_table.cellClicked.connect(self._on_row_selected)
         main_layout.addWidget(self.schedule_table)
 
-        self.tabs.addTab(tab, "2. DAILY SCHEDULE")
+        self.tabs.addTab(tab, "SCHEDULE")
         self._update_schedule_table()
         self._prep_new_heat()
 
@@ -138,7 +140,7 @@ class OperatorWindow(QMainWindow):
         layout.addWidget(save_btn)
 
         layout.addStretch()
-        self.tabs.addTab(tab, "3. SETTINGS")
+        self.tabs.addTab(tab, "SETTINGS")
 
     def _save_settings(self):
         self.engine.db.save_setting("competition_name", self.edit_comp_name.text())
@@ -216,57 +218,9 @@ class OperatorWindow(QMainWindow):
             self.schedule_table.setItem(row, 5, status_item)
 
     def refresh(self, model):
+        # KEY FIX: The UI now shows 'WAITING' when no heat is active.
         if model.is_armed:
             msg = f"H{model.heat_number} | {model.thermalling_dir}\n{model.primary_timer}"
         else:
-            msg = "STANDBY"
+            msg = "WAITING"
         self.heat_status.setText(msg)
-
-class PublicDisplay(QMainWindow):
-    def __init__(self, engine):
-        super().__init__()
-        self.engine = engine
-        self.setWindowTitle("Atlas Public Display")
-        self.setStyleSheet("background-color: black;")
-        self.resize(1024, 768)
-        main_layout = QVBoxLayout()
-        main_layout.setContentsMargins(5, 5, 5, 5)
-        main_layout.setSpacing(10)
-        self.local_time = QLabel("00:00:00")
-        self.local_time.setStyleSheet("color: white; font-family: 'Courier New'; font-size: 40px;")
-        self.local_time.setAlignment(Qt.AlignCenter)
-        main_layout.addWidget(self.local_time)
-        self.heat_dir_row = QLabel("HEAT: -- | DIR: ---")
-        self.heat_dir_row.setStyleSheet("color: #00FFFF; font-size: 45px; font-weight: bold; border-top: 1px solid #222;")
-        self.heat_dir_row.setAlignment(Qt.AlignCenter)
-        main_layout.addWidget(self.heat_dir_row)
-        self.window_row = QLabel("OPEN: --:--   CLOSE: --:--")
-        self.window_row.setStyleSheet("color: #00FF00; font-family: 'Courier New'; font-size: 45px; font-weight: bold;")
-        self.window_row.setAlignment(Qt.AlignCenter)
-        main_layout.addWidget(self.window_row)
-        self.phase_label = QLabel("SYSTEM IDLE")
-        self.phase_label.setStyleSheet("color: #888; font-size: 35px; font-weight: bold; background: #111;")
-        self.phase_label.setAlignment(Qt.AlignCenter)
-        main_layout.addWidget(self.phase_label)
-        self.timer = QLabel("--:--")
-        self.timer.setStyleSheet("font-size: 320px; font-family: 'Courier New'; font-weight: bold; color: #444;")
-        self.timer.setAlignment(Qt.AlignCenter)
-        main_layout.addWidget(self.timer)
-        self.band = QWidget()
-        self.band.setFixedHeight(30)
-        self.band.setStyleSheet("background-color: #333;")
-        main_layout.addWidget(self.band)
-        container = QWidget()
-        container.setLayout(main_layout)
-        self.setCentralWidget(container)
-        self.engine.model_updated.connect(self.refresh)
-
-    def refresh(self, model):
-        self.local_time.setText(model.local_time)
-        self.heat_dir_row.setText(f"HEAT: {model.heat_number} | DIR: {model.thermalling_dir}")
-        self.window_row.setText(f"OPEN: {model.planned_open}   CLOSE: {model.planned_close}")
-        self.timer.setText(model.primary_timer)
-        self.timer.setStyleSheet(f"color: {model.primary_timer_color}; font-size: 320px; font-weight: bold;")
-        self.phase_label.setText(model.primary_timer_label)
-        self.phase_label.setStyleSheet(f"color: {model.primary_timer_color}; font-size: 35px; font-weight: bold; background: #050505;")
-        self.band.setStyleSheet(f"background-color: {model.band_color};")
