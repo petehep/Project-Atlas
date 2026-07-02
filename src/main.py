@@ -1,12 +1,14 @@
 import sys
 from PySide6.QtWidgets import QApplication
-from core.engine import AtlasStateEngine
+from core.database import AtlasDatabase
+from core.engine import AtlasEngine
 from gui.windows import OperatorWindow, PublicDisplay
 
 def main():
     app = QApplication(sys.argv)
 
-    engine = AtlasStateEngine()
+    db = AtlasDatabase()
+    engine = AtlasEngine(db)
     op_console = OperatorWindow(engine)
     public_led = PublicDisplay(engine)
 
