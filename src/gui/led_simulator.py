@@ -1,7 +1,7 @@
 from PySide6.QtWidgets import QWidget
 from PySide6.QtCore import Qt
 from PySide6.QtGui import QColor, QPainter, QBrush, QPen
-from gui.fonts import AtlasBitmapFont
+from .fonts import AtlasBitmapFont
 
 class AtlasLEDSimulator(QWidget):
     def __init__(self, config):

@@ -10,7 +10,6 @@ class AtlasDatabase:
 
     def _bootstrap(self):
         with sqlite3.connect(self.db_path) as conn:
-            # We use 'READY' as the default to match your current data state
             conn.execute("""
                 CREATE TABLE IF NOT EXISTS heats (
                     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -60,7 +59,6 @@ class AtlasDatabase:
         now = int(time.time())
         with sqlite3.connect(self.db_path) as conn:
             conn.row_factory = sqlite3.Row
-            # FIX: We now look for 'READY' to match your data
             res = conn.execute("""
                 SELECT * FROM heats 
                 WHERE status = 'READY' AND track_close > ? 
