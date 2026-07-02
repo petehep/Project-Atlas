@@ -9,7 +9,14 @@ from gui.led_simulator import AtlasLEDSimulator
 
 def main():
     app = QApplication(sys.argv)
-    
+
+    # Force Fusion style to override macOS native tab rendering
+    from PySide6.QtWidgets import QStyleFactory
+    app.setStyle(QStyleFactory.create("Fusion"))
+
+
+
+
     config = AtlasConfig()
     db = AtlasDatabase()
     engine = AtlasEngine(db)

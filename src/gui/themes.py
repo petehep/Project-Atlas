@@ -5,27 +5,48 @@ class AtlasTheme:
     
     BTN_CANCEL = "background-color: #880000; color: white; border-radius: 5px; font-weight: bold; border: 1px solid #550000;"
 
+
+
+
     TABS = """
+    QTabWidget {
+        background-color: #111;
+    }
     QTabWidget::pane { 
         border: 1px solid #333; 
-        background: #111;
+        background-color: #111;
+        top: -1px;
+    }
+    QTabBar {
+        background-color: #111;
     }
     QTabBar::tab {
-        background: #222;
-        color: #888;
+        background-color: #2A2A2A;
+        color: #999;
         padding: 12px 30px;
         margin-right: 2px;
+        border: 1px solid #444;
+        border-bottom: none;
         border-top-left-radius: 4px;
         border-top-right-radius: 4px;
         font-weight: bold;
+        font-size: 13px;
     }
     QTabBar::tab:selected {
-        background: #0066CC;
-        color: white;
-        border-bottom: 2px solid #00FFFF;
+        background-color: #0066CC;
+        color: #FFFFFF;
+        border: 2px solid #00FFFF;
+        border-bottom: none;
+        font-size: 14px;
+    }
+    QTabBar::tab:!selected {
+        background-color: #2A2A2A;
+        color: #AAAAAA;
     }
     QTabBar::tab:hover:!selected {
-        background: #333;
-        color: #BBB;
+        background-color: #444;
+        color: #FFF;
     }
     """
+
+

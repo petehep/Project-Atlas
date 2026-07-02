@@ -1,8 +1,8 @@
 from PySide6.QtWidgets import (QMainWindow, QLabel, QVBoxLayout, QHBoxLayout, 
-                    QWidget, QPushButton, QTimeEdit, QTabWidget, 
-                    QLineEdit, QFormLayout, QFrame, QTableWidget, 
-                    QTableWidgetItem, QHeaderView, QMessageBox)
-from PySide6.QtCore import Qt, QDateTime, QTimer
+                    QWidget, QPushButton, QTimeEdit, QLineEdit, 
+                    QFormLayout, QFrame, QTableWidget, QTableWidgetItem, 
+                    QHeaderView, QMessageBox, QStackedWidget)
+from PySide6.QtCore import Qt, QDateTime
 from gui.themes import AtlasTheme
 from core.models import HeatConfig
 
@@ -11,25 +11,58 @@ class OperatorWindow(QMainWindow):
         super().__init__()
         self.engine = engine
         self.setWindowTitle("Atlas Operator Console")
-        
-        # KEY FIX: Applying the combined background and tab CSS
-        self.setStyleSheet(AtlasTheme.COCKPIT_BG + AtlasTheme.TABS)
+        self.setStyleSheet(AtlasTheme.COCKPIT_BG)
         self.resize(900, 850)
 
         self._selected_heat_id = None
 
-        self.tabs = QTabWidget()
-        self.setCentralWidget(self.tabs)
+        # Main Layout Container
+        central_widget = QWidget()
+        self.setCentralWidget(central_widget)
+        main_layout = QVBoxLayout(central_widget)
+
+        # STEP 1: Custom Navigation Bar
+        nav_bar = QHBoxLayout()
+        self.btn_live = QPushButton("LIVE")
+        self.btn_schedule = QPushButton("SCHEDULE")
+        self.btn_settings = QPushButton("SETTINGS")
+        
+        self.nav_buttons = [self.btn_live, self.btn_schedule, self.btn_settings]
+        
+        for i, btn in enumerate(self.nav_buttons):
+            btn.setFixedHeight(50)
+            btn.setFixedWidth(290)
+            btn.clicked.connect(lambda checked=False, index=i: self._switch_tab(index))
+            nav_bar.addWidget(btn)
+        
+        main_layout.addLayout(nav_bar)
+
+        # STEP 2: The Content Stack
+        self.stack = QStackedWidget()
+        main_layout.addWidget(self.stack)
 
         self._setup_control_tab()
         self._setup_schedule_tab()
         self._setup_settings_tab()
 
+        # Start on LIVE
+        self._switch_tab(0)
+
         self.engine.model_updated.connect(self.refresh)
 
+    def _switch_tab(self, index):
+        self.stack.setCurrentIndex(index)
+        
+        # Style the buttons to show which one is active
+        active_css = "background-color: #0066CC; color: white; font-weight: bold; border: 2px solid #00FFFF; font-size: 16px;"
+        inactive_css = "background-color: #333; color: white; border: 1px solid #555; font-size: 16px;"
+        
+        for i, btn in enumerate(self.nav_buttons):
+            btn.setStyleSheet(active_css if i == index else inactive_css)
+
     def _setup_control_tab(self):
-        tab = QWidget()
-        layout = QVBoxLayout(tab)
+        page = QWidget()
+        layout = QVBoxLayout(page)
         
         self.status_header = QLabel("LIVE FLIGHTLINE STATUS")
         self.status_header.setStyleSheet("color: #888; font-size: 14px; font-weight: bold;")
@@ -48,11 +81,11 @@ class OperatorWindow(QMainWindow):
         self.cancel_btn.clicked.connect(self.engine.cancel_active_heat)
         layout.addWidget(self.cancel_btn)
 
-        self.tabs.addTab(tab, "LIVE")
+        self.stack.addWidget(page)
 
     def _setup_schedule_tab(self):
-        tab = QWidget()
-        main_layout = QVBoxLayout(tab)
+        page = QWidget()
+        main_layout = QVBoxLayout(page)
 
         form_group = QFrame()
         form_group.setStyleSheet("background: #1A1A1A; border: 1px solid #333; border-radius: 5px;")
@@ -105,13 +138,13 @@ class OperatorWindow(QMainWindow):
         self.schedule_table.cellClicked.connect(self._on_row_selected)
         main_layout.addWidget(self.schedule_table)
 
-        self.tabs.addTab(tab, "SCHEDULE")
+        self.stack.addWidget(page)
         self._update_schedule_table()
         self._prep_new_heat()
 
     def _setup_settings_tab(self):
-        tab = QWidget()
-        layout = QVBoxLayout(tab)
+        page = QWidget()
+        layout = QVBoxLayout(page)
 
         form_group = QFrame()
         form_group.setStyleSheet("background: #1A1A1A; border: 1px solid #333; border-radius: 5px;")
@@ -140,7 +173,7 @@ class OperatorWindow(QMainWindow):
         layout.addWidget(save_btn)
 
         layout.addStretch()
-        self.tabs.addTab(tab, "SETTINGS")
+        self.stack.addWidget(page)
 
     def _save_settings(self):
         self.engine.db.save_setting("competition_name", self.edit_comp_name.text())
@@ -218,7 +251,6 @@ class OperatorWindow(QMainWindow):
             self.schedule_table.setItem(row, 5, status_item)
 
     def refresh(self, model):
-        # KEY FIX: The UI now shows 'WAITING' when no heat is active.
         if model.is_armed:
             msg = f"H{model.heat_number} | {model.thermalling_dir}\n{model.primary_timer}"
         else:
