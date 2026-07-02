@@ -157,3 +157,28 @@ class AtlasLEDSimulator(QWidget):
         for char in string:
             self._draw_char(p, cur_x, y, char, color_hex, scale)
             cur_x += (6 * scale)
+
+    def set_brightness(self, value):
+        self.config.brightness = value
+        self.update()  # Immediate repaint
+
+    def _apply_brightness(self, color_hex):
+        brightness = getattr(self.config, 'brightness', 80) / 100.0
+        c = QColor(color_hex)
+        c.setRed(int(c.red() * brightness))
+        c.setGreen(int(c.green() * brightness))
+        c.setBlue(int(c.blue() * brightness))
+        return c
+
+    def _draw_char(self, p, x, y, char, color_hex, scale=1):
+        bitmap = AtlasBitmapFont.FONT_5x7.get(char.upper(), AtlasBitmapFont.FONT_5x7[' '])
+        p.setPen(Qt.NoPen)
+        p.setBrush(QBrush(self._apply_brightness(color_hex)))  # <-- uses brightness
+
+        for col_idx, col_data in enumerate(bitmap):
+            for row_idx in range(7):
+                if col_data & (1 << row_idx):
+                    rect_x = (x + (col_idx * scale)) * self.scale
+                    rect_y = (y + (row_idx * scale)) * self.scale
+                    size = self.scale * scale
+                    p.drawEllipse(rect_x, rect_y, size - 1, size - 1)

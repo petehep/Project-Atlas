@@ -12,6 +12,7 @@ class DisplayConfig:
         self.display_width = int(db.get_setting("display_width", 128))
         self.display_height = int(db.get_setting("display_height", 64))
         self.led_scale = int(db.get_setting("led_scale", 8))
+        self.brightness = int(db.get_setting("brightness", 80))
 
 def main():
     app = QApplication(sys.argv)
@@ -35,6 +36,7 @@ def main():
     # Launch LED Simulator
     led_sim = AtlasLEDSimulator(config)
     engine.model_updated.connect(led_sim.update_model)
+    engine.brightness_changed.connect(led_sim.set_brightness)
     led_sim.show()
 
     sys.exit(app.exec())

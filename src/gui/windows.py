@@ -106,34 +106,87 @@ class OperatorWindow(QMainWindow):
         self.stack.addWidget(page)
         self._update_schedule_table(); self._prep_new_heat()
 
+
+
     def _setup_settings_tab(self):
+        from PySide6.QtWidgets import QSlider
+        from PySide6.QtCore import Qt
+
         page = QWidget()
         layout = QVBoxLayout(page)
-        form_group = QFrame(); form_group.setStyleSheet("background: #1A1A1A; border: 1px solid #333; border-radius: 5px;")
+        form_group = QFrame()
+        form_group.setStyleSheet("background: #1A1A1A; border: 1px solid #333; border-radius: 5px;")
         form_layout = QFormLayout(form_group)
         input_css = "color: white; background: #222; border: 1px solid #444; font-size: 18px; padding: 8px;"
-        
-        self.edit_comp_name = QLineEdit(); self.edit_comp_name.setStyleSheet(input_css)
+
+        self.edit_comp_name = QLineEdit()
+        self.edit_comp_name.setStyleSheet(input_css)
         self.edit_comp_name.setText(self.engine.db.get_setting("competition_name", ""))
-        
-        # DISPLAY CONFIG
-        self.combo_disp_size = QComboBox(); self.combo_disp_size.setStyleSheet(input_css)
+
+        self.combo_disp_size = QComboBox()
+        self.combo_disp_size.setStyleSheet(input_css)
         self.combo_disp_size.addItems(["128x64 (Large)", "64x64 (Compact/Half)"])
         current_w = self.engine.db.get_setting("display_width", "128")
         self.combo_disp_size.setCurrentIndex(0 if current_w == "128" else 1)
-        
-        self.edit_led_scale = QLineEdit(); self.edit_led_scale.setStyleSheet(input_css)
+
+        self.edit_led_scale = QLineEdit()
+        self.edit_led_scale.setStyleSheet(input_css)
         self.edit_led_scale.setText(self.engine.db.get_setting("led_scale", "8"))
+
+        # BRIGHTNESS SLIDER
+        brightness_val = int(self.engine.db.get_setting("brightness", 80))
         
+        self.brightness_label = QLabel(self._brightness_label(brightness_val))
+        self.brightness_label.setStyleSheet("color: #00FFFF; font-size: 18px; font-weight: bold;")
+
+        self.brightness_slider = QSlider(Qt.Horizontal)
+        self.brightness_slider.setMinimum(10)
+        self.brightness_slider.setMaximum(100)
+        self.brightness_slider.setSingleStep(10)
+        self.brightness_slider.setTickInterval(10)
+        self.brightness_slider.setTickPosition(QSlider.TicksBelow)
+        self.brightness_slider.setValue(brightness_val)
+        self.brightness_slider.setStyleSheet("""
+            QSlider::groove:horizontal {
+                background: #333; height: 8px; border-radius: 4px;
+            }
+            QSlider::handle:horizontal {
+                background: #00FFFF; width: 22px; height: 22px;
+                margin: -7px 0; border-radius: 11px;
+            }
+            QSlider::sub-page:horizontal {
+                background: #0066CC; border-radius: 4px;
+            }
+        """)
+        self.brightness_slider.valueChanged.connect(self._on_brightness_changed)
+
         form_layout.addRow("Competition Name:", self.edit_comp_name)
         form_layout.addRow("Display Size:", self.combo_disp_size)
         form_layout.addRow("Sim LED Scale:", self.edit_led_scale)
+        form_layout.addRow("Display Intensity:", self.brightness_label)
+        form_layout.addRow("", self.brightness_slider)
         layout.addWidget(form_group)
 
-        save_btn = QPushButton("SAVE & APPLY"); save_btn.setStyleSheet(AtlasTheme.BTN_MASTER_ARM); save_btn.setFixedHeight(60)
-        save_btn.clicked.connect(self._save_settings); layout.addWidget(save_btn)
+        save_btn = QPushButton("SAVE & APPLY")
+        save_btn.setStyleSheet(AtlasTheme.BTN_MASTER_ARM)
+        save_btn.setFixedHeight(60)
+        save_btn.clicked.connect(self._save_settings)
+        layout.addWidget(save_btn)
         layout.addStretch()
         self.stack.addWidget(page)
+
+    def _brightness_label(self, value):
+        if value <= 20:   return f"Night ({value}%)"
+        elif value <= 40: return f"Overcast ({value}%)"
+        elif value <= 60: return f"Normal ({value}%)"
+        elif value <= 80: return f"Bright Day ({value}%)"
+        else:             return f"Full Sun ({value}%)"
+
+    def _on_brightness_changed(self, value):
+        self.brightness_label.setText(self._brightness_label(value))
+        # Live update the simulator immediately - no restart needed
+        self.engine.brightness_changed.emit(value)
+
 
     def _save_settings(self):
         self.engine.db.save_setting("competition_name", self.edit_comp_name.text())
@@ -144,6 +197,7 @@ class OperatorWindow(QMainWindow):
         self.engine.db.save_setting("display_width", w)
         self.engine.db.save_setting("display_height", h)
         self.engine.db.save_setting("led_scale", self.edit_led_scale.text())
+        self.engine.db.save_setting("brightness", self.brightness_slider.value())
         
         QMessageBox.information(self, "Settings Saved", "Settings saved. Please restart Atlas to reconfigure hardware/simulator.")
 

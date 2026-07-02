@@ -4,6 +4,7 @@ from core.models import AtlasDisplayModel
 
 class AtlasEngine(QObject):
     model_updated = Signal(object)
+    brightness_changed = Signal(int)
 
     def __init__(self, db):
         super().__init__()
