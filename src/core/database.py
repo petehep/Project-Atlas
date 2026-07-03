@@ -27,6 +27,17 @@ class AtlasDatabase:
                     value TEXT
                 )
             """)
+            # Seed defaults for newer settings without clobbering existing
+            # values. INSERT OR IGNORE keeps older atlas.db files working
+            # (backward compatible) while giving fresh installs sane defaults.
+            #   display_backend   -> which display module renders the clock
+            #   auto_boot_enabled -> appliance mode; DEFAULT OFF ("0")
+            conn.execute(
+                "INSERT OR IGNORE INTO settings (key, value) VALUES (?, ?)",
+                ("display_backend", "simulator"))
+            conn.execute(
+                "INSERT OR IGNORE INTO settings (key, value) VALUES (?, ?)",
+                ("auto_boot_enabled", "0"))
 
     def save_heat(self, config):
         with sqlite3.connect(self.db_path) as conn:
@@ -86,3 +97,15 @@ class AtlasDatabase:
         with sqlite3.connect(self.db_path) as conn:
             res = conn.execute("SELECT value FROM settings WHERE key = ?", (key,)).fetchone()
             return res[0] if res else default
+
+    def get_bool_setting(self, key, default=False):
+        """Return a setting coerced to bool.
+
+        Settings are stored as strings; this accepts common truthy values
+        ("1", "true", "yes", "on") case-insensitively. Used by the auto-boot
+        flag which must default to False (off).
+        """
+        raw = self.get_setting(key, None)
+        if raw is None:
+            return bool(default)
+        return str(raw).strip().lower() in ("1", "true", "yes", "on")

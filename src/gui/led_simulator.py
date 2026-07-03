@@ -139,19 +139,6 @@ class AtlasLEDSimulator(QWidget):
         x = max(0, int((self.cols - width) / 2))
         self._draw_string(p, x, y, string, color_hex, scale)
 
-    def _draw_char(self, p, x, y, char, color_hex, scale=1):
-        bitmap = AtlasBitmapFont.FONT_5x7.get(char.upper(), AtlasBitmapFont.FONT_5x7[' '])
-        p.setPen(Qt.NoPen)
-        p.setBrush(QBrush(QColor(color_hex)))
-
-        for col_idx, col_data in enumerate(bitmap):
-            for row_idx in range(7):
-                if col_data & (1 << row_idx):
-                    rect_x = (x + (col_idx * scale)) * self.scale
-                    rect_y = (y + (row_idx * scale)) * self.scale
-                    size = self.scale * scale
-                    p.drawEllipse(rect_x, rect_y, size - 1, size - 1)
-
     def _draw_string(self, p, x, y, string, color_hex, scale=1):
         cur_x = x
         for char in string:

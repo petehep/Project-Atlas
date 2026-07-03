@@ -1,0 +1,1395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ATLAS-DEP-001 Deployment Guide v2.0</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'\\(',right:'\\)',display:false},{left:'\\[',right:'\\]',display:true}]});"></script>
+<style>
+/* ============================================================
+   PAGE SETUP
+   ============================================================ */
+@page {
+  size: A4;
+  margin: 2.5cm 2cm;
+  @top-left   { content: "ATLAS-DEP-001"; font-size: 8pt; color: #666; font-family: 'Helvetica Neue', Arial, sans-serif; }
+  @top-center { content: string(doctitle); font-size: 8pt; color: #666; font-family: 'Helvetica Neue', Arial, sans-serif; }
+  @top-right  { content: "v2.0 — CONFIDENTIAL"; font-size: 8pt; color: #666; font-family: 'Helvetica Neue', Arial, sans-serif; }
+  @bottom-left  { content: "Project Atlas — Master Flightline Clock"; font-size: 8pt; color: #888; font-family: 'Helvetica Neue', Arial, sans-serif; }
+  @bottom-center{ content: counter(page); font-size: 8pt; color: #555; font-family: 'Helvetica Neue', Arial, sans-serif; }
+  @bottom-right { content: "© 2026 Peter Lochhead Hepburn"; font-size: 8pt; color: #888; font-family: 'Helvetica Neue', Arial, sans-serif; }
+}
+@page :first { margin: 0; @top-left { content: none; } @top-center { content: none; } @top-right { content: none; } @bottom-left { content: none; } @bottom-center { content: none; } @bottom-right { content: none; } }
+
+/* ============================================================
+   BASE RESET
+   ============================================================ */
+*, *::before, *::after { box-sizing: border-box; }
+body {
+  margin: 0; padding: 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 10.5pt;
+  line-height: 1.65;
+  color: #1a1a1a;
+  text-align: justify;
+  text-align-last: left;
+  string-set: doctitle "";
+}
+h1 { string-set: doctitle content(); }
+
+/* ============================================================
+   OVERFLOW PREVENTION
+   ============================================================ */
+pre, table, figure, img, svg, .mermaid, blockquote, .equation, code {
+  max-width: 100%; box-sizing: border-box; overflow-wrap: break-word;
+}
+pre { overflow-x: auto; white-space: pre-wrap; word-wrap: break-word; }
+figure img, figure svg { max-width: 80%; max-height: 40vh; height: auto; }
+a { word-break: break-all; }
+.katex-display { overflow-x: auto; }
+
+/* ============================================================
+   COVER PAGE
+   ============================================================ */
+.cover {
+  page: cover; width: 210mm; height: 297mm; margin: 0;
+  position: relative; overflow: hidden; page-break-after: always;
+  background: linear-gradient(160deg, #0a1628 0%, #0f2044 30%, #132858 60%, #0a1628 100%);
+  color: #ffffff; box-sizing: border-box;
+}
+.cover-top-stripe {
+  position: absolute; top: 0; left: 0; right: 0; height: 6px;
+  background: linear-gradient(90deg, #00aaff, #0055cc, #003388);
+}
+.cover-bottom-stripe {
+  position: absolute; bottom: 0; left: 0; right: 0; height: 6px;
+  background: linear-gradient(90deg, #003388, #0055cc, #00aaff);
+}
+.cover-content {
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+  text-align: center; width: 85%; padding: 0 10mm;
+}
+.cover-logo-area {
+  margin-bottom: 18px;
+}
+.cover-project-label {
+  font-size: 9pt; letter-spacing: 4px; text-transform: uppercase;
+  color: #88bbee; font-family: 'Helvetica Neue', Arial, sans-serif;
+  margin-bottom: 8px;
+}
+.cover-divider-top {
+  width: 60px; height: 2px;
+  background: linear-gradient(90deg, transparent, #0077cc, transparent);
+  margin: 0 auto 20px;
+}
+.cover h1 {
+  font-size: 28pt; font-weight: 700; color: #ffffff;
+  letter-spacing: 1px; line-height: 1.2; margin: 0 0 6px;
+  white-space: normal; overflow-wrap: break-word; word-wrap: break-word;
+  text-shadow: 0 2px 12px rgba(0,100,200,0.5);
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  string-set: doctitle "";
+}
+.cover-subtitle {
+  font-size: 14pt; color: #aaccee; margin: 8px 0 28px;
+  font-family: 'Helvetica Neue', Arial, sans-serif; letter-spacing: 0.5px;
+}
+.cover-divider-mid {
+  width: 100%; height: 1px; background: rgba(0,120,220,0.4); margin: 0 auto 28px;
+}
+.cover-meta-table {
+  width: 100%; border-collapse: collapse; margin: 0 auto;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+.cover-meta-table td {
+  padding: 5px 10px; font-size: 9.5pt; line-height: 1.5;
+  border: none;
+}
+.cover-meta-table .meta-key {
+  color: #66aadd; font-weight: 600; text-align: right; width: 42%;
+  text-transform: uppercase; letter-spacing: 0.5px; font-size: 8pt;
+}
+.cover-meta-table .meta-val {
+  color: #ddeeff; text-align: left;
+}
+.cover-classification {
+  position: absolute; bottom: 30px; left: 0; right: 0; text-align: center;
+  font-size: 7.5pt; color: #4477aa; letter-spacing: 3px; text-transform: uppercase;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+.cover-doc-id {
+  position: absolute; top: 18px; left: 20mm;
+  font-size: 8pt; color: #446688; font-family: 'Courier New', monospace; letter-spacing: 1px;
+}
+.cover-ver-badge {
+  position: absolute; top: 18px; right: 20mm;
+  background: rgba(0,100,200,0.3); border: 1px solid #0055cc;
+  color: #88ccff; font-size: 8pt; padding: 3px 10px; border-radius: 3px;
+  font-family: 'Helvetica Neue', Arial, sans-serif; letter-spacing: 1px;
+}
+.cover-accent-box {
+  position: absolute; bottom: 55px; left: 20mm; right: 20mm;
+  background: rgba(0,50,120,0.3); border: 1px solid rgba(0,100,200,0.3);
+  border-radius: 4px; padding: 8px 14px; text-align: center;
+  font-size: 8pt; color: #aaccee; font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* ============================================================
+   HEADINGS
+   ============================================================ */
+h1, h2, h3, h4 {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  color: #0a2150;
+  page-break-after: avoid;
+}
+h1 { font-size: 18pt; border-bottom: 2px solid #0a2150; padding-bottom: 6px; margin: 24px 0 14px; }
+h2 { font-size: 14pt; border-bottom: 1px solid #ccd6e8; padding-bottom: 4px; margin: 20px 0 10px; color: #0d2d6e; }
+h3 { font-size: 11.5pt; margin: 16px 0 7px; color: #1a3a6c; }
+h4 { font-size: 10.5pt; margin: 12px 0 5px; color: #2a4a7c; font-style: italic; }
+
+/* ============================================================
+   TOC
+   ============================================================ */
+.toc-page { page-break-before: always; }
+.toc-title { font-size: 18pt; color: #0a2150; margin-bottom: 22px; border-bottom: 2px solid #0a2150; padding-bottom: 6px; font-family: 'Helvetica Neue', Arial, sans-serif; }
+.toc-list { list-style: none; padding: 0; margin: 0; column-count: 2; column-gap: 0.6cm; }
+.toc-list li { display: flex; align-items: baseline; padding: 4px 0; }
+.toc-list li a { display: flex; align-items: baseline; width: 100%; text-decoration: none; color: #1a1a1a; }
+.toc-list .toc-h1 .toc-text { font-weight: 700; font-size: 11pt; color: #0a2150; }
+.toc-list .toc-h2 .toc-text { font-weight: 600; font-size: 10.5pt; color: #0d2d6e; }
+.toc-list .toc-h3 { padding-left: 22px; }
+.toc-list .toc-h3 .toc-text { font-weight: 400; font-size: 10pt; color: #444; }
+.toc-text { white-space: nowrap; flex-shrink: 0; }
+.toc-dots { flex: 1; margin: 0 6px; border-bottom: 1.5px dotted #bbb; min-width: 30px; position: relative; top: -3px; }
+.toc-page-num { flex-shrink: 0; text-align: right; min-width: 20px; font-size: 10pt; color: #555; }
+
+/* ============================================================
+   DOCUMENT CONTROL TABLE
+   ============================================================ */
+.doc-control {
+  width: 100%; border-collapse: collapse; margin-bottom: 28px; font-size: 10pt;
+}
+.doc-control th {
+  background: #0a2150; color: white; padding: 8px 10px; text-align: left;
+  font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 9pt; letter-spacing: 0.5px;
+}
+.doc-control td { padding: 7px 10px; border: 1px solid #c8d4e8; vertical-align: top; }
+.doc-control tr:nth-child(even) td { background: #f0f4fb; }
+
+/* ============================================================
+   REVISION HISTORY TABLE
+   ============================================================ */
+.rev-table { width: 100%; border-collapse: collapse; margin: 16px 0 24px; font-size: 10pt; }
+.rev-table th {
+  background: #0d2d6e; color: white; padding: 7px 10px; text-align: left;
+  font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 9pt;
+}
+.rev-table td { padding: 6px 10px; border: 1px solid #c8d4e8; vertical-align: top; }
+.rev-table tr:nth-child(even) td { background: #f0f4fb; }
+
+/* ============================================================
+   CONTENT TABLES
+   ============================================================ */
+table { width: 100%; border-collapse: collapse; margin: 14px 0 20px; font-size: 10pt; }
+table th {
+  background: #1a3a6c; color: white; padding: 8px 10px; text-align: left;
+  font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 9.5pt;
+}
+table td { padding: 7px 10px; border: 1px solid #c8d4e8; vertical-align: top; }
+table tr:nth-child(even) td { background: #f4f7fc; }
+caption { font-weight: bold; font-size: 9.5pt; text-align: left; margin-bottom: 6px; color: #1a3a6c; }
+caption::before { content: attr(data-label) "  "; font-weight: bold; }
+
+/* ============================================================
+   CODE BLOCKS
+   ============================================================ */
+pre {
+  background: #0e1117; color: #d4e0f7; border: 1px solid #2a3a5e;
+  border-left: 4px solid #0055cc; border-radius: 4px;
+  padding: 14px 16px; font-size: 8.5pt; font-family: 'Courier New', monospace;
+  line-height: 1.5; margin: 14px 0 18px;
+}
+code {
+  background: #eef2fa; color: #1a3a6c; padding: 1px 5px; border-radius: 3px;
+  font-family: 'Courier New', monospace; font-size: 9pt;
+}
+pre code { background: none; color: inherit; padding: 0; }
+
+/* ============================================================
+   CALLOUT / NOTICE BOXES
+   ============================================================ */
+.note-box {
+  background: #e8f4fd; border: 1px solid #90c4e8; border-left: 4px solid #0077cc;
+  border-radius: 3px; padding: 12px 16px; margin: 14px 0; font-size: 10pt;
+}
+.warn-box {
+  background: #fff8e0; border: 1px solid #e8c840; border-left: 4px solid #cc9900;
+  border-radius: 3px; padding: 12px 16px; margin: 14px 0; font-size: 10pt;
+}
+.danger-box {
+  background: #fdeee8; border: 1px solid #e8a090; border-left: 4px solid #cc3300;
+  border-radius: 3px; padding: 12px 16px; margin: 14px 0; font-size: 10pt;
+}
+.success-box {
+  background: #eaf7ed; border: 1px solid #90d4a0; border-left: 4px solid #007722;
+  border-radius: 3px; padding: 12px 16px; margin: 14px 0; font-size: 10pt;
+}
+.box-label {
+  font-weight: 700; font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 9pt; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 5px;
+}
+
+/* ============================================================
+   STEP BOXES (numbered procedures)
+   ============================================================ */
+.step-list { list-style: none; padding: 0; margin: 10px 0 18px; }
+.step-list li {
+  display: flex; align-items: flex-start; gap: 12px;
+  padding: 8px 0; border-bottom: 1px solid #e8eef8;
+}
+.step-list li:last-child { border-bottom: none; }
+.step-num {
+  flex-shrink: 0; width: 26px; height: 26px; background: #0a2150; color: white;
+  border-radius: 50%; text-align: center; line-height: 26px; font-size: 9pt;
+  font-weight: 700; font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+.step-content { flex: 1; }
+
+/* ============================================================
+   CHECKLIST
+   ============================================================ */
+.checklist { list-style: none; padding: 0; margin: 10px 0 18px; }
+.checklist li {
+  padding: 5px 0 5px 28px; position: relative; border-bottom: 1px dotted #ccd4e0;
+  font-size: 10.5pt;
+}
+.checklist li::before {
+  content: "☐"; position: absolute; left: 4px; color: #1a3a6c; font-size: 12pt; top: 3px;
+}
+.checklist li:last-child { border-bottom: none; }
+
+/* ============================================================
+   PLATFORM BADGES
+   ============================================================ */
+.platform-badge {
+  display: inline-block; padding: 2px 8px; border-radius: 3px;
+  font-size: 8pt; font-weight: 700; font-family: 'Helvetica Neue', Arial, sans-serif;
+  text-transform: uppercase; letter-spacing: 0.5px; margin-right: 4px;
+}
+.badge-mac  { background: #e0e8f8; color: #0a2150; border: 1px solid #90a8c8; }
+.badge-win  { background: #e0f0ff; color: #003388; border: 1px solid #88aad0; }
+.badge-lin  { background: #e8f8e0; color: #1a4400; border: 1px solid #88c880; }
+.badge-all  { background: #fffae0; color: #554400; border: 1px solid #ccaa44; }
+
+/* ============================================================
+   ARCHITECTURE DIAGRAM (ASCII-art style)
+   ============================================================ */
+.arch-diagram {
+  background: #f4f7fc; border: 1px solid #c0ccdd; border-radius: 4px;
+  padding: 16px; margin: 14px 0 20px; font-family: 'Courier New', monospace;
+  font-size: 8pt; line-height: 1.6; text-align: left;
+}
+
+/* ============================================================
+   SECTION OPENERS
+   ============================================================ */
+.section-opener {
+  background: linear-gradient(90deg, #0a2150, #0d2d6e);
+  color: white; padding: 10px 16px; margin-bottom: 20px; border-radius: 3px;
+  font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 8.5pt;
+  letter-spacing: 1px; text-transform: uppercase;
+}
+
+/* ============================================================
+   FIGURE / CAPTION
+   ============================================================ */
+figure { margin: 16px 0 20px; page-break-inside: avoid; max-height: 70vh; height: auto; width: 100%; object-fit: contain; }
+figcaption { font-size: 9pt; color: #445; text-align: center; margin-top: 6px; }
+figcaption::before { content: attr(data-label) "  "; font-weight: bold; color: #0a2150; }
+
+/* ============================================================
+   PAGE BREAKS
+   ============================================================ */
+.page-break { page-break-after: always; }
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════
+     COVER PAGE
+════════════════════════════════════════════════ -->
+<div class="cover">
+  <div class="cover-top-stripe"></div>
+  <div class="cover-doc-id">ATLAS-DEP-001</div>
+  <div class="cover-ver-badge">VERSION 2.0</div>
+
+  <div class="cover-content">
+    <div class="cover-logo-area">
+      <div class="cover-project-label">Project Atlas &mdash; Master Flightline Clock</div>
+      <div class="cover-divider-top"></div>
+    </div>
+
+    <h1>Deployment Guide</h1>
+    <div class="cover-subtitle">Appliance-Mode Installation &amp; Configuration Reference</div>
+    <div class="cover-divider-mid"></div>
+
+    <table class="cover-meta-table">
+      <tr><td class="meta-key">Document ID</td><td class="meta-val">ATLAS-DEP-001</td></tr>
+      <tr><td class="meta-key">Version</td><td class="meta-val">2.0</td></tr>
+      <tr><td class="meta-key">Date</td><td class="meta-val">3 July 2026</td></tr>
+      <tr><td class="meta-key">Status</td><td class="meta-val">Released</td></tr>
+      <tr><td class="meta-key">Author</td><td class="meta-val">Peter Lochhead Hepburn</td></tr>
+      <tr><td class="meta-key">Replaces</td><td class="meta-val">ATLAS-DEP-001 v1.0</td></tr>
+    </table>
+  </div>
+
+  <div class="cover-accent-box">
+    Covers Mac Mini M4 &bull; Windows PC &bull; Linux Workstation &bull; Appliance-Mode Deployment
+  </div>
+  <div class="cover-classification">Internal Technical Document &bull; Competition Operations</div>
+  <div class="cover-bottom-stripe"></div>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     DOCUMENT CONTROL
+════════════════════════════════════════════════ -->
+<div>
+<h1 id="doc-control">Document Control</h1>
+
+<table class="doc-control">
+  <tr><th>Field</th><th>Value</th></tr>
+  <tr><td>Document ID</td><td>ATLAS-DEP-001</td></tr>
+  <tr><td>Title</td><td>Deployment Guide — Appliance-Mode Installation &amp; Configuration</td></tr>
+  <tr><td>Project</td><td>Project Atlas — Master Flightline Clock</td></tr>
+  <tr><td>Version</td><td>2.0</td></tr>
+  <tr><td>Date</td><td>3 July 2026</td></tr>
+  <tr><td>Status</td><td>Released</td></tr>
+  <tr><td>Author</td><td>Peter Lochhead Hepburn</td></tr>
+  <tr><td>Reviewed By</td><td>Project Atlas Core Team</td></tr>
+  <tr><td>Classification</td><td>Internal — Competition Operations</td></tr>
+</table>
+
+<h2>Revision History</h2>
+<table class="rev-table">
+  <tr><th>Version</th><th>Date</th><th>Author</th><th>Summary of Changes</th></tr>
+  <tr><td>1.0</td><td>2026-06-01</td><td>P. Lochhead Hepburn</td><td>Initial release. Basic installation and startup procedures.</td></tr>
+  <tr><td>1.1</td><td>2026-06-20</td><td>P. Lochhead Hepburn</td><td>Added SQLite persistence notes. Updated directory structure.</td></tr>
+  <tr><td>2.0</td><td>2026-07-03</td><td>P. Lochhead Hepburn</td><td>Major revision. Appliance-mode operation, auto-boot configuration (macOS/Windows/Linux), HAL backend architecture, Display Type selector, cross-platform notes, hardware migration path, competition-day checklist.</td></tr>
+</table>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     TABLE OF CONTENTS
+════════════════════════════════════════════════ -->
+<div class="toc-page page-break">
+<h2 class="toc-title">Table of Contents</h2>
+<ul class="toc-list">
+  <li class="toc-h1"><a href="#intro"><span class="toc-text">1. Introduction &amp; Deployment Overview</span><span class="toc-dots"></span><span class="toc-page-num"><span class="page-ref" data-href="#intro"></span></span></a></li>
+  <li class="toc-h1"><a href="#sysreq"><span class="toc-text">2. System Requirements</span><span class="toc-dots"></span><span class="toc-page-num"><span class="page-ref" data-href="#sysreq"></span></span></a></li>
+  <li class="toc-h1"><a href="#install"><span class="toc-text">3. Installation Procedures</span><span class="toc-dots"></span><span class="toc-page-num"><span class="page-ref" data-href="#install"></span></span></a></li>
+  <li class="toc-h3"><a href="#install-env"><span class="toc-text">3.1 Python Environment Setup</span><span class="toc-dots"></span><span class="toc-page-num"><span class="page-ref" data-href="#install-env"></span></span></a></li>
+  <li class="toc-h3"><a href="#install-deps"><span class="toc-text">3.2 Dependency Installation</span><span class="toc-dots"></span><span class="toc-page-num"><span class="page-ref" data-href="#install-deps"></span></span></a></li>
+  <li class="toc-h3"><a href="#install-db"><span class="toc-text">3.3 Database Initialisation</span><span class="toc-dots"></span><span class="toc-page-num"><span class="page-ref" data-href="#install-db"></span></span></a></li>
+  <li class="toc-h3"><a href="#install-dir"><span class="toc-text">3.4 Directory Structure &amp; Permissions</span><span class="toc-dots"></span><span class="toc-page-num"><span class="page-ref" data-href="#install-dir"></span></span></a></li>
+  <li class="toc-h1"><a href="#config"><span class="toc-text">4. Initial Configuration</span><span class="toc-dots"></span><span class="toc-page-num"><span class="page-ref" data-href="#config"></span></span></a></li>
+  <li class="toc-h1"><a href="#autoboot"><span class="toc-text">5. Auto-Boot Configuration</span><span class="toc-dots"></span><span class="toc-page-num"><span class="page-ref" data-href="#autoboot"></span></span></a></li>
+  <li class="toc-h3"><a href="#autoboot-mac"><span class="toc-text">5.1 macOS: LaunchAgent Setup</span><span class="toc-dots"></span><span class="toc-page-num"><span class="page-ref" data-href="#autoboot-mac"></span></span></a></li>
+  <li class="toc-h3"><a href="#autoboot-win"><span class="toc-text">5.2 Windows: Startup &amp; Task Scheduler</span><span class="toc-dots"></span><span class="toc-page-num"><span class="page-ref" data-href="#autoboot-win"></span></span></a></li>
+  <li class="toc-h3"><a href="#autoboot-lin"><span class="toc-text">5.3 Linux: systemd Service</span><span class="toc-dots"></span><span class="toc-page-num"><span class="page-ref" data-href="#autoboot-lin"></span></span></a></li>
+  <li class="toc-h1"><a href="#display"><span class="toc-text">6. Display Type Configuration</span><span class="toc-dots"></span><span class="toc-page-num"><span class="page-ref" data-href="#display"></span></span></a></li>
+  <li class="toc-h1"><a href="#startup"><span class="toc-text">7. Startup Sequence &amp; Boot Flow</span><span class="toc-dots"></span><span class="toc-page-num"><span class="page-ref" data-href="#startup"></span></span></a></li>
+  <li class="toc-h1"><a href="#operator"><span class="toc-text">8. Operator Interface Guide</span><span class="toc-dots"></span><span class="toc-page-num"><span class="page-ref" data-href="#operator"></span></span></a></li>
+  <li class="toc-h1"><a href="#migration"><span class="toc-text">9. Hardware Migration Path</span><span class="toc-dots"></span><span class="toc-page-num"><span class="page-ref" data-href="#migration"></span></span></a></li>
+  <li class="toc-h1"><a href="#platform"><span class="toc-text">10. Platform-Specific Notes</span><span class="toc-dots"></span><span class="toc-page-num"><span class="page-ref" data-href="#platform"></span></span></a></li>
+  <li class="toc-h1"><a href="#troubleshoot"><span class="toc-text">11. Troubleshooting Guide</span><span class="toc-dots"></span><span class="toc-page-num"><span class="page-ref" data-href="#troubleshoot"></span></span></a></li>
+  <li class="toc-h1"><a href="#maintenance"><span class="toc-text">12. Maintenance &amp; Updates</span><span class="toc-dots"></span><span class="toc-page-num"><span class="page-ref" data-href="#maintenance"></span></span></a></li>
+  <li class="toc-h1"><a href="#checklist"><span class="toc-text">13. Competition Day Checklist</span><span class="toc-dots"></span><span class="toc-page-num"><span class="page-ref" data-href="#checklist"></span></span></a></li>
+</ul>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     §1 INTRODUCTION
+════════════════════════════════════════════════ -->
+<h1 id="intro">1. Introduction &amp; Deployment Overview</h1>
+<p>This document is the primary deployment and operations reference for <strong>Project Atlas</strong>, the Master Flightline Clock system for competitive aviation events. Version 2.0 introduces <em>appliance-mode</em> deployment as the primary operational model: Atlas starts automatically when the host computer powers on, proceeds directly to clock display mode, and runs without any operator interaction unless configuration changes are required.</p>
+
+<p>This guide supersedes ATLAS-DEP-001 v1.0. It covers all three supported host platforms — Apple Mac Mini, Windows PC, and Linux workstation — from first-time installation through to competition-day operation. Administrators and operators should read Sections 1–4 in full before deployment; Section 13 provides the quick-reference competition-day checklist.</p>
+
+<h2>1.1 Appliance-Mode Operation Concept</h2>
+<p>In appliance mode, the Atlas host computer behaves like a purpose-built timing device rather than a general-purpose desktop. Once configured, the operator does not need a keyboard or mouse to operate the clock during a competition — the system initialises automatically, connects to the database, and begins displaying timing data. Configuration access is reserved for pre-event setup and post-event administration.</p>
+
+<p>The architecture that enables this behaviour is illustrated below. The timing engine, persistence layer, operator interface, and display renderer are separate subsystems that communicate through defined interfaces. This separation means that the display output layer can be replaced or upgraded (for example, swapping the on-screen simulator for physical P5/P10 LED panels) without touching the engine or database.</p>
+
+<div class="arch-diagram">
+┌─────────────────────────────────────────────────────────────────┐
+│                      Project Atlas v2.0                         │
+│                                                                 │
+│  ┌────────────────┐    ┌────────────────┐    ┌──────────────┐  │
+│  │  AtlasEngine   │───▶│ AtlasDatabase  │    │  main.py     │  │
+│  │  (State/Timer) │    │  (SQLite)      │    │  (Entry Pt)  │  │
+│  └────────────────┘    └────────────────┘    └──────────────┘  │
+│          │ model_updated signal                                  │
+│          ▼                                                       │
+│  ┌────────────────┐    ┌─────────────────────────────────────┐  │
+│  │ OperatorWindow │    │  Display Backend (HAL)              │  │
+│  │ (Operator GUI) │    │  ├── Simulator (AtlasLEDSimulator)  │  │
+│  └────────────────┘    │  └── Hardware (LED Controller)     │  │
+│                        └─────────────────────────────────────┘  │
+└─────────────────────────────────────────────────────────────────┘
+</div>
+
+<h2>1.2 Supported Platforms</h2>
+<p>Atlas is tested and supported on the following host platforms. The <strong>Mac Mini M4</strong> is the primary production target and receives the most thorough hardware integration testing. Windows and Linux are fully supported for development, testing, and alternative production deployments.</p>
+
+<table>
+  <caption data-label="Table 1">Supported Deployment Platforms</caption>
+  <tr><th>Platform</th><th>Primary Use</th><th>Auto-Boot Method</th></tr>
+  <tr><td>macOS (Mac Mini M4)</td><td>Production appliance</td><td>LaunchAgent .plist</td></tr>
+  <tr><td>Windows 10/11 (PC)</td><td>Production / testing</td><td>Task Scheduler / Startup folder</td></tr>
+  <tr><td>Linux (any desktop)</td><td>Development / testing</td><td>systemd user service</td></tr>
+</table>
+
+<h2>1.3 Deployment Scenarios</h2>
+<p>Two distinct deployment scenarios exist and govern the appropriate configuration choices:</p>
+<ul>
+  <li><strong>Testing / Development:</strong> Atlas runs on a developer workstation with the LED Simulator (LCD monitor) as the display backend. Auto-boot is optional. The operator uses keyboard and mouse freely and may alter schedules between test runs.</li>
+  <li><strong>Production (Competition):</strong> Atlas runs on a dedicated host — ideally a Mac Mini — with auto-boot enabled and the display backend set to either the LCD Simulator (if physical LED panels are not yet available) or the Hardware backend (P5/P10 LED matrix panels). Operator interaction is kept to a minimum during the event.</li>
+</ul>
+
+<!-- ══════════════════════════════════════════════
+     §2 SYSTEM REQUIREMENTS
+════════════════════════════════════════════════ -->
+<h1 id="sysreq">2. System Requirements</h1>
+<p>The following requirements apply to all supported platforms. Where platform-specific requirements differ, they are noted with the relevant badge.</p>
+
+<h2>2.1 Hardware Requirements</h2>
+<table>
+  <caption data-label="Table 2">Minimum Hardware Specifications</caption>
+  <tr><th>Component</th><th>Minimum</th><th>Recommended (Production)</th></tr>
+  <tr><td>CPU</td><td>Dual-core, 1.8 GHz</td><td>Apple M4 (Mac Mini M4) or equivalent</td></tr>
+  <tr><td>RAM</td><td>4 GB</td><td>8 GB or more</td></tr>
+  <tr><td>Storage</td><td>10 GB free</td><td>SSD, 256 GB or more</td></tr>
+  <tr><td>Network</td><td>Not required for core operation</td><td>Ethernet for NTP time sync</td></tr>
+  <tr><td>Display Output</td><td>One HDMI / DisplayPort output</td><td>Two outputs (operator + public display)</td></tr>
+  <tr><td>USB</td><td>One port (optional, for LED controller)</td><td>Two or more USB-A / USB-C ports</td></tr>
+</table>
+
+<div class="note-box">
+  <div class="box-label">Note — Mac Mini M4 (Primary Platform)</div>
+  The Mac Mini M4 is the preferred production appliance. Its silent fan, compact form factor, and two HDMI outputs make it ideal for both the operator console and a secondary public-facing display. The system has been optimised and tested on this hardware.
+</div>
+
+<h2>2.2 Software Requirements</h2>
+<table>
+  <caption data-label="Table 3">Required Software Components</caption>
+  <tr><th>Component</th><th>Version</th><th>Notes</th></tr>
+  <tr><td>Python</td><td>3.8 or later (3.12 recommended)</td><td>Must include pip and venv modules</td></tr>
+  <tr><td>PySide6</td><td>6.4 or later</td><td>Qt6 Python bindings; installed via pip</td></tr>
+  <tr><td>pydantic</td><td>2.x</td><td>Data models validation layer</td></tr>
+  <tr><td>SQLite</td><td>3.31 or later</td><td>Bundled with Python; no separate install needed</td></tr>
+  <tr><td>Git (optional)</td><td>Any</td><td>Recommended for version management</td></tr>
+</table>
+
+<h2>2.3 Display Requirements</h2>
+<p>Atlas supports two display backends, each with different hardware requirements:</p>
+<ul>
+  <li><strong>LCD Monitor (Simulator backend):</strong> Any standard HDMI or DisplayPort monitor running at 1920×1080 or higher. No additional hardware required. Suitable for development and for competitions where physical LED panels are unavailable.</li>
+  <tr><strong>LED Matrix (Hardware backend — future):</strong> P5 or P10 pitch outdoor LED panels driven by a compatible controller (e.g., Colorlight, Nova). Connection via USB or Ethernet depending on controller. Panel array must present a minimum of 64×64 pixels; the standard configuration is 128×64 pixels (two 64×64 P10 panels side by side).</li>
+</ul>
+
+<h2>2.4 Operating System Requirements</h2>
+<table>
+  <caption data-label="Table 4">Supported Operating Systems</caption>
+  <tr><th>OS</th><th>Versions Tested</th><th>Notes</th></tr>
+  <tr><td><span class="platform-badge badge-mac">macOS</span></td><td>Ventura (13), Sonoma (14), Sequoia (15)</td><td>Fusion style applied; native tab bars bypassed</td></tr>
+  <tr><td><span class="platform-badge badge-win">Windows</span></td><td>Windows 10 (22H2), Windows 11</td><td>Antivirus whitelist recommended (see §10)</td></tr>
+  <tr><td><span class="platform-badge badge-lin">Linux</span></td><td>Ubuntu 22.04 LTS, Fedora 39+</td><td>X11 or Wayland; Qt Fusion style auto-applied</td></tr>
+</table>
+
+<!-- ══════════════════════════════════════════════
+     §3 INSTALLATION
+════════════════════════════════════════════════ -->
+<h1 id="install">3. Installation Procedures</h1>
+<p>Follow the steps in this section sequentially on a freshly provisioned host. Estimated total time: 20–30 minutes on a fast internet connection.</p>
+
+<h2 id="install-env">3.1 Python Environment Setup</h2>
+<p>Atlas requires Python 3.8 or later. The recommended approach uses a Python virtual environment (<code>venv</code>) to isolate Atlas dependencies from any system-level Python packages.</p>
+
+<h3>macOS</h3>
+<ol>
+<li>Open <strong>Terminal</strong> (Applications → Utilities → Terminal).</li>
+<li>Install Python via Homebrew if not already present:
+<pre>brew install <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a7d7ded3cfc8c9e794899695">[email&#160;protected]</a></pre>
+</li>
+<li>Navigate to your chosen installation directory and clone or copy the Atlas source tree:
+<pre>cd ~
+mkdir -p Applications/Atlas
+cd Applications/Atlas
+# Copy source files here, or:
+# git clone &lt;repository-url&gt; .</pre>
+</li>
+<li>Create and activate the virtual environment:
+<pre>python3 -m venv .venv
+source .venv/bin/activate</pre>
+</li>
+</ol>
+
+<h3>Windows</h3>
+<ol>
+<li>Download Python 3.12 from <strong>python.org</strong>. During installation, tick <em>"Add Python to PATH"</em> and <em>"Install for all users"</em>.</li>
+<li>Open <strong>Command Prompt</strong> as Administrator and navigate to your chosen directory:
+<pre>cd C:\Atlas</pre>
+</li>
+<li>Create and activate the virtual environment:
+<pre>python -m venv .venv
+.venv\Scripts\activate</pre>
+</li>
+</ol>
+
+<h3>Linux</h3>
+<ol>
+<li>Install Python and pip using your distribution's package manager:
+<pre># Ubuntu/Debian:
+sudo apt update
+sudo apt install -y python3.12 python3.12-venv python3-pip
+
+# Fedora/RHEL:
+sudo dnf install -y python3.12</pre>
+</li>
+<li>Create and activate the virtual environment:
+<pre>python3.12 -m venv ~/.atlas/.venv
+source ~/.atlas/.venv/bin/activate</pre>
+</li>
+</ol>
+
+<h2 id="install-deps">3.2 Dependency Installation</h2>
+<p>With the virtual environment active, install all required Python packages. The Atlas project includes a <code>requirements.txt</code> file that pins tested dependency versions.</p>
+
+<pre># With virtual environment active:
+pip install --upgrade pip
+pip install -r requirements.txt</pre>
+
+<p>The <code>requirements.txt</code> specifies, at minimum:</p>
+
+<pre>PySide6&gt;=6.4.0
+pydantic&gt;=2.0.0</pre>
+
+<div class="warn-box">
+  <div class="box-label">Warning — PySide6 Download Size</div>
+  PySide6 is a large package (approximately 150–250 MB). Ensure a reliable internet connection before installing. On the Mac Mini M4 with Apple Silicon, ensure you install the <code>arm64</code> build; pip will automatically select this when running native Python for Apple Silicon.
+</div>
+
+<p>Verify the installation is complete by running:</p>
+<pre>python -c "import PySide6; import pydantic; print('Dependencies OK')"</pre>
+<p>A successful installation prints: <code>Dependencies OK</code></p>
+
+<h2 id="install-db">3.3 Database Initialisation</h2>
+<p>Atlas uses an embedded SQLite database stored at <code>data/atlas.db</code> relative to the application's working directory. The database is created automatically on first launch by the <code>AtlasDatabase._bootstrap()</code> method, which creates the <code>heats</code> and <code>settings</code> tables if they do not already exist.</p>
+
+<p>No manual database creation steps are required. However, the <code>data/</code> directory must be writable by the user account running Atlas. To pre-create the directory and verify permissions:</p>
+
+<pre>mkdir -p data
+# macOS/Linux — verify write access:
+touch data/.write_test && rm data/.write_test && echo "OK"</pre>
+
+<div class="note-box">
+  <div class="box-label">Note — Database Location</div>
+  The database path is configured in <code>core/database.py</code> as <code>data/atlas.db</code>. Atlas must always be launched from the project's root directory (the folder containing <code>main.py</code>), or the database will be created in the wrong location. The auto-boot scripts in Section 5 handle this by setting a working directory explicitly.
+</div>
+
+<h2 id="install-dir">3.4 Directory Structure &amp; Permissions</h2>
+<p>After installation, the Atlas project directory should contain the following structure:</p>
+
+<div class="arch-diagram">
+Project_Atlas/
+├── main.py               ← Entry point — always launch from this directory
+├── requirements.txt      ← Python dependencies
+├── run_atlas.sh          ← Optional convenience launch script (macOS/Linux)
+├── core/
+│   ├── __init__.py
+│   ├── config.py         ← Hardware panel geometry config
+│   ├── database.py       ← SQLite persistence layer
+│   ├── engine.py         ← 1 Hz timing state machine
+│   ├── models.py         ← Pydantic data models
+│   └── timers.py         ← Timer utilities
+├── gui/
+│   ├── __init__.py
+│   ├── windows.py        ← Operator Console (main window)
+│   ├── themes.py         ← Cockpit colour theme constants
+│   ├── led_simulator.py  ← Virtual LED matrix renderer
+│   ├── display_backend.py← HAL interface for future hardware
+│   └── fonts.py          ← Custom 5×7 bitmap font engine
+├── data/
+│   └── atlas.db          ← SQLite database (auto-created on first run)
+└── docs/                 ← Documentation (SDS, DEP, URS, Charter)
+</div>
+
+<p>Ensure the user account running Atlas has <strong>read and write</strong> access to the <code>data/</code> directory and <strong>read</strong> access to all Python source files. No files outside the project directory are required or modified during normal operation.</p>
+
+<h3>Creating a Convenience Launch Script (macOS / Linux)</h3>
+<p>Create a script named <code>run_atlas.sh</code> in the project root to simplify launching, especially for the auto-boot configuration:</p>
+
+<pre>#!/bin/bash
+# run_atlas.sh — Atlas launch wrapper
+cd "$(dirname "$0")"
+source .venv/bin/activate
+exec python3 main.py "$@"</pre>
+
+<p>Make it executable:</p>
+<pre>chmod +x run_atlas.sh</pre>
+
+<p>Test that it launches correctly from Terminal before proceeding to auto-boot configuration.</p>
+
+<!-- ══════════════════════════════════════════════
+     §4 INITIAL CONFIGURATION
+════════════════════════════════════════════════ -->
+<h1 id="config">4. Initial Configuration</h1>
+<p>After a successful installation, perform the following initial configuration steps before the first competition. These settings are stored in the SQLite database and persist across restarts.</p>
+
+<h2>4.1 First Launch</h2>
+<p>Launch Atlas manually from a terminal for the first configuration session. This ensures any startup errors are visible in the terminal window before auto-boot is configured:</p>
+
+<pre># macOS / Linux (from the project root):
+source .venv/bin/activate
+python3 main.py
+
+# Windows (from the project root):
+.venv\Scripts\activate
+python main.py</pre>
+
+<p>On first launch, two windows will appear:</p>
+<ul>
+  <li><strong>Atlas Operator Console</strong> — the main control window with three navigation tabs: LIVE, SCHEDULE, and SETTINGS.</li>
+  <li><strong>ATLAS VIRTUAL LED</strong> — the LED simulator window showing the current display output on a virtual matrix panel.</li>
+</ul>
+
+<p>If either window fails to appear, check the terminal for Python error messages and refer to Section 11 (Troubleshooting).</p>
+
+<h2>4.2 Competition Name</h2>
+<p>Navigate to the <strong>SETTINGS</strong> tab by clicking the SETTINGS button in the navigation bar. Enter the competition name in the <em>Competition Name</em> field. This value is stored in the settings database and is available for display overlays and future report generation.</p>
+
+<h2>4.3 Display Backend Selection</h2>
+<p>The Display Size setting on the SETTINGS tab controls the virtual LED matrix resolution. Select the profile that matches your intended display hardware:</p>
+<ul>
+  <li><strong>128×64 (Large):</strong> Two 64×64 P10 panels side by side, or the standard full-size simulator window. This is the default and recommended setting for production deployments.</li>
+  <li><strong>64×64 (Compact/Half):</strong> A single 64×64 P10 panel, or any display width of 96 pixels or fewer. The renderer automatically abbreviates label text in compact mode (e.g., "TRACK OPENS IN" becomes "OPEN IN") to maintain readability.</li>
+</ul>
+
+<p>Set the <em>Sim LED Scale</em> value to control the on-screen pixel size of the simulator window. A value of 8 produces a comfortable simulator window size on a 1920×1080 monitor. Reduce to 6 if screen space is limited; increase to 10 for higher-resolution displays.</p>
+
+<h2>4.4 Brightness Preference</h2>
+<p>The <em>Display Intensity</em> slider controls LED brightness from 10% (Night) to 100% (Full Sun). The slider applies immediately to the simulator and is saved to the database when you click <strong>SAVE &amp; APPLY</strong>. The appropriate brightness levels for different environments are:</p>
+<table>
+  <caption data-label="Table 5">Brightness Level Guide</caption>
+  <tr><th>Level</th><th>Value</th><th>Environment</th></tr>
+  <tr><td>Night</td><td>10–20%</td><td>Indoor / night operations. Minimum glare.</td></tr>
+  <tr><td>Overcast</td><td>30–40%</td><td>Overcast outdoor conditions.</td></tr>
+  <tr><td>Normal</td><td>50–60%</td><td>Standard outdoor daylight.</td></tr>
+  <tr><td>Bright Day</td><td>70–80%</td><td>Bright sunny conditions.</td></tr>
+  <tr><td>Full Sun</td><td>90–100%</td><td>Maximum output; direct sunlight environments.</td></tr>
+</table>
+
+<h2>4.5 Saving Configuration</h2>
+<p>Click <strong>SAVE &amp; APPLY</strong> to commit all settings to the database. A confirmation dialog will inform you if a restart is required to apply hardware changes (display size or LED scale). Brightness changes take effect immediately without a restart.</p>
+
+<div class="note-box">
+  <div class="box-label">Note — Settings Persistence</div>
+  All settings are stored in <code>data/atlas.db</code> under the <code>settings</code> key-value table. There is no separate configuration file. Settings survive application restarts, OS reboots, and software updates, provided the <code>data/</code> directory is preserved.
+</div>
+
+<!-- ══════════════════════════════════════════════
+     §5 AUTO-BOOT
+════════════════════════════════════════════════ -->
+<h1 id="autoboot">5. Auto-Boot Configuration</h1>
+<p>Auto-boot places Atlas in true appliance mode: the system starts automatically when the host computer powers on or the user logs in, without any manual terminal or double-click interaction. Configure auto-boot after completing the initial configuration in Section 4 and verifying that Atlas launches and runs correctly from the terminal.</p>
+
+<div class="warn-box">
+  <div class="box-label">Prerequisite</div>
+  Auto-boot scripts reference the absolute path to the Atlas project directory and the virtual environment. Verify these paths on your specific installation before creating the auto-boot configuration. An incorrect path will silently fail at boot with no visible error.
+</div>
+
+<h2 id="autoboot-mac">5.1 macOS — LaunchAgent Setup</h2>
+<p><span class="platform-badge badge-mac">macOS</span> The recommended auto-boot mechanism on macOS is a <strong>LaunchAgent</strong> — a <code>.plist</code> configuration file that macOS launches automatically when the user logs in. LaunchAgents run in the user's session with access to the graphical display, making them ideal for Qt applications like Atlas.</p>
+
+<h3>Step 1: Enable Automatic Login</h3>
+<p>For a true appliance with no login prompt, configure macOS Automatic Login:</p>
+<ol>
+  <li>Open <strong>System Settings → General → Login Items &amp; Extensions</strong> (macOS Ventura+) or <strong>System Preferences → Users &amp; Groups → Login Options</strong> (earlier).</li>
+  <li>Set <em>Automatic login</em> to the Atlas operator account.</li>
+  <li>Note: FileVault must be disabled for automatic login to function. If data security is a concern, use FileVault and accept the manual password entry at boot instead.</li>
+</ol>
+
+<h3>Step 2: Create the LaunchAgent Plist</h3>
+<p>Create the following file at <code>~/Library/LaunchAgents/com.atlas.clock.plist</code>. Adjust the path to match your actual installation directory.</p>
+
+<pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+    "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;
+&lt;plist version="1.0"&gt;
+&lt;dict&gt;
+    &lt;key&gt;Label&lt;/key&gt;
+    &lt;string&gt;com.atlas.clock&lt;/string&gt;
+
+    &lt;key&gt;ProgramArguments&lt;/key&gt;
+    &lt;array&gt;
+        &lt;string&gt;/Users/atlas/Applications/Atlas/.venv/bin/python3&lt;/string&gt;
+        &lt;string&gt;/Users/atlas/Applications/Atlas/main.py&lt;/string&gt;
+    &lt;/array&gt;
+
+    &lt;key&gt;WorkingDirectory&lt;/key&gt;
+    &lt;string&gt;/Users/atlas/Applications/Atlas&lt;/string&gt;
+
+    &lt;key&gt;RunAtLoad&lt;/key&gt;
+    &lt;true/&gt;
+
+    &lt;key&gt;KeepAlive&lt;/key&gt;
+    &lt;false/&gt;
+
+    &lt;key&gt;StandardOutPath&lt;/key&gt;
+    &lt;string&gt;/Users/atlas/Applications/Atlas/logs/atlas.log&lt;/string&gt;
+
+    &lt;key&gt;StandardErrorPath&lt;/key&gt;
+    &lt;string&gt;/Users/atlas/Applications/Atlas/logs/atlas_error.log&lt;/string&gt;
+
+    &lt;key&gt;EnvironmentVariables&lt;/key&gt;
+    &lt;dict&gt;
+        &lt;key&gt;DISPLAY&lt;/key&gt;
+        &lt;string&gt;:0&lt;/string&gt;
+    &lt;/dict&gt;
+&lt;/dict&gt;
+&lt;/plist&gt;</pre>
+
+<h3>Step 3: Create the Logs Directory</h3>
+<pre>mkdir -p ~/Applications/Atlas/logs</pre>
+
+<h3>Step 4: Load the LaunchAgent</h3>
+<pre>launchctl load ~/Library/LaunchAgents/com.atlas.clock.plist</pre>
+
+<h3>Step 5: Verify</h3>
+<p>Log out and log back in. Atlas should start automatically. Check the log file if it does not appear:</p>
+<pre>tail -f ~/Applications/Atlas/logs/atlas_error.log</pre>
+
+<h3>Disabling / Enabling Auto-Boot</h3>
+<pre># Disable:
+launchctl unload ~/Library/LaunchAgents/com.atlas.clock.plist
+
+# Re-enable:
+launchctl load ~/Library/LaunchAgents/com.atlas.clock.plist</pre>
+
+<h2 id="autoboot-win">5.2 Windows — Startup Folder &amp; Task Scheduler</h2>
+<p><span class="platform-badge badge-win">Windows</span> Two options are available on Windows. The <strong>Startup folder</strong> method is simpler; <strong>Task Scheduler</strong> provides more control and is recommended for production deployments.</p>
+
+<h3>Option A: Startup Folder (Simple)</h3>
+<ol>
+  <li>Create a batch file named <code>run_atlas.bat</code> in the project root:
+<pre>@echo off
+cd /d C:\Atlas
+call .venv\Scripts\activate.bat
+python main.py
+</pre></li>
+  <li>Press <strong>Win + R</strong>, type <code>shell:startup</code>, and press Enter.</li>
+  <li>Copy a shortcut to <code>run_atlas.bat</code> into the Startup folder that opens.</li>
+  <li>Reboot to test.</li>
+</ol>
+
+<h3>Option B: Task Scheduler (Recommended)</h3>
+<ol>
+  <li>Open <strong>Task Scheduler</strong> (search the Start menu).</li>
+  <li>Click <em>Create Basic Task</em> → name it <em>Atlas Flightline Clock</em>.</li>
+  <li>Trigger: <em>When I log on</em>.</li>
+  <li>Action: <em>Start a program</em>. Set Program to <code>C:\Atlas\.venv\Scripts\python.exe</code> and Add Arguments to <code>main.py</code>, and Start In to <code>C:\Atlas</code>.</li>
+  <li>In <em>Properties → Settings</em>, untick <em>"Stop the task if it runs longer than"</em>.</li>
+  <li>Enable <em>Run only when user is logged on</em>.</li>
+</ol>
+
+<h2 id="autoboot-lin">5.3 Linux — systemd User Service</h2>
+<p><span class="platform-badge badge-lin">Linux</span> On Linux with systemd (Ubuntu, Fedora, and most modern distributions), create a <em>user service unit</em> that starts Atlas after the graphical session is available.</p>
+
+<h3>Step 1: Create the Service File</h3>
+<p>Create the file <code>~/.config/systemd/user/atlas.service</code>:</p>
+
+<pre>[Unit]
+Description=Atlas Master Flightline Clock
+After=graphical-session.target
+Wants=graphical-session.target
+
+[Service]
+Type=simple
+WorkingDirectory=%h/Atlas
+ExecStart=%h/Atlas/.venv/bin/python3 %h/Atlas/main.py
+Restart=no
+Environment=DISPLAY=:0
+Environment=DBUS_SESSION_BUS_ADDRESS=autolaunch:
+StandardOutput=append:%h/Atlas/logs/atlas.log
+StandardError=append:%h/Atlas/logs/atlas_error.log
+
+[Install]
+WantedBy=graphical-session.target</pre>
+
+<h3>Step 2: Enable and Start the Service</h3>
+<pre>mkdir -p ~/Atlas/logs
+systemctl --user daemon-reload
+systemctl --user enable atlas.service
+systemctl --user start atlas.service</pre>
+
+<h3>Step 3: Check Status</h3>
+<pre>systemctl --user status atlas.service
+journalctl --user -u atlas.service -f</pre>
+
+<div class="note-box">
+  <div class="box-label">Note — Wayland Compatibility</div>
+  On systems using Wayland (default in Fedora 38+, Ubuntu 23.10+), set <code>QT_QPA_PLATFORM=xcb</code> in the service <code>Environment</code> line to force X11 compatibility mode. PySide6 under Wayland may require additional XWayland configuration; X11 mode is the most reliable path for production deployments.
+</div>
+
+<!-- ══════════════════════════════════════════════
+     §6 DISPLAY TYPE
+════════════════════════════════════════════════ -->
+<h1 id="display">6. Display Type Configuration</h1>
+<p>Atlas supports two display backends — the software LED Simulator and the physical LED Hardware backend — selectable from the SETTINGS tab. The backend architecture is designed so that both backends receive identical timing data from the engine; only the output rendering layer differs.</p>
+
+<h2>6.1 Display Backends Overview</h2>
+<table>
+  <caption data-label="Table 6">Display Backend Comparison</caption>
+  <tr><th>Feature</th><th>Simulator (LCD Monitor)</th><th>Hardware (LED Matrix)</th></tr>
+  <tr><td>Status</td><td>Available — current production</td><td>Pending hardware integration</td></tr>
+  <tr><td>Hardware required</td><td>Any LCD monitor</td><td>P5/P10 LED panels + controller</td></tr>
+  <tr><td>Brightness control</td><td>Software dimming of pixel colours</td><td>Hardware PWM via controller</td></tr>
+  <tr><td>Display size</td><td>128×64 or 64×64 pixels scaled on screen</td><td>Physical panel pixel count</td></tr>
+  <tr><td>Configuration</td><td>Display Size + LED Scale in SETTINGS</td><td>Controller IP/COM + panel geometry</td></tr>
+</table>
+
+<h2>6.2 Simulator Backend — LCD Monitor</h2>
+<p>The simulator renders the LED matrix as a grid of circular "pixels" on a black background within a standard Qt window on the connected LCD monitor. The pixel appearance accurately represents what will be displayed on physical P5/P10 panels — each pixel is drawn as a filled circle with a small gap, matching the physical appearance of LED matrix displays.</p>
+
+<h3>Layout Modes</h3>
+<p>The simulator automatically selects a layout mode based on the configured display width:</p>
+<ul>
+  <li><strong>Full Mode (128×64 or wider):</strong> Six display rows arranged with the local time at the top, heat information in the centre, and the primary countdown timer in large format at the bottom. The status band (a coloured stripe) indicates the current phase.</li>
+  <li><strong>Compact Mode (64×64 or narrower):</strong> The same six-row layout with abbreviated text labels. The primary timer is displayed at standard scale rather than double scale to accommodate the narrower canvas.</li>
+</ul>
+
+<h3>Configuring the Simulator Window Scale</h3>
+<p>The <em>Sim LED Scale</em> setting (in SETTINGS) controls the on-screen pixel size. This does not affect the timing data or display logic — it only changes how large the simulator window appears on screen. Typical values:</p>
+<ul>
+  <li><strong>6–7:</strong> Compact window on 1920×1080; useful when sharing screen space with the Operator Console.</li>
+  <li><strong>8:</strong> Default — comfortable full-size window on 1080p display.</li>
+  <li><strong>10–12:</strong> Large display on high-DPI or 4K monitors. At 128×64 pixels with scale 10, the simulator is approximately 1280×640 px.</li>
+</ul>
+
+<h2>6.3 Hardware Backend — Physical LED Panels (Future)</h2>
+<p>The hardware backend is the planned output path for physical P5 or P10 LED matrix panels driven by a compatible LED controller. The architectural separation of the rendering layer from the engine and database means enabling hardware output requires only replacing or extending the display backend module — no changes to the timing logic are necessary.</p>
+
+<p>The Hardware backend activation process is covered in full in Section 9 (Hardware Migration Path). At the time of this document's publication, the hardware backend module (<code>gui/display_backend.py</code>) contains the HAL interface definition and stub implementation. Physical controller communication is a planned future task.</p>
+
+<h2>6.4 Testing Display Output Before Competition</h2>
+<p>Before any competition, verify display output as follows:</p>
+<ol>
+  <li>Launch Atlas and navigate to the SCHEDULE tab.</li>
+  <li>Add a test heat set to open within the next 2–3 minutes.</li>
+  <li>Monitor the LED simulator window and confirm the countdown transitions from WAITING → TRACK OPENS IN → ENTER NOW → HEAT TIME REMAINING → HEAT COMPLETED as each phase threshold is crossed.</li>
+  <li>Adjust brightness using the SETTINGS slider and confirm the simulator updates in real time.</li>
+  <li>Click the LIVE tab and verify the ABORT / CANCEL button cancels the test heat correctly.</li>
+  <li>Delete the test heat from the SCHEDULE tab before the real competition begins.</li>
+</ol>
+
+<!-- ══════════════════════════════════════════════
+     §7 STARTUP SEQUENCE
+════════════════════════════════════════════════ -->
+<h1 id="startup">7. Startup Sequence &amp; Boot Flow</h1>
+<p>This section documents the normal startup sequence and the different paths an operator may take depending on whether auto-boot is configured and whether configuration changes are needed before the event.</p>
+
+<h2>7.1 Auto-Boot Sequence (Normal Production)</h2>
+<p>With auto-boot configured, the startup sequence from power-on to active display is as follows:</p>
+
+<div class="arch-diagram">
+Power On
+    │
+    ▼
+OS boots → User auto-login
+    │
+    ▼
+LaunchAgent / Task Scheduler / systemd fires Atlas
+    │
+    ▼
+main.py starts
+    ├─ AtlasDatabase() → connects to data/atlas.db
+    ├─ AtlasEngine() → starts 1 Hz QTimer
+    ├─ DisplayConfig() → reads display_width, brightness from DB
+    ├─ OperatorWindow.show() → Operator Console appears (LIVE tab)
+    └─ AtlasLEDSimulator.show() → Virtual LED window appears
+    │
+    ▼
+Engine first tick
+    ├─ No heats scheduled → LED shows "WAITING"
+    └─ Heats scheduled (within 15 min) → auto-activates and begins countdown
+</div>
+
+<p>Total time from power-on to live clock display on a Mac Mini M4: approximately 20–30 seconds (dominated by macOS boot time and Python import time).</p>
+
+<h2>7.2 Manual Startup Sequence (Development / Configuration Sessions)</h2>
+<ol>
+  <li>Open Terminal.</li>
+  <li>Navigate to the Atlas project root: <code>cd ~/Applications/Atlas</code></li>
+  <li>Activate the virtual environment: <code>source .venv/bin/activate</code></li>
+  <li>Launch: <code>python3 main.py</code></li>
+  <li>Both the Operator Console and LED Simulator windows appear.</li>
+</ol>
+
+<h2>7.3 Accessing Settings During Operation</h2>
+<p>Settings can be accessed at any time during operation without stopping or restarting the clock:</p>
+<ol>
+  <li>Click the <strong>SETTINGS</strong> navigation button in the Operator Console.</li>
+  <li>Make required changes (competition name, brightness, display size).</li>
+  <li>Click <strong>SAVE &amp; APPLY</strong>.</li>
+  <li>If the dialog prompts a restart (for display size/LED scale changes), click <strong>RESTART ATLAS</strong> in the System Controls section. Atlas will restart in approximately 5 seconds and the LED display will resume from the saved state.</li>
+  <li>For brightness changes — no restart is needed; the simulator updates immediately.</li>
+</ol>
+
+<h2>7.4 Safe Shutdown Procedures</h2>
+<p>Atlas uses a graceful shutdown mechanism that terminates both the Operator Console and LED Simulator windows simultaneously. This prevents "stale" timing data from being visible on the public display after the operator has exited.</p>
+
+<p><strong>Recommended shutdown procedure:</strong></p>
+<ol>
+  <li>Click the <strong>SETTINGS</strong> tab in the Operator Console.</li>
+  <li>Click <strong>EXIT TO macOS</strong> (or <em>Exit to Desktop</em> on Windows/Linux).</li>
+  <li>Confirm the shutdown dialog.</li>
+  <li>Both windows close. The LED display goes blank.</li>
+</ol>
+
+<div class="danger-box">
+  <div class="box-label">Important — Do Not Force Quit</div>
+  Avoid force-quitting or killing the Atlas process via Activity Monitor or Task Manager. The graceful shutdown ensures the LED display receives a clear signal before the application exits. Force-quitting may leave a static frame on physical LED hardware (when connected), displaying stale timing information to pilots.
+</div>
+
+<!-- ══════════════════════════════════════════════
+     §8 OPERATOR INTERFACE
+════════════════════════════════════════════════ -->
+<h1 id="operator">8. Operator Interface Guide</h1>
+<p>The Atlas Operator Console is the main control interface for competition administrators. It uses a custom navigation bar with three tabs: <strong>LIVE</strong>, <strong>SCHEDULE</strong>, and <strong>SETTINGS</strong>. The cockpit-style dark theme and high-contrast colours are optimised for use in outdoor environments with varying light conditions.</p>
+
+<h2>8.1 LIVE Tab — Real-Time Monitoring</h2>
+<p>The LIVE tab displays the current system state and provides emergency controls. It is the default view on startup.</p>
+
+<table>
+  <caption data-label="Table 7">LIVE Tab Display States</caption>
+  <tr><th>Display Text</th><th>Meaning</th><th>LED Colour</th></tr>
+  <tr><td>WAITING</td><td>No heats scheduled, or next heat &gt; 15 min away</td><td>Dim grey</td></tr>
+  <tr><td>H[N] | [DIR]<br>MM:SS</td><td>Active heat countdown in progress</td><td>Depends on phase</td></tr>
+</table>
+
+<p>The <strong>ABORT / CANCEL ACTIVE HEAT</strong> button at the bottom of the LIVE tab immediately cancels the currently active heat. The cancelled heat is flagged as CANCELLED in the database (not deleted), preserving the audit trail. Use this button only in genuine emergencies — cancelled heats cannot be automatically reactivated.</p>
+
+<h2>8.2 SCHEDULE Tab — Heat Management</h2>
+<p>The SCHEDULE tab allows the operator to add, edit, and delete heats for the day's competition. Heats are stored in the SQLite database and survive restarts.</p>
+
+<h3>Adding a Heat</h3>
+<ol>
+  <li>Enter the heat number in the <em>Heat Number</em> field (e.g., <code>01</code>, <code>07A</code>).</li>
+  <li>Enter the thermalling direction in <em>Thermalling Dir</em> (e.g., <code>LEFT</code> or <code>RIGHT</code>).</li>
+  <li>Set the Track Opens, Track Closes, and Heat Ends times using the time pickers. Times are for today's date.</li>
+  <li>Click <strong>ADD NEW HEAT</strong>.</li>
+</ol>
+
+<h3>Editing a Heat</h3>
+<p>Click any row in the schedule table to load that heat's values into the form. The button changes to <strong>UPDATE SELECTED HEAT</strong>. Modify values and click the button to save.</p>
+
+<h3>Deleting a Heat</h3>
+<p>Select a heat in the table, then click the <strong>DELETE</strong> button that appears. Confirm the deletion dialog. Deleted heats are permanently removed from the database.</p>
+
+<div class="warn-box">
+  <div class="box-label">Warning — Deleting vs. Cancelling</div>
+  <strong>Delete</strong> removes the heat permanently with no audit trail. <strong>Abort/Cancel</strong> (from the LIVE tab) flags the heat as CANCELLED, preserving it in the database for post-event review. Use Cancel during a competition; use Delete only when correcting a data entry error.
+</div>
+
+<h2>8.3 SETTINGS Tab — Configuration Controls</h2>
+<p>The SETTINGS tab provides access to all persistent configuration options and system controls.</p>
+
+<h3>System Controls</h3>
+<p>At the bottom of the SETTINGS tab, two system control buttons are available:</p>
+<ul>
+  <li><strong>RESTART ATLAS:</strong> Performs a hot restart using <code>os.execv()</code>, replacing the running process with a fresh Atlas instance. Settings changes that require a restart (display size, LED scale) take effect after this action. The database is not affected.</li>
+  <li><strong>EXIT TO macOS / Exit to Desktop:</strong> Initiates graceful shutdown, closing all Atlas windows cleanly. On macOS the button is labelled <em>EXIT TO macOS</em>; on Windows it reads <em>Exit to Desktop</em>; on Linux it reads <em>Exit</em>. This label is determined at runtime based on the operating system.</li>
+</ul>
+
+<h2>8.4 Emergency Shutdown Procedures</h2>
+<p>If the Operator Console becomes unresponsive and the EXIT button is inaccessible, use the following emergency procedures:</p>
+<ul>
+  <li><span class="platform-badge badge-mac">macOS</span> Right-click the Python icon in the Dock → Force Quit, or use Activity Monitor to quit the <code>python3</code> process.</li>
+  <li><span class="platform-badge badge-win">Windows</span> Press Ctrl+Alt+Delete → Task Manager → find <code>python.exe</code> → End Task.</li>
+  <li><span class="platform-badge badge-lin">Linux</span> Open a terminal and run: <code>pkill -f main.py</code></li>
+</ul>
+
+<!-- ══════════════════════════════════════════════
+     §9 HARDWARE MIGRATION
+════════════════════════════════════════════════ -->
+<h1 id="migration">9. Hardware Migration Path</h1>
+<p>This section describes the path from the current simulator-based deployment to a physical LED matrix display system. The Atlas architecture was deliberately designed to make this transition require only the rendering layer — the timing engine, database, and operator interface remain unchanged.</p>
+
+<h2>9.1 Architecture of the Hardware Abstraction Layer (HAL)</h2>
+<p>The display backend is separated from the application logic through a Hardware Abstraction Layer defined in <code>gui/display_backend.py</code>. The HAL interface specifies a standard contract that any display backend must implement:</p>
+<ul>
+  <li><strong>update_model(model: AtlasDisplayModel)</strong> — called on every engine tick with the current display state.</li>
+  <li><strong>set_brightness(value: int)</strong> — live brightness update (0–100).</li>
+  <li><strong>show()</strong> — initialise and display the output.</li>
+  <li><strong>close()</strong> — graceful shutdown; send blank/clear frame to hardware.</li>
+</ul>
+<p>The <code>AtlasLEDSimulator</code> class currently implements this interface for the LCD monitor backend. A future <code>AtlasLEDHardware</code> class will implement the same interface for physical LED controllers, allowing the two backends to be swapped by changing a single line in <code>main.py</code>.</p>
+
+<h2>9.2 Transitioning from Simulator to Physical LED Panels</h2>
+
+<h3>Phase 1: Hardware Acquisition and Bench Testing</h3>
+<ol>
+  <li>Procure P5 or P10 pitch LED matrix panels in the required configuration (recommended: two 64×64 P10 panels = 128×64 pixel total).</li>
+  <li>Procure a compatible LED controller (Colorlight 5A-75B, Linsn RV908M32, or equivalent).</li>
+  <li>Connect panels to the controller and power supply per the controller manufacturer's instructions.</li>
+  <li>Verify the panel array is functional using the controller's native test software before connecting to Atlas.</li>
+</ol>
+
+<h3>Phase 2: Backend Module Development</h3>
+<ol>
+  <li>Implement <code>AtlasLEDHardware</code> in <code>gui/display_backend.py</code>, conforming to the HAL interface.</li>
+  <li>The hardware module must translate the <code>AtlasDisplayModel</code> into the pixel frame format expected by the LED controller protocol (typically a flat RGB byte array).</li>
+  <li>Use the existing bitmap font in <code>gui/fonts.py</code> (AtlasBitmapFont.FONT_5x7) for text rendering — the same font used by the simulator, ensuring visual consistency between simulator and hardware output.</li>
+  <li>Implement the <code>close()</code> method to send an all-black frame to the panels on shutdown, preventing stale display.</li>
+</ol>
+
+<h3>Phase 3: Integration into main.py</h3>
+<p>To activate the hardware backend, modify <code>main.py</code> as follows:</p>
+<pre># Replace this line:
+from gui.led_simulator import AtlasLEDSimulator
+
+# With:
+from gui.display_backend import AtlasLEDHardware as AtlasLEDSimulator</pre>
+<p>No other changes to <code>main.py</code> are required, as the hardware backend implements the same interface as the simulator.</p>
+
+<h2>9.3 Hardware Backend Activation Checklist</h2>
+<ul class="checklist">
+  <li>LED panels powered on and displaying controller test pattern</li>
+  <li>Controller connected to Atlas host via USB or Ethernet</li>
+  <li>Controller driver installed (if USB connection)</li>
+  <li>AtlasLEDHardware module implemented and unit-tested against AtlasDisplayModel</li>
+  <li>main.py import line updated to use hardware backend</li>
+  <li>Atlas launched; "WAITING" text visible on physical panels</li>
+  <li>Test heat entered; all five phase transitions confirmed on physical display</li>
+  <li>Brightness control verified via SETTINGS slider</li>
+  <li>Graceful shutdown tested; panels go dark on Atlas exit</li>
+</ul>
+
+<h2>9.4 Rollback Procedures if Hardware Fails</h2>
+<p>If physical LED hardware fails during a competition, revert to the simulator backend immediately:</p>
+<ol>
+  <li>Exit Atlas (SETTINGS → EXIT TO macOS).</li>
+  <li>Open a terminal and edit <code>main.py</code>: restore the <code>AtlasLEDSimulator</code> import.</li>
+  <li>Relaunch Atlas: <code>python3 main.py</code></li>
+  <li>The LED simulator window will appear on the operator's LCD monitor, which can serve as a fallback display visible to nearby observers.</li>
+  <li>Log the hardware failure in the event record for post-event diagnosis.</li>
+</ol>
+
+<div class="note-box">
+  <div class="box-label">Design Principle</div>
+  The HAL separation means a hardware failure never affects the timing engine or database. Heat schedules, completed heat records, and configuration are all preserved regardless of which display backend is active.
+</div>
+
+<!-- ══════════════════════════════════════════════
+     §10 PLATFORM NOTES
+════════════════════════════════════════════════ -->
+<h1 id="platform">10. Platform-Specific Notes</h1>
+<h2>10.1 macOS — Security, Gatekeeper &amp; Permissions</h2>
+<p><span class="platform-badge badge-mac">macOS</span> Modern macOS applies several security controls that can affect Atlas on a fresh deployment.</p>
+
+<h3>Gatekeeper — "Unidentified Developer" Warning</h3>
+<p>If Atlas is distributed as a folder rather than a signed application bundle, macOS Gatekeeper will block execution the first time a script is run. To resolve:</p>
+<ol>
+  <li>Right-click (or Control-click) the script file → Open.</li>
+  <li>Click <em>Open</em> in the Gatekeeper dialog.</li>
+  <li>Alternatively, remove the quarantine attribute: <code>xattr -rd com.apple.quarantine ~/Applications/Atlas</code></li>
+</ol>
+
+<h3>Accessibility Permissions</h3>
+<p>PySide6 Qt applications may request Accessibility permissions on macOS Ventura and later when using certain widget interactions. Grant these permissions in <strong>System Settings → Privacy &amp; Security → Accessibility</strong> if prompted.</p>
+
+<h3>Screen Recording Permission (Dual-Monitor Setup)</h3>
+<p>If the LED simulator is displayed on a secondary monitor and a screen recording or streaming application is also running, macOS may request Screen Recording permission for Python. Grant this in <strong>System Settings → Privacy &amp; Security → Screen &amp; System Audio Recording</strong>.</p>
+
+<h3>NTP Time Synchronisation</h3>
+<p>Atlas computes phase transitions by comparing the current system time against programmed heat timestamps. The system time must be accurate. On macOS, ensure Network Time is enabled: <strong>System Settings → General → Date &amp; Time → Set time automatically</strong>. The Mac Mini M4 should be connected to the venue network or internet for NTP synchronisation before the competition begins.</p>
+
+<h2>10.2 Windows — Firewall and Antivirus Configuration</h2>
+<p><span class="platform-badge badge-win">Windows</span> Windows Defender and third-party antivirus software may interfere with Atlas in several ways.</p>
+
+<h3>Windows Defender SmartScreen</h3>
+<p>When first launching <code>run_atlas.bat</code> or a Python script, Windows SmartScreen may display a blue warning dialog. Click <em>More info</em> → <em>Run anyway</em> to proceed. This warning appears only once per script.</p>
+
+<h3>Antivirus Exclusions</h3>
+<p>Some antivirus products flag Python virtual environments as suspicious due to the large number of DLL files in <code>.venv\Lib\</code>. If Atlas launches slowly or fails to start, add the Atlas project folder to the antivirus exclusion list:</p>
+<ol>
+  <li>Open Windows Security → Virus &amp; Threat Protection.</li>
+  <li>Under <em>Virus &amp; threat protection settings</em>, select <em>Manage settings</em>.</li>
+  <li>Scroll to <em>Exclusions</em> → <em>Add or remove exclusions</em>.</li>
+  <li>Add the folder <code>C:\Atlas</code> (or wherever Atlas is installed).</li>
+</ol>
+
+<h2>10.3 Linux — Display Server Compatibility</h2>
+<p><span class="platform-badge badge-lin">Linux</span> Atlas uses PySide6 (Qt6) which supports both X11 and Wayland display servers. However, for production deployments the X11 (XCB) backend is strongly recommended for stability and predictable window placement.</p>
+
+<h3>Forcing X11 Mode on Wayland Systems</h3>
+<p>Set the following environment variable before launching Atlas, or include it in the systemd service file:</p>
+<pre>export QT_QPA_PLATFORM=xcb
+python3 main.py</pre>
+
+<h3>Missing Qt Platform Plugin</h3>
+<p>If Atlas fails with the error <em>"Could not load the Qt platform plugin 'xcb'"</em>, install the missing X11 libraries:</p>
+<pre># Ubuntu/Debian:
+sudo apt install -y libxcb-cursor0 libxcb-xinerama0 libxkbcommon-x11-0
+
+# Fedora:
+sudo dnf install -y xcb-util-cursor</pre>
+
+<!-- ══════════════════════════════════════════════
+     §11 TROUBLESHOOTING
+════════════════════════════════════════════════ -->
+<h1 id="troubleshoot">11. Troubleshooting Guide</h1>
+<p>This section provides diagnostic and resolution steps for the most common issues encountered during deployment and operation. For issues not listed here, consult the log file at <code>logs/atlas.log</code> for error messages.</p>
+
+<table>
+  <caption data-label="Table 8">Troubleshooting Quick Reference</caption>
+  <tr><th>Symptom</th><th>Probable Cause</th><th>Section</th></tr>
+  <tr><td>Auto-boot does not start Atlas</td><td>Incorrect path in plist/task/service</td><td>11.1</td></tr>
+  <tr><td>Atlas starts but LED window missing</td><td>Display backend initialisation error</td><td>11.2</td></tr>
+  <tr><td>Countdown not updating</td><td>System time desynchronised or heat timestamps wrong</td><td>11.3</td></tr>
+  <tr><td>Database error on startup</td><td>Missing data/ directory or permission denied</td><td>11.4</td></tr>
+  <tr><td>Settings not saving</td><td>data/atlas.db not writable</td><td>11.4</td></tr>
+  <tr><td>Qt platform plugin error</td><td>Missing X11 libraries (Linux)</td><td>11.5</td></tr>
+</table>
+
+<h2>11.1 Auto-Boot Not Working</h2>
+<h3>macOS LaunchAgent Failures</h3>
+<p>The most common cause is an incorrect path in the .plist file. Diagnose with:</p>
+<pre># Check if the agent is loaded:
+launchctl list | grep atlas
+
+# View error output:
+cat ~/Applications/Atlas/logs/atlas_error.log
+
+# Manually trigger the agent:
+launchctl start com.atlas.clock</pre>
+<p>If the agent is listed but Atlas does not appear, the most likely cause is that the working directory or Python path in the plist is incorrect. Verify by running the exact Python path from a terminal:</p>
+<pre>/Users/atlas/Applications/Atlas/.venv/bin/python3 --version</pre>
+<p>If this fails, the virtual environment path is wrong. Update the plist and reload.</p>
+
+<h3>Windows Task Scheduler Failures</h3>
+<p>Open Task Scheduler, find the Atlas task, and check the <em>Last Run Result</em>. Common result codes:</p>
+<ul>
+  <li><code>0x1</code> — Script returned error; check <code>run_atlas.bat</code> paths.</li>
+  <li><code>0x41303</code> — Task has not been run yet; trigger manually with <em>Run</em>.</li>
+  <li><code>0xC000013A</code> — Application was terminated; check for antivirus interference.</li>
+</ul>
+
+<h3>Linux systemd Failures</h3>
+<pre>systemctl --user status atlas.service
+journalctl --user -u atlas.service --since "1 hour ago"</pre>
+<p>The most common cause is the service starting before the display server (X11/Wayland) is ready. Add a delay:</p>
+<pre>ExecStartPre=/bin/sleep 5</pre>
+
+<h2>11.2 Display Backend Issues</h2>
+<p>If the Operator Console appears but the LED simulator window does not:</p>
+<ol>
+  <li>Check the terminal for import errors from <code>gui/led_simulator.py</code>.</li>
+  <li>Verify PySide6 is installed: <code>python3 -c "from PySide6.QtWidgets import QApplication"</code></li>
+  <li>On macOS with multiple monitors: check that Atlas is not opening the LED window on a disconnected display. Unplug and replug external monitors and restart Atlas.</li>
+</ol>
+
+<h2>11.3 Database Corruption Recovery</h2>
+<p>If Atlas fails to start with a database error such as <em>"database disk image is malformed"</em>:</p>
+<ol>
+  <li>Stop Atlas immediately.</li>
+  <li>Create a backup of the corrupted database:
+  <pre>cp data/atlas.db data/atlas.db.corrupted.$(date +%Y%m%d%H%M%S)</pre></li>
+  <li>Attempt SQLite recovery:
+  <pre>sqlite3 data/atlas.db ".recover" | sqlite3 data/atlas_recovered.db
+mv data/atlas.db data/atlas.db.bak
+mv data/atlas_recovered.db data/atlas.db</pre></li>
+  <li>If recovery fails, delete <code>data/atlas.db</code> and restart Atlas. A fresh database will be created. Re-enter the competition schedule from backup records.</li>
+</ol>
+
+<div class="danger-box">
+  <div class="box-label">Competition Risk</div>
+  Database corruption is unlikely but most commonly caused by a sudden power loss during a write operation. Use a UPS (Uninterruptible Power Supply) for the Atlas host during competitions to eliminate this risk. Always maintain a manual paper backup of the heat schedule.
+</div>
+
+<h2>11.4 Permission Denied Errors</h2>
+<p>If Atlas cannot write to the database or log files:</p>
+<pre># macOS / Linux — fix data directory permissions:
+chmod 755 ~/Applications/Atlas/data
+chmod 644 ~/Applications/Atlas/data/atlas.db
+
+# Check the owner:
+ls -la ~/Applications/Atlas/data/</pre>
+<p>Ensure the running user account owns the <code>data/</code> directory. If Atlas is running as a different user (e.g., via a system-level LaunchDaemon rather than a LaunchAgent), the file ownership will not match.</p>
+
+<h2>11.5 Platform-Specific Errors</h2>
+<table>
+  <caption data-label="Table 9">Platform-Specific Error Messages</caption>
+  <tr><th>Platform</th><th>Error Message</th><th>Resolution</th></tr>
+  <tr><td>macOS</td><td>"This application cannot be opened" (Gatekeeper)</td><td>Right-click → Open, or use xattr -rd (see §10.1)</td></tr>
+  <tr><td>Windows</td><td>"python.exe is not recognized"</td><td>Python not in PATH; reinstall with "Add to PATH" ticked</td></tr>
+  <tr><td>Linux</td><td>"xcb plugin not found"</td><td>Install libxcb packages (see §10.3)</td></tr>
+  <tr><td>All</td><td>"ModuleNotFoundError: PySide6"</td><td>Virtual environment not activated; run source .venv/bin/activate</td></tr>
+  <tr><td>All</td><td>"OperationalError: no such table: heats"</td><td>Wrong working directory; ensure you launch from the project root</td></tr>
+</table>
+
+<!-- ══════════════════════════════════════════════
+     §12 MAINTENANCE
+════════════════════════════════════════════════ -->
+<h1 id="maintenance">12. Maintenance &amp; Updates</h1>
+<h2>12.1 Software Update Procedures</h2>
+<p>Atlas software updates are distributed as revised source code. The update process preserves the existing database and all stored heat records and settings.</p>
+
+<h3>Standard Update Procedure</h3>
+<ol>
+  <li>Exit Atlas (SETTINGS → EXIT TO macOS / Exit to Desktop).</li>
+  <li>Back up the current installation directory (especially <code>data/atlas.db</code>):
+  <pre>cp -r ~/Applications/Atlas ~/Applications/Atlas.backup.$(date +%Y%m%d)</pre></li>
+  <li>If using Git, pull the latest changes:
+  <pre>cd ~/Applications/Atlas
+git pull origin main</pre>
+  <p>If distributing as a folder copy, replace source files only — do <strong>not</strong> overwrite the <code>data/</code> directory.</p></li>
+  <li>Update Python dependencies:
+  <pre>source .venv/bin/activate
+pip install -r requirements.txt --upgrade</pre></li>
+  <li>Relaunch Atlas and verify normal operation.</li>
+  <li>Check the SCHEDULE tab to confirm heat data is intact.</li>
+</ol>
+
+<div class="note-box">
+  <div class="box-label">Database Schema Changes</div>
+  If an update includes database schema changes, the <code>AtlasDatabase._bootstrap()</code> method will apply them on first launch using <code>CREATE TABLE IF NOT EXISTS</code> statements. Existing data is preserved. If a breaking schema change is introduced in a future release, migration notes will be included in the release documentation.
+</div>
+
+<h2>12.2 Database Backup and Restore</h2>
+<h3>Manual Backup</h3>
+<pre># Create a timestamped backup:
+cp data/atlas.db data/atlas.db.$(date +%Y%m%d_%H%M%S).bak</pre>
+
+<h3>Automated Daily Backup (macOS cron)</h3>
+<p>Add the following to the atlas user's crontab (<code>crontab -e</code>) to create a nightly backup:</p>
+<pre># Backup Atlas database nightly at 02:00
+0 2 * * * cp ~/Applications/Atlas/data/atlas.db \
+    ~/Applications/Atlas/data/backups/atlas.db.$(date +\%Y\%m\%d).bak</pre>
+
+<h3>Restoring from Backup</h3>
+<ol>
+  <li>Exit Atlas.</li>
+  <li>Copy the backup file to <code>data/atlas.db</code>:
+  <pre>cp data/atlas.db.20260703_120000.bak data/atlas.db</pre></li>
+  <li>Relaunch Atlas and verify the schedule is restored.</li>
+</ol>
+
+<h2>12.3 Log File Locations and Analysis</h2>
+<p>Atlas writes stdout and stderr to log files when launched via auto-boot scripts. In terminal sessions, output appears directly in the terminal.</p>
+
+<table>
+  <caption data-label="Table 10">Log File Locations</caption>
+  <tr><th>Platform</th><th>Log File</th><th>Contains</th></tr>
+  <tr><td>macOS (LaunchAgent)</td><td><code>~/Applications/Atlas/logs/atlas.log</code></td><td>Startup messages, engine ticks</td></tr>
+  <tr><td>macOS (LaunchAgent)</td><td><code>~/Applications/Atlas/logs/atlas_error.log</code></td><td>Python exceptions, import errors</td></tr>
+  <tr><td>Linux (systemd)</td><td><code>journalctl --user -u atlas.service</code></td><td>All output, systemd events</td></tr>
+  <tr><td>Windows (Task Scheduler)</td><td>Task History tab in Task Scheduler</td><td>Last run result code</td></tr>
+</table>
+
+<h2>12.4 Performance Optimisation</h2>
+<p>Atlas is a lightweight application with a 1 Hz update cycle. Performance issues are rare, but the following tips apply if sluggish behaviour is observed:</p>
+<ul>
+  <li><strong>Close unnecessary applications:</strong> On the dedicated Mac Mini, disable Spotlight indexing of the Atlas folder (<code>System Settings → Siri &amp; Spotlight → Spotlight Privacy</code>) and close all non-Atlas applications.</li>
+  <li><strong>Reduce LED simulator scale:</strong> Higher LED scale values increase the number of pixels rendered per frame. Reduce the Sim LED Scale value in SETTINGS to improve rendering performance on low-powered hardware.</li>
+  <li><strong>Database maintenance:</strong> After many events, the <code>heats</code> table may accumulate thousands of historical records. Periodically export and archive old records using the SQLite command-line tool:
+  <pre>sqlite3 data/atlas.db "DELETE FROM heats WHERE status IN ('COMPLETED','CANCELLED') AND heat_end &lt; strftime('%s','now','-30 days');"</pre></li>
+</ul>
+
+<!-- ══════════════════════════════════════════════
+     §13 COMPETITION CHECKLIST
+════════════════════════════════════════════════ -->
+<h1 id="checklist">13. Competition Day Checklist</h1>
+<p>Use this checklist on competition day to verify Atlas is configured, connected, and operating correctly before the first heat. Each item should be confirmed by the system operator and initialled on the printed copy.</p>
+
+<h2>13.1 T-60 Minutes: Pre-Event Preparation</h2>
+<ul class="checklist">
+  <li>Atlas host computer powered on and booted to desktop</li>
+  <li>Atlas application launched (manually or via auto-boot)</li>
+  <li>Operator Console LIVE tab visible on operator monitor</li>
+  <li>LED Simulator (or physical LED display) showing "WAITING"</li>
+  <li>System clock verified against reference time source (phone, GPS, official timekeeper)</li>
+  <li>NTP synchronisation confirmed active (macOS: System Settings → Date &amp; Time)</li>
+  <li>Database backup created: <code>cp data/atlas.db data/atlas.db.pre-event.bak</code></li>
+  <li>Logs directory exists and is writable</li>
+</ul>
+
+<h2>13.2 T-30 Minutes: Schedule Entry</h2>
+<ul class="checklist">
+  <li>Navigate to SCHEDULE tab in Operator Console</li>
+  <li>Enter all heats for today's competition with correct times</li>
+  <li>Verify Track Open → Track Close → Heat End times are in correct sequence</li>
+  <li>Confirm heat count matches official competition briefing sheet</li>
+  <li>Add a test heat 5 minutes from now — verify countdown appears correctly — then delete it</li>
+  <li>Cross-check thermalling directions for each heat against briefing</li>
+</ul>
+
+<h2>13.3 T-15 Minutes: Display Verification</h2>
+<ul class="checklist">
+  <li>LED simulator brightness set to appropriate level for ambient conditions</li>
+  <li>Physical LED panels (if connected) displaying correctly and with readable text</li>
+  <li>LED display visible from the competition viewing area (conduct field check)</li>
+  <li>Backup display plan confirmed (what happens if primary display fails)</li>
+  <li>Paper backup of heat schedule printed and available at the control point</li>
+</ul>
+
+<h2>13.4 During Competition: Operational Procedures</h2>
+<ul class="checklist">
+  <li>Monitor LIVE tab at all times during active heats</li>
+  <li>If a heat must be cancelled, use ABORT / CANCEL ACTIVE HEAT — do not delete</li>
+  <li>After each heat completes, verify status shows COMPLETED in SCHEDULE table</li>
+  <li>If brightness adjustment is needed: SETTINGS → adjust slider → SAVE &amp; APPLY (no restart required)</li>
+  <li>Do not restart Atlas during an active heat</li>
+</ul>
+
+<h2>13.5 Post-Event: Shutdown and Archival</h2>
+<ul class="checklist">
+  <li>After final heat marked COMPLETED, click SETTINGS → EXIT TO macOS (or Desktop)</li>
+  <li>Confirm both Operator Console and LED windows have closed</li>
+  <li>Create post-event database archive:
+  <pre>cp data/atlas.db data/atlas.db.$(date +%Y%m%d).post-event.bak</pre></li>
+  <li>Power off LED panels before powering off the Atlas host</li>
+  <li>Document any anomalies or incidents in the event log</li>
+  <li>Submit post-event database copy to competition records</li>
+</ul>
+
+<div class="success-box">
+  <div class="box-label">End of Document</div>
+  ATLAS-DEP-001 v2.0 — Deployment Guide. For technical issues beyond this document's scope, refer to ATLAS-SDS-001 (Software Design Specification) for architectural detail, or contact the Product Owner: Peter Lochhead Hepburn.
+</div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+document.addEventListener('DOMContentLoaded', function() {
+  var observer = new MutationObserver(function(mutations, obs) {
+    var pagedContent = document.querySelector('.pagedjs_pages');
+    if (pagedContent) { obs.disconnect(); setTimeout(resolvePageNumbers, 500); }
+  });
+  observer.observe(document.body, { childList: true, subtree: true });
+  function resolvePageNumbers() {
+    document.querySelectorAll('.page-ref').forEach(function(ref) {
+      var href = ref.getAttribute('data-href');
+      var target = document.getElementById(href.replace('#', ''));
+      if (target) {
+        var page = target.closest('.pagedjs_page');
+        if (page) ref.textContent = page.getAttribute('data-page-number') || '?';
+      }
+    });
+  }
+});
+</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"f0f03d0605bf45f1a3b17cf7d5e6861f","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>

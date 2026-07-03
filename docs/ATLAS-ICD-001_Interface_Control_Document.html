@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ATLAS-ICD-001 Interface Control Document</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'\\(',right:'\\)',display:false},{left:'\\[',right:'\\]',display:true}]});"></script>
+<style>
+/* =====================================================================
+   PAGE GEOMETRY
+   ===================================================================== */
+@page {
+  size: A4;
+  margin: 2.2cm 2cm 2.2cm 2cm;
+  @top-center  { content: string(doctitle); font-family: Arial, sans-serif; font-size: 8pt; color: #555; }
+  @top-right   { content: "ATLAS-ICD-001 Rev 1.0"; font-family: Arial, sans-serif; font-size: 8pt; color: #555; }
+  @bottom-left { content: "UNCONTROLLED WHEN PRINTED"; font-family: Arial, sans-serif; font-size: 7.5pt; color: #888; }
+  @bottom-center { content: counter(page); font-family: Arial, sans-serif; font-size: 8pt; color: #555; }
+  @bottom-right  { content: "© ATLAS Project 2026"; font-family: Arial, sans-serif; font-size: 7.5pt; color: #888; }
+}
+@page :first {
+  margin: 0;
+  @top-center  { content: none; }
+  @top-right   { content: none; }
+  @bottom-left { content: none; }
+  @bottom-center { content: none; }
+  @bottom-right  { content: none; }
+}
+
+/* =====================================================================
+   GLOBAL
+   ===================================================================== */
+*, *::before, *::after { box-sizing: border-box; }
+body {
+  margin: 0; padding: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 11pt;
+  color: #222;
+  line-height: 1.6;
+  text-align: justify;
+  text-align-last: left;
+  string-set: doctitle "";
+}
+h1, h2, h3, h4 { string-set: doctitle content(); }
+
+/* =====================================================================
+   OVERFLOW PREVENTION
+   ===================================================================== */
+pre, table, figure, img, svg, blockquote, code {
+  max-width: 100%; box-sizing: border-box; overflow-wrap: break-word;
+}
+pre { overflow-x: auto; white-space: pre-wrap; word-wrap: break-word; }
+figure img, figure svg { max-width: 100%; max-height: 40vh; height: auto; }
+a { word-break: break-all; }
+.katex-display { overflow-x: auto; }
+
+/* =====================================================================
+   COVER PAGE
+   ===================================================================== */
+.cover {
+  page: cover;
+  width: 210mm; height: 297mm; margin: 0;
+  position: relative; overflow: hidden;
+  page-break-after: always;
+  background: linear-gradient(160deg, #0a1628 0%, #0d1b3e 30%, #122150 60%, #0a1628 100%);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.cover-stripe-top {
+  width: 100%; height: 8mm;
+  background: linear-gradient(90deg, #c8aa6e 0%, #e8c87a 40%, #c8aa6e 100%);
+}
+.cover-stripe-bottom {
+  position: absolute; bottom: 0; width: 100%; height: 8mm;
+  background: linear-gradient(90deg, #c8aa6e 0%, #e8c87a 40%, #c8aa6e 100%);
+}
+.cover-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 25mm;
+  text-align: center;
+}
+.cover-badge {
+  font-family: Arial, sans-serif;
+  font-size: 9pt;
+  letter-spacing: 3px;
+  color: #c8aa6e;
+  text-transform: uppercase;
+  margin-bottom: 6mm;
+}
+.cover h1 {
+  font-family: Arial, sans-serif;
+  font-size: 30pt;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 4mm 0;
+  line-height: 1.25;
+  white-space: normal;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.5);
+  string-set: doctitle "";
+}
+.cover-subtitle {
+  font-family: Arial, sans-serif;
+  font-size: 13pt;
+  font-weight: 400;
+  color: #b8c8e8;
+  margin-bottom: 10mm;
+  letter-spacing: 0.5px;
+}
+.cover-divider {
+  width: 60%; height: 1px;
+  background: linear-gradient(90deg, transparent, #c8aa6e, transparent);
+  margin: 0 auto 10mm auto;
+}
+.cover-meta-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  font-size: 9.5pt;
+  color: #ccd6f0;
+  margin-top: 2mm;
+}
+.cover-meta-table td {
+  padding: 2.5mm 3mm;
+  border-bottom: 1px solid rgba(200,170,110,0.25);
+  text-align: left;
+}
+.cover-meta-table td:first-child {
+  font-weight: 700;
+  color: #c8aa6e;
+  width: 38%;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 8.5pt;
+}
+.cover-classification {
+  font-family: Arial, sans-serif;
+  font-size: 8pt;
+  letter-spacing: 2px;
+  color: #c8aa6e;
+  margin-top: 10mm;
+  opacity: 0.8;
+}
+
+/* =====================================================================
+   DOCUMENT CONTROL TABLE
+   ===================================================================== */
+.doccontrol-page {
+  page-break-after: always;
+}
+.doccontrol-header {
+  font-family: Arial, sans-serif;
+  font-size: 14pt;
+  font-weight: 700;
+  color: #0d1b3e;
+  border-bottom: 2px solid #c8aa6e;
+  padding-bottom: 4px;
+  margin-bottom: 18px;
+}
+
+/* =====================================================================
+   HEADINGS
+   ===================================================================== */
+h1 {
+  font-family: Arial, sans-serif;
+  font-size: 20pt;
+  color: #0d1b3e;
+  border-bottom: 2.5px solid #c8aa6e;
+  padding-bottom: 5px;
+  margin-top: 0;
+  margin-bottom: 14px;
+  page-break-after: avoid;
+  font-weight: 700;
+}
+h2 {
+  font-family: Arial, sans-serif;
+  font-size: 14pt;
+  color: #122150;
+  margin-top: 18px;
+  margin-bottom: 8px;
+  page-break-after: avoid;
+  font-weight: 700;
+  border-left: 4px solid #c8aa6e;
+  padding-left: 8px;
+}
+h3 {
+  font-family: Arial, sans-serif;
+  font-size: 11.5pt;
+  color: #1a2f5a;
+  margin-top: 14px;
+  margin-bottom: 6px;
+  page-break-after: avoid;
+  font-weight: 700;
+}
+h4 {
+  font-family: Arial, sans-serif;
+  font-size: 10.5pt;
+  color: #2a3f6a;
+  margin-top: 10px;
+  margin-bottom: 4px;
+  page-break-after: avoid;
+  font-style: italic;
+}
+
+/* =====================================================================
+   TOC
+   ===================================================================== */
+.toc-page { page-break-after: always; }
+.toc-title {
+  font-family: Arial, sans-serif;
+  font-size: 18pt;
+  color: #0d1b3e;
+  border-bottom: 2.5px solid #c8aa6e;
+  padding-bottom: 6px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+.toc-list { list-style: none; padding: 0; margin: 0; column-count: 2; column-gap: 0.6cm; }
+.toc-list li { display: flex; align-items: baseline; padding: 4px 0; }
+.toc-list li a {
+  display: flex; align-items: baseline; width: 100%;
+  text-decoration: none; color: #333;
+  font-family: Arial, sans-serif;
+}
+.toc-list .toc-h1 .toc-text {
+  font-weight: 700; font-size: 11pt; color: #0d1b3e;
+}
+.toc-list .toc-h2 { padding-left: 20px; }
+.toc-list .toc-h2 .toc-text {
+  font-weight: 400; font-size: 10pt; color: #333;
+}
+.toc-list .toc-h3 { padding-left: 40px; }
+.toc-list .toc-h3 .toc-text {
+  font-weight: 400; font-size: 9.5pt; color: #555; font-style: italic;
+}
+.toc-text { white-space: nowrap; flex-shrink: 0; }
+.toc-dots {
+  flex: 1; margin: 0 6px;
+  border-bottom: 1.5px dotted #bbb;
+  min-width: 30px;
+  position: relative; top: -3px;
+}
+.toc-page-num {
+  flex-shrink: 0; text-align: right; min-width: 20px;
+  font-size: 10pt; color: #555;
+  font-family: Arial, sans-serif;
+}
+.toc-section-break { height: 8px; }
+
+/* =====================================================================
+   SECTION / PAGE BREAKS
+   ===================================================================== */
+.section { page-break-before: auto; }
+.no-break { page-break-inside: avoid; }
+
+/* =====================================================================
+   TABLES
+   ===================================================================== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  font-size: 9.5pt;
+  margin: 12px 0 16px 0;
+}
+thead tr {
+  background-color: #0d1b3e;
+  color: #ffffff;
+}
+thead th {
+  padding: 7px 10px;
+  text-align: left;
+  font-weight: 700;
+  font-size: 9pt;
+  letter-spacing: 0.3px;
+  border: 1px solid #0d1b3e;
+}
+tbody tr { border-bottom: 1px solid #ddd; }
+tbody tr:nth-child(even) { background-color: #f4f6fa; }
+tbody td {
+  padding: 6px 10px;
+  color: #333;
+  border-left: 1px solid #e0e4ee;
+  border-right: 1px solid #e0e4ee;
+  vertical-align: top;
+}
+tbody tr:last-child td { border-bottom: 1px solid #c0c8d8; }
+caption {
+  caption-side: top;
+  font-family: Arial, sans-serif;
+  font-size: 9pt;
+  color: #0d1b3e;
+  text-align: left;
+  margin-bottom: 4px;
+  font-weight: 700;
+}
+caption::before { content: attr(data-label) "  "; font-weight: 700; }
+
+/* =====================================================================
+   FIGURES / DIAGRAMS
+   ===================================================================== */
+figure {
+  margin: 16px 0;
+  page-break-inside: avoid;
+  text-align: center;
+  max-height: 70vh; height: auto; width: 100%; object-fit: contain;
+}
+figcaption {
+  font-family: Arial, sans-serif;
+  font-size: 9pt;
+  color: #444;
+  margin-top: 6px;
+  text-align: center;
+}
+figcaption::before { content: attr(data-label) "  "; font-weight: bold; }
+
+/* Monospaced diagram boxes */
+.diagram-box {
+  background: #f8f9fc;
+  border: 1px solid #c8d0e0;
+  border-left: 4px solid #0d1b3e;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 8.5pt;
+  line-height: 1.45;
+  padding: 12px 14px;
+  overflow-x: auto;
+  white-space: pre;
+  word-wrap: normal;
+  text-align: left;
+  margin: 8px 0;
+  color: #1a2540;
+}
+
+/* =====================================================================
+   CALLOUT BOXES
+   ===================================================================== */
+.callout {
+  border-left: 4px solid #c8aa6e;
+  background: #fdf9f0;
+  padding: 10px 14px;
+  margin: 14px 0;
+  font-size: 10pt;
+  font-family: Arial, sans-serif;
+}
+.callout-warn {
+  border-left: 4px solid #c0392b;
+  background: #fdf4f3;
+}
+.callout-note {
+  border-left: 4px solid #2980b9;
+  background: #f0f6fc;
+}
+.callout-title {
+  font-weight: 700;
+  font-size: 9pt;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+  color: #0d1b3e;
+}
+.callout-warn .callout-title { color: #c0392b; }
+.callout-note .callout-title { color: #1a6fa0; }
+
+/* =====================================================================
+   CODE BLOCKS
+   ===================================================================== */
+code {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 8.5pt;
+  background: #f0f2f8;
+  padding: 1px 4px;
+  border-radius: 2px;
+  color: #1a2f5a;
+}
+pre.code-block {
+  background: #0e1a30;
+  color: #d4e0f8;
+  padding: 12px 14px;
+  font-size: 8.5pt;
+  border-left: 4px solid #c8aa6e;
+  line-height: 1.5;
+  overflow-x: auto;
+  white-space: pre;
+  word-wrap: normal;
+  margin: 10px 0;
+}
+pre.code-block code {
+  background: none;
+  color: inherit;
+  padding: 0;
+  font-size: inherit;
+}
+
+/* =====================================================================
+   APPENDIX SECTIONS
+   ===================================================================== */
+.appendix-title {
+  font-family: Arial, sans-serif;
+  font-size: 13pt;
+  font-weight: 700;
+  color: #0d1b3e;
+  border-bottom: 1.5px solid #c8aa6e;
+  padding-bottom: 3px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  page-break-after: avoid;
+}
+.glossary-term {
+  font-weight: 700;
+  font-family: Arial, sans-serif;
+  font-size: 10pt;
+  color: #0d1b3e;
+}
+.glossary-def {
+  margin-left: 0;
+  margin-bottom: 6px;
+  font-size: 10pt;
+}
+dt { font-weight: 700; color: #0d1b3e; font-family: Arial, sans-serif; font-size: 10pt; margin-top: 6px; }
+dd { margin-left: 20px; margin-bottom: 4px; font-size: 10pt; }
+
+/* =====================================================================
+   STATUS BADGE
+   ===================================================================== */
+.badge {
+  display: inline-block;
+  font-family: Arial, sans-serif;
+  font-size: 8pt;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: 2px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.badge-future { background: #e8eaf6; color: #3949ab; border: 1px solid #9fa8da; }
+.badge-current { background: #e8f5e9; color: #2e7d32; border: 1px solid #a5d6a7; }
+.badge-tbd { background: #fff3e0; color: #e65100; border: 1px solid #ffcc80; }
+
+p { margin: 0 0 9px 0; }
+ul, ol { margin: 6px 0 10px 0; padding-left: 22px; }
+li { margin-bottom: 3px; }
+</style>
+</head>
+<body>
+
+<!-- ====================================================
+     COVER PAGE
+     ==================================================== -->
+<div class="cover">
+  <div class="cover-stripe-top"></div>
+  <div class="cover-body">
+    <div class="cover-badge">Project ATLAS — Interface Control Document</div>
+    <h1>ATLAS-ICD-001<br>LED Display Interface<br>Control Document</h1>
+    <div class="cover-subtitle">Master Flightline Clock &mdash; 6-Row LED Display Interface Specification</div>
+    <div class="cover-divider"></div>
+    <table class="cover-meta-table">
+      <tr><td>Document Number</td><td>ATLAS-ICD-001</td></tr>
+      <tr><td>Revision</td><td>1.0 — Initial Release</td></tr>
+      <tr><td>Issue Date</td><td>3 July 2026</td></tr>
+      <tr><td>Status</td><td>APPROVED FOR USE</td></tr>
+      <tr><td>Classification</td><td>Project Confidential</td></tr>
+      <tr><td>Author</td><td>ATLAS Engineering Team</td></tr>
+      <tr><td>Hardware Target</td><td>P5 Indoor / P10 Outdoor LED Matrix</td></tr>
+      <tr><td>Software Version</td><td>v1.5.0 (Simulator) / HAL v1.0 (Future)</td></tr>
+    </table>
+    <div class="cover-classification">UNCONTROLLED WHEN PRINTED</div>
+  </div>
+  <div class="cover-stripe-bottom"></div>
+</div>
+
+<!-- ====================================================
+     DOCUMENT CONTROL
+     ==================================================== -->
+<div class="doccontrol-page">
+<div class="doccontrol-header">Document Control &amp; Approval Record</div>
+
+<h3>Revision History</h3>
+<table>
+  <caption data-label="Table DC-1">Revision History</caption>
+  <thead>
+    <tr><th>Rev</th><th>Date</th><th>Description</th><th>Author</th><th>Approved By</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>1.0</td><td>2026-07-03</td><td>Initial release — modular ICD, simulator backend and HAL architecture defined; hardware-specific sections marked TBD pending procurement</td><td>ATLAS Engineering</td><td>Project Lead</td></tr>
+  </tbody>
+</table>
+
+<h3>Document Purpose and Status</h3>
+<p>This document defines the interface between the ATLAS Master Flightline Clock software system and the physical LED display hardware. It covers physical panel specifications, signal-level electrical requirements, communication protocols, the Hardware Abstraction Layer (HAL) software architecture, and integration requirements.</p>
+<p>Sections marked <span class="badge badge-tbd">TBD</span> are placeholders that require specific hardware procurement decisions before they can be completed. Sections marked <span class="badge badge-current">CURRENT</span> reflect the as-built simulator implementation. Sections marked <span class="badge badge-future">FUTURE</span> define the target physical hardware integration architecture.</p>
+
+<h3>Applicable Documents and Standards</h3>
+<table>
+  <caption data-label="Table DC-2">Reference Documents</caption>
+  <thead><tr><th>Reference</th><th>Title</th><th>Version</th></tr></thead>
+  <tbody>
+    <tr><td>ATLAS-SDS-001</td><td>ATLAS Software Design Specification</td><td>Current</td></tr>
+    <tr><td>ATLAS-SHD-001</td><td>ATLAS System Handover Dossier</td><td>2026-07-03</td></tr>
+    <tr><td>HUB75 Spec</td><td>HUB75 RGB LED Matrix Interface Specification</td><td>Community Rev D</td></tr>
+    <tr><td>IEC 60950-1</td><td>Information Technology Equipment — Safety</td><td>Ed. 2</td></tr>
+    <tr><td>CISPR 32</td><td>Multimedia Equipment EMC — Emission Requirements</td><td>Ed. 3</td></tr>
+    <tr><td>AS/NZS 3820</td><td>Essential Requirements for Electrical Equipment</td><td>1998</td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- ====================================================
+     TABLE OF CONTENTS
+     ==================================================== -->
+<div class="toc-page">
+  <h2 class="toc-title">Table of Contents</h2>
+  <ul class="toc-list">
+    <li class="toc-h1"><a href="#sec-exec"><span class="toc-text">1. Executive Summary</span><span class="toc-dots"></span><span class="toc-page-num"><span class="page-ref" data-href="#sec-exec"></span></span></a></li>
+    <li class="toc-h1"><a href="#sec-overview"><span class="toc-text">2. System Overview</span><span class="toc-dots"></span><span class="toc-page-num"><span class="page-ref" data-href="#sec-overview"></span></span></a></li>
+    <li class="toc-h2"><a href="#sec-arch"><span class="toc-text">2.1 Architecture Context</span><span class="toc-dots"></span><span class="toc-page-num"><span class="page-ref" data-href="#sec-arch"></span></span></a></li>
+    <li class="toc-h2"><a href="#sec-dataflow"><span class="toc-text">2.2 Data Flow</span><span class="toc-dots"></span><span class="toc-page-num"><span class="page-ref" data-href="#sec-dataflow"></span></span></a></li>
+    <li class="toc-h2"><a href="#sec-6row"><span class="toc-text">2.3 Six-Row Display Strategy</span><span class="toc-dots"></span><span class="toc-page-num"><span class="page-ref" data-href="#sec-6row"></span></span></a></li>
+    <li class="toc-h1"><a href="#sec-hardware"><span class="toc-text">3. Display Hardware Specifications</span><span class="toc-dots"></span><span class="toc-page-num"><span class="page-ref" data-href="#sec-hardware"></span></span></a></li>
+    <li class="toc-h2"><a href="#sec-panels"><span class="toc-text">3.1 LED Panel Options</span><span class="toc-dots"></span><span class="toc-page-num"><span class="page-ref" data-href="#sec-panels"></span></span></a></li>
+    <li class="toc-h2"><a href="#sec-resolution"><span class="toc-text">3.2 Resolution and Layout Configuration</span><span class="toc-dots"></span><span class="toc-page-num"><span class="page-ref" data-href="#sec-resolution"></span></span></a></li>
+    <li class="toc-h2"><a href="#sec-viewing"><span class="toc-text">3.3 Viewing Distance and Brightness</span><span class="toc-dots"></span><span class="toc-page-num"><span class="page-ref" data-href="#sec-viewing"></span></span></a></li>
+    <li class="toc-h1"><a href="#sec-protocols"><span class="toc-text">4. Interface Protocols</span><span class="toc-dots"></span><span class="toc-page-num"><span class="page-ref" data-href="#sec-protocols"></span></span></a></li>
+    <li class="toc-h2"><a href="#sec-hub75"><span class="toc-text">4.1 HUB75 RGB Matrix Protocol</span><span class="toc-dots"></span><span class="toc-page-num"><span class="page-ref" data-href="#sec-hub75"></span></span></a></li>
+    <li class="toc-h2"><a href="#sec-altproto"><span class="toc-text">4.2 Alternative Protocols</span><span class="toc-dots"></span><span class="toc-page-num"><span class="page-ref" data-href="#sec-altproto"></span></span></a></li>
+    <li class="toc-h2"><a href="#sec-protsel"><span class="toc-text">4.3 Protocol Selection Criteria</span><span class="toc-dots"></span><span class="toc-page-num"><span class="page-ref" data-href="#sec-protsel"></span></span></a></li>
+    <li class="toc-h1"><a href="#sec-signals"><span class="toc-text">5. Signal Definitions</span><span class="toc-dots"></span><span class="toc-page-num"><span class="page-ref" data-href="#sec-signals"></span></span></a></li>
+    <li class="toc-h2"><a href="#sec-pinout"><span class="toc-text">5.1 HUB75 Connector Pinout</span><span class="toc-dots"></span><span class="toc-page-num"><span class="page-ref" data-href="#sec-pinout"></span></span></a></li>
+    <li class="toc-h2"><a href="#sec-timing"><span class="toc-text">5.2 Timing Diagrams</span><span class="toc-dots"></span><span class="toc-page-num"><span class="page-ref" data-href="#sec-timing"></span></span></a></li>
+    <li class="toc-h2"><a href="#sec-dataformat"><span class="toc-text">5.3 Data Frame Format</span><span class="toc-dots"></span><span class="toc-page-num"><span class="page-ref" data-href="#sec-dataformat"></span></span></a></li>
+    <li class="toc-h2"><a href="#sec-rowaddr"><span class="toc-text">5.4 Row Addressing for 6-Row Configuration</span><span class="toc-dots"></span><span class="toc-page-num"><span class="page-ref" data-href="#sec-rowaddr"></span></span></a></li>
+    <li class="toc-h1"><a href="#sec-hal"><span class="toc-text">6. Hardware Abstraction Layer (HAL)</span><span class="toc-dots"></span><span class="toc-page-num"><span class="page-ref" data-href="#sec-hal"></span></span></a></li>
+    <li class="toc-h2"><a href="#sec-hal-design"><span class="toc-text">6.1 Abstract Interface Design</span><span class="toc-dots"></span><span class="toc-page-num"><span class="page-ref" data-href="#sec-hal-design"></span></span></a></li>
+    <li class="toc-h2"><a href="#sec-hal-sim"><span class="toc-text">6.2 Simulator Backend (Current)</span><span class="toc-dots"></span><span class="toc-page-num"><span class="page-ref" data-href="#sec-hal-sim"></span></span></a></li>
+    <li class="toc-h2"><a href="#sec-hal-hw"><span class="toc-text">6.3 Physical Hardware Backend (Future)</span><span class="toc-dots"></span><span class="toc-page-num"><span class="page-ref" data-href="#sec-hal-hw"></span></span></a></li>
+    <li class="toc-h2"><a href="#sec-hal-factory"><span class="toc-text">6.4 Backend Selection Mechanism</span><span class="toc-dots"></span><span class="toc-page-num"><span class="page-ref" data-href="#sec-hal-factory"></span></span></a></li>
+    <li class="toc-h1"><a href="#sec-integration"><span class="toc-text">7. Integration Requirements</span><span class="toc-dots"></span><span class="toc-page-num"><span class="page-ref" data-href="#sec-integration"></span></span></a></li>
+    <li class="toc-h1"><a href="#sec-testing"><span class="toc-text">8. Testing and Validation</span><span class="toc-dots"></span><span class="toc-page-num"><span class="page-ref" data-href="#sec-testing"></span></span></a></li>
+    <li class="toc-h1"><a href="#sec-app-a"><span class="toc-text">Appendix A — Glossary of Terms</span><span class="toc-dots"></span><span class="toc-page-num"><span class="page-ref" data-href="#sec-app-a"></span></span></a></li>
+    <li class="toc-h1"><a href="#sec-app-b"><span class="toc-text">Appendix B — Reference Documents</span><span class="toc-dots"></span><span class="toc-page-num"><span class="page-ref" data-href="#sec-app-b"></span></span></a></li>
+    <li class="toc-h1"><a href="#sec-app-c"><span class="toc-text">Appendix C — Revision History</span><span class="toc-dots"></span><span class="toc-page-num"><span class="page-ref" data-href="#sec-app-c"></span></span></a></li>
+  </ul>
+</div>
+
+<!-- ====================================================
+     SECTION 1 — EXECUTIVE SUMMARY
+     ==================================================== -->
+<div class="section" id="sec-exec">
+<h1>1. Executive Summary</h1>
+
+<p>This Interface Control Document (ICD) defines the complete interface specification between the ATLAS Master Flightline Clock software system and the physical LED matrix display hardware used at competitive aviation events. The document governs all aspects of the display interface: physical panel selection and mounting, electrical signal definitions, communication protocols, software abstraction architecture, and integration requirements.</p>
+
+<p>The ATLAS system currently operates in a software-simulator mode, where <code>AtlasLEDSimulator</code> renders the 6-row display layout in a Qt6 window on the host Mac Mini M4. This ICD establishes the architectural framework and technical specifications needed to transition from the current simulator to physical LED panel hardware, without requiring changes to the core timing engine or operator console.</p>
+
+<h2>Scope of Interface Control</h2>
+<p>This ICD has authority over the following interface boundaries:</p>
+<ul>
+  <li><strong>Software-to-Hardware boundary:</strong> The <code>DisplayBackend</code> abstract class defines the contract between the AtlasEngine and any physical or simulated display hardware.</li>
+  <li><strong>Electrical interface:</strong> HUB75 signal levels, timing, connector pinout, and power distribution between the host controller and LED panels.</li>
+  <li><strong>Mechanical interface:</strong> Panel dimensions, mounting provisions, and cabling topology.</li>
+  <li><strong>Operational interface:</strong> Brightness control, on/off sequencing, and fault behaviour during heat operations.</li>
+</ul>
+
+<div class="callout callout-note">
+  <div class="callout-title">Note — Modular ICD Approach</div>
+  Sections describing electrical pin-level specifications and mechanical dimensions are currently defined generically for the P5/P10 panel family. Hardware-specific values (exact panel model number, controller board, wiring harness part numbers) shall be inserted in a Rev 1.1 update once hardware procurement is finalised.
+</div>
+
+<h2>Key Design Decisions Codified in This Document</h2>
+<ol>
+  <li>The 6-row display layout is the normative rendering target for all physical hardware; it is not a simulator artefact.</li>
+  <li>The Hardware Abstraction Layer (HAL) isolates all hardware-specific code; no HAL code shall appear in the engine, models, or operator console modules.</li>
+  <li>HUB75 is the primary protocol for direct-drive Raspberry Pi / FPGA controller implementations. Artnet DMX and Serial/UART are documented as secondary options for network-based or embedded controller alternatives.</li>
+  <li>Brightness control (10–100%) is a first-class operational requirement and must be implementable on all backends without restarting the application.</li>
+</ol>
+</div>
+
+<!-- ====================================================
+     SECTION 2 — SYSTEM OVERVIEW
+     ==================================================== -->
+<div class="section" id="sec-overview">
+<h1>2. System Overview</h1>
+
+<p>ATLAS (Automated Timing &amp; LED Announcement System) is a Master Flightline Clock designed for competitive aviation events such as Race to the Sky and similar airshow circuits. It provides a single authoritative time reference for track operations, driving both the operator console (internal) and a large-format public LED display (external, visible to pilots and spectators).</p>
+
+<h2 id="sec-arch">2.1 Architecture Context</h2>
+<p>The system runs on a Mac Mini M4 and implements a strict Model-View-Controller (MVC) architecture. The display subsystem is intentionally isolated from the timing engine via a well-defined data model boundary. Figure 2-1 illustrates the top-level architecture and the position of the LED display interface.</p>
+
+<figure>
+<div class="diagram-box">
+┌─────────────────────────────────────────────────────────────────────┐
+│                         Mac Mini M4 (Host)                          │
+│                                                                     │
+│   ┌─────────────────┐    ┌──────────────────┐    ┌──────────────┐  │
+│   │  AtlasEngine    │───►│ AtlasDisplayModel│───►│  HAL Layer   │  │
+│   │  (engine.py)    │    │  (models.py)     │    │              │  │
+│   │  1 Hz tick      │    │  Local time      │    │ [Simulator]  │  │
+│   │  UTC-synced     │    │  Heat number     │    │  ─────────   │  │
+│   │  Phase P0–P4    │    │  Phase label     │    │ [HUB75 HW]   │  │
+│   └─────────────────┘    │  Primary timer   │    │  ─────────   │  │
+│          │               │  Colors / bands  │    │ [Artnet DMX] │  │
+│   ┌──────▼──────────┐    └──────────────────┘    └──────┬───────┘  │
+│   │  AtlasDatabase  │                                    │          │
+│   │  (SQLite)       │    ┌──────────────────┐            │          │
+│   │  Heats + Settings    │ OperatorConsole  │            │          │
+│   └─────────────────┘    │  (windows.py)    │            │          │
+│                          │  Qt6 / PySide6   │            │          │
+│                          └──────────────────┘            │          │
+└──────────────────────────────────────────────────────────┼──────────┘
+                                                           │
+                                          Physical Interface Boundary
+                                                           │
+                          ┌───────────────────────────────▼───────────┐
+                          │   LED Controller Board                     │
+                          │   (Raspberry Pi / FPGA / Serial Adapter)   │
+                          └───────────────────┬───────────────────────┘
+                                              │ HUB75 / Artnet / Serial
+                          ┌───────────────────▼───────────────────────┐
+                          │   LED Panel Array (P5 or P10)              │
+                          │   128×64 px Full  OR  64×64 px Compact     │
+                          └───────────────────────────────────────────┘
+</div>
+<figcaption data-label="Figure 2-1">ATLAS System Architecture and Display Interface Boundary</figcaption>
+</figure>
+
+<h2 id="sec-dataflow">2.2 Data Flow</h2>
+<p>The <code>AtlasEngine</code> emits an <code>AtlasDisplayModel</code> object once per second via the Qt signal <code>model_updated</code>. The HAL backend receives this model and is responsible for translating it into the frame buffer format required by the physical hardware. Table 2-1 defines the fields of <code>AtlasDisplayModel</code> and their display mappings.</p>
+
+<table>
+  <caption data-label="Table 2-1">AtlasDisplayModel Field Definitions</caption>
+  <thead>
+    <tr><th>Field</th><th>Type</th><th>Example</th><th>Display Row</th><th>Color</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><code>local_time</code></td><td>str</td><td>"14:32:07"</td><td>Row 1</td><td>Cyan (#00FFFF)</td></tr>
+    <tr><td><code>heat_number</code></td><td>str</td><td>"03"</td><td>Row 2 (prefix H)</td><td>Yellow (#FFFF00)</td></tr>
+    <tr><td><code>thermalling_dir</code></td><td>str</td><td>"LEFT" / "RIGHT"</td><td>Row 2 (suffix)</td><td>Yellow (#FFFF00)</td></tr>
+    <tr><td><code>planned_open</code></td><td>str</td><td>"14:30"</td><td>Row 3 (prefix O)</td><td>Gray (#AAAAAA)</td></tr>
+    <tr><td><code>planned_close</code></td><td>str</td><td>"14:35"</td><td>Row 3 (prefix C) / Row 4 compact</td><td>Gray (#AAAAAA)</td></tr>
+    <tr><td><code>primary_timer_label</code></td><td>str</td><td>"TRACK OPENS IN"</td><td>Row 4 (full) / Row 5 (compact)</td><td>Phase-dependent</td></tr>
+    <tr><td><code>primary_timer</code></td><td>str</td><td>"04:52"</td><td>Row 5 (full 2× scale) / Row 6 (compact)</td><td>Phase-dependent</td></tr>
+    <tr><td><code>primary_timer_color</code></td><td>str</td><td>"#FFFF00"</td><td>Rows 4–5</td><td>Model-defined</td></tr>
+    <tr><td><code>band_color</code></td><td>str</td><td>"#555500"</td><td>Row 6 (2 px status band)</td><td>Model-defined</td></tr>
+    <tr><td><code>is_armed</code></td><td>bool</td><td>True</td><td>All rows — gate for live data</td><td>N/A</td></tr>
+  </tbody>
+</table>
+
+<h2 id="sec-6row">2.3 Six-Row Display Strategy</h2>
+<p>The display is partitioned into six logical rows regardless of the physical pixel resolution selected. The renderer adapts font scale and text abbreviation to fit both the Full (128×64) and Compact (64×64) profiles. This two-profile strategy is a core ATLAS design requirement and must be preserved by any physical hardware backend.</p>
+
+<table>
+  <caption data-label="Table 2-2">Six-Row Layout — Full Mode (128×64)</caption>
+  <thead><tr><th>Row</th><th>Content</th><th>Y Origin (px)</th><th>Font Scale</th><th>Color</th></tr></thead>
+  <tbody>
+    <tr><td>1</td><td>Local Time (HH:MM:SS)</td><td>2</td><td>1× (5×7)</td><td>Cyan</td></tr>
+    <tr><td>2</td><td>Heat number and thermalling direction</td><td>12</td><td>1× (5×7)</td><td>Yellow</td></tr>
+    <tr><td>3</td><td>Track open / close window</td><td>22</td><td>1× (5×7)</td><td>Gray</td></tr>
+    <tr><td>4</td><td>Phase label (TRACK OPENS IN / ENTER NOW / HEAT TIME REMAINING)</td><td>35</td><td>1× (5×7)</td><td>Phase color</td></tr>
+    <tr><td>5</td><td>Primary countdown timer MM:SS</td><td>45</td><td>2× (scaled)</td><td>Phase color</td></tr>
+    <tr><td>6</td><td>Status band (2 px solid stripe)</td><td>62</td><td>—</td><td>Band color</td></tr>
+  </tbody>
+</table>
+
+<table>
+  <caption data-label="Table 2-3">Six-Row Layout — Compact Mode (64×64)</caption>
+  <thead><tr><th>Row</th><th>Content</th><th>Y Origin (px)</th><th>Alignment</th><th>Color</th></tr></thead>
+  <tbody>
+    <tr><td>1</td><td>Local Time</td><td>2</td><td>Centered</td><td>Cyan</td></tr>
+    <tr><td>2</td><td>H&lt;num&gt; L/R</td><td>12</td><td>Centered</td><td>Yellow</td></tr>
+    <tr><td>3</td><td>O HH:MM (open time)</td><td>22</td><td>Centered</td><td>Gray</td></tr>
+    <tr><td>4</td><td>C HH:MM (close time)</td><td>32</td><td>Centered</td><td>Gray</td></tr>
+    <tr><td>5</td><td>Abbreviated phase label (OPEN IN / ENTER / HEAT LEFT)</td><td>42</td><td>Centered</td><td>Phase color</td></tr>
+    <tr><td>6</td><td>Primary timer MM:SS</td><td>53</td><td>Centered</td><td>Phase color</td></tr>
+  </tbody>
+</table>
+
+<p>The threshold for compact mode selection is <code>display_width ≤ 96 px</code>, implemented as a comparison at simulator initialisation. Physical hardware backends shall apply the same threshold.</p>
+</div>
+
+<!-- ====================================================
+     SECTION 3 — DISPLAY HARDWARE SPECIFICATIONS
+     ==================================================== -->
+<div class="section" id="sec-hardware">
+<h1>3. Display Hardware Specifications</h1>
+
+<h2 id="sec-panels">3.1 LED Panel Options</h2>
+<p>Two LED panel families are approved for use with the ATLAS display system. Selection between P5 and P10 is driven by the installation environment (indoor versus outdoor) and the required viewing distance. Both panel types use the same HUB75 electrical interface and are therefore interchangeable from a software perspective.</p>
+
+<table>
+  <caption data-label="Table 3-1">LED Panel Comparison — P5 Indoor vs. P10 Outdoor</caption>
+  <thead>
+    <tr><th>Parameter</th><th>P5 Indoor</th><th>P10 Outdoor</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Pixel Pitch</td><td>5 mm</td><td>10 mm</td></tr>
+    <tr><td>Module Size (W × H)</td><td>320 × 160 mm</td><td>320 × 160 mm</td></tr>
+    <tr><td>Module Resolution</td><td>64 × 32 px</td><td>32 × 16 px</td></tr>
+    <tr><td>LED Type</td><td>SMD 2121</td><td>SMD 3535 / DIP 346</td></tr>
+    <tr><td>Peak Brightness</td><td>800–1,200 cd/m²</td><td>6,000–8,000 cd/m²</td></tr>
+    <tr><td>Viewing Angle (H × V)</td><td>120° × 60°</td><td>120° × 60°</td></tr>
+    <tr><td>IP Rating</td><td>IP31 (indoor)</td><td>IP65 (outdoor)</td></tr>
+    <tr><td>Operating Temperature</td><td>-10 °C to +45 °C</td><td>-20 °C to +55 °C</td></tr>
+    <tr><td>Power Consumption (peak)</td><td>≈ 80 W/m²</td><td>≈ 200 W/m²</td></tr>
+    <tr><td>Refresh Rate</td><td>≥ 1,920 Hz</td><td>≥ 960 Hz</td></tr>
+    <tr><td>Colour Depth</td><td>16-bit per channel (48-bit RGB)</td><td>16-bit per channel (48-bit RGB)</td></tr>
+    <tr><td>Connector</td><td>HUB75E (2 × 8 IDC)</td><td>HUB75 (2 × 8 IDC)</td></tr>
+    <tr><td>Recommended Use</td><td>Indoor timing tower, hangar display</td><td>Outdoor flight line, grandstand</td></tr>
+  </tbody>
+</table>
+
+<h2 id="sec-resolution">3.2 Resolution and Layout Configuration</h2>
+<p>The ATLAS display requires a minimum resolution of 64×64 pixels (Compact profile) and recommends 128×64 pixels (Full profile) for optimal readability of the 5×7 bitmap font. Table 3-2 defines the panel module counts required for each profile.</p>
+
+<table>
+  <caption data-label="Table 3-2">Panel Array Configuration</caption>
+  <thead>
+    <tr><th>Profile</th><th>Resolution</th><th>P5 Modules (W × H)</th><th>P10 Modules (W × H)</th><th>Physical Size (P5)</th><th>Physical Size (P10)</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Compact</td><td>64 × 64 px</td><td>1 × 2</td><td>2 × 4</td><td>320 × 320 mm</td><td>640 × 640 mm</td></tr>
+    <tr><td>Full (recommended)</td><td>128 × 64 px</td><td>2 × 2</td><td>4 × 4</td><td>640 × 320 mm</td><td>1,280 × 640 mm</td></tr>
+    <tr><td>Extended (optional)</td><td>256 × 64 px</td><td>4 × 2</td><td>8 × 4</td><td>1,280 × 320 mm</td><td>2,560 × 640 mm</td></tr>
+  </tbody>
+</table>
+
+<p>The <code>config.py</code> module currently computes panel resolution from <code>panels_wide × 32</code> (width) and <code>panels_high × 16</code> (height), consistent with P10 module geometry. For P5 panels, the multiplier changes to <code>panels_wide × 64</code> (width) and <code>panels_high × 32</code> (height). This parameter shall be made configurable in the database settings table under keys <code>px_per_module_wide</code> and <code>px_per_module_high</code> in a future software revision.</p>
+
+<h2 id="sec-viewing">3.3 Viewing Distance and Brightness</h2>
+<p>Optimal viewing distance for an LED display is a function of pixel pitch. A practical rule is that the minimum comfortable viewing distance equals approximately 1,000 × pixel pitch (in the same units). Table 3-3 provides viewing distance ranges for both panel types.</p>
+
+<table>
+  <caption data-label="Table 3-3">Viewing Distance and Brightness Requirements</caption>
+  <thead>
+    <tr><th>Panel</th><th>Min. Distance</th><th>Optimal Distance</th><th>Max. Distance</th><th>Daytime Brightness</th><th>Night Brightness</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>P5 Indoor</td><td>4 m</td><td>8–20 m</td><td>30 m</td><td>100% (≈1,000 cd/m²)</td><td>10–30%</td></tr>
+    <tr><td>P10 Outdoor</td><td>8 m</td><td>15–50 m</td><td>80 m</td><td>100% (≈7,000 cd/m²)</td><td>20–40%</td></tr>
+  </tbody>
+</table>
+
+<p>The ATLAS brightness control slider (10–100%, five labeled steps: Night / Overcast / Normal / Bright Day / Full Sun) maps directly to these brightness requirements. The software brightness value is transmitted to the backend and must be applied uniformly to all LEDs in the panel array, without per-channel correction at the software layer.</p>
+</div>
+
+<!-- ====================================================
+     SECTION 4 — INTERFACE PROTOCOLS
+     ==================================================== -->
+<div class="section" id="sec-protocols">
+<h1>4. Interface Protocols</h1>
+
+<h2 id="sec-hub75">4.1 HUB75 RGB LED Matrix Protocol</h2>
+<p>HUB75 is the de facto standard parallel interface for driving RGB LED matrix panels directly from a microcontroller or single-board computer. It uses a 16-pin IDC (2×8) connector and transmits pixel data serially, one row at a time, using a shift-register architecture. The protocol is synchronous: all signals are referenced to a common clock (CLK).</p>
+
+<p>The HUB75 protocol drives <em>two</em> rows simultaneously per clock cycle (upper half and lower half of the panel are driven in parallel via separate R1/G1/B1 and R2/G2/B2 data lines). For a 32-row panel, the row select lines A, B, C, D address 16 pairs, yielding 16 multiplex steps per frame.</p>
+
+<div class="callout">
+  <div class="callout-title">HUB75E Variant</div>
+  HUB75<strong>E</strong> adds a fifth row-select line (E) to support 64-row panels (32 pairs). P5 modules commonly use HUB75E. The ATLAS HAL must detect the panel height and configure the row-select bus accordingly (4-bit for 32-row, 5-bit for 64-row).
+</div>
+
+<h2 id="sec-altproto">4.2 Alternative Protocols</h2>
+
+<h3>4.2.1 Artnet DMX (UDP/IP)</h3>
+<p>Artnet is an Ethernet-based protocol that encapsulates DMX512 data in UDP packets, transmitting pixel values over a standard network switch. It is supported by commercial LED controllers (e.g., Novastar, Colorlight) and is appropriate when the host computer and LED controller are connected via Ethernet rather than GPIO/USB. Artnet Universe 0, starting at DMX address 1, can carry 512 channels, sufficient for a 64×64 display as 8-bit RGB (512/3 = 170 pixels per universe; chained universes required for larger arrays).</p>
+
+<h3>4.2.2 Serial / UART</h3>
+<p>A simplified serial protocol over USB-to-UART or RS-232 is viable for custom or low-cost embedded controllers. A text-based or binary frame structure (see Section 5.3) can be transmitted from the Mac Mini at 115,200 baud or higher. This approach requires a custom firmware image on the controller board and is the least mature of the three protocol options. It is included for completeness and for scenarios where Ethernet and GPIO both present integration challenges.</p>
+
+<h2 id="sec-protsel">4.3 Protocol Selection Criteria</h2>
+<table>
+  <caption data-label="Table 4-1">Protocol Selection Matrix</caption>
+  <thead>
+    <tr><th>Criterion</th><th>HUB75 Direct</th><th>Artnet DMX</th><th>Serial/UART</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Controller hardware cost</td><td>Low (RPi Zero 2W ~$20)</td><td>Medium ($150–$500)</td><td>Very low (&lt;$10)</td></tr>
+    <tr><td>Max panel refresh rate</td><td>High (≥120 Hz at 128×64)</td><td>Medium (≥40 Hz)</td><td>Low (≥10 Hz at 115.2 kbps)</td></tr>
+    <tr><td>Cabling distance</td><td>Short (≤1 m flat ribbon)</td><td>Long (100 m Ethernet)</td><td>Medium (10–15 m USB)</td></tr>
+    <tr><td>Software complexity</td><td>Medium (bit-bang or rpi-rgb-led-matrix lib)</td><td>Low (UDP socket)</td><td>Medium (binary framing)</td></tr>
+    <tr><td>Commercial support</td><td>Community (well-documented)</td><td>Industry standard</td><td>Custom only</td></tr>
+    <tr><td>Recommended for ATLAS</td><td><strong>Primary choice</strong></td><td>Fallback / expansion</td><td>Prototype only</td></tr>
+  </tbody>
+</table>
+
+<p>The recommended implementation for ATLAS hardware integration is <strong>HUB75 direct-drive using a Raspberry Pi 4 or Pi Zero 2W</strong> running the <code>rpi-rgb-led-matrix</code> open-source library. The Mac Mini connects to the Raspberry Pi over USB (acting as a USB-Serial bridge) or over Ethernet (local TCP socket), and the Pi drives the LED panels directly via GPIO. This architecture decouples the ATLAS application from the real-time pixel-clocking requirements of HUB75.</p>
+</div>
+
+<!-- ====================================================
+     SECTION 5 — SIGNAL DEFINITIONS
+     ==================================================== -->
+<div class="section" id="sec-signals">
+<h1>5. Signal Definitions</h1>
+
+<h2 id="sec-pinout">5.1 HUB75 Connector Pinout</h2>
+<p>The HUB75 interface uses a 16-pin IDC (2×8) connector. Table 5-1 defines the pin assignments for the standard HUB75 and HUB75E variants. All signal lines are 3.3 V or 5 V CMOS logic; the controller must match the panel's input voltage (check panel datasheet). Series termination resistors (33–47 Ω) on data and clock lines are recommended for cable runs exceeding 0.3 m.</p>
+
+<table>
+  <caption data-label="Table 5-1">HUB75 / HUB75E Connector Pinout (2×8 IDC, numbered top-to-bottom, odd = left column)</caption>
+  <thead>
+    <tr><th>Pin</th><th>Signal</th><th>Direction</th><th>Description</th><th>Logic Level</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>1</td><td>R1</td><td>Controller → Panel</td><td>Red data — upper half of panel</td><td>3.3 / 5 V</td></tr>
+    <tr><td>2</td><td>G1</td><td>Controller → Panel</td><td>Green data — upper half of panel</td><td>3.3 / 5 V</td></tr>
+    <tr><td>3</td><td>B1</td><td>Controller → Panel</td><td>Blue data — upper half of panel</td><td>3.3 / 5 V</td></tr>
+    <tr><td>4</td><td>GND</td><td>—</td><td>Signal ground (0 V reference)</td><td>0 V</td></tr>
+    <tr><td>5</td><td>R2</td><td>Controller → Panel</td><td>Red data — lower half of panel</td><td>3.3 / 5 V</td></tr>
+    <tr><td>6</td><td>G2</td><td>Controller → Panel</td><td>Green data — lower half of panel</td><td>3.3 / 5 V</td></tr>
+    <tr><td>7</td><td>B2</td><td>Controller → Panel</td><td>Blue data — lower half of panel</td><td>3.3 / 5 V</td></tr>
+    <tr><td>8</td><td>GND</td><td>—</td><td>Signal ground</td><td>0 V</td></tr>
+    <tr><td>9</td><td>A</td><td>Controller → Panel</td><td>Row select bit 0 (LSB)</td><td>3.3 / 5 V</td></tr>
+    <tr><td>10</td><td>B</td><td>Controller → Panel</td><td>Row select bit 1</td><td>3.3 / 5 V</td></tr>
+    <tr><td>11</td><td>C</td><td>Controller → Panel</td><td>Row select bit 2</td><td>3.3 / 5 V</td></tr>
+    <tr><td>12</td><td>D</td><td>Controller → Panel</td><td>Row select bit 3 (MSB for 32-row)</td><td>3.3 / 5 V</td></tr>
+    <tr><td>13</td><td>CLK</td><td>Controller → Panel</td><td>Shift register clock (rising edge active)</td><td>3.3 / 5 V</td></tr>
+    <tr><td>14</td><td>STB / LAT</td><td>Controller → Panel</td><td>Strobe / Latch: transfers shift register to output</td><td>3.3 / 5 V</td></tr>
+    <tr><td>15</td><td>OE</td><td>Controller → Panel</td><td>Output Enable (active LOW): enables LED drivers</td><td>3.3 / 5 V</td></tr>
+    <tr><td>16</td><td>E (HUB75E)</td><td>Controller → Panel</td><td>Row select bit 4 — required for 64-row panels (P5)</td><td>3.3 / 5 V</td></tr>
+  </tbody>
+</table>
+
+<h2 id="sec-timing">5.2 Timing Diagrams</h2>
+<p>Figure 5-1 illustrates the HUB75 single-row scan cycle. Each scan cycle clocks out one row of pixel data, latches it, and enables the LED drivers for the blanking period. The OE signal is used for PWM brightness control by modulating the enable duration.</p>
+
+<figure>
+<div class="diagram-box">
+Row Scan Cycle (one of N/2 rows per frame):
+
+CLK   ┌┐┌┐┌┐┌┐┌┐┌┐┌┐┌┐┌┐┌┐┌┐┌┐  . . .  ┌┐┌┐  ──────────
+      ││││││││││││││││││││││││││           ││││
+R1/G1 ──[D0]──[D1]──[D2]──[D3]──  . . .  [Dn]───────────
+B1/R2 (parallel, same timing)
+
+      ┌─────────────────────────────────────────────┐
+STB   │                                             │
+──────┘ clocked on rising edge of CLK               └────
+
+A/B   ────────── ROW SELECT [stable during clock] ───────
+C/D/E
+
+OE    ───┐          (pulled HIGH = LEDs OFF during load)
+(LOW)    └─────────────────────────── . . . ────────┐
+         Blanking interval               LED ON      └───
+
+Brightness PWM: duty cycle of OE LOW determines brightness.
+At 10% brightness: OE LOW for 10% of row period.
+At 100% brightness: OE LOW for 100% of row period.
+</div>
+<figcaption data-label="Figure 5-1">HUB75 Row Scan Timing — Single Row Cycle</figcaption>
+</figure>
+
+<table>
+  <caption data-label="Table 5-2">HUB75 Timing Parameters (Typical, 5 V CMOS)</caption>
+  <thead><tr><th>Parameter</th><th>Symbol</th><th>Min</th><th>Typical</th><th>Max</th><th>Unit</th></tr></thead>
+  <tbody>
+    <tr><td>Clock frequency</td><td>f_CLK</td><td>1</td><td>10</td><td>20</td><td>MHz</td></tr>
+    <tr><td>Clock high time</td><td>t_CH</td><td>20</td><td>50</td><td>—</td><td>ns</td></tr>
+    <tr><td>Clock low time</td><td>t_CL</td><td>20</td><td>50</td><td>—</td><td>ns</td></tr>
+    <tr><td>Data setup time (to CLK rise)</td><td>t_DS</td><td>5</td><td>—</td><td>—</td><td>ns</td></tr>
+    <tr><td>Data hold time (after CLK rise)</td><td>t_DH</td><td>5</td><td>—</td><td>—</td><td>ns</td></tr>
+    <tr><td>STB pulse width</td><td>t_STB</td><td>50</td><td>100</td><td>—</td><td>ns</td></tr>
+    <tr><td>Row select settling time</td><td>t_RS</td><td>100</td><td>—</td><td>—</td><td>ns</td></tr>
+    <tr><td>Frame refresh period (128×64, 60 Hz)</td><td>t_FR</td><td>—</td><td>16.7</td><td>—</td><td>ms</td></tr>
+  </tbody>
+</table>
+
+<h2 id="sec-dataformat">5.3 Data Frame Format</h2>
+<p>The ATLAS HAL represents a complete display frame as a two-dimensional byte array of dimensions <code>[height][width][3]</code>, where the innermost dimension contains the R, G, B byte values (8-bit per channel). Brightness scaling is applied by the HAL before transmission; the engine and model layers always operate in full-scale (0–255) colour.</p>
+
+<pre class="code-block"><code># Frame buffer type definition (Python pseudo-specification)
+FrameBuffer = List[List[Tuple[int, int, int]]]   # [row][col] = (R, G, B)
+
+# Dimensions: frame[row][col] where
+#   row in range(0, display_height)   # 0 = top
+#   col in range(0, display_width)    # 0 = left
+#   R, G, B in range(0, 256)          # full 8-bit colour, pre-brightness-scaled
+
+# Example: set pixel at row=5, col=10 to full red
+frame[5][10] = (255, 0, 0)
+
+# Brightness application before HAL send:
+scaled = tuple(int(ch * brightness / 100) for ch in (R, G, B))</code></pre>
+
+<h2 id="sec-rowaddr">5.4 Row Addressing for 6-Row Configuration</h2>
+<p>It is important to distinguish between the <em>logical</em> display rows defined by the ATLAS 6-row layout strategy (Section 2.3) and the <em>physical</em> row scan lines of the HUB75 panel. The 6-row layout refers to content regions defined in pixel coordinates; the HUB75 panel scans each physical pixel row independently. Figure 5-2 maps logical rows to physical pixel rows for the Full profile (128×64).</p>
+
+<figure>
+<div class="diagram-box">
+LOGICAL ROW → PHYSICAL PIXEL ROW MAPPING (Full Profile, 128×64 px)
+
+Logical Row 1 (Local Time)          pixels Y:  0 –  9  (10 px)
+Logical Row 2 (Heat Info)           pixels Y: 10 – 19  (10 px)
+Logical Row 3 (Window Times)        pixels Y: 20 – 29  (10 px)
+Logical Row 4 (Phase Label)         pixels Y: 33 – 42  (10 px, Y=35 origin + 7px font)
+Logical Row 5 (Timer 2× scale)      pixels Y: 43 – 58  (16 px — 2× scaled 5×7 font)
+Logical Row 6 (Status Band)         pixels Y: 62 – 63  ( 2 px solid fill)
+
+HUB75 Physical Scan Pairs (64-row panel, 32 pairs via A/B/C/D/E):
+  Pair  0: physical rows  0,  32  →  covers Logical Rows 1–2
+  Pair  1: physical rows  1,  33  →  covers Logical Rows 1–2
+  ...
+  Pair  9: physical rows  9,  41  →  covers Logical Rows 1–4
+  ...
+  Pair 15: physical rows 15,  47  →  covers Logical Rows 4–5
+  ...
+  Pair 31: physical rows 31,  63  →  covers Logical Rows 5–6
+</div>
+<figcaption data-label="Figure 5-2">Logical Row to Physical HUB75 Scan Row Mapping (128×64 Full Profile)</figcaption>
+</figure>
+
+<div class="callout callout-note">
+  <div class="callout-title">Note — No Software Row Mapping Required</div>
+  The <code>rpi-rgb-led-matrix</code> library abstracts away the physical scan pairs; software writes to a 2D pixel coordinate space and the library handles interleaving. Direct register-level implementations must account for the pair interleaving shown in Figure 5-2.
+</div>
+</div>
+
+<!-- ====================================================
+     SECTION 6 — HARDWARE ABSTRACTION LAYER
+     ==================================================== -->
+<div class="section" id="sec-hal">
+<h1>6. Hardware Abstraction Layer (HAL)</h1>
+
+<p>The Hardware Abstraction Layer is the critical architectural boundary between the ATLAS application software and the physical display hardware. All hardware-specific code is contained within backend modules that implement the <code>DisplayBackend</code> abstract interface. No hardware-specific code shall appear in <code>engine.py</code>, <code>models.py</code>, <code>windows.py</code>, or <code>database.py</code>.</p>
+
+<h2 id="sec-hal-design">6.1 Abstract Interface Design</h2>
+<p>The <code>DisplayBackend</code> abstract base class defines the complete contract that every backend must fulfil. It consists of five mandatory methods. Any class that does not implement all five methods cannot be registered as a valid backend.</p>
+
+<pre class="code-block"><code>from abc import ABC, abstractmethod
+from core.models import AtlasDisplayModel
+
+class DisplayBackend(ABC):
+    """
+    ATLAS HAL — Abstract Display Backend (ATLAS-ICD-001 §6.1)
+    All physical and virtual display implementations must inherit
+    from this class and implement every abstract method.
+    """
+
+    @abstractmethod
+    def initialize(self, config) -> bool:
+        """
+        Allocate hardware resources, open device handles, and configure
+        the display for operation.
+        :param config: DisplayConfig object (width, height, brightness, etc.)
+        :return: True if initialisation succeeded; False on failure.
+        """
+
+    @abstractmethod
+    def render(self, model: AtlasDisplayModel) -> None:
+        """
+        Receive an AtlasDisplayModel snapshot and render a complete frame
+        to the display. Called once per engine tick (≈1 Hz).
+        Must NOT block for more than 100 ms.
+        """
+
+    @abstractmethod
+    def set_brightness(self, value: int) -> None:
+        """
+        Adjust display brightness in real time.
+        :param value: Integer percentage, range 10–100 inclusive.
+        Must take effect within 2 seconds without restarting the app.
+        """
+
+    @abstractmethod
+    def clear(self) -> None:
+        """
+        Set all pixels to off (black). Called on graceful shutdown
+        to blank the display before power-down.
+        """
+
+    @abstractmethod
+    def shutdown(self) -> None:
+        """
+        Release all hardware resources. Called once on application exit.
+        Must call clear() before releasing resources.
+        """</code></pre>
+
+<h2 id="sec-hal-sim">6.2 Simulator Backend (Current Implementation)</h2>
+<p>The current system implements a <code>SimulatorBackend</code> that wraps the existing <code>AtlasLEDSimulator</code> Qt widget. This backend renders the 6-row layout using QPainter onto a Qt window, with circular LED pixels and a 5×7 bitmap font. It is fully functional and is the production backend for all software-only deployments.</p>
+
+<table>
+  <caption data-label="Table 6-1">Simulator Backend Characteristics</caption>
+  <thead><tr><th>Property</th><th>Value</th></tr></thead>
+  <tbody>
+    <tr><td>Backend identifier</td><td><code>"simulator"</code></td></tr>
+    <tr><td>Module</td><td><code>led_simulator.py</code> — <code>AtlasLEDSimulator</code></td></tr>
+    <tr><td>Rendering engine</td><td>Qt6 QPainter (PySide6)</td></tr>
+    <tr><td>Font</td><td>5×7 bitmap, <code>AtlasBitmapFont.FONT_5x7</code></td></tr>
+    <tr><td>LED pixel style</td><td>Filled ellipse, radius = <code>led_scale − 1</code></td></tr>
+    <tr><td>Brightness scaling</td><td>Linear per-channel multiply: <code>ch × brightness / 100</code></td></tr>
+    <tr><td>Update rate</td><td>1 Hz (driven by engine tick)</td></tr>
+    <tr><td>Adaptive layout</td><td>Full (cols &gt; 96) / Compact (cols ≤ 96) auto-selected</td></tr>
+    <tr><td>Physical hardware required</td><td>None — software only</td></tr>
+  </tbody>
+</table>
+
+<h2 id="sec-hal-hw">6.3 Physical Hardware Backend (Future)</h2>
+<p>The <code>HUB75Backend</code> will be implemented to drive physical LED panels via a Raspberry Pi controller. The Mac Mini communicates with the Raspberry Pi over a local TCP socket (preferred) or USB-Serial link. The Raspberry Pi runs a lightweight Python daemon (<code>atlas_display_daemon.py</code>) that accepts <code>AtlasDisplayModel</code> JSON objects, renders the 6-row frame using the <code>rpi-rgb-led-matrix</code> Python bindings, and writes directly to the HUB75 GPIO bus.</p>
+
+<figure>
+<div class="diagram-box">
+Mac Mini M4                         Raspberry Pi 4 / Zero 2W
+┌─────────────────────────┐         ┌────────────────────────────────┐
+│  AtlasEngine            │         │  atlas_display_daemon.py       │
+│  model_updated.emit()   │         │                                │
+│         │               │         │  recv JSON → AtlasDisplayModel │
+│  HUB75Backend           │ TCP/USB │  → 6-row renderer              │
+│  .render(model)         │────────►│  → rpi-rgb-led-matrix          │
+│    JSON serialise ──────┼─────────┼──► RGBMatrix.SetImage()        │
+│  .set_brightness(n)     │         │                                │
+│    "BRIGHT:80\n"────────┼─────────┼──► matrix.brightness = 80      │
+│                         │         │                                │
+└─────────────────────────┘         └──────────┬─────────────────────┘
+                                               │ HUB75 GPIO (40-pin header)
+                                    ┌──────────▼─────────────────────┐
+                                    │   LED Panel Array (P5 / P10)   │
+                                    └────────────────────────────────┘
+</div>
+<figcaption data-label="Figure 6-1">HUB75 Physical Backend Architecture</figcaption>
+</figure>
+
+<p>The <code>ArtnetBackend</code> is an alternative future backend for installations using a commercial LED controller connected to the venue Ethernet infrastructure. It packages the rendered frame buffer as Artnet universe packets and transmits them via UDP broadcast to the controller's IP address.</p>
+
+<h2 id="sec-hal-factory">6.4 Backend Selection Mechanism</h2>
+<p>The backend is selected at application startup from the <code>display_backend</code> key in the ATLAS settings database. The backend factory module returns a fully configured backend object ready for <code>initialize()</code> to be called. No restart is required to switch brightness; a restart is required to switch backend type.</p>
+
+<pre class="code-block"><code># backend_factory.py  (ATLAS-ICD-001 §6.4)
+BACKEND_REGISTRY = {
+    "simulator": SimulatorBackend,
+    "hub75":     HUB75Backend,      # Future
+    "artnet":    ArtnetBackend,     # Future
+    "serial":    SerialBackend,     # Prototype
+}
+
+def create_display_backend(backend_type: str) -> DisplayBackend:
+    cls = BACKEND_REGISTRY.get(backend_type)
+    if cls is None:
+        print(f"[WARN] Unknown backend '{backend_type}', falling back to simulator")
+        cls = SimulatorBackend
+    return cls()</code></pre>
+
+<table>
+  <caption data-label="Table 6-2">Backend Selection — Database Setting Values</caption>
+  <thead><tr><th>Setting Value</th><th>Backend</th><th>Status</th><th>Notes</th></tr></thead>
+  <tbody>
+    <tr><td><code>"simulator"</code></td><td>SimulatorBackend</td><td><span class="badge badge-current">Current</span></td><td>Qt6 window, no hardware required</td></tr>
+    <tr><td><code>"hub75"</code></td><td>HUB75Backend</td><td><span class="badge badge-future">Future</span></td><td>Raspberry Pi + rpi-rgb-led-matrix</td></tr>
+    <tr><td><code>"artnet"</code></td><td>ArtnetBackend</td><td><span class="badge badge-future">Future</span></td><td>Commercial controller, UDP/IP</td></tr>
+    <tr><td><code>"serial"</code></td><td>SerialBackend</td><td><span class="badge badge-tbd">TBD</span></td><td>USB-Serial embedded controller</td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- ====================================================
+     SECTION 7 — INTEGRATION REQUIREMENTS
+     ==================================================== -->
+<div class="section" id="sec-integration">
+<h1>7. Integration Requirements</h1>
+
+<h2>7.1 Power Requirements</h2>
+<p>LED panel power consumption must be assessed for the specific panel model and array size selected. Table 7-1 provides indicative power budgets for the recommended configurations. A margin of at least 25% shall be applied to all power supply ratings to account for cold-start inrush current and peak brightness operation.</p>
+
+<table>
+  <caption data-label="Table 7-1">Indicative Power Budget by Configuration</caption>
+  <thead><tr><th>Configuration</th><th>Panel Count</th><th>Avg Power</th><th>Peak Power</th><th>Min PSU Rating</th><th>Supply Voltage</th></tr></thead>
+  <tbody>
+    <tr><td>P5 Compact (64×64)</td><td>2 modules</td><td>35 W</td><td>90 W</td><td>5 V / 25 A</td><td>5 V DC</td></tr>
+    <tr><td>P5 Full (128×64)</td><td>4 modules</td><td>70 W</td><td>180 W</td><td>5 V / 50 A</td><td>5 V DC</td></tr>
+    <tr><td>P10 Compact (64×64)</td><td>8 modules</td><td>60 W</td><td>150 W</td><td>5 V / 40 A</td><td>5 V DC</td></tr>
+    <tr><td>P10 Full (128×64)</td><td>16 modules</td><td>120 W</td><td>300 W</td><td>5 V / 80 A</td><td>5 V DC</td></tr>
+  </tbody>
+</table>
+
+<div class="callout callout-warn">
+  <div class="callout-title">Warning — Power Sequencing</div>
+  Always power the LED panels <strong>before</strong> asserting HUB75 data signals. Applying data signals to unpowered panels may damage input protection diodes. The ATLAS shutdown procedure must clear (blank) the display before cutting panel power.
+</div>
+
+<h2>7.2 Cabling and Connectors</h2>
+<ul>
+  <li><strong>Panel power cable:</strong> 5 V / 0 V on 14 AWG (≥2.5 mm²) minimum for runs up to 1 m. Voltage drop shall not exceed 0.2 V at peak load. Use star-topology power distribution from the PSU to each panel module.</li>
+  <li><strong>HUB75 data cable:</strong> Standard 16-pin IDC flat ribbon cable. Maximum recommended length between controller and first panel: 0.5 m. Between daisy-chained panels: use panel's built-in pass-through connector; do not extend with additional cable.</li>
+  <li><strong>Controller-to-host cable (Raspberry Pi option):</strong> Standard USB-A to USB-Micro or USB-C, maximum 2 m, or shielded Cat-5e Ethernet for TCP socket connection, maximum 100 m.</li>
+  <li><strong>Grounding:</strong> The signal ground of the HUB75 connector (pins 4 and 8) must be bonded to the PSU negative rail and to the panel chassis. A single-point ground at the PSU is preferred.</li>
+</ul>
+
+<h2>7.3 Environmental Considerations</h2>
+<table>
+  <caption data-label="Table 7-2">Environmental Operating Requirements</caption>
+  <thead><tr><th>Parameter</th><th>P5 Indoor</th><th>P10 Outdoor</th></tr></thead>
+  <tbody>
+    <tr><td>Operating temperature</td><td>-10 °C to +45 °C</td><td>-20 °C to +55 °C</td></tr>
+    <tr><td>Storage temperature</td><td>-20 °C to +65 °C</td><td>-40 °C to +70 °C</td></tr>
+    <tr><td>Relative humidity (operating)</td><td>10–80% non-condensing</td><td>10–95% non-condensing</td></tr>
+    <tr><td>IP rating</td><td>IP31 (drip-proof)</td><td>IP65 (dust/jet water proof)</td></tr>
+    <tr><td>Wind load (outdoor)</td><td>N/A</td><td>Must be rated for site-specific wind loading; consult structural engineer for permanent mounting</td></tr>
+    <tr><td>Vibration (transport)</td><td>Packing as per manufacturer</td><td>Packing as per manufacturer</td></tr>
+  </tbody>
+</table>
+
+<h2>7.4 Safety and Compliance</h2>
+<p>The following electrical safety and EMC requirements apply to the complete ATLAS display installation:</p>
+<ul>
+  <li>All power supplies must carry an applicable safety certification for the jurisdiction of use (e.g., SAA/RCM for Australia/NZ, CE for EU, UL for USA/Canada).</li>
+  <li>The installation must comply with AS/NZS 3000 wiring rules (Australia/NZ) or the applicable national electrical code.</li>
+  <li>LED display panels are Class 1 equipment; the panel chassis shall be protectively earthed (green/yellow conductor, minimum 1.5 mm²).</li>
+  <li>EMC emissions from the HUB75 flat ribbon cable can be significant. Cable shall be routed away from RF-sensitive equipment (e.g., radio receivers, GPS units). Ferrite clamps on the ribbon cable at both the controller and panel ends are recommended for P10 outdoor installations.</li>
+  <li>A residual current device (RCD/GFCI) of 30 mA or less shall protect the AC supply circuit feeding the display PSU, per AS/NZS 3000:2018 requirements for outdoor electrical equipment.</li>
+</ul>
+</div>
+
+<!-- ====================================================
+     SECTION 8 — TESTING AND VALIDATION
+     ==================================================== -->
+<div class="section" id="sec-testing">
+<h1>8. Testing and Validation</h1>
+
+<h2>8.1 Interface Verification Procedures</h2>
+<p>The following verification tests shall be conducted upon installation of physical hardware and after any modification to the display system or its software. Tests are listed in the order they shall be executed; any failure halts the sequence until the defect is rectified.</p>
+
+<table>
+  <caption data-label="Table 8-1">Interface Verification Test Sequence</caption>
+  <thead><tr><th>Test ID</th><th>Name</th><th>Procedure</th><th>Pass Criterion</th></tr></thead>
+  <tbody>
+    <tr><td>IVT-01</td><td>Power-On Self-Test</td><td>Apply mains power; observe display for 10 s</td><td>All pixels illuminate in sequence (panel self-test); no flickering; no dead rows or columns</td></tr>
+    <tr><td>IVT-02</td><td>HAL Backend Initialisation</td><td>Launch ATLAS application with target backend configured</td><td>Application starts without error; operator console displays; no "Failed to initialize display backend" message</td></tr>
+    <tr><td>IVT-03</td><td>Blank Frame Render</td><td>Call <code>display_backend.clear()</code> via test harness</td><td>All pixels extinguish within 1 second</td></tr>
+    <tr><td>IVT-04</td><td>Full-Colour Fill</td><td>Send solid Red, Green, Blue frames sequentially</td><td>Each colour fills all pixels uniformly; no dead LEDs visible at normal brightness</td></tr>
+    <tr><td>IVT-05</td><td>6-Row Layout Render</td><td>Inject a known <code>AtlasDisplayModel</code> with all fields populated; render to display</td><td>All six rows render in correct positions; correct colours; no truncation or overflow at panel edges</td></tr>
+    <tr><td>IVT-06</td><td>Brightness Control</td><td>Sweep brightness from 10% to 100% in 10% steps; hold 2 s per step</td><td>Display luminance increases monotonically; no colour shift; no flicker; response time ≤ 2 s per step</td></tr>
+    <tr><td>IVT-07</td><td>1 Hz Update Rate</td><td>Run ATLAS with an active heat for 60 s; time-stamp each render call</td><td>All 60 render calls complete; interval between renders 950–1,050 ms; no dropped frames</td></tr>
+    <tr><td>IVT-08</td><td>Graceful Shutdown</td><td>Click "EXIT TO macOS"; observe display</td><td>Display blanks completely before application window closes; no residual pixel state</td></tr>
+    <tr><td>IVT-09</td><td>Phase Transition Display</td><td>Schedule a heat with track_open 90 s in the future; observe display through all phases</td><td>Phase label and colour change correctly at each transition: Yellow→Green→Red; no rendering artefacts</td></tr>
+    <tr><td>IVT-10</td><td>Compact / Full Mode Switch</td><td>Configure 64×64 profile; restart; verify compact mode activates; switch to 128×64; restart; verify full mode</td><td>Correct mode selected for each resolution; abbreviations applied in compact mode</td></tr>
+  </tbody>
+</table>
+
+<h2>8.2 Acceptance Criteria</h2>
+<p>The ATLAS display hardware integration is accepted when all ten IVT tests pass with zero failures in a single test run. A partial pass (nine of ten) is not acceptable; all tests are mandatory. The test results shall be documented on an IVT sign-off sheet referencing this document (ATLAS-ICD-001 Rev 1.0) and retained as part of the project commissioning record.</p>
+
+<p>The following quantitative performance requirements constitute the minimum acceptance threshold for physical hardware:</p>
+<ul>
+  <li>Frame render latency from model receipt to first pixel visible: ≤ 100 ms</li>
+  <li>Brightness adjustment response time: ≤ 2 seconds</li>
+  <li>Panel refresh rate (hardware scan rate): ≥ 60 Hz (P10), ≥ 120 Hz (P5)</li>
+  <li>Dead pixel count: 0 (zero tolerance; any dead pixel requires panel replacement)</li>
+  <li>Operational uptime during a six-hour competition day: ≥ 99.5% (maximum 108 s of unplanned outage)</li>
+</ul>
+</div>
+
+<!-- ====================================================
+     APPENDICES
+     ==================================================== -->
+<div class="section" id="sec-app-a">
+<h1>Appendix A — Glossary of Terms</h1>
+
+<dl>
+  <dt>Artnet DMX</dt><dd>An industry-standard protocol encapsulating DMX512 lighting control data in UDP/IP packets for transmission over Ethernet networks.</dd>
+  <dt>AtlasDisplayModel</dt><dd>The Pydantic data model class in <code>models.py</code> that carries all display-relevant state from the AtlasEngine to the HAL backend once per second.</dd>
+  <dt>AtlasEngine</dt><dd>The core timing state machine in <code>engine.py</code>. Maintains phase P0–P4 transitions, UTC-referenced countdown timers, and auto-activation of heats.</dd>
+  <dt>Compact Mode</dt><dd>The six-row display layout profile selected when display width ≤ 96 px. Uses abbreviated phase labels and single-scale font throughout.</dd>
+  <dt>DisplayBackend</dt><dd>The abstract base class (ATLAS HAL) that all display implementations must inherit. Defines the <code>initialize</code>, <code>render</code>, <code>set_brightness</code>, <code>clear</code>, and <code>shutdown</code> interface contract.</dd>
+  <dt>Full Mode</dt><dd>The six-row display layout profile for display width &gt; 96 px (e.g., 128×64). Uses 2× scaled primary timer font and inline track window times.</dd>
+  <dt>HAL</dt><dd>Hardware Abstraction Layer. The architectural boundary in ATLAS that isolates application software from hardware-specific display drivers.</dd>
+  <dt>HUB75</dt><dd>A 16-pin IDC parallel interface standard used to drive RGB LED matrix panels. The primary approved protocol for ATLAS physical hardware integration.</dd>
+  <dt>HUB75E</dt><dd>An extended variant of HUB75 adding a fifth row-select line (E) to support panels with 64 or more rows, such as P5 indoor panels.</dd>
+  <dt>ICD</dt><dd>Interface Control Document. A formal engineering document defining the interface between two subsystems or components.</dd>
+  <dt>IDC</dt><dd>Insulation-Displacement Connector. A cable connector type that terminates multi-conductor flat ribbon cables by piercing the insulation.</dd>
+  <dt>OE</dt><dd>Output Enable. An active-LOW signal on HUB75 that gates the LED driver outputs. PWM modulation of OE controls display brightness.</dd>
+  <dt>P5</dt><dd>A 5 mm pixel pitch LED panel type, typically SMD-packaged, recommended for indoor or short-viewing-distance applications.</dd>
+  <dt>P10</dt><dd>A 10 mm pixel pitch LED panel type, typically available in outdoor-rated (IP65) configurations, recommended for flight line and grandstand deployments.</dd>
+  <dt>Phase (P0–P4)</dt><dd>The five operational states of the ATLAS timing engine relative to the current heat's track_open, track_close, and heat_end timestamps.</dd>
+  <dt>PSU</dt><dd>Power Supply Unit. Provides regulated 5 V DC power to LED panel modules.</dd>
+  <dt>PWM</dt><dd>Pulse-Width Modulation. Technique used to control LED brightness by rapidly switching power at varying duty cycles.</dd>
+  <dt>RCD</dt><dd>Residual Current Device (also RCCB or GFCI). A safety device that disconnects the AC supply if it detects current leakage to earth.</dd>
+  <dt>rpi-rgb-led-matrix</dt><dd>An open-source C/Python library by Henner Zeller for driving HUB75 LED panels directly from Raspberry Pi GPIO.</dd>
+  <dt>STB / LAT</dt><dd>Strobe / Latch. A HUB75 signal that transfers the contents of the shift register to the LED driver output latches, making a new row of pixels visible.</dd>
+</dl>
+</div>
+
+<div class="section" id="sec-app-b">
+<h1>Appendix B — Reference Documents</h1>
+
+<table>
+  <caption data-label="Table B-1">Complete Reference Document List</caption>
+  <thead><tr><th>Reference ID</th><th>Title</th><th>Source / Author</th><th>Version / Date</th></tr></thead>
+  <tbody>
+    <tr><td>ATLAS-SDS-001</td><td>ATLAS Software Design Specification</td><td>ATLAS Engineering</td><td>Current (2026)</td></tr>
+    <tr><td>ATLAS-SHD-001</td><td>ATLAS System Handover Dossier</td><td>ATLAS Engineering</td><td>2026-07-03</td></tr>
+    <tr><td>ATLAS-TU-002</td><td>ATLAS Technical Update</td><td>ATLAS Engineering</td><td>2026-07-02</td></tr>
+    <tr><td>HUB75-SPEC</td><td>HUB75 RGB LED Matrix Interface Specification</td><td>Community / Henner Zeller</td><td>Rev D</td></tr>
+    <tr><td>RPI-RGB-LED</td><td>rpi-rgb-led-matrix Library Documentation</td><td>Henner Zeller (GitHub)</td><td>Latest</td></tr>
+    <tr><td>IEC 60950-1</td><td>Information Technology Equipment — Safety — Part 1: General Requirements</td><td>IEC</td><td>Edition 2.2</td></tr>
+    <tr><td>CISPR 32</td><td>Multimedia Equipment — Electromagnetic Disturbances — Requirements for Emission</td><td>CISPR / IEC</td><td>Edition 3</td></tr>
+    <tr><td>AS/NZS 3000</td><td>Wiring Rules — Electrical Installations of Buildings</td><td>Standards Australia</td><td>2018</td></tr>
+    <tr><td>AS/NZS 3820</td><td>Essential Requirements for Electrical Equipment</td><td>Standards Australia</td><td>1998</td></tr>
+    <tr><td>ARTNET-SPEC</td><td>Art-Net 4 Protocol Specification</td><td>Artistic Licence (UK) Ltd</td><td>Revision 1.4dd</td></tr>
+  </tbody>
+</table>
+</div>
+
+<div id="sec-app-c">
+<div class="appendix-title">Appendix C — Revision History</div>
+<table>
+  <caption data-label="Table C-1">Document Revision History</caption>
+  <thead><tr><th>Revision</th><th>Date</th><th>Author</th><th>Changes</th></tr></thead>
+  <tbody>
+    <tr><td>1.0</td><td>2026-07-03</td><td>ATLAS Engineering / Abacus AI Agent</td><td>Initial document. Covers modular ICD framework: 6-row display strategy, P5/P10 panel specifications, HUB75 protocol definitions, HAL abstract interface design, simulator backend documentation, and provisional integration requirements. Hardware-specific electrical values (exact panel model, controller board part number) to be finalised in Rev 1.1 after procurement.</td></tr>
+    <tr><td>1.1</td><td>TBD</td><td>TBD</td><td>Planned: Insert specific panel model and controller board; complete connector part numbers; add commissioning test results for IVT-01 through IVT-10.</td></tr>
+    <tr><td>1.2</td><td>TBD</td><td>TBD</td><td>Planned: HUB75Backend implementation details; Artnet backend evaluation results; field test data from competition deployment.</td></tr>
+  </tbody>
+</table>
+
+<p style="margin-top:30px; font-family: Arial, sans-serif; font-size:9pt; color:#666; text-align:center;">
+  — End of ATLAS-ICD-001 Interface Control Document, Revision 1.0 —<br>
+  Issued 3 July 2026 &nbsp;|&nbsp; ATLAS Master Flightline Clock Project &nbsp;|&nbsp; UNCONTROLLED WHEN PRINTED
+</p>
+</div>
+
+<!-- TOC page number resolver -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var observer = new MutationObserver(function(mutations, obs) {
+    var pagedContent = document.querySelector('.pagedjs_pages');
+    if (pagedContent) { obs.disconnect(); setTimeout(resolvePageNumbers, 500); }
+  });
+  observer.observe(document.body, { childList: true, subtree: true });
+  function resolvePageNumbers() {
+    document.querySelectorAll('.page-ref').forEach(function(ref) {
+      var href = ref.getAttribute('data-href');
+      var target = document.getElementById(href.replace('#', ''));
+      if (target) {
+        var page = target.closest('.pagedjs_page');
+        if (page) ref.textContent = page.getAttribute('data-page-number') || '?';
+      }
+    });
+  }
+});
+</script>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"f0f03d0605bf45f1a3b17cf7d5e6861f","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>

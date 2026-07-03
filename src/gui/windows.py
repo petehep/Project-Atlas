@@ -140,7 +140,7 @@ class OperatorWindow(QMainWindow):
 
 
     def _setup_settings_tab(self):
-        from PySide6.QtWidgets import QSlider
+        from PySide6.QtWidgets import QSlider, QCheckBox
         from PySide6.QtCore import Qt
 
         page = QWidget()
@@ -153,6 +153,17 @@ class OperatorWindow(QMainWindow):
         self.edit_comp_name = QLineEdit()
         self.edit_comp_name.setStyleSheet(input_css)
         self.edit_comp_name.setText(self.engine.db.get_setting("competition_name", ""))
+
+        # DISPLAY BACKEND selection. Order maps to these stored ids.
+        self._backend_order = ["simulator", "lcd"]
+        self.combo_disp_backend = QComboBox()
+        self.combo_disp_backend.setStyleSheet(input_css)
+        self.combo_disp_backend.addItems(
+            ["LED Simulator (Software)", "LCD Monitor (Full Resolution)"])
+        current_backend = self.engine.db.get_setting("display_backend", "simulator")
+        self.combo_disp_backend.setCurrentIndex(
+            self._backend_order.index(current_backend)
+            if current_backend in self._backend_order else 0)
 
         self.combo_disp_size = QComboBox()
         self.combo_disp_size.setStyleSheet(input_css)
@@ -191,11 +202,20 @@ class OperatorWindow(QMainWindow):
         """)
         self.brightness_slider.valueChanged.connect(self._on_brightness_changed)
 
+        # AUTO-BOOT TO CLOCK. Defaults to OFF; when ticked the app boots
+        # straight into the display window without the operator console.
+        self.chk_auto_boot = QCheckBox("Boot straight to clock display (hide operator console)")
+        self.chk_auto_boot.setStyleSheet("color: #EEE; font-size: 15px;")
+        self.chk_auto_boot.setChecked(
+            self.engine.db.get_bool_setting("auto_boot_enabled", False))
+
         form_layout.addRow("Competition Name:", self.edit_comp_name)
+        form_layout.addRow("Display Backend:", self.combo_disp_backend)
         form_layout.addRow("Display Size:", self.combo_disp_size)
         form_layout.addRow("Sim LED Scale:", self.edit_led_scale)
         form_layout.addRow("Display Intensity:", self.brightness_label)
         form_layout.addRow("", self.brightness_slider)
+        form_layout.addRow("Auto-Boot to Clock:", self.chk_auto_boot)
         layout.addWidget(form_group)
 
 
@@ -245,7 +265,11 @@ class OperatorWindow(QMainWindow):
 
     def _save_settings(self):
         self.engine.db.save_setting("competition_name", self.edit_comp_name.text())
-        
+
+        # Display backend selection (which display module to launch).
+        backend_id = self._backend_order[self.combo_disp_backend.currentIndex()]
+        self.engine.db.save_setting("display_backend", backend_id)
+
         # Extract width/height from combo
         selection = self.combo_disp_size.currentText()
         w, h = (128, 64) if "128" in selection else (64, 64)
@@ -253,7 +277,11 @@ class OperatorWindow(QMainWindow):
         self.engine.db.save_setting("display_height", h)
         self.engine.db.save_setting("led_scale", self.edit_led_scale.text())
         self.engine.db.save_setting("brightness", self.brightness_slider.value())
-        
+
+        # Auto-boot flag. Stored as "1"/"0"; defaults to OFF.
+        self.engine.db.save_setting(
+            "auto_boot_enabled", "1" if self.chk_auto_boot.isChecked() else "0")
+
         QMessageBox.information(self, "Settings Saved", "Settings saved. Please restart Atlas to reconfigure hardware/simulator.")
 
     def _on_row_selected(self, row, column):
