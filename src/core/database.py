@@ -2,9 +2,31 @@ import sqlite3
 import time
 import os
 
+# ----------------------------------------------------------------
+# PATCH NOTE (July 2026) — Cross-platform path hardening
+#
+# PROBLEM: The original code used db_path="data/atlas.db" which is
+# a path relative to the CURRENT WORKING DIRECTORY. This works fine
+# on macOS when run_atlas.sh does "cd $(dirname $0)" first, but on
+# Windows — or any launch method that doesn't set CWD to the project
+# root — the database lands in the wrong place (or fails outright).
+#
+# FIX: Compute an absolute, project-relative path using __file__.
+# This file lives at: src/core/database.py
+# Three dirname() calls walk up: core → src → project_root
+# The data folder is always at: <project_root>/data/atlas.db
+# ----------------------------------------------------------------
+
 class AtlasDatabase:
-    def __init__(self, db_path="data/atlas.db"):
-        os.makedirs("data", exist_ok=True)
+    def __init__(self, db_path=None):
+        if db_path is None:
+            _this_file    = os.path.abspath(__file__)       # …/src/core/database.py
+            _core_dir     = os.path.dirname(_this_file)     # …/src/core
+            _src_dir      = os.path.dirname(_core_dir)      # …/src
+            _project_root = os.path.dirname(_src_dir)       # …/project_atlas
+            db_path = os.path.join(_project_root, "data", "atlas.db")
+
+        os.makedirs(os.path.dirname(db_path), exist_ok=True)
         self.db_path = db_path
         self._bootstrap()
 
@@ -27,11 +49,6 @@ class AtlasDatabase:
                     value TEXT
                 )
             """)
-            # Seed defaults for newer settings without clobbering existing
-            # values. INSERT OR IGNORE keeps older atlas.db files working
-            # (backward compatible) while giving fresh installs sane defaults.
-            #   display_backend   -> which display module renders the clock
-            #   auto_boot_enabled -> appliance mode; DEFAULT OFF ("0")
             conn.execute(
                 "INSERT OR IGNORE INTO settings (key, value) VALUES (?, ?)",
                 ("display_backend", "simulator"))
