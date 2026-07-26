@@ -204,8 +204,39 @@ class OperatorWindow(QMainWindow):
 
         # AUTO-BOOT TO CLOCK. Defaults to OFF; when ticked the app boots
         # straight into the display window without the operator console.
-        self.chk_auto_boot = QCheckBox("Boot straight to clock display (hide operator console)")
-        self.chk_auto_boot.setStyleSheet("color: #EEE; font-size: 15px;")
+
+
+        #self.chk_auto_boot = QCheckBox("Boot straight to clock display (hide operator console)")
+        #self.chk_auto_boot.setStyleSheet("color: #EEE; font-size: 15px;")
+
+
+        self.chk_auto_boot = QCheckBox("✓ Boot straight to clock display (hide operator console)")
+        self.chk_auto_boot.setStyleSheet("""
+            QCheckBox {
+                color: #FFCC00;
+                font-size: 18px;
+                font-weight: bold;
+                padding: 8px;
+                background: #2A2A2A;
+                border: 2px solid #FFCC00;
+                border-radius: 6px;
+            }
+            QCheckBox::indicator {
+                width: 24px;
+                height: 24px;
+                border: 2px solid #FFCC00;
+                border-radius: 4px;
+                background: #1A1A1A;
+            }
+            QCheckBox::indicator:checked {
+                background: #FFCC00;
+                border: 2px solid #FF8800;
+            }
+        """)
+
+
+
+
         self.chk_auto_boot.setChecked(
             self.engine.db.get_bool_setting("auto_boot_enabled", False))
 
