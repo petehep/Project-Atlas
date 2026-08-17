@@ -1,12 +1,3 @@
-# ----------------------------------------------------------------
-# PATCH NOTE (July 2026) — Cross-platform UI text fix
-#
-# CHANGE: Line 270 — "EXIT TO MACOS" → "EXIT TO DESKTOP"
-# REASON: Label was macOS-specific. This file runs on both Mac and
-#         Windows, so the button text should be platform-neutral.
-# APPLY TO: src/gui/windows.py  (replace the original file)
-# ----------------------------------------------------------------
-
 from PySide6.QtWidgets import (QMainWindow, QLabel, QVBoxLayout, QHBoxLayout, 
                     QWidget, QPushButton, QTimeEdit, QLineEdit, 
                     QFormLayout, QFrame, QTableWidget, QTableWidgetItem, 
@@ -164,11 +155,14 @@ class OperatorWindow(QMainWindow):
         self.edit_comp_name.setText(self.engine.db.get_setting("competition_name", ""))
 
         # DISPLAY BACKEND selection. Order maps to these stored ids.
-        self._backend_order = ["simulator", "lcd"]
+        self._backend_order = ["simulator", "lcd", "hdmi"]
         self.combo_disp_backend = QComboBox()
         self.combo_disp_backend.setStyleSheet(input_css)
-        self.combo_disp_backend.addItems(
-            ["LED Simulator (Software)", "LCD Monitor (Full Resolution)"])
+        self.combo_disp_backend.addItems([
+            "LED Simulator (Software)",
+            "LCD Monitor (Full Resolution)",
+            "HDMI / NovaStar Output  (640×320)",
+        ])
         current_backend = self.engine.db.get_setting("display_backend", "simulator")
         self.combo_disp_backend.setCurrentIndex(
             self._backend_order.index(current_backend)
@@ -276,7 +270,7 @@ class OperatorWindow(QMainWindow):
         reboot_btn.setFixedHeight(50)
         reboot_btn.clicked.connect(self._reboot_app)
 
-        exit_btn = QPushButton("EXIT TO DESKTOP")
+        exit_btn = QPushButton("EXIT TO MACOS")
         exit_btn.setStyleSheet("background: #900; color: white; font-weight: bold; border-radius: 5px;")
         exit_btn.setFixedHeight(50)
         exit_btn.clicked.connect(self._shutdown_app)

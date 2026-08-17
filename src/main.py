@@ -5,7 +5,7 @@ from core.database import AtlasDatabase
 from core.engine import AtlasEngine
 from gui.windows import OperatorWindow
 from gui.led_simulator import AtlasLEDSimulator
-from gui.lcd_display import AtlasLCDDisplay
+from gui.lcd_display import AtlasLCDDisplay, AtlasHDMIOutput
 
 # Simple data class to mimic our old JSON config
 class DisplayConfig:
@@ -26,6 +26,8 @@ def _create_display(backend_id, config):
     """
     if backend_id == "lcd":
         return AtlasLCDDisplay(config)
+    if backend_id == "hdmi":
+        return AtlasHDMIOutput(config)
     return AtlasLEDSimulator(config)
 
 def main():

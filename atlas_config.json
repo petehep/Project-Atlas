@@ -1,7 +1,7 @@
 {
     "display": {
         "panels_wide": 2,
-        "panels_high": 4,
+        "panels_high": 2,
         "double_sided": false,
         "led_scale": 10
     }
