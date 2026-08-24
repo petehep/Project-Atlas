@@ -246,6 +246,27 @@ class AtlasHDMIOutput(QWidget):
                     p.drawRect(x + col_idx, y + row_idx, 1, 1)
 
     # ── painting ─────────────────────────────────────────────────────────────
+    #
+    # Layout (64 cols × 32 rows, 5×7 bitmap font at scale=1):
+    #
+    #   Cols 0-1  and  62-63 : vertical status-colour bars (full height)
+    #   Cols 2-61             : 60-col text area
+    #
+    #   y= 0  Row 1 — local time        (cyan)
+    #   y= 8  Row 2 — heat + direction  (yellow)  /  WAIT when unarmed
+    #   y=16  Row 3 — phase label       (phase colour)
+    #   y=24  Row 4 — primary timer     (phase colour)
+    #                                    font is 7px → ends at y=30, fits in 32
+    #
+    TEXT_X     = 2   # first usable text column
+    TEXT_COLS  = 60  # columns available for text (cols 2..61)
+
+    def _draw_text_centered(self, p, y, text, color_hex):
+        """Centre text inside the 60-col text area (cols 2..61)."""
+        text_w = len(text) * 6
+        x = self.TEXT_X + max(0, (self.TEXT_COLS - text_w) // 2)
+        self._draw_string(p, x, y, text, color_hex)
+
     def paintEvent(self, event):
         p = QPainter(self)
         # No anti-aliasing — every pixel must map cleanly to one LED.
@@ -254,34 +275,37 @@ class AtlasHDMIOutput(QWidget):
         if not self.model:
             return
 
-        # Row 1 (y=1): Local time — cyan
-        self._draw_centered(p, 1, self.model.local_time, "#00FFFF")
+        # ── Status-colour vertical bars: cols 0-1 and 62-63 ─────────────────
+        band = self._apply_brightness(self.model.band_color)
+        p.fillRect(0,              0, 2, self.ROWS, band)  # left bar
+        p.fillRect(self.COLS - 2,  0, 2, self.ROWS, band)  # right bar
+
+        # ── Row 1  y=0 : Local time — cyan ───────────────────────────────────
+        self._draw_text_centered(p, 0, self.model.local_time, "#00FFFF")
 
         if not self.model.is_armed:
-            # "WAIT" centred in the lower half when not armed
-            self._draw_centered(p, 13, "WAIT", "#888888")
-        else:
-            # Row 2 (y=10): Heat + short direction — yellow
-            dir_short = str(self.model.thermalling_dir).strip().upper()
-            dir_short = "L" if dir_short.startswith("L") else (
-                        "R" if dir_short.startswith("R") else dir_short[:1])
-            heat_txt = f"H{self.model.heat_number} {dir_short}"
-            self._draw_centered(p, 10, heat_txt, "#FFFF00")
+            # "WAIT" centred vertically in the remaining space
+            self._draw_text_centered(p, 13, "WAIT", "#888888")
+            return
 
-            # Row 3 (y=19): Phase label — phase colour (truncated to 10 chars)
-            label_short = {
-                "TRACK OPENS IN": "OPEN IN",
-                "ENTER NOW":      "ENTER",
-                "HEAT TIME REMAINING": "HEAT LEFT",
-            }.get(self.model.primary_timer_label,
-                  self.model.primary_timer_label)[:10]
-            self._draw_centered(p, 19, label_short,
-                                self.model.primary_timer_color)
+        # ── Row 2  y=8 : Heat number + short direction — yellow ──────────────
+        dir_short = str(self.model.thermalling_dir).strip().upper()
+        dir_short = ("L" if dir_short.startswith("L") else
+                     "R" if dir_short.startswith("R") else dir_short[:1])
+        heat_txt = f"H{self.model.heat_number} {dir_short}"
+        self._draw_text_centered(p, 8, heat_txt, "#FFFF00")
 
-            # Row 4 (y=25): Primary timer — phase colour
-            self._draw_centered(p, 25, self.model.primary_timer,
-                                self.model.primary_timer_color)
+        # ── Row 3  y=16 : Phase label — phase colour ─────────────────────────
+        label_short = {
+            "TRACK OPENS IN":     "OPEN IN",
+            "ENTER NOW":          "ENTER",
+            "HEAT TIME REMAINING": "HEAT LFT",
+        }.get(self.model.primary_timer_label,
+              self.model.primary_timer_label)[:10]
+        self._draw_text_centered(p, 16, label_short,
+                                 self.model.primary_timer_color)
 
-        # Status band — bottom 2 rows
-        p.fillRect(0, self.ROWS - 2, self.COLS, 2,
-                   self._apply_brightness(self.model.band_color))
+        # ── Row 4  y=24 : Primary timer — phase colour ───────────────────────
+        # Font is 7px tall → last lit pixel at y=30, fits within 32 rows.
+        self._draw_text_centered(p, 24, self.model.primary_timer,
+                                 self.model.primary_timer_color)
