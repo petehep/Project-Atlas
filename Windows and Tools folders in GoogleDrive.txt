@@ -1,0 +1,15 @@
+Project ATLAS — Large binaries hosted on Google Drive
+=====================================================
+
+These files are NOT stored in git (GitHub rejects files over 100 MB).
+They live in the owner's Google Drive instead.
+
+Google Drive folder:
+https://drive.google.com/drive/folders/1Kw5pX9y-wmYYnq9MFY6Wdwa_gvAiQVWR?usp=drive_link
+
+Contents:
+- NovaLCT V5.5.0.zip                                    (271 MB)  -> tools/
+- pyside6_addons-6.11.1-cp310-abi3-win_amd64.whl        (161 MB)  -> windows_packages/
+- pyside6_essentials-6.11.1-cp310-abi3-win_amd64.whl    ( 74 MB)  -> windows_packages/
+
+https://drive.google.com/drive/folders/1Kw5pX9y-wmYYnq9MFY6Wdwa_gvAiQVWR?usp=drive_link

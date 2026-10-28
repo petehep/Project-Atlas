@@ -178,7 +178,7 @@ To perform a fully-offline install, copy these three files back into the project
 — the two `.whl` files into `windows_packages\`, and `NovaLCT V5.5.0.zip` into
 `tools\` — before running the install steps above.
 
-> _Share link: (paste the Google Drive link here)_
+> **Share link:** https://drive.google.com/drive/folders/1Kw5pX9y-wmYYnq9MFY6Wdwa_gvAiQVWR?usp=drive_link
 
 ---
 
