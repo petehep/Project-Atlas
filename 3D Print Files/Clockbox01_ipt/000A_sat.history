@@ -1,0 +1,1369 @@
+SAT history_stream: 44 44 0 1178 $-1  $0  $1  -1:
+0 delta_state 44 1 0 $-1  $2  $0  $-1  0 11
+	BulletinBoard: 2
+		$-1   $8    // inserted:   -8 plane-surface $-1 -1 $-1 -161 119 -50 -0 -0 -1 1 -0 -0 forward_v I I I I #
+		$-1   $7    // inserted:   -7 loop $-1 -1 $-1 $-1 $14 $4 #
+		$-1   $15   // inserted:   -15 straight-curve $-1 -1 $-1 -141 119 50 -0 -1 -0 I I #
+		$-1   $11   // inserted:   -11 face $16 1115 $-1 $17 $18 $3 $-1 $19 reversed single #
+		$-1   $116  // inserted:   -116 face $174 1116 $-1 $175 $176 $3 $-1 $177 reversed single #
+		$-1   $73   // inserted:   -73 straight-curve $-1 -1 $-1 160.997 119 -50 -0 -1 -0 I I #
+		$-1   $46   // inserted:   -46 face $74 1117 $-1 $75 $76 $3 $-1 $77 reversed single #
+		$-1   $29   // inserted:   -29 plane-surface $-1 -1 $-1 160.997 119 50 -4.44089e-16 0 1 -1 0 -4.44089e-16 forward_v I I I I #
+		$-1   $28   // inserted:   -28 loop $-1 -1 $-1 $-1 $49 $17 #
+		$-1   $16   // inserted:   -16 ATTRIB_CUSTOM-attrib $-1 -1 $25 $-1 $11 @28 INV_FEATURE_ORIENTATION_ATTR 1 44 $15 $-1 #
+		$-1   $25   // inserted:   -25 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $16 $11 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 571 -1 38 0 20 0 0 0 0 0 0 0 #
+		$-1   $19   // inserted:   -19 plane-surface $-1 -1 $-1 -141 119 50 -0 0 1 -1 -0 -0 forward_v I I I I #
+		$-1   $35   // inserted:   -35 coedge $-1 -1 $-1 $22 $21 $58 $59 forward $7 0 $-1 #
+		$-1   $252  // inserted:   -252 straight-curve $-1 -1 $-1 50 119 -303.318 -0 -1 -0 I I #
+		$-1   $174  // inserted:   -174 ATTRIB_CUSTOM-attrib $-1 -1 $251 $-1 $116 @28 INV_FEATURE_ORIENTATION_ATTR 1 44 $252 $-1 #
+		$-1   $251  // inserted:   -251 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $174 $116 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 571 -1 33 0 20 0 0 0 0 0 0 0 #
+		$-1   $177  // inserted:   -177 plane-surface $-1 -1 $-1 -50 119 -303.318 -1 -0 -0 0 0 -1 forward_v I I I I #
+		$-1   $74   // inserted:   -74 ATTRIB_CUSTOM-attrib $-1 -1 $114 $-1 $46 @28 INV_FEATURE_ORIENTATION_ATTR 1 44 $73 $-1 #
+		$-1   $114  // inserted:   -114 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $74 $46 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 571 -1 22 0 20 0 0 0 0 0 0 0 #
+		$-1   $75   // inserted:   -75 face $115 1118 $-1 $116 $117 $3 $-1 $118 reversed single #
+		$-1   $77   // inserted:   -77 plane-surface $-1 -1 $-1 160.997 119 -50 1 0 -0 0 0 1 forward_v I I I I #
+		$-1   $76   // inserted:   -76 loop $-1 -1 $-1 $-1 $119 $46 #
+		$-1   $51   // inserted:   -51 coedge $-1 -1 $-1 $30 $83 $84 $85 reversed $18 0 $-1 #
+		$-1   $58   // inserted:   -58 coedge $-1 -1 $-1 $95 $89 $35 $59 reversed $96 0 $-1 #
+		$-1   $133  // inserted:   -133 coedge $-1 -1 $-1 $89 $201 $83 $134 forward $96 0 $-1 #
+		$-1   $22   // inserted:   -22 coedge $-1 -1 $-1 $14 $35 $31 $38 forward $7 0 $-1 #
+		$-1   $59   // inserted:   -59 edge $97 1175 $-1 $63 0 $66 0.6 $58 $98 forward @7 unknown #
+		$-1   $627  // inserted:   -627 straight-curve $-1 -1 $-1 50 119 321 -0 -1 -0 I I #
+		$-1   $441  // inserted:   -441 plane-surface $-1 -1 $-1 -50 119 321 -1 0 0 -0 -0 -1 forward_v I I I I #
+		$-1   $440  // inserted:   -440 loop $-1 -1 $-1 $-1 $423 $346 #
+		$-1   $175  // inserted:   -175 face $253 1119 $-1 $254 $255 $3 $-1 $256 reversed single #
+		$-1   $220  // inserted:   -220 coedge $-1 -1 $-1 $257 $312 $150 $221 reversed $176 0 $-1 #
+		$-1   $409  // inserted:   -409 coedge $-1 -1 $-1 $469 $317 $497 $498 reversed $226 0 $-1 #
+		$-1   $225  // inserted:   -225 coedge $-1 -1 $-1 $317 $153 $312 $318 forward $226 0 $-1 #
+		$-1   $115  // inserted:   -115 ATTRIB_CUSTOM-attrib $-1 -1 $173 $-1 $75 @28 INV_FEATURE_ORIENTATION_ATTR 1 44 $73 $-1 #
+		$-1   $173  // inserted:   -173 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $115 $75 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 571 -1 21 0 20 0 0 0 0 0 0 0 #
+		$-1   $118  // inserted:   -118 plane-surface $-1 -1 $-1 140.997 119 -50 -4.44089e-16 -0 -1 1 0 -4.44089e-16 forward_v I I I I #
+		$-1   $119  // inserted:   -119 coedge $-1 -1 $-1 $179 $180 $181 $182 reversed $76 0 $-1 #
+		$-1   $124  // inserted:   -124 coedge $-1 -1 $-1 $80 $79 $180 $189 forward $28 0 $-1 #
+		$-1   $83   // inserted:   -83 coedge $-1 -1 $-1 $51 $50 $133 $134 reversed $18 0 $-1 #
+		$-1   $89   // inserted:   -89 coedge $-1 -1 $-1 $58 $133 $54 $90 forward $96 0 $-1 #
+		$-1   $134  // inserted:   -134 edge $202 1137 $-1 $138 0 $92 0.6 $83 $203 forward @7 unknown #
+		$-1   $31   // inserted:   -31 coedge $-1 -1 $-1 $54 $20 $22 $38 reversed $12 0 $-1 #
+		$-1   $38   // inserted:   -38 edge $65 1171 $-1 $66 -2 $42 -0.8 $22 $67 forward @7 unknown #
+		$-1   $97   // inserted:   -97 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $59 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 571 -1 37 0 18 0 0 0 0 0 0 0 #
+		$-1   $66   // inserted:   -66 vertex $104 -1 $-1 $59 1 $105 #
+		$-1   $98   // inserted:   -98 straight-curve $-1 -1 $-1 -161 119 -50 0 -1 0 I I #
+		$-1   $524  // inserted:   -524 face $628 1120 $-1 $70 $537 $3 $-1 $629 reversed single #
+		$-1   $253  // inserted:   -253 ATTRIB_CUSTOM-attrib $-1 -1 $344 $-1 $175 @28 INV_FEATURE_ORIENTATION_ATTR 1 44 $252 $-1 #
+		$-1   $344  // inserted:   -344 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $253 $175 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 571 -1 31 0 20 0 0 0 0 0 0 0 #
+		$-1   $256  // inserted:   -256 plane-surface $-1 -1 $-1 50 119 -321 1 0 -0 0 0 1 forward_v I I I I #
+		$-1   $312  // inserted:   -312 coedge $-1 -1 $-1 $220 $350 $225 $318 reversed $176 0 $-1 #
+		$-1   $317  // inserted:   -317 coedge $-1 -1 $-1 $409 $225 $410 $411 forward $226 0 $-1 #
+		$-1   $497  // inserted:   -497 coedge $-1 -1 $-1 $443 $442 $409 $498 forward $255 0 $-1 #
+		$-1   $498  // inserted:   -498 edge $595 1152 $-1 $596 0 $500 0.6 $497 $597 forward @7 unknown #
+		$-1   $318  // inserted:   -318 edge $412 1141 $-1 $228 0 $413 0.6 $312 $414 forward @7 unknown #
+		$-1   $258  // inserted:   -258 coedge $-1 -1 $-1 $178 $261 $263 $351 reversed $117 0 $-1 #
+		$-1   $180  // inserted:   -180 coedge $-1 -1 $-1 $119 $260 $124 $189 reversed $76 0 $-1 #
+		$-1   $179  // inserted:   -179 coedge $-1 -1 $-1 $260 $119 $261 $262 forward $76 0 $-1 #
+		$-1   $80   // inserted:   -80 coedge $-1 -1 $-1 $49 $124 $120 $127 forward $28 0 $-1 #
+		$-1   $189  // inserted:   -189 edge $272 1146 $-1 $192 0 $195 0.6 $180 $273 forward @7 unknown #
+		$-1   $13   // inserted:   -13 plane-surface $-1 -1 $-1 -151 113 0 0 -1 0 0 0 -1 forward_v I I I I #
+		$-1   $12   // inserted:   -12 loop $-1 -1 $-1 $-1 $20 $6 #
+		$-1   $54   // inserted:   -54 coedge $-1 -1 $-1 $32 $31 $89 $90 reversed $12 0 $-1 #
+		$-1   $90   // inserted:   -90 edge $143 1172 $-1 $92 -10 $66 -0 $89 $144 forward @7 unknown #
+		$-1   $202  // inserted:   -202 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $134 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 571 -1 34 0 18 0 0 0 0 0 0 0 #
+		$-1   $92   // inserted:   -92 vertex $145 -1 $-1 $134 1 $146 #
+		$-1   $203  // inserted:   -203 straight-curve $-1 -1 $-1 -161 119 50 0 -1 0 I I #
+		$-1   $65   // inserted:   -65 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $38 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 571 -1 40 0 10 0 0 0 0 0 0 0 #
+		$-1   $67   // inserted:   -67 straight-curve $-1 -1 $-1 -141 113 -50 1 0 0 I I #
+		$-1   $104  // inserted:   -104 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $66 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 571 -1 37 0 9 0 0 0 0 0 0 0 #
+		$-1   $105  // inserted:   -105 point $-1 -1 $-1 -161 113 -50 #
+		$-1   $628  // inserted:   -628 ATTRIB_CUSTOM-attrib $-1 -1 $729 $-1 $524 @28 INV_FEATURE_ORIENTATION_ATTR 1 44 $627 $-1 #
+		$-1   $729  // inserted:   -729 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $628 $524 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 571 -1 7 0 20 0 0 0 0 0 0 0 #
+		$-1   $629  // inserted:   -629 plane-surface $-1 -1 $-1 50 119 301 1 0 0 -0 -0 1 forward_v I I I I #
+		$-1   $461  // inserted:   -461 coedge $-1 -1 $-1 $515 $372 $374 $464 forward $440 0 $-1 #
+		$-1   $254  // inserted:   -254 face $345 1121 $-1 $346 $347 $3 $-1 $348 reversed single #
+		$-1   $410  // inserted:   -410 coedge $-1 -1 $-1 $445 $493 $317 $411 reversed $347 0 $-1 #
+		$-1   $411  // inserted:   -411 edge $499 1159 $-1 $413 -21.1 $500 -11.1 $317 $501 forward @7 unknown #
+		$-1   $443  // inserted:   -443 coedge $-1 -1 $-1 $349 $497 $493 $528 forward $255 0 $-1 #
+		$-1   $595  // inserted:   -595 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $498 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 571 -1 42 0 18 0 0 0 0 0 0 0 #
+		$-1   $500  // inserted:   -500 vertex $598 -1 $-1 $498 1 $599 #
+		$-1   $597  // inserted:   -597 straight-curve $-1 -1 $-1 50 119 -321 0 -1 0 I I #
+		$-1   $412  // inserted:   -412 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $318 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 571 -1 23 0 18 0 0 0 0 0 0 0 #
+		$-1   $413  // inserted:   -413 vertex $502 -1 $-1 $318 1 $503 #
+		$-1   $414  // inserted:   -414 straight-curve $-1 -1 $-1 -50 119 -321 0 -1 0 I I #
+		$-1   $48   // inserted:   -48 plane-surface $-1 -1 $-1 150.997 113 -8.88178e-15 0 -1 0 0 0 -1 forward_v I I I I #
+		$-1   $47   // inserted:   -47 loop $-1 -1 $-1 $-1 $78 $27 #
+		$-1   $261  // inserted:   -261 coedge $-1 -1 $-1 $258 $184 $179 $262 reversed $117 0 $-1 #
+		$-1   $260  // inserted:   -260 coedge $-1 -1 $-1 $180 $179 $183 $266 forward $76 0 $-1 #
+		$-1   $262  // inserted:   -262 edge $354 1144 $-1 $264 0 $268 0.6 $261 $355 forward @7 unknown #
+		$-1   $120  // inserted:   -120 coedge $-1 -1 $-1 $183 $78 $80 $127 reversed $47 0 $-1 #
+		$-1   $127  // inserted:   -127 edge $194 1167 $-1 $195 -2 $131 -0.800255 $80 $196 forward @7 unknown #
+		$-1   $272  // inserted:   -272 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $189 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 571 -1 13 0 18 0 0 0 0 0 0 0 #
+		$-1   $195  // inserted:   -195 vertex $276 -1 $-1 $189 1 $277 #
+		$-1   $273  // inserted:   -273 straight-curve $-1 -1 $-1 160.997 119 50 0 -1 0 I I #
+		$-1   $143  // inserted:   -143 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $90 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 571 -1 41 0 10 0 0 0 0 0 0 0 #
+		$-1   $144  // inserted:   -144 straight-curve $-1 -1 $-1 -161 113 -50 -3.55271e-16 -0 -1 I I #
+		$-1   $145  // inserted:   -145 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $92 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 571 -1 34 0 9 0 0 0 0 0 0 0 #
+		$-1   $146  // inserted:   -146 point $-1 -1 $-1 -161 113 50 #
+		$-1   $451  // inserted:   -451 coedge $-1 -1 $-1 $535 $536 $363 $452 reversed $537 0 $-1 #
+		$-1   $374  // inserted:   -374 coedge $-1 -1 $-1 $285 $463 $461 $464 reversed $375 0 $-1 #
+		$-1   $543  // inserted:   -543 coedge $-1 -1 $-1 $463 $533 $536 $637 forward $375 0 $-1 #
+		$-1   $515  // inserted:   -515 coedge $-1 -1 $-1 $423 $461 $619 $623 forward $440 0 $-1 #
+		$-1   $464  // inserted:   -464 edge $546 1165 $-1 $377 0 $547 0.6 $374 $548 forward @7 unknown #
+		$-1   $345  // inserted:   -345 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $254 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 571 -1 0 0 12 0 0 0 0 0 0 0 #
+		$-1   $348  // inserted:   -348 plane-surface $-1 -1 $-1 -5.32907e-14 113 -312.159 0 -1 0 0 0 -1 forward_v I I I I #
+		$-1   $493  // inserted:   -493 coedge $-1 -1 $-1 $410 $405 $443 $528 reversed $347 0 $-1 #
+		$-1   $499  // inserted:   -499 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $411 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 571 -1 26 0 10 0 0 0 0 0 0 0 #
+		$-1   $501  // inserted:   -501 straight-curve $-1 -1 $-1 161 113 -321 1 0 -4.41331e-16 I I #
+		$-1   $528  // inserted:   -528 edge $631 1153 $-1 $500 -1.76822 $494 -0.568218 $443 $632 forward @7 unknown #
+		$-1   $598  // inserted:   -598 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $500 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 571 -1 42 0 9 0 0 0 0 0 0 0 #
+		$-1   $599  // inserted:   -599 point $-1 -1 $-1 50 113 -321 #
+		$-1   $502  // inserted:   -502 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $413 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 571 -1 23 0 9 0 0 0 0 0 0 0 #
+		$-1   $503  // inserted:   -503 point $-1 -1 $-1 -50 113 -321 #
+		$-1   $183  // inserted:   -183 coedge $-1 -1 $-1 $121 $120 $260 $266 reversed $47 0 $-1 #
+		$-1   $266  // inserted:   -266 edge $358 1145 $-1 $268 -10 $195 0 $260 $359 forward @7 unknown #
+		$-1   $354  // inserted:   -354 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $262 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 571 -1 18 0 18 0 0 0 0 0 0 0 #
+		$-1   $268  // inserted:   -268 vertex $360 -1 $-1 $262 1 $361 #
+		$-1   $355  // inserted:   -355 straight-curve $-1 -1 $-1 160.997 119 -50 0 -1 0 I I #
+		$-1   $194  // inserted:   -194 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $127 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 571 -1 19 0 10 0 0 0 0 0 0 0 #
+		$-1   $196  // inserted:   -196 straight-curve $-1 -1 $-1 140.997 113 50 -1 0 -4.44089e-16 I I #
+		$-1   $276  // inserted:   -276 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $195 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 571 -1 13 0 9 0 0 0 0 0 0 0 #
+		$-1   $277  // inserted:   -277 point $-1 -1 $-1 160.997 113 50 #
+		$-1   $269  // inserted:   -269 straight-curve $-1 -1 $-1 160.997 113 -50 1 0 -4.44089e-16 I I #
+		$-1   $93   // inserted:   -93 straight-curve $-1 -1 $-1 -161 113 50 -1 -0 -0 I I #
+		$-1   $526  // inserted:   -526 plane-surface $-1 -1 $-1 9.76996e-14 113 311 0 -1 0 0 0 -1 forward_v I I I I #
+		$-1   $525  // inserted:   -525 loop $-1 -1 $-1 $-1 $513 $439 #
+		$-1   $536  // inserted:   -536 coedge $-1 -1 $-1 $451 $636 $543 $637 reversed $537 0 $-1 #
+		$-1   $463  // inserted:   -463 coedge $-1 -1 $-1 $374 $543 $544 $545 forward $375 0 $-1 #
+		$-1   $637  // inserted:   -637 edge $734 1156 $-1 $538 0 $641 0.6 $536 $735 forward @7 unknown #
+		$-1   $619  // inserted:   -619 coedge $-1 -1 $-1 $544 $513 $515 $623 reversed $525 0 $-1 #
+		$-1   $623  // inserted:   -623 edge $727 1161 $-1 $547 -2 $516 -0.8 $515 $728 forward @7 unknown #
+		$-1   $546  // inserted:   -546 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $464 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 571 -1 2 0 18 0 0 0 0 0 0 0 #
+		$-1   $547  // inserted:   -547 vertex $643 -1 $-1 $464 1 $644 #
+		$-1   $548  // inserted:   -548 straight-curve $-1 -1 $-1 -50 119 321 0 -1 0 I I #
+		$-1   $531  // inserted:   -531 straight-curve $-1 -1 $-1 -50 113 -321 0 0 -1 I I #
+		$-1   $631  // inserted:   -631 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $528 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 571 -1 31 0 10 0 0 0 0 0 0 0 #
+		$-1   $632  // inserted:   -632 straight-curve $-1 -1 $-1 50 113 -303.318 0 0 1 I I #
+		$-1   $358  // inserted:   -358 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $266 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 571 -1 22 0 10 0 0 0 0 0 0 0 #
+		$-1   $359  // inserted:   -359 straight-curve $-1 -1 $-1 160.997 113 50 0 0 1 I I #
+		$-1   $360  // inserted:   -360 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $268 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 571 -1 18 0 9 0 0 0 0 0 0 0 #
+		$-1   $361  // inserted:   -361 point $-1 -1 $-1 160.997 113 -50 #
+		$-1   $544  // inserted:   -544 coedge $-1 -1 $-1 $620 $619 $463 $545 reversed $525 0 $-1 #
+		$-1   $545  // inserted:   -545 edge $640 1162 $-1 $641 -10 $547 -0 $463 $642 forward @7 unknown #
+		$-1   $734  // inserted:   -734 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $637 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 571 -1 4 0 18 0 0 0 0 0 0 0 #
+		$-1   $641  // inserted:   -641 vertex $736 -1 $-1 $637 1 $737 #
+		$-1   $735  // inserted:   -735 straight-curve $-1 -1 $-1 50 119 321 0 -1 0 I I #
+		$-1   $727  // inserted:   -727 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $623 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 571 -1 9 0 10 0 0 0 0 0 0 0 #
+		$-1   $728  // inserted:   -728 straight-curve $-1 -1 $-1 -50 113 301 -0 -0 -1 I I #
+		$-1   $643  // inserted:   -643 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $547 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 571 -1 2 0 9 0 0 0 0 0 0 0 #
+		$-1   $644  // inserted:   -644 point $-1 -1 $-1 -50 113 321 #
+		$-1   $824  // inserted:   -824 straight-curve $-1 -1 $-1 50 113 321 0 0 1 I I #
+		$-1   $640  // inserted:   -640 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $545 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 571 -1 6 0 10 0 0 0 0 0 0 0 #
+		$-1   $642  // inserted:   -642 straight-curve $-1 -1 $-1 -50 113 321 -1 -0 -0 I I #
+		$-1   $736  // inserted:   -736 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $641 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 571 -1 4 0 9 0 0 0 0 0 0 0 #
+		$-1   $737  // inserted:   -737 point $-1 -1 $-1 50 113 321 #
+		$-1   $103  // inserted:   -103 point $-1 -1 $-1 -161 119 -50 #
+		$-1   $63   // inserted:   -63 vertex $-1 -1 $-1 $101 0 $103 #
+		$-1   $101  // inserted:   -101 edge $155 1134 $-1 $63 -27.1 $156 -0 $95 $157 forward @7 unknown #
+		$-1   $155  // inserted:   -155 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $101 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 109 -1 9 0 10 0 0 0 0 0 0 0 #
+		$945  $205  // updated id: -205 edge $287 700 $-1 $288 -64.2 $138 -37.1 $201 $157 forward @7 unknown #
+		$-1   $95   // inserted:   -95 coedge $-1 -1 $-1 $147 $58 $61 $101 forward $96 0 $-1 #
+		$946  $147  // updated id: -147 coedge $-1 -1 $-1 $148 $95 $212 $213 reversed $96 0 $-1 #
+		$947  $201  // updated id: -201 coedge $-1 -1 $-1 $133 $214 $135 $205 forward $96 0 $-1 #
+		$-1   $61   // inserted:   -61 coedge $-1 -1 $-1 $36 $100 $95 $101 reversed $62 0 $-1 #
+		$948  $100  // updated id: -100 coedge $-1 -1 $-1 $61 $150 $153 $154 reversed $62 0 $-1 #
+		$949  $135  // updated id: -135 coedge $-1 -1 $-1 $204 $84 $201 $205 reversed $137 0 $-1 #
+		$-1   $208  // inserted:   -208 point $-1 -1 $-1 -161 119 50 #
+		$-1   $138  // inserted:   -138 vertex $-1 -1 $-1 $134 0 $208 #
+		$-1   $693  // inserted:   -693 point $-1 -1 $-1 50 119 -321 #
+		$-1   $596  // inserted:   -596 vertex $-1 -1 $-1 $553 0 $693 #
+		$-1   $553  // inserted:   -553 edge $648 1131 $-1 $596 -11.1 $557 -0 $469 $229 forward @7 unknown #
+		$-1   $740  // inserted:   -740 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $648 $553 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 503 -1 48 0 #
+		$-1   $648  // inserted:   -648 ATTRIB_CUSTOM-attrib $-1 -1 $740 $-1 $553 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 109 -1 8 0 10 0 0 0 0 0 0 0 #
+		$950  $154  // updated id: -154 edge $227 699 $-1 $156 -32.2 $228 -21.1 $153 $229 forward @7 unknown #
+		$-1   $469  // inserted:   -469 coedge $-1 -1 $-1 $386 $409 $552 $553 forward $226 0 $-1 #
+		$951  $386  // updated id: -386 coedge $-1 -1 $-1 $297 $469 $470 $471 reversed $226 0 $-1 #
+		$952  $153  // updated id: -153 coedge $-1 -1 $-1 $225 $212 $100 $154 forward $226 0 $-1 #
+		$-1   $552  // inserted:   -552 coedge $-1 -1 $-1 $518 $532 $469 $553 reversed $191 0 $-1 #
+		$953  $532  // updated id: -532 coedge $-1 -1 $-1 $552 $450 $554 $633 reversed $191 0 $-1 #
+		$-1   $321  // inserted:   -321 point $-1 -1 $-1 -50 119 -321 #
+		$-1   $228  // inserted:   -228 vertex $-1 -1 $-1 $318 0 $321 #
+		$-1   $466  // inserted:   -466 point $-1 -1 $-1 -50 119 321 #
+		$-1   $377  // inserted:   -377 vertex $-1 -1 $-1 $286 0 $466 #
+		$-1   $286  // inserted:   -286 edge $376 1133 $-1 $377 -11.1 $288 -0 $285 $378 forward @7 unknown #
+		$-1   $376  // inserted:   -376 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $286 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 109 -1 6 0 10 0 0 0 0 0 0 0 #
+		$954  $534  // updated id: -534 edge $634 683 $-1 $635 -32.2 $538 -21.1 $533 $378 forward @7 unknown #
+		$-1   $285  // inserted:   -285 coedge $-1 -1 $-1 $301 $374 $204 $286 forward $375 0 $-1 #
+		$955  $301  // updated id: -301 coedge $-1 -1 $-1 $389 $285 $214 $302 reversed $375 0 $-1 #
+		$956  $533  // updated id: -533 coedge $-1 -1 $-1 $543 $474 $450 $534 forward $375 0 $-1 #
+		$-1   $204  // inserted:   -204 coedge $-1 -1 $-1 $284 $135 $285 $286 reversed $137 0 $-1 #
+		$957  $450  // updated id: -450 coedge $-1 -1 $-1 $532 $363 $533 $534 reversed $191 0 $-1 #
+		$-1   $638  // inserted:   -638 point $-1 -1 $-1 50 119 321 #
+		$-1   $538  // inserted:   -538 vertex $-1 -1 $-1 $637 0 $638 #
+		$958  $141  // updated id: -141 edge $-1 690 $-1 $211 -15.45 $87 10.45 $136 $110 forward @7 unknown #
+		$959  $287  // updated id: -287 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $205 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 109 -1 9 0 10 0 0 0 0 0 0 0 #
+		$960  $449  // updated id: -449 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $362 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 463 -1 45 0 #
+		$961  $362  // updated id: -362 edge $449 696 $-1 $432 -15.45 $352 10.45 $356 $283 forward @7 unknown #
+		$962  $227  // updated id: -227 ATTRIB_CUSTOM-attrib $-1 -1 $320 $-1 $154 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 503 -1 48 0 #
+		$963  $152  // updated id: -152 edge $-1 686 $-1 $109 -7.45 $223 2.45 $99 $224 forward @7 unknown #
+		$964  $454  // updated id: -454 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $365 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 452 -1 42 0 #
+		$965  $365  // updated id: -365 edge $454 693 $-1 $282 -7.45 $455 2.45 $274 $383 forward @7 unknown #
+		$966  $634  // updated id: -634 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $534 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 109 -1 6 0 10 0 0 0 0 0 0 0 #
+		$-1   $71   // inserted:   -71 point $-1 -1 $-1 -149 119 -50 #
+		$-1   $72   // inserted:   -72 point $-1 -1 $-1 -149 113 -50 #
+		$-1   $42   // inserted:   -42 vertex $-1 -1 $-1 $24 1 $72 #
+		$-1   $43   // inserted:   -43 straight-curve $-1 -1 $-1 -149 119 -50 0 -1 0 I I #
+		$-1   $24   // inserted:   -24 edge $-1 1173 $-1 $41 0 $42 0.6 $23 $43 forward @7 unknown #
+		$-1   $14   // inserted:   -14 coedge $-1 -1 $-1 $21 $22 $23 $24 reversed $7 0 $-1 #
+		$-1   $23   // inserted:   -23 coedge $-1 -1 $-1 $33 $39 $14 $24 forward $40 0 $-1 #
+		$-1   $64   // inserted:   -64 straight-curve $-1 -1 $-1 -80.5 119 -50 1 0 -0 I I #
+		$-1   $37   // inserted:   -37 edge $-1 1174 $-1 $63 -8.05 $41 -6.85 $36 $64 forward @7 unknown #
+		$-1   $36   // inserted:   -36 coedge $-1 -1 $-1 $60 $61 $21 $37 forward $62 0 $-1 #
+		$-1   $94   // inserted:   -94 point $-1 -1 $-1 -149 113 50 #
+		$-1   $56   // inserted:   -56 vertex $-1 -1 $-1 $53 0 $94 #
+		$-1   $142  // inserted:   -142 point $-1 -1 $-1 -149 119 50 #
+		$-1   $88   // inserted:   -88 straight-curve $-1 -1 $-1 -149 119 50 0 1 0 I I #
+		$-1   $53   // inserted:   -53 edge $-1 1135 $-1 $56 -0.6 $87 0 $52 $88 forward @7 unknown #
+		$-1   $30   // inserted:   -30 coedge $-1 -1 $-1 $50 $51 $52 $53 reversed $18 0 $-1 #
+		$-1   $52   // inserted:   -52 coedge $-1 -1 $-1 $86 $33 $30 $53 forward $40 0 $-1 #
+		$-1   $139  // inserted:   -139 straight-curve $-1 -1 $-1 -70.5 119 50 -1 -0 0 I I #
+		$-1   $85   // inserted:   -85 edge $-1 1138 $-1 $87 7.85 $138 9.05 $84 $139 forward @7 unknown #
+		$-1   $84   // inserted:   -84 coedge $-1 -1 $-1 $135 $136 $51 $85 forward $137 0 $-1 #
+		$-1   $57   // inserted:   -57 straight-curve $-1 -1 $-1 -149 113 154.5 2.87436e-16 0 1 I I #
+		$-1   $34   // inserted:   -34 edge $-1 1170 $-1 $42 -20.45 $56 -10.45 $33 $57 forward @7 unknown #
+		$-1   $20   // inserted:   -20 coedge $-1 -1 $-1 $31 $32 $33 $34 reversed $12 0 $-1 #
+		$-1   $33   // inserted:   -33 coedge $-1 -1 $-1 $52 $23 $20 $34 forward $40 0 $-1 #
+		$-1   $199  // inserted:   -199 point $-1 -1 $-1 149 119 50 #
+		$-1   $200  // inserted:   -200 point $-1 -1 $-1 149 113 50 #
+		$-1   $131  // inserted:   -131 vertex $-1 -1 $-1 $82 1 $200 #
+		$-1   $132  // inserted:   -132 straight-curve $-1 -1 $-1 149 119 50 0 -1 0 I I #
+		$-1   $82   // inserted:   -82 edge $-1 1168 $-1 $130 0 $131 0.6 $81 $132 forward @7 unknown #
+		$-1   $49   // inserted:   -49 coedge $-1 -1 $-1 $79 $80 $81 $82 reversed $28 0 $-1 #
+		$-1   $81   // inserted:   -81 coedge $-1 -1 $-1 $122 $128 $49 $82 forward $129 0 $-1 #
+		$-1   $275  // inserted:   -275 point $-1 -1 $-1 160.997 119 50 #
+		$-1   $192  // inserted:   -192 vertex $-1 -1 $-1 $126 0 $275 #
+		$-1   $193  // inserted:   -193 straight-curve $-1 -1 $-1 80.4987 119 50 -1 -0 -4.44089e-16 I I #
+		$-1   $126  // inserted:   -126 edge $-1 1169 $-1 $192 -8.04987 $130 -6.85013 $125 $193 forward @7 unknown #
+		$-1   $125  // inserted:   -125 coedge $-1 -1 $-1 $190 $181 $79 $126 forward $191 0 $-1 #
+		$-1   $357  // inserted:   -357 point $-1 -1 $-1 160.997 119 -50 #
+		$-1   $264  // inserted:   -264 vertex $-1 -1 $-1 $182 0 $357 #
+		$-1   $265  // inserted:   -265 straight-curve $-1 -1 $-1 160.997 119 -25 0 0 1 I I #
+		$-1   $182  // inserted:   -182 edge $-1 1143 $-1 $264 -2.5 $192 7.5 $181 $265 forward @7 unknown #
+		$-1   $181  // inserted:   -181 coedge $-1 -1 $-1 $125 $263 $119 $182 forward $191 0 $-1 #
+		$-1   $271  // inserted:   -271 point $-1 -1 $-1 149 113 -50 #
+		$-1   $187  // inserted:   -187 vertex $-1 -1 $-1 $259 0 $271 #
+		$-1   $448  // inserted:   -448 point $-1 -1 $-1 149 119 -50 #
+		$-1   $353  // inserted:   -353 straight-curve $-1 -1 $-1 149 119 -50 -0 1 0 I I #
+		$-1   $259  // inserted:   -259 edge $-1 1147 $-1 $187 -0.6 $352 0 $186 $353 forward @7 unknown #
+		$-1   $178  // inserted:   -178 coedge $-1 -1 $-1 $184 $258 $186 $259 reversed $117 0 $-1 #
+		$-1   $186  // inserted:   -186 coedge $-1 -1 $-1 $270 $122 $178 $259 forward $129 0 $-1 #
+		$-1   $447  // inserted:   -447 straight-curve $-1 -1 $-1 70.4987 119 -50 1 0 -4.44089e-16 I I #
+		$-1   $351  // inserted:   -351 edge $-1 1149 $-1 $352 7.85013 $264 9.04987 $263 $447 forward @7 unknown #
+		$-1   $263  // inserted:   -263 coedge $-1 -1 $-1 $181 $356 $258 $351 forward $191 0 $-1 #
+		$-1   $188  // inserted:   -188 straight-curve $-1 -1 $-1 149 113 -154.5 -1.72462e-16 -0 -1 I I #
+		$-1   $123  // inserted:   -123 edge $-1 1166 $-1 $131 -20.45 $187 -10.45 $122 $188 forward @7 unknown #
+		$-1   $78   // inserted:   -78 coedge $-1 -1 $-1 $120 $121 $122 $123 reversed $47 0 $-1 #
+		$-1   $122  // inserted:   -122 coedge $-1 -1 $-1 $186 $81 $78 $123 forward $129 0 $-1 #
+		$-1   $496  // inserted:   -496 point $-1 -1 $-1 -50 113 -309 #
+		$-1   $407  // inserted:   -407 vertex $-1 -1 $-1 $315 0 $496 #
+		$-1   $316  // inserted:   -316 point $-1 -1 $-1 -50 119 -309 #
+		$-1   $408  // inserted:   -408 straight-curve $-1 -1 $-1 -50 119 -309 0 1 0 I I #
+		$-1   $315  // inserted:   -315 edge $-1 1139 $-1 $407 -0.6 $223 0 $222 $408 forward @7 unknown #
+		$-1   $257  // inserted:   -257 coedge $-1 -1 $-1 $350 $220 $222 $315 reversed $176 0 $-1 #
+		$-1   $222  // inserted:   -222 coedge $-1 -1 $-1 $151 $314 $257 $315 forward $164 0 $-1 #
+		$-1   $313  // inserted:   -313 straight-curve $-1 -1 $-1 -50 119 -151.659 0 0 -1 I I #
+		$-1   $221  // inserted:   -221 edge $-1 1142 $-1 $223 15.7341 $228 16.9341 $150 $313 forward @7 unknown #
+		$-1   $150  // inserted:   -150 coedge $-1 -1 $-1 $100 $99 $220 $221 forward $62 0 $-1 #
+		$-1   $625  // inserted:   -625 point $-1 -1 $-1 50 119 -309 #
+		$-1   $594  // inserted:   -594 point $-1 -1 $-1 50 113 -309 #
+		$-1   $494  // inserted:   -494 vertex $-1 -1 $-1 $444 1 $594 #
+		$-1   $529  // inserted:   -529 straight-curve $-1 -1 $-1 50 119 -309 0 -1 0 I I #
+		$-1   $444  // inserted:   -444 edge $-1 1150 $-1 $519 0 $494 0.6 $404 $529 forward @7 unknown #
+		$-1   $349  // inserted:   -349 coedge $-1 -1 $-1 $442 $443 $404 $444 reversed $255 0 $-1 #
+		$-1   $404  // inserted:   -404 coedge $-1 -1 $-1 $314 $335 $349 $444 forward $164 0 $-1 #
+		$-1   $630  // inserted:   -630 straight-curve $-1 -1 $-1 50 119 -160.5 0 0 1 I I #
+		$-1   $527  // inserted:   -527 edge $-1 1151 $-1 $596 -16.05 $519 -14.85 $518 $630 forward @7 unknown #
+		$-1   $518  // inserted:   -518 coedge $-1 -1 $-1 $429 $552 $442 $527 forward $191 0 $-1 #
+		$-1   $495  // inserted:   -495 straight-curve $-1 -1 $-1 -74.5 113 -309 -1 0 2.38437e-16 I I #
+		$-1   $406  // inserted:   -406 edge $-1 1158 $-1 $494 -12.45 $407 -2.45 $314 $495 forward @7 unknown #
+		$-1   $405  // inserted:   -405 coedge $-1 -1 $-1 $493 $445 $314 $406 reversed $347 0 $-1 #
+		$-1   $314  // inserted:   -314 coedge $-1 -1 $-1 $222 $404 $405 $406 forward $164 0 $-1 #
+		$-1   $467  // inserted:   -467 point $-1 -1 $-1 -50 119 309 #
+		$-1   $624  // inserted:   -624 point $-1 -1 $-1 -50 113 309 #
+		$-1   $516  // inserted:   -516 vertex $-1 -1 $-1 $424 1 $624 #
+		$-1   $517  // inserted:   -517 straight-curve $-1 -1 $-1 -50 119 309 0 -1 0 I I #
+		$-1   $424  // inserted:   -424 edge $-1 1163 $-1 $382 0 $516 0.6 $329 $517 forward @7 unknown #
+		$-1   $423  // inserted:   -423 coedge $-1 -1 $-1 $372 $515 $329 $424 reversed $440 0 $-1 #
+		$-1   $329  // inserted:   -329 coedge $-1 -1 $-1 $422 $289 $423 $424 forward $235 0 $-1 #
+		$-1   $462  // inserted:   -462 straight-curve $-1 -1 $-1 -50 119 160.5 -0 -0 -1 I I #
+		$-1   $373  // inserted:   -373 edge $-1 1164 $-1 $377 -16.05 $382 -14.85 $284 $462 forward @7 unknown #
+		$-1   $284  // inserted:   -284 coedge $-1 -1 $-1 $206 $204 $372 $373 forward $137 0 $-1 #
+		$-1   $726  // inserted:   -726 point $-1 -1 $-1 50 113 309 #
+		$-1   $621  // inserted:   -621 vertex $-1 -1 $-1 $540 0 $726 #
+		$-1   $541  // inserted:   -541 point $-1 -1 $-1 50 119 309 #
+		$-1   $639  // inserted:   -639 straight-curve $-1 -1 $-1 50 119 309 0 1 -0 I I #
+		$-1   $540  // inserted:   -540 edge $-1 1154 $-1 $621 -0.6 $455 0 $453 $639 forward @7 unknown #
+		$-1   $535  // inserted:   -535 coedge $-1 -1 $-1 $636 $451 $453 $540 reversed $537 0 $-1 #
+		$-1   $453  // inserted:   -453 coedge $-1 -1 $-1 $364 $422 $535 $540 forward $235 0 $-1 #
+		$-1   $539  // inserted:   -539 straight-curve $-1 -1 $-1 50 119 150.5 -0 0 1 I I #
+		$-1   $452  // inserted:   -452 edge $-1 1157 $-1 $455 15.85 $538 17.05 $363 $539 forward @7 unknown #
+		$-1   $363  // inserted:   -363 coedge $-1 -1 $-1 $450 $274 $451 $452 forward $191 0 $-1 #
+		$-1   $622  // inserted:   -622 straight-curve $-1 -1 $-1 74.5 113 309 1 0 0 I I #
+		$-1   $514  // inserted:   -514 edge $-1 1160 $-1 $516 -12.45 $621 -2.45 $422 $622 forward @7 unknown #
+		$-1   $513  // inserted:   -513 coedge $-1 -1 $-1 $619 $620 $422 $514 reversed $525 0 $-1 #
+		$-1   $422  // inserted:   -422 coedge $-1 -1 $-1 $453 $329 $513 $514 forward $235 0 $-1 #
+		$-1   $725  // inserted:   -725 edge $823 1155 $-1 $621 -1.2 $641 -0 $636 $824 forward @7 unknown #
+		$-1   $823  // inserted:   -823 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $725 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 571 -1 7 0 10 0 0 0 0 0 0 0 #
+		$-1   $636  // inserted:   -636 coedge $-1 -1 $-1 $536 $535 $620 $725 forward $537 0 $-1 #
+		$-1   $620  // inserted:   -620 coedge $-1 -1 $-1 $513 $544 $636 $725 reversed $525 0 $-1 #
+		$-1   $372  // inserted:   -372 coedge $-1 -1 $-1 $461 $423 $284 $373 reversed $440 0 $-1 #
+		$-1   $442  // inserted:   -442 coedge $-1 -1 $-1 $497 $349 $518 $527 reversed $255 0 $-1 #
+		$-1   $446  // inserted:   -446 edge $530 1140 $-1 $407 -1.2 $413 -0 $350 $531 forward @7 unknown #
+		$-1   $530  // inserted:   -530 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $446 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 571 -1 33 0 10 0 0 0 0 0 0 0 #
+		$-1   $350  // inserted:   -350 coedge $-1 -1 $-1 $312 $257 $445 $446 forward $176 0 $-1 #
+		$-1   $445  // inserted:   -445 coedge $-1 -1 $-1 $405 $410 $350 $446 reversed $347 0 $-1 #
+		$-1   $185  // inserted:   -185 edge $267 1148 $-1 $187 -1.19974 $268 -0 $184 $269 forward @7 unknown #
+		$-1   $267  // inserted:   -267 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $185 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 571 -1 21 0 10 0 0 0 0 0 0 0 #
+		$-1   $184  // inserted:   -184 coedge $-1 -1 $-1 $261 $178 $121 $185 forward $117 0 $-1 #
+		$-1   $121  // inserted:   -121 coedge $-1 -1 $-1 $78 $183 $184 $185 reversed $47 0 $-1 #
+		$-1   $79   // inserted:   -79 coedge $-1 -1 $-1 $124 $49 $125 $126 reversed $28 0 $-1 #
+		$-1   $55   // inserted:   -55 edge $91 1136 $-1 $56 -1.2 $92 -0 $50 $93 forward @7 unknown #
+		$-1   $91   // inserted:   -91 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $55 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 571 -1 38 0 10 0 0 0 0 0 0 0 #
+		$-1   $50   // inserted:   -50 coedge $-1 -1 $-1 $83 $30 $32 $55 forward $18 0 $-1 #
+		$-1   $32   // inserted:   -32 coedge $-1 -1 $-1 $20 $54 $50 $55 reversed $12 0 $-1 #
+		$-1   $21   // inserted:   -21 coedge $-1 -1 $-1 $35 $14 $36 $37 reversed $7 0 $-1 #
+		$-1   $537  // inserted:   -537 loop $-1 -1 $-1 $-1 $535 $524 #
+		$-1   $255  // inserted:   -255 loop $-1 -1 $-1 $-1 $349 $175 #
+		$-1   $347  // inserted:   -347 loop $-1 -1 $-1 $-1 $405 $254 #
+		$-1   $176  // inserted:   -176 loop $-1 -1 $-1 $-1 $257 $116 #
+		$-1   $117  // inserted:   -117 loop $-1 -1 $-1 $-1 $178 $75 #
+		$-1   $18   // inserted:   -18 loop $-1 -1 $-1 $-1 $30 $11 #
+		$-1   $455  // inserted:   -455 vertex $-1 -1 $-1 $540 1 $541 #
+		$967  $383  // updated id: -383 straight-curve $-1 -1 $-1 74.5 119 309 -1 -0 0 I I #
+		$968  $136  // updated id: -136 coedge $-1 -1 $-1 $84 $206 $86 $141 forward $137 0 $-1 #
+		$969  $274  // updated id: -274 coedge $-1 -1 $-1 $363 $190 $364 $365 forward $191 0 $-1 #
+		$970  $209  // updated id: -209 coedge $-1 -1 $-1 $289 $292 $140 $210 reversed $235 0 $-1 #
+		$971  $364  // updated id: -364 coedge $-1 -1 $-1 $279 $453 $274 $365 reversed $235 0 $-1 #
+		$-1   $382  // inserted:   -382 vertex $-1 -1 $-1 $290 0 $467 #
+		$-1   $290  // inserted:   -290 edge $381 1176 $-1 $382 12.45 $211 22.35 $206 $383 forward @7 unknown #
+		$-1   $381  // inserted:   -381 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $290 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 452 -1 42 0 #
+		$-1   $206  // inserted:   -206 coedge $-1 -1 $-1 $136 $284 $289 $290 forward $137 0 $-1 #
+		$-1   $289  // inserted:   -289 coedge $-1 -1 $-1 $329 $209 $206 $290 reversed $235 0 $-1 #
+		$-1   $519  // inserted:   -519 vertex $-1 -1 $-1 $430 0 $625 #
+		$-1   $430  // inserted:   -430 edge $-1 1130 $-1 $519 12.45 $432 22.35 $429 $224 forward @7 unknown #
+		$972  $224  // updated id: -224 straight-curve $-1 -1 $-1 -74.5 119 -309 1 0 -2.38437e-16 I I #
+		$973  $432  // updated id: -432 vertex $520 -1 $-1 $430 1 $521 #
+		$-1   $429  // inserted:   -429 coedge $-1 -1 $-1 $356 $518 $335 $430 forward $191 0 $-1 #
+		$974  $356  // updated id: -356 coedge $-1 -1 $-1 $263 $429 $270 $362 forward $191 0 $-1 #
+		$975  $99   // updated id: -99 coedge $-1 -1 $-1 $150 $60 $151 $152 forward $62 0 $-1 #
+		$-1   $335  // inserted:   -335 coedge $-1 -1 $-1 $404 $243 $429 $430 reversed $164 0 $-1 #
+		$976  $243  // updated id: -243 coedge $-1 -1 $-1 $335 $163 $336 $337 reversed $164 0 $-1 #
+		$977  $151  // updated id: -151 coedge $-1 -1 $-1 $107 $222 $99 $152 reversed $164 0 $-1 #
+		$-1   $223  // inserted:   -223 vertex $-1 -1 $-1 $315 1 $316 #
+		$-1   $352  // inserted:   -352 vertex $-1 -1 $-1 $259 1 $448 #
+		$978  $283  // updated id: -283 straight-curve $-1 -1 $-1 149 119 -154.5 1.72462e-16 0 1 I I #
+		$979  $197  // updated id: -197 coedge $-1 -1 $-1 $128 $278 $279 $280 reversed $129 0 $-1 #
+		$980  $270  // updated id: -270 coedge $-1 -1 $-1 $336 $186 $356 $362 reversed $129 0 $-1 #
+		$-1   $130  // inserted:   -130 vertex $-1 -1 $-1 $198 0 $199 #
+		$-1   $198  // inserted:   -198 edge $281 1132 $-1 $130 20.45 $282 46.35 $190 $283 forward @7 unknown #
+		$-1   $281  // inserted:   -281 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $198 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 463 -1 45 0 #
+		$-1   $190  // inserted:   -190 coedge $-1 -1 $-1 $274 $125 $128 $198 forward $191 0 $-1 #
+		$-1   $128  // inserted:   -128 coedge $-1 -1 $-1 $81 $197 $190 $198 reversed $129 0 $-1 #
+		$-1   $87   // inserted:   -87 vertex $-1 -1 $-1 $53 1 $142 #
+		$981  $110  // updated id: -110 straight-curve $-1 -1 $-1 -149 119 154.5 -2.87436e-16 -0 -1 I I #
+		$982  $68   // updated id: -68 coedge $-1 -1 $-1 $39 $106 $107 $108 reversed $40 0 $-1 #
+		$983  $86   // updated id: -86 coedge $-1 -1 $-1 $140 $52 $136 $141 reversed $40 0 $-1 #
+		$-1   $41   // inserted:   -41 vertex $-1 -1 $-1 $69 0 $71 #
+		$-1   $69   // inserted:   -69 edge $-1 1177 $-1 $41 20.45 $109 46.35 $60 $110 forward @7 unknown #
+		$-1   $60   // inserted:   -60 coedge $-1 -1 $-1 $99 $36 $39 $69 forward $62 0 $-1 #
+		$-1   $39   // inserted:   -39 coedge $-1 -1 $-1 $23 $68 $60 $69 reversed $40 0 $-1 #
+		$984  $235  // updated id: -235 loop $-1 -1 $-1 $-1 $329 $159 #
+		$985  $-1   // deleted:    -983 coedge $-1 -1 $-1 $140 $68 $136 $141 reversed $40 0 $-1 #
+		$986  $-1   // deleted:    -984 loop $-1 -1 $-1 $-1 $364 $985 #
+		$987  $-1   // deleted:    -985 face $1001 621 $-1 $994 $235 $3 $-1 $236 reversed single #
+		$988  $-1   // deleted:    -986 loop $-1 -1 $-1 $988 $99 $987 #
+		$989  $-1   // deleted:    -987 face $1004 626 $-1 $218 $986 $3 $-1 $160 reversed single #
+		$-1   $164  // inserted:   -164 loop $-1 -1 $-1 $-1 $222 $245 #
+		$990  $107  // updated id: -107 coedge $-1 -1 $-1 $163 $151 $68 $108 forward $164 0 $-1 #
+		$991  $163  // updated id: -163 coedge $-1 -1 $-1 $243 $107 $238 $244 forward $164 0 $-1 #
+		$992  $245  // updated id: -245 face $341 619 $-1 $332 $164 $3 $-1 $342 reversed single #
+		$-1   $62   // inserted:   -62 loop $-1 -1 $-1 $-1 $36 $102 #
+		$993  $129  // updated id: -129 loop $-1 -1 $-1 $-1 $81 $112 #
+		$994  $-1   // deleted:    -992 face $341 619 $-1 $996 $989 $3 $-1 $342 T F #
+		$-1   $191  // inserted:   -191 loop $-1 -1 $-1 $-1 $125 $171 #
+		$995  $40   // updated id: -40 loop $-1 -1 $-1 $-1 $23 $70 #
+		$996  $-1   // deleted:    -994 face $1007 622 $-1 $332 $129 $3 $-1 $172 reversed single #
+		$-1   $137  // inserted:   -137 loop $-1 -1 $-1 $-1 $84 $207 #
+		$-1   $439  // inserted:   -439 face $523 1122 $-1 $524 $525 $3 $-1 $526 reversed single #
+		$-1   $523  // inserted:   -523 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $439 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 571 -1 0 0 12 0 0 0 0 0 0 0 #
+		$-1   $346  // inserted:   -346 face $438 1123 $-1 $439 $440 $3 $-1 $441 reversed single #
+		$-1   $522  // inserted:   -522 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $438 $346 @28 INV_FEATURE_ORIENTATION_ATTR 1 44 $627 $-1 #
+		$-1   $438  // inserted:   -438 ATTRIB_CUSTOM-attrib $-1 -1 $522 $-1 $346 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 571 -1 9 0 20 0 0 0 0 0 0 0 #
+		$-1   $27   // inserted:   -27 face $45 1124 $-1 $46 $47 $3 $-1 $48 reversed single #
+		$-1   $45   // inserted:   -45 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $27 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 571 -1 0 0 12 0 0 0 0 0 0 0 #
+		$-1   $17   // inserted:   -17 face $26 1125 $-1 $27 $28 $3 $-1 $29 reversed single #
+		$-1   $44   // inserted:   -44 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $26 $17 @28 INV_FEATURE_ORIENTATION_ATTR 1 44 $73 $-1 #
+		$-1   $26   // inserted:   -26 ATTRIB_CUSTOM-attrib $-1 -1 $44 $-1 $17 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 571 -1 19 0 20 0 0 0 0 0 0 0 #
+		$-1   $6    // inserted:   -6 face $10 1126 $-1 $11 $12 $3 $-1 $13 reversed single #
+		$-1   $10   // inserted:   -10 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $6 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 571 -1 0 0 12 0 0 0 0 0 0 0 #
+		$-1   $4    // inserted:   -4 face $5 1127 $-1 $6 $7 $3 $-1 $8 reversed single #
+		$-1   $9    // inserted:   -9 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $5 $4 @28 INV_FEATURE_ORIENTATION_ATTR 1 44 $15 $-1 #
+		$-1   $5    // inserted:   -5 ATTRIB_CUSTOM-attrib $-1 -1 $9 $-1 $4 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 571 -1 40 0 20 0 0 0 0 0 0 0 #
+		$-1   $159  // inserted:   -159 face $233 1128 $-1 $234 $235 $3 $-1 $236 reversed single #
+		$997  $3    // updated id: -3 shell $-1 -1 $-1 $-1 $-1 $4 $-1 $2 #
+		$-1   $324  // inserted:   -324 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $233 $159 @28 INV_FEATURE_ORIENTATION_ATTR 1 44 $248 $-1 #
+		$-1   $233  // inserted:   -233 ATTRIB_CUSTOM-attrib $-1 -1 $324 $-1 $159 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 198 -1 6 0 20 0 0 0 0 0 0 0 #
+		$-1   $102  // inserted:   -102 face $158 1129 $-1 $159 $62 $3 $-1 $160 reversed single #
+		$-1   $323  // inserted:   -323 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $232 $102 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 411 -1 4 1 #
+		$-1   $232  // inserted:   -232 ATTRIB_CUSTOM-attrib $-1 -1 $323 $158 $102 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 130 -1 4 1 #
+		$-1   $158  // inserted:   -158 ATTRIB_CUSTOM-attrib $-1 -1 $232 $-1 $102 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 109 -1 0 0 12 0 0 0 0 0 0 0 #
+		$-1   $207  // inserted:   -207 face $291 1114 $-1 $102 $137 $3 $-1 $160 reversed single #
+		$-1   $468  // inserted:   -468 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $384 $207 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 109 -1 0 0 12 0 0 0 0 0 0 0 #
+		$-1   $384  // inserted:   -384 ATTRIB_CUSTOM-attrib $-1 -1 $468 $291 $207 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 130 -1 4 1 #
+		$-1   $291  // inserted:   -291 ATTRIB_CUSTOM-attrib $-1 -1 $384 $-1 $207 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 411 -1 4 1 #
+		$-1   $171  // inserted:   -171 face $250 1113 $-1 $207 $191 $3 $-1 $160 reversed single #
+		$-1   $437  // inserted:   -437 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $343 $171 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 411 -1 4 1 #
+		$-1   $343  // inserted:   -343 ATTRIB_CUSTOM-attrib $-1 -1 $437 $250 $171 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 130 -1 4 1 #
+		$-1   $250  // inserted:   -250 ATTRIB_CUSTOM-attrib $-1 -1 $343 $-1 $171 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 109 -1 0 0 12 0 0 0 0 0 0 0 #
+		$-1   $112  // inserted:   -112 face $170 1112 $-1 $171 $129 $3 $-1 $172 reversed single #
+		$-1   $249  // inserted:   -249 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $170 $112 @28 INV_FEATURE_ORIENTATION_ATTR 1 44 $248 $-1 #
+		$-1   $170  // inserted:   -170 ATTRIB_CUSTOM-attrib $-1 -1 $249 $-1 $112 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 198 -1 7 0 20 0 0 0 0 0 0 0 #
+		$-1   $70   // inserted:   -70 face $111 1111 $-1 $112 $40 $3 $-1 $113 reversed single #
+		$-1   $169  // inserted:   -169 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $111 $70 @28 INV_FEATURE_ORIENTATION_ATTR 1 44 $248 $-1 #
+		$-1   $111  // inserted:   -111 ATTRIB_CUSTOM-attrib $-1 -1 $169 $-1 $70 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 198 -1 9 0 20 0 0 0 0 0 0 0 #
+		$998  $-1   // deleted:    -996 face $999 620 $-1 $985 $40 $3 $-1 $113 T F #
+		$999  $-1   // deleted:    -997 shell $-1 -1 $-1 $-1 $-1 $234 $-1 $2 #
+		$1000 $-1   // deleted:    -998 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $999 $996 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 198 -1 9 0 20 0 0 0 0 0 0 0 #
+		$1001 $-1   // deleted:    -999 ATTRIB_CUSTOM-attrib $-1 -1 $998 $-1 $996 @28 INV_FEATURE_ORIENTATION_ATTR 1 44 $248 $-1 #
+		$1002 $149  // updated id: -149 face $217 625 $-1 $218 $96 $3 $-1 $219 reversed single #
+		$1003 $-1   // deleted:    -1001 ATTRIB_CUSTOM-attrib $-1 -1 $1000 $-1 $985 @28 INV_FEATURE_ORIENTATION_ATTR 1 44 $248 $-1 #
+		$1004 $-1   // deleted:    -1002 face $1014 625 $-1 $987 $96 $3 $-1 $219 reversed single #
+		$1005 $-1   // deleted:    -1003 ATTRIB_CUSTOM-attrib $-1 -1 $1005 $1004 $987 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 130 -1 4 1 #
+		$1006 $-1   // deleted:    -1004 ATTRIB_CUSTOM-attrib $-1 -1 $1003 $-1 $987 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 411 -1 4 1 #
+		$1007 $-1   // deleted:    -1005 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $1003 $987 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 109 -1 0 0 12 0 0 0 0 0 0 0 #
+		$1008 $645  // updated id: -645 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $549 $465 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 109 -1 6 0 20 0 0 0 0 0 0 0 #
+		$1009 $-1   // deleted:    -1007 ATTRIB_CUSTOM-attrib $-1 -1 $1006 $-1 $994 @28 INV_FEATURE_ORIENTATION_ATTR 1 44 $248 $-1 #
+		$1010 $319  // updated id: -319 face $415 624 $-1 $149 $226 $3 $-1 $416 reversed single #
+		$1011 $415  // updated id: -415 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $319 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 109 -1 8 0 20 0 0 0 0 0 0 0 #
+		$1012 $-1   // deleted:    -1010 face $1012 624 $-1 $149 $226 $3 $-1 $416 reversed single #
+		$1013 $217  // updated id: -217 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $149 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 109 -1 9 0 20 0 0 0 0 0 0 0 #
+		$1014 $-1   // deleted:    -1012 ATTRIB_CUSTOM-attrib $-1 -1 $415 $-1 $319 @28 INV_FEATURE_ORIENTATION_ATTR 1 44 $739 $-1 #
+2 delta_state 43 1 0 $0  $4  $2  $-1  0 11
+	BulletinBoard: 2
+		$1015 $154  // updated id: -154 edge $227 699 $-1 $156 -32.2 $228 -21.1 $153 $229 forward @7 unknown #
+		$1016 $320  // updated id: -320 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $227 $154 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 109 -1 8 0 10 0 0 0 0 0 0 0 #
+		$1017 $-1   // deleted:    -1015 edge $1017 699 $-1 $156 -32.2 $557 -0 $153 $229 forward @7 unknown #
+		$-1   $227  // inserted:   -227 ATTRIB_CUSTOM-attrib $-1 -1 $320 $-1 $154 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 503 -1 48 0 #
+		$-1   $322  // inserted:   -322 ATTRIB_CUSTOM-attrib $-1 -1 $417 $230 $156 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 503 -1 46 1 #
+		$1018 $-1   // deleted:    -1016 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $1017 $154 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 109 -1 8 0 10 0 0 0 0 0 0 0 #
+		$1019 $156  // updated id: -156 vertex $230 -1 $-1 $213 1 $231 #
+		$-1   $744  // inserted:   -744 ATTRIB_CUSTOM-attrib $-1 -1 $828 $650 $557 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 503 -1 47 1 #
+		$1020 $-1   // deleted:    -1018 ATTRIB_CUSTOM-attrib $-1 -1 $417 $-1 $156 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 495 -1 46 1 #
+		$1021 $557  // updated id: -557 vertex $650 -1 $-1 $471 1 $651 #
+		$1022 $828  // updated id: -828 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $744 $557 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 109 -1 3 0 9 0 0 0 0 0 0 0 #
+		$-1   $650  // inserted:   -650 ATTRIB_CUSTOM-attrib $-1 -1 $744 $-1 $557 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 499 -1 47 1 #
+		$1023 $417  // updated id: -417 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $322 $156 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 109 -1 5 0 9 0 0 0 0 0 0 0 #
+		$-1   $230  // inserted:   -230 ATTRIB_CUSTOM-attrib $-1 -1 $322 $-1 $156 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 495 -1 46 1 #
+		$1024 $987  // updated id: -985 face $1001 621 $-1 $994 $235 $3 $-1 $236 reversed single #
+		$1025 $1003 // updated id: -1001 ATTRIB_CUSTOM-attrib $-1 -1 $1000 $-1 $985 @28 INV_FEATURE_ORIENTATION_ATTR 1 44 $248 $-1 #
+		$1026 $-1   // deleted:    -1024 face $1026 626 $-1 $218 $986 $3 $-1 $160 reversed single #
+		$-1   $1004 // inserted:   -1002 face $1014 625 $-1 $987 $96 $3 $-1 $219 reversed single #
+		$1027 $465  // updated id: -465 face $549 719 $-1 $550 $375 $3 $-1 $551 reversed single #
+		$1028 $645  // updated id: -645 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $549 $465 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 109 -1 6 0 20 0 0 0 0 0 0 0 #
+		$1029 $-1   // deleted:    -1027 face $1029 719 $-1 $550 $375 $3 $-1 $551 reversed single #
+		$1030 $742  // updated id: -742 face $826 718 $-1 $465 $827 $3 $-1 $551 reversed single #
+		$1031 $888  // updated id: -888 ATTRIB_CUSTOM-attrib $-1 -1 $922 $826 $742 @28 INV_FEATURE_ORIENTATION_ATTR 1 44 $739 $-1 #
+		$1032 $-1   // deleted:    -1030 face $1032 718 $-1 $465 $827 $3 $-1 $551 reversed single #
+		$-1   $549  // inserted:   -549 ATTRIB_CUSTOM-attrib $-1 -1 $645 $-1 $465 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 399 -1 5 1 #
+		$-1   $826  // inserted:   -826 ATTRIB_CUSTOM-attrib $-1 -1 $888 $-1 $742 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 399 -1 5 1 #
+		$1033 $362  // updated id: -362 edge $449 696 $-1 $432 -15.45 $352 10.45 $356 $283 forward @7 unknown #
+		$1034 $-1   // deleted:    -1032 ATTRIB_CUSTOM-attrib $-1 -1 $888 $-1 $742 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 399 -1 5 1 #
+		$-1   $449  // inserted:   -449 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $362 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 463 -1 45 0 #
+		$-1   $626  // inserted:   -626 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $520 $432 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 463 -1 44 1 #
+		$1035 $-1   // deleted:    -1033 edge $1034 696 $-1 $432 -15.45 $282 46.35 $356 $283 forward @7 unknown #
+		$1036 $432  // updated id: -432 vertex $520 -1 $-1 $430 1 $521 #
+		$-1   $542  // inserted:   -542 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $460 $282 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 463 -1 39 1 #
+		$1037 $-1   // deleted:    -1035 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $432 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 459 -1 44 1 #
+		$1038 $282  // updated id: -282 vertex $370 -1 $-1 $365 0 $371 #
+		$-1   $520  // inserted:   -520 ATTRIB_CUSTOM-attrib $-1 -1 $626 $-1 $432 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 459 -1 44 1 #
+		$1039 $365  // updated id: -365 edge $454 693 $-1 $282 -7.45 $455 2.45 $274 $383 forward @7 unknown #
+		$1040 $-1   // deleted:    -1038 vertex $1037 -1 $-1 $365 0 $371 #
+		$-1   $454  // inserted:   -454 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $365 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 452 -1 42 0 #
+		$-1   $460  // inserted:   -460 ATTRIB_CUSTOM-attrib $-1 -1 $542 $370 $282 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 452 -1 39 1 #
+		$-1   $385  // inserted:   -385 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $295 $211 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 452 -1 41 1 #
+		$1041 $-1   // deleted:    -1039 edge $1040 693 $-1 $282 -7.45 $211 22.35 $274 $383 forward @7 unknown #
+		$1042 $211  // updated id: -211 vertex $295 -1 $-1 $141 0 $296 #
+		$-1   $295  // inserted:   -295 ATTRIB_CUSTOM-attrib $-1 -1 $385 $-1 $211 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 448 -1 41 1 #
+		$-1   $370  // inserted:   -370 ATTRIB_CUSTOM-attrib $-1 -1 $460 $-1 $282 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 444 -1 39 1 #
+4 delta_state 42 1 0 $2  $6  $4  $-1  0 11
+	BulletinBoard: 2
+		$-1   $1018 // inserted:   -1016 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $1017 $154 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 109 -1 8 0 10 0 0 0 0 0 0 0 #
+		$1048 $417  // updated id: -417 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $322 $156 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 109 -1 5 0 9 0 0 0 0 0 0 0 #
+		$1049 $156  // updated id: -156 vertex $230 -1 $-1 $213 1 $231 #
+		$-1   $1020 // inserted:   -1018 ATTRIB_CUSTOM-attrib $-1 -1 $417 $-1 $156 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 495 -1 46 1 #
+		$1050 $828  // updated id: -828 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $744 $557 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 109 -1 3 0 9 0 0 0 0 0 0 0 #
+		$1051 $557  // updated id: -557 vertex $650 -1 $-1 $471 1 $651 #
+		$-1   $1017 // inserted:   -1015 edge $1017 699 $-1 $156 -32.2 $557 -0 $153 $229 forward @7 unknown #
+		$1052 $320  // updated id: -320 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $227 $154 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 109 -1 8 0 10 0 0 0 0 0 0 0 #
+		$1053 $154  // updated id: -154 edge $227 699 $-1 $156 -32.2 $228 -21.1 $153 $229 forward @7 unknown #
+6 delta_state 41 1 0 $4  $8  $6  $-1  0 11
+	BulletinBoard: 2
+		$-1   $1035 // inserted:   -1033 edge $1034 696 $-1 $432 -15.45 $282 46.35 $356 $283 forward @7 unknown #
+		$1070 $432  // updated id: -432 vertex $520 -1 $-1 $430 1 $521 #
+		$-1   $1034 // inserted:   -1032 ATTRIB_CUSTOM-attrib $-1 -1 $888 $-1 $742 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 399 -1 5 1 #
+		$1071 $362  // updated id: -362 edge $449 696 $-1 $432 -15.45 $352 10.45 $356 $283 forward @7 unknown #
+8 delta_state 40 1 0 $6  $10  $8  $-1  0 11
+	BulletinBoard: 2
+		$-1   $1037 // inserted:   -1035 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $432 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 459 -1 44 1 #
+		$1088 $282  // updated id: -282 vertex $370 -1 $-1 $365 0 $371 #
+		$-1   $1041 // inserted:   -1039 edge $1040 693 $-1 $282 -7.45 $211 22.35 $274 $383 forward @7 unknown #
+		$1089 $211  // updated id: -211 vertex $295 -1 $-1 $141 0 $296 #
+		$-1   $1040 // inserted:   -1038 vertex $1037 -1 $-1 $365 0 $371 #
+		$1090 $365  // updated id: -365 edge $454 693 $-1 $282 -7.45 $455 2.45 $274 $383 forward @7 unknown #
+10 delta_state 38 1 0 $8  $12  $10  $-1  0 11
+	BulletinBoard: 2
+		$-1   $1026 // inserted:   -1024 face $1026 626 $-1 $218 $986 $3 $-1 $160 reversed single #
+		$1102 $1003 // updated id: -1001 ATTRIB_CUSTOM-attrib $-1 -1 $1000 $-1 $985 @28 INV_FEATURE_ORIENTATION_ATTR 1 44 $248 $-1 #
+		$1103 $987  // updated id: -985 face $1001 621 $-1 $994 $235 $3 $-1 $236 reversed single #
+12 delta_state 37 1 0 $10  $14  $12  $-1  0 11
+	BulletinBoard: 2
+		$-1   $1029 // inserted:   -1027 face $1029 719 $-1 $550 $375 $3 $-1 $551 reversed single #
+		$1106 $645  // updated id: -645 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $549 $465 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 109 -1 6 0 20 0 0 0 0 0 0 0 #
+		$1107 $465  // updated id: -465 face $549 719 $-1 $550 $375 $3 $-1 $551 reversed single #
+		$-1   $1032 // inserted:   -1030 face $1032 718 $-1 $465 $827 $3 $-1 $551 reversed single #
+		$1108 $888  // updated id: -888 ATTRIB_CUSTOM-attrib $-1 -1 $922 $826 $742 @28 INV_FEATURE_ORIENTATION_ATTR 1 44 $739 $-1 #
+		$1109 $742  // updated id: -742 face $826 718 $-1 $465 $827 $3 $-1 $551 reversed single #
+14 delta_state 36 1 0 $12  $15  $14  $-1  0 11
+	BulletinBoard: 2
+		$-1   $328  // inserted:   -328 plane-surface $-1 -1 $-1 0 142.933 -321 0 0 1 1 0 0 forward_v I I I I #
+		$-1   $717  // inserted:   -717 straight-curve $-1 -1 $-1 -166 138.29 -321 0 -1 0 I I #
+		$-1   $799  // inserted:   -799 straight-curve $-1 -1 $-1 166 147.577 -321 2.39096e-16 1 -9.99341e-32 I I #
+		$-1   $699  // inserted:   -699 edge $-1 881 $-1 $791 -7.5 $660 -6.7 $604 $792 forward @7 unknown #
+		$1138 $-1   // deleted:    -1136 point $-1 -1 $-1 -166 140 -327 #
+		$-1   $604  // inserted:   -604 coedge $-1 -1 $-1 $566 $697 $698 $699 forward $506 0 $-1 #
+		$1186 $566  // updated id: -566 coedge $-1 -1 $-1 $659 $604 $479 $567 forward $506 0 $-1 #
+		$1139 $-1   // deleted:    -1137 vertex $-1 -1 $-1 $1138 0 $1136 #
+		$-1   $698  // inserted:   -698 coedge $-1 -1 $-1 $714 $655 $604 $699 reversed $572 0 $-1 #
+		$1187 $655  // updated id: -655 coedge $-1 -1 $-1 $698 $747 $564 $656 reversed $572 0 $-1 #
+		$1115 $-1   // deleted:    -1113 ATTRIB_CUSTOM-attrib $-1 -1 $1114 $-1 $1111 @28 INV_FEATURE_ORIENTATION_ATTR 1 44 $569 $-1 #
+		$1150 $-1   // deleted:    -1148 coedge $-1 -1 $-1 $1139 $1151 $1118 $1147 F $506 0 $-1 #
+		$1148 $-1   // deleted:    -1146 straight-curve $-1 -1 $-1 168 140 -327 -1 1.07009e-16 4.17966e-16 I I #
+		$1151 $-1   // deleted:    -1149 straight-curve $-1 -1 $-1 166 68.5 -327 0 1 0 I I #
+		$1124 $-1   // deleted:    -1122 coedge $-1 -1 $-1 $843 $1118 $1124 $1125 F $602 0 $-1 #
+		$1120 $-1   // deleted:    -1118 coedge $-1 -1 $-1 $1122 $1121 $1148 $1147 T $602 0 $-1 #
+		$1137 $-1   // deleted:    -1135 edge $933 678 $-1 $874 0 $635 2.6 $870 $653 forward @7 unknown #
+		$1145 $-1   // deleted:    -1143 coedge $-1 -1 $-1 $1078 $1079 $1142 $1141 F $1174 0 $-1 #
+		$1126 $-1   // deleted:    -1124 coedge $-1 -1 $-1 $1120 $751 $1122 $1125 reversed $1117 0 $-1 #
+		$1123 $-1   // deleted:    -1121 coedge $-1 -1 $-1 $1118 $843 $1119 $1123 T $602 0 $-1 #
+		$1147 $-1   // deleted:    -1145 vertex $-1 -1 $-1 $1147 0 $1144 #
+		$1188 $896  // updated id: -896 ATTRIB_CUSTOM-attrib $-1 -1 $925 $-1 $839 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 274 -1 28 0 #
+		$1189 $839  // updated id: -839 edge $896 650 $-1 $848 0 $840 0.4 $756 $864 forward @7 unknown #
+		$1127 $-1   // deleted:    -1125 edge $1127 751 $-1 $1145 0 $894 65.2 $1124 $912 F @7 unknown #
+		$1125 $-1   // deleted:    -1123 edge $1126 745 $-1 $1137 0 $845 65.2 $1121 $846 F @7 unknown #
+		$1141 $-1   // deleted:    -1139 coedge $-1 -1 $-1 $566 $1148 $1115 $1138 F $506 0 $-1 #
+		$1190 $713  // updated id: -713 vertex $-1 -1 $-1 $709 1 $814 #
+		$1191 $804  // updated id: -804 vertex $-1 -1 $-1 $794 0 $872 #
+		$1192 $873  // updated id: -873 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $805 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 191 -1 16 0 #
+		$1193 $809  // updated id: -809 ATTRIB_CUSTOM-attrib $-1 -1 $877 $-1 $708 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 181 -1 14 1 #
+		$1194 $708  // updated id: -708 vertex $809 -1 $-1 $608 1 $810 #
+		$1195 $803  // updated id: -803 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $704 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 109 -1 3 0 18 0 0 0 0 0 0 0 #
+		$1196 $712  // updated id: -712 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $611 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 109 -1 5 0 18 0 0 0 0 0 0 0 #
+		$1197 $722  // updated id: -722 ATTRIB_CUSTOM-attrib $-1 -1 $822 $-1 $616 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 171 -1 12 1 #
+		$1198 $616  // updated id: -616 vertex $722 -1 $-1 $512 0 $723 #
+		$1199 $819  // updated id: -819 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $721 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 175 -1 13 0 #
+		$1094 $-1   // deleted:    -1092 vertex $-1 -1 $-1 $1083 1 $810 #
+		$1083 $-1   // deleted:    -1081 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $1080 $1077 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 109 -1 7 0 20 0 0 0 0 0 0 0 #
+		$-1   $815  // inserted:   -815 point $-1 -1 $-1 -166 140 -321 #
+		$-1   $865  // inserted:   -865 point $-1 -1 $-1 -166 145 -327 #
+		$-1   $724  // inserted:   -724 point $-1 -1 $-1 -166 145 -321 #
+		$-1   $617  // inserted:   -617 vertex $-1 -1 $-1 $719 0 $724 #
+		$-1   $816  // inserted:   -816 straight-curve $-1 -1 $-1 -166 145 -163.5 0 0 -1 I I #
+		$-1   $719  // inserted:   -719 edge $-1 886 $-1 $617 15.75 $791 16.35 $614 $816 forward @7 unknown #
+		$-1   $714  // inserted:   -714 coedge $-1 -1 $-1 $612 $698 $614 $719 reversed $572 0 $-1 #
+		$-1   $614  // inserted:   -614 coedge $-1 -1 $-1 $718 $511 $714 $719 forward $577 0 $-1 #
+		$-1   $869  // inserted:   -869 point $-1 -1 $-1 166 140 -321 #
+		$-1   $841  // inserted:   -841 straight-curve $-1 -1 $-1 166 69.145 -327 2.39096e-16 1 -9.99341e-32 I I #
+		$-1   $897  // inserted:   -897 point $-1 -1 $-1 166 145 -327 #
+		$-1   $757  // inserted:   -757 edge $-1 882 $-1 $661 6.7855 $840 7.5855 $659 $841 forward @7 unknown #
+		$-1   $659  // inserted:   -659 coedge $-1 -1 $-1 $756 $566 $752 $757 forward $506 0 $-1 #
+		$-1   $808  // inserted:   -808 point $-1 -1 $-1 166 145 -321 #
+		$-1   $707  // inserted:   -707 vertex $-1 -1 $-1 $807 1 $808 #
+		$-1   $876  // inserted:   -876 straight-curve $-1 -1 $-1 166 145 -163.5 -0 0 1 I I #
+		$-1   $807  // inserted:   -807 edge $-1 887 $-1 $840 -16.35 $707 -15.75 $706 $876 forward @7 unknown #
+		$-1   $795  // inserted:   -795 coedge $-1 -1 $-1 $752 $701 $706 $807 reversed $665 0 $-1 #
+		$-1   $706  // inserted:   -706 coedge $-1 -1 $-1 $607 $806 $795 $807 forward $577 0 $-1 #
+		$-1   $811  // inserted:   -811 straight-curve $-1 -1 $-1 83 140 -321 1 -1.07009e-16 0 I I #
+		$-1   $709  // inserted:   -709 edge $-1 876 $-1 $716 -24.9 $713 -24.4 $696 $811 forward @7 unknown #
+		$-1   $609  // inserted:   -609 coedge $-1 -1 $-1 $510 $509 $696 $709 reversed $327 0 $-1 #
+		$-1   $696  // inserted:   -696 coedge $-1 -1 $-1 $789 $764 $609 $709 forward $602 0 $-1 #
+		$-1   $794  // inserted:   -794 edge $-1 880 $-1 $804 7.8 $798 8.3 $793 $811 forward @7 unknown #
+		$-1   $700  // inserted:   -700 coedge $-1 -1 $-1 $606 $605 $793 $794 reversed $420 0 $-1 #
+		$-1   $793  // inserted:   -793 coedge $-1 -1 $-1 $866 $867 $700 $794 forward $602 0 $-1 #
+		$-1   $606  // inserted:   -606 coedge $-1 -1 $-1 $508 $700 $703 $704 reversed $420 0 $-1 #
+		$-1   $509  // inserted:   -509 coedge $-1 -1 $-1 $609 $421 $610 $611 forward $327 0 $-1 #
+		$-1   $618  // inserted:   -618 straight-curve $-1 -1 $-1 0 145 -321 -1 0 0 I I #
+		$-1   $608  // inserted:   -608 edge $-1 878 $-1 $707 -16.6 $708 -16.1 $607 $618 forward @7 unknown #
+		$-1   $508  // inserted:   -508 coedge $-1 -1 $-1 $605 $606 $607 $608 reversed $420 0 $-1 #
+		$-1   $607  // inserted:   -607 coedge $-1 -1 $-1 $705 $706 $508 $608 forward $577 0 $-1 #
+		$-1   $512  // inserted:   -512 edge $-1 875 $-1 $616 16.1 $617 16.6 $511 $618 forward @7 unknown #
+		$-1   $421  // inserted:   -421 coedge $-1 -1 $-1 $509 $510 $511 $512 reversed $327 0 $-1 #
+		$-1   $511  // inserted:   -511 coedge $-1 -1 $-1 $614 $615 $421 $512 forward $577 0 $-1 #
+		$-1   $702  // inserted:   -702 edge $797 879 $-1 $798 -0.757679 $707 -0.257679 $701 $799 forward @7 unknown #
+		$-1   $797  // inserted:   -797 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $702 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 334 -1 9 0 10 0 0 0 0 0 0 0 #
+		$-1   $701  // inserted:   -701 coedge $-1 -1 $-1 $795 $796 $605 $702 forward $665 0 $-1 #
+		$-1   $605  // inserted:   -605 coedge $-1 -1 $-1 $700 $508 $701 $702 reversed $420 0 $-1 #
+		$-1   $752  // inserted:   -752 coedge $-1 -1 $-1 $657 $795 $659 $757 reversed $665 0 $-1 #
+		$-1   $613  // inserted:   -613 edge $715 877 $-1 $617 -0.671005 $716 -0.171005 $612 $717 forward @7 unknown #
+		$-1   $715  // inserted:   -715 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $613 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 334 -1 7 0 10 0 0 0 0 0 0 0 #
+		$-1   $612  // inserted:   -612 coedge $-1 -1 $-1 $667 $714 $510 $613 forward $572 0 $-1 #
+		$-1   $510  // inserted:   -510 coedge $-1 -1 $-1 $421 $609 $612 $613 reversed $327 0 $-1 #
+		$-1   $420  // inserted:   -420 loop $-1 -1 $-1 $-1 $508 $326 #
+		$-1   $327  // inserted:   -327 loop $-1 -1 $-1 $-1 $421 $234 #
+		$-1   $798  // inserted:   -798 vertex $-1 -1 $-1 $868 0 $869 #
+		$-1   $868  // inserted:   -868 edge $911 884 $-1 $798 0.6 $894 65.2 $796 $912 forward @7 unknown #
+		$1200 $912  // updated id: -912 straight-curve $-1 -1 $-1 166 140 -327 4.35916e-16 0 1 I I #
+		$1201 $894  // updated id: -894 vertex $923 -1 $-1 $868 1 $924 #
+		$-1   $911  // inserted:   -911 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $868 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 281 -1 4 0 18 0 0 0 0 0 0 0 #
+		$-1   $796  // inserted:   -796 coedge $-1 -1 $-1 $701 $751 $866 $868 reversed $665 0 $-1 #
+		$1202 $751  // updated id: -751 coedge $-1 -1 $-1 $796 $657 $830 $836 forward $665 0 $-1 #
+		$-1   $866  // inserted:   -866 coedge $-1 -1 $-1 $843 $793 $796 $868 forward $602 0 $-1 #
+		$1203 $843  // updated id: -843 coedge $-1 -1 $-1 $764 $866 $890 $899 forward $602 0 $-1 #
+		$1122 $-1   // deleted:    -1120 coedge $-1 -1 $-1 $657 $1124 $1151 $1150 T $1117 0 $-1 #
+		$-1   $716  // inserted:   -716 vertex $-1 -1 $-1 $765 0 $815 #
+		$-1   $765  // inserted:   -765 edge $844 885 $-1 $716 0.6 $845 65.2 $764 $846 forward @7 unknown #
+		$1204 $846  // updated id: -846 straight-curve $-1 -1 $-1 -166 140 -327 4.35916e-16 0 1 I I #
+		$1205 $845  // updated id: -845 vertex $900 -1 $-1 $765 1 $901 #
+		$-1   $844  // inserted:   -844 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $765 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 281 -1 2 0 18 0 0 0 0 0 0 0 #
+		$-1   $764  // inserted:   -764 coedge $-1 -1 $-1 $696 $843 $667 $765 reversed $602 0 $-1 #
+		$1121 $-1   // deleted:    -1119 coedge $-1 -1 $-1 $747 $1115 $1121 $1123 F $1112 0 $-1 #
+		$-1   $667  // inserted:   -667 coedge $-1 -1 $-1 $747 $612 $764 $765 forward $572 0 $-1 #
+		$1206 $747  // updated id: -747 coedge $-1 -1 $-1 $655 $667 $829 $833 forward $572 0 $-1 #
+		$1119 $-1   // deleted:    -1117 loop $-1 -1 $-1 $-1 $1120 $571 #
+		$-1   $840  // inserted:   -840 vertex $-1 -1 $-1 $757 1 $897 #
+		$1207 $864  // updated id: -864 straight-curve $-1 -1 $-1 170 145 -327 -1 0 4.17966e-16 I I #
+		$1208 $674  // updated id: -674 coedge $-1 -1 $-1 $697 $773 $581 $675 forward $506 0 $-1 #
+		$1209 $756  // updated id: -756 coedge $-1 -1 $-1 $766 $659 $806 $839 reversed $506 0 $-1 #
+		$1210 $771  // updated id: -771 coedge $-1 -1 $-1 $680 $718 $673 $772 forward $577 0 $-1 #
+		$1211 $806  // updated id: -806 coedge $-1 -1 $-1 $706 $780 $756 $839 forward $577 0 $-1 #
+		$-1   $791  // inserted:   -791 vertex $-1 -1 $-1 $790 0 $865 #
+		$-1   $790  // inserted:   -790 edge $863 883 $-1 $791 33.6 $775 34 $697 $864 forward @7 unknown #
+		$-1   $910  // inserted:   -910 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $863 $790 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 52 -1 8 0 10 0 0 0 0 0 0 0 #
+		$-1   $863  // inserted:   -863 ATTRIB_CUSTOM-attrib $-1 -1 $910 $-1 $790 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 274 -1 28 0 #
+		$-1   $697  // inserted:   -697 coedge $-1 -1 $-1 $604 $674 $718 $790 reversed $506 0 $-1 #
+		$-1   $718  // inserted:   -718 coedge $-1 -1 $-1 $771 $614 $697 $790 forward $577 0 $-1 #
+		$1118 $-1   // deleted:    -1116 ATTRIB_CUSTOM-attrib $-1 -1 $663 $-1 $571 @28 INV_FEATURE_ORIENTATION_ATTR 1 44 $569 $-1 #
+		$1142 $-1   // deleted:    -1140 straight-curve $-1 -1 $-1 2.5 140 -321 1 -1.07009e-16 -4.41331e-16 I I #
+		$1143 $-1   // deleted:    -1141 edge $-1 747 $-1 $713 -16.35 $804 15.85 $1143 $1140 F @7 unknown #
+		$1078 $-1   // deleted:    -1076 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $1075 $1073 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 109 -1 6 0 20 0 0 0 0 0 0 0 #
+		$1212 $703  // updated id: -703 coedge $-1 -1 $-1 $800 $801 $606 $704 forward $802 0 $-1 #
+		$1213 $867  // updated id: -867 coedge $-1 -1 $-1 $793 $862 $800 $871 reversed $602 0 $-1 #
+		$1214 $862  // updated id: -862 coedge $-1 -1 $-1 $867 $789 $889 $909 reversed $602 0 $-1 #
+		$1215 $789  // updated id: -789 coedge $-1 -1 $-1 $862 $696 $711 $813 reversed $602 0 $-1 #
+		$1111 $-1   // deleted:    -1109 face $888 718 $-1 $465 $827 $3 $-1 $551 reversed single #
+		$1152 $-1   // deleted:    -1150 edge $-1 735 $-1 $661 6.85 $1145 7.15 $1151 $1149 F @7 unknown #
+		$1216 $506  // updated id: -506 loop $-1 -1 $-1 $-1 $604 $419 #
+		$1045 $-1   // deleted:    -1043 loop $-1 -1 $-1 $-1 $780 $485 #
+		$1117 $-1   // deleted:    -1115 coedge $-1 -1 $-1 $1119 $655 $1139 $1138 T $1112 0 $-1 #
+		$-1   $665  // inserted:   -665 loop $-1 -1 $-1 $-1 $752 $571 #
+		$1217 $657  // updated id: -657 coedge $-1 -1 $-1 $751 $752 $565 $658 forward $665 0 $-1 #
+		$1218 $571  // updated id: -571 face $663 714 $-1 $664 $665 $3 $-1 $666 reversed single #
+		$1074 $-1   // deleted:    -1072 loop $-1 -1 $-1 $-1 $1074 $319 #
+		$1084 $-1   // deleted:    -1082 straight-curve $-1 -1 $-1 -80.5 145 -321 1 0 -4.41331e-16 I I #
+		$1219 $705  // updated id: -705 coedge $-1 -1 $-1 $720 $607 $801 $805 forward $577 0 $-1 #
+		$1220 $610  // updated id: -610 coedge $-1 -1 $-1 $710 $711 $509 $611 reversed $647 0 $-1 #
+		$1079 $-1   // deleted:    -1077 face $1080 -1 $-1 $987 $555 $3 $-1 $743 reversed single #
+		$1221 $602  // updated id: -602 loop $-1 -1 $-1 $-1 $696 $505 #
+		$1112 $-1   // deleted:    -1110 ATTRIB_CUSTOM-attrib $-1 -1 $570 $-1 $481 @28 INV_FEATURE_ORIENTATION_ATTR 1 44 $569 $-1 #
+		$-1   $572  // inserted:   -572 loop $-1 -1 $-1 $-1 $667 $481 #
+		$1222 $481  // updated id: -481 face $570 712 $-1 $571 $572 $3 $-1 $573 reversed single #
+		$1223 $773  // updated id: -773 coedge $-1 -1 $-1 $674 $766 $676 $777 forward $506 0 $-1 #
+		$1224 $766  // updated id: -766 coedge $-1 -1 $-1 $773 $756 $671 $767 reversed $506 0 $-1 #
+		$1044 $-1   // deleted:    -1042 vertex $1041 -1 $-1 $141 0 $296 #
+		$1225 $780  // updated id: -780 coedge $-1 -1 $-1 $806 $680 $682 $783 forward $577 0 $-1 #
+		$1226 $680  // updated id: -680 coedge $-1 -1 $-1 $780 $771 $584 $681 forward $577 0 $-1 #
+		$1085 $-1   // deleted:    -1083 edge $1094 661 $-1 $616 -8.05 $708 24.15 $1084 $1082 F @7 unknown #
+		$1043 $-1   // deleted:    -1041 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $211 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 448 -1 41 1 #
+		$1227 $615  // updated id: -615 coedge $-1 -1 $-1 $511 $720 $710 $721 forward $577 0 $-1 #
+		$-1   $577  // inserted:   -577 loop $-1 -1 $-1 $-1 $614 $485 #
+		$1228 $720  // updated id: -720 coedge $-1 -1 $-1 $615 $705 $817 $818 forward $577 0 $-1 #
+		$1229 $485  // updated id: -485 face $575 762 $-1 $576 $577 $3 $-1 $578 forward single #
+		$-1   $326  // inserted:   -326 face $418 872 $-1 $419 $420 $3 $-1 $328 reversed single #
+		$-1   $418  // inserted:   -418 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $326 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 334 -1 0 0 12 0 0 0 0 0 0 0 #
+		$-1   $234  // inserted:   -234 face $325 871 $-1 $326 $327 $3 $-1 $328 reversed single #
+		$-1   $325  // inserted:   -325 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $234 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 334 -1 0 0 12 0 0 0 0 0 0 0 #
+		$-1   $505  // inserted:   -505 face $601 874 $-1 $395 $602 $3 $-1 $603 reversed single #
+		$1230 $3    // updated id: -3 shell $-1 -1 $-1 $-1 $-1 $4 $-1 $2 #
+		$-1   $695  // inserted:   -695 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $601 $505 @28 INV_FEATURE_ORIENTATION_ATTR 1 44 $569 $-1 #
+		$-1   $601  // inserted:   -601 ATTRIB_CUSTOM-attrib $-1 -1 $695 $-1 $505 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 281 -1 6 0 20 0 0 0 0 0 0 0 #
+		$-1   $419  // inserted:   -419 face $504 873 $-1 $505 $506 $3 $-1 $507 forward single #
+		$-1   $788  // inserted:   -788 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $694 $419 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 219 -1 18 1 #
+		$-1   $694  // inserted:   -694 ATTRIB_CUSTOM-attrib $-1 -1 $788 $600 $419 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 302 -1 18 1 #
+		$-1   $600  // inserted:   -600 ATTRIB_CUSTOM-attrib $-1 -1 $694 $504 $419 @28 INV_FEATURE_ORIENTATION_ATTR 1 44 $398 $-1 #
+		$-1   $504  // inserted:   -504 ATTRIB_CUSTOM-attrib $-1 -1 $600 $-1 $419 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 52 -1 8 0 20 0 0 0 0 0 0 0 #
+		$1114 $-1   // deleted:    -1112 loop $-1 -1 $-1 $-1 $1115 $481 #
+		$1113 $-1   // deleted:    -1111 face $1113 713 $-1 $571 $1152 $3 $-1 $603 T F #
+		$1174 $-1   // deleted:    -1172 coedge $-1 -1 $-1 $533 $817 $870 $913 forward $827 0 $-1 #
+		$1183 $-1   // deleted:    -1181 coedge $-1 -1 $-1 $703 $870 $705 $805 reversed $555 0 $-1 #
+		$1231 $550  // updated id: -550 face $646 720 $-1 $245 $647 $3 $-1 $219 reversed single #
+		$1184 $-1   // deleted:    -1182 shell $-1 -1 $-1 $-1 $-1 $245 $-1 $2 #
+		$1185 $-1   // deleted:    -1183 face $1185 721 $-1 $245 $1174 $3 $-1 $416 T F #
+		$1232 $309  // updated id: -309 face $399 628 $-1 $400 $401 $3 $-1 $402 forward single #
+		$1054 $-1   // deleted:    -1052 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $154 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 109 -1 8 0 10 0 0 0 0 0 0 0 #
+		$1067 $-1   // deleted:    -1065 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $678 @15 INV_NMX_GEN_TAG 1 44 1 52 -1 5 0 1 #
+		$1047 $-1   // deleted:    -1045 face $1067 776 $-1 $400 $506 $3 $-1 $507 forward single #
+		$1046 $-1   // deleted:    -1044 loop $-1 -1 $-1 $-1 $773 $1045 #
+		$1146 $-1   // deleted:    -1144 point $-1 -1 $-1 166 140 -327 #
+		$1140 $-1   // deleted:    -1138 edge $-1 733 $-1 $1137 -7 $660 -6.7 $1139 $792 F @7 unknown #
+		$1082 $-1   // deleted:    -1080 ATTRIB_CUSTOM-attrib $-1 -1 $1081 $-1 $1077 @28 INV_FEATURE_ORIENTATION_ATTR 1 44 $739 $-1 #
+		$1233 $663  // updated id: -663 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $571 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 281 -1 7 0 20 0 0 0 0 0 0 0 #
+		$1116 $-1   // deleted:    -1114 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $1113 $1111 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 281 -1 6 0 20 0 0 0 0 0 0 0 #
+		$1234 $570  // updated id: -570 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $481 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 281 -1 9 0 20 0 0 0 0 0 0 0 #
+		$1110 $-1   // deleted:    -1108 ATTRIB_CUSTOM-attrib $-1 -1 $922 $-1 $742 @28 INV_FEATURE_ORIENTATION_ATTR 1 44 $739 $-1 #
+		$1144 $-1   // deleted:    -1142 coedge $-1 -1 $-1 $789 $867 $1143 $1141 T $1152 0 $-1 #
+		$1149 $-1   // deleted:    -1147 edge $-1 736 $-1 $1145 0.2 $1137 33.4 $1148 $1146 F @7 unknown #
+		$1136 $-1   // deleted:    -1134 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $913 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 109 -1 4 0 18 0 0 0 0 0 0 0 #
+15 delta_state 31 1 0 $14  $13  $15  $-1  0 11
+	BulletinBoard: 2
+		$-1   $774  // inserted:   -774 ATTRIB_CUSTOM-attrib $-1 -1 $854 $-1 $675 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 375 -1 26 0 #
+		$1235 $854  // updated id: -854 ATTRIB_CUSTOM-attrib $-1 -1 $906 $774 $675 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 262 -1 26 0 #
+		$1236 $675  // updated id: -675 edge $774 653 $-1 $678 0 $775 14.5 $674 $776 forward @7 unknown #
+		$-1   $859  // inserted:   -859 ATTRIB_CUSTOM-attrib $-1 -1 $908 $778 $678 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 375 -1 20 1 #
+		$1237 $908  // updated id: -908 ATTRIB_CUSTOM-attrib $-1 -1 $931 $859 $678 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 254 -1 20 1 #
+		$1238 $678  // updated id: -678 vertex $778 -1 $-1 $777 1 $779 #
+		$-1   $907  // inserted:   -907 ATTRIB_CUSTOM-attrib $-1 -1 $930 $855 $775 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 375 -1 24 1 #
+		$1239 $930  // updated id: -930 ATTRIB_CUSTOM-attrib $-1 -1 $938 $907 $775 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 258 -1 24 1 #
+		$1240 $775  // updated id: -775 vertex $855 -1 $-1 $675 1 $856 #
+		$-1   $855  // inserted:   -855 ATTRIB_CUSTOM-attrib $-1 -1 $907 $-1 $775 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 371 -1 24 1 #
+		$-1   $778  // inserted:   -778 ATTRIB_CUSTOM-attrib $-1 -1 $859 $-1 $678 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 367 -1 20 1 #
+		$-1   $847  // inserted:   -847 ATTRIB_CUSTOM-attrib $-1 -1 $902 $-1 $767 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 361 -1 31 0 #
+		$1241 $902  // updated id: -902 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $847 $767 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 52 -1 3 0 18 0 0 0 0 0 0 0 #
+		$1242 $767  // updated id: -767 edge $847 651 $-1 $769 0 $848 14.5 $671 $849 forward @7 unknown #
+		$-1   $905  // inserted:   -905 ATTRIB_CUSTOM-attrib $-1 -1 $929 $850 $769 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 361 -1 19 1 #
+		$1243 $929  // updated id: -929 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $905 $769 @15 INV_NMX_GEN_TAG 1 44 1 52 -1 3 0 1 #
+		$1244 $769  // updated id: -769 vertex $850 -1 $-1 $672 1 $851 #
+		$-1   $928  // inserted:   -928 ATTRIB_CUSTOM-attrib $-1 -1 $937 $903 $848 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 361 -1 27 1 #
+		$1245 $937  // updated id: -937 ATTRIB_CUSTOM-attrib $-1 -1 $941 $928 $848 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 270 -1 27 1 #
+		$1246 $848  // updated id: -848 vertex $903 -1 $-1 $767 1 $904 #
+		$-1   $903  // inserted:   -903 ATTRIB_CUSTOM-attrib $-1 -1 $928 $-1 $848 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 357 -1 27 1 #
+		$-1   $850  // inserted:   -850 ATTRIB_CUSTOM-attrib $-1 -1 $905 $-1 $769 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 353 -1 19 1 #
+13 delta_state 29 1 0 $15  $11  $13  $-1  0 11
+	BulletinBoard: 2
+		$-1   $395  // inserted:   -395 face $480 711 $-1 $481 $305 $3 $-1 $482 reversed single #
+		$-1   $480  // inserted:   -480 ATTRIB_CUSTOM-attrib $-1 -1 $568 $-1 $395 @28 INV_FEATURE_ORIENTATION_ATTR 1 44 $569 $-1 #
+		$-1   $568  // inserted:   -568 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $480 $395 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 281 -1 8 0 20 0 0 0 0 0 0 0 #
+		$-1   $481  // inserted:   -481 face $570 712 $-1 $571 $572 $3 $-1 $573 reversed single #
+		$-1   $482  // inserted:   -482 plane-surface $-1 -1 $-1 -166 137 -327 -6.42057e-16 -1 2.79883e-31 1 -6.42057e-16 -4.17966e-16 forward_v I I I I #
+		$-1   $394  // inserted:   -394 loop $-1 -1 $-1 $-1 $479 $395 #
+		$-1   $569  // inserted:   -569 straight-curve $-1 -1 $-1 166 140 -327 4.17966e-16 -0 1 I I #
+		$-1   $1110 // inserted:   -1108 ATTRIB_CUSTOM-attrib $-1 -1 $922 $-1 $742 @28 INV_FEATURE_ORIENTATION_ATTR 1 44 $739 $-1 #
+		$-1   $570  // inserted:   -570 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $481 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 281 -1 9 0 20 0 0 0 0 0 0 0 #
+		$-1   $1111 // inserted:   -1109 face $888 718 $-1 $465 $827 $3 $-1 $551 reversed single #
+		$-1   $573  // inserted:   -573 plane-surface $-1 -1 $-1 -166 140 -327 -1 0 4.35916e-16 -0 -1 -0 forward_v I I I I #
+		$-1   $1112 // inserted:   -1110 ATTRIB_CUSTOM-attrib $-1 -1 $570 $-1 $481 @28 INV_FEATURE_ORIENTATION_ATTR 1 44 $569 $-1 #
+		$-1   $479  // inserted:   -479 coedge $-1 -1 $-1 $564 $565 $566 $567 reversed $394 0 $-1 #
+		$-1   $1113 // inserted:   -1111 face $1113 713 $-1 $571 $1152 $3 $-1 $603 T F #
+		$-1   $1114 // inserted:   -1112 loop $-1 -1 $-1 $-1 $1115 $481 #
+		$-1   $571  // inserted:   -571 face $663 714 $-1 $664 $665 $3 $-1 $666 reversed single #
+		$-1   $603  // inserted:   -603 plane-surface $-1 -1 $-1 166 140 -327 1.07009e-16 1 -4.66471e-32 -1 1.07009e-16 4.17966e-16 forward_v I I I I #
+		$-1   $602  // inserted:   -602 loop $-1 -1 $-1 $-1 $696 $505 #
+		$-1   $1115 // inserted:   -1113 ATTRIB_CUSTOM-attrib $-1 -1 $1114 $-1 $1111 @28 INV_FEATURE_ORIENTATION_ATTR 1 44 $569 $-1 #
+		$-1   $565  // inserted:   -565 coedge $-1 -1 $-1 $479 $654 $657 $658 reversed $394 0 $-1 #
+		$-1   $564  // inserted:   -564 coedge $-1 -1 $-1 $654 $479 $655 $656 forward $394 0 $-1 #
+		$-1   $1116 // inserted:   -1114 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $1113 $1111 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 281 -1 6 0 20 0 0 0 0 0 0 0 #
+		$-1   $663  // inserted:   -663 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $571 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 281 -1 7 0 20 0 0 0 0 0 0 0 #
+		$-1   $666  // inserted:   -666 plane-surface $-1 -1 $-1 166 137 -327 1 -0 -4.35916e-16 0 1 -0 forward_v I I I I #
+		$-1   $1117 // inserted:   -1115 coedge $-1 -1 $-1 $1119 $655 $1139 $1138 T $1112 0 $-1 #
+		$-1   $1118 // inserted:   -1116 ATTRIB_CUSTOM-attrib $-1 -1 $663 $-1 $571 @28 INV_FEATURE_ORIENTATION_ATTR 1 44 $569 $-1 #
+		$-1   $655  // inserted:   -655 coedge $-1 -1 $-1 $698 $747 $564 $656 reversed $572 0 $-1 #
+		$-1   $1119 // inserted:   -1117 loop $-1 -1 $-1 $-1 $1120 $571 #
+		$-1   $654  // inserted:   -654 coedge $-1 -1 $-1 $565 $564 $745 $746 forward $394 0 $-1 #
+		$-1   $657  // inserted:   -657 coedge $-1 -1 $-1 $751 $752 $565 $658 forward $665 0 $-1 #
+		$-1   $658  // inserted:   -658 edge $753 744 $-1 $661 0 $754 65.2 $657 $755 forward @7 unknown #
+		$-1   $656  // inserted:   -656 edge $748 742 $-1 $660 0 $749 65.2 $655 $750 forward @7 unknown #
+		$-1   $664  // inserted:   -664 face $760 715 $-1 $761 $762 $3 $-1 $763 reversed single #
+		$-1   $1120 // inserted:   -1118 coedge $-1 -1 $-1 $1122 $1121 $1148 $1147 T $602 0 $-1 #
+		$-1   $1121 // inserted:   -1119 coedge $-1 -1 $-1 $747 $1115 $1121 $1123 F $1112 0 $-1 #
+		$-1   $1122 // inserted:   -1120 coedge $-1 -1 $-1 $657 $1124 $1151 $1150 T $1117 0 $-1 #
+		$-1   $747  // inserted:   -747 coedge $-1 -1 $-1 $655 $667 $829 $833 forward $572 0 $-1 #
+		$-1   $1123 // inserted:   -1121 coedge $-1 -1 $-1 $1118 $843 $1119 $1123 T $602 0 $-1 #
+		$-1   $745  // inserted:   -745 coedge $-1 -1 $-1 $829 $830 $654 $746 reversed $762 0 $-1 #
+		$-1   $746  // inserted:   -746 edge $831 743 $-1 $749 -33.2 $754 -0 $654 $832 forward @7 unknown #
+		$-1   $751  // inserted:   -751 coedge $-1 -1 $-1 $796 $657 $830 $836 forward $665 0 $-1 #
+		$-1   $753  // inserted:   -753 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $658 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 281 -1 3 0 18 0 0 0 0 0 0 0 #
+		$-1   $754  // inserted:   -754 vertex $837 -1 $-1 $658 1 $838 #
+		$-1   $755  // inserted:   -755 straight-curve $-1 -1 $-1 166 137 -327 4.35916e-16 0 1 I I #
+		$-1   $748  // inserted:   -748 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $656 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 281 -1 5 0 18 0 0 0 0 0 0 0 #
+		$-1   $749  // inserted:   -749 vertex $834 -1 $-1 $656 1 $835 #
+		$-1   $750  // inserted:   -750 straight-curve $-1 -1 $-1 -166 137 -327 4.35916e-16 0 1 I I #
+		$-1   $760  // inserted:   -760 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $664 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 281 -1 0 0 12 0 0 0 0 0 0 0 #
+		$-1   $763  // inserted:   -763 plane-surface $-1 -1 $-1 2.4869e-13 138.5 325 4.35916e-16 0 1 1 0 -4.35916e-16 forward_v I I I I #
+		$-1   $762  // inserted:   -762 loop $-1 -1 $-1 $-1 $830 $664 #
+		$-1   $1124 // inserted:   -1122 coedge $-1 -1 $-1 $843 $1118 $1124 $1125 F $602 0 $-1 #
+		$-1   $843  // inserted:   -843 coedge $-1 -1 $-1 $764 $866 $890 $899 forward $602 0 $-1 #
+		$-1   $1125 // inserted:   -1123 edge $1126 745 $-1 $1137 0 $845 65.2 $1121 $846 F @7 unknown #
+		$-1   $829  // inserted:   -829 coedge $-1 -1 $-1 $890 $745 $747 $833 reversed $762 0 $-1 #
+		$-1   $833  // inserted:   -833 edge $891 746 $-1 $845 -0.3 $749 -0 $747 $892 forward @7 unknown #
+		$-1   $1126 // inserted:   -1124 coedge $-1 -1 $-1 $1120 $751 $1122 $1125 reversed $1117 0 $-1 #
+		$-1   $845  // inserted:   -845 vertex $900 -1 $-1 $765 1 $901 #
+		$-1   $846  // inserted:   -846 straight-curve $-1 -1 $-1 -166 140 -327 4.35916e-16 0 1 I I #
+		$-1   $830  // inserted:   -830 coedge $-1 -1 $-1 $745 $890 $751 $836 reversed $762 0 $-1 #
+		$-1   $831  // inserted:   -831 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $746 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 281 -1 8 0 10 0 0 0 0 0 0 0 #
+		$-1   $832  // inserted:   -832 straight-curve $-1 -1 $-1 166 137 325 1 -6.42057e-16 -4.17966e-16 I I #
+		$-1   $836  // inserted:   -836 edge $893 753 $-1 $754 -0.3 $894 -0 $751 $895 forward @7 unknown #
+		$-1   $837  // inserted:   -837 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $754 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 281 -1 3 0 9 0 0 0 0 0 0 0 #
+		$-1   $838  // inserted:   -838 point $-1 -1 $-1 166 137 325 #
+		$-1   $834  // inserted:   -834 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $749 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 281 -1 5 0 9 0 0 0 0 0 0 0 #
+		$-1   $835  // inserted:   -835 point $-1 -1 $-1 -166 137 325 #
+		$-1   $890  // inserted:   -890 coedge $-1 -1 $-1 $830 $829 $843 $899 reversed $762 0 $-1 #
+		$-1   $899  // inserted:   -899 edge $926 752 $-1 $894 -33.2 $845 -0 $843 $927 forward @7 unknown #
+		$-1   $1127 // inserted:   -1125 edge $1127 751 $-1 $1145 0 $894 65.2 $1124 $912 F @7 unknown #
+		$-1   $894  // inserted:   -894 vertex $923 -1 $-1 $868 1 $924 #
+		$-1   $912  // inserted:   -912 straight-curve $-1 -1 $-1 166 140 -327 4.35916e-16 0 1 I I #
+		$-1   $891  // inserted:   -891 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $833 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 281 -1 9 0 10 0 0 0 0 0 0 0 #
+		$-1   $892  // inserted:   -892 straight-curve $-1 -1 $-1 -166 137 325 -0 -1 -0 I I #
+		$-1   $900  // inserted:   -900 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $845 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 281 -1 2 0 9 0 0 0 0 0 0 0 #
+		$-1   $901  // inserted:   -901 point $-1 -1 $-1 -166 140 325 #
+		$-1   $893  // inserted:   -893 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $836 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 281 -1 7 0 10 0 0 0 0 0 0 0 #
+		$-1   $895  // inserted:   -895 straight-curve $-1 -1 $-1 166 140 325 0 1 0 I I #
+		$-1   $926  // inserted:   -926 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $899 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 281 -1 6 0 10 0 0 0 0 0 0 0 #
+		$-1   $927  // inserted:   -927 straight-curve $-1 -1 $-1 -166 140 325 -1 1.07009e-16 4.17966e-16 I I #
+		$-1   $923  // inserted:   -923 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $894 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 281 -1 4 0 9 0 0 0 0 0 0 0 #
+		$-1   $924  // inserted:   -924 point $-1 -1 $-1 166 140 325 #
+		$1128 $712  // updated id: -712 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $611 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 109 -1 5 0 18 0 0 0 0 0 0 0 #
+		$1129 $611  // updated id: -611 edge $712 685 $-1 $616 0 $713 0.5 $610 $300 forward @7 unknown #
+		$1130 $803  // updated id: -803 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $704 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 109 -1 3 0 18 0 0 0 0 0 0 0 #
+		$1131 $704  // updated id: -704 edge $803 640 $-1 $708 0 $804 0.5 $703 $558 forward @7 unknown #
+		$1132 $919  // updated id: -919 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $879 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 109 -1 2 0 18 0 0 0 0 0 0 0 #
+		$1133 $879  // updated id: -879 edge $919 682 $-1 $820 0 $880 0.5 $878 $391 forward @7 unknown #
+		$1134 $933  // updated id: -933 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $913 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 109 -1 4 0 18 0 0 0 0 0 0 0 #
+		$1135 $913  // updated id: -913 edge $933 678 $-1 $874 0 $914 0.5 $870 $653 forward @7 unknown #
+		$-1   $559  // inserted:   -559 point $-1 -1 $-1 161 137 -321 #
+		$-1   $388  // inserted:   -388 point $-1 -1 $-1 -161 137 -321 #
+		$-1   $473  // inserted:   -473 straight-curve $-1 -1 $-1 -163.5 137 -321 -1 6.42057e-16 4.41331e-16 I I #
+		$-1   $387  // inserted:   -387 edge $-1 738 $-1 $472 -32.45 $299 -0.25 $297 $473 forward @7 unknown #
+		$-1   $303  // inserted:   -303 coedge $-1 -1 $-1 $392 $215 $297 $387 reversed $305 0 $-1 #
+		$-1   $297  // inserted:   -297 coedge $-1 -1 $-1 $212 $386 $303 $387 forward $226 0 $-1 #
+		$-1   $396  // inserted:   -396 point $-1 -1 $-1 -161 137 321 #
+		$-1   $307  // inserted:   -307 straight-curve $-1 -1 $-1 -161 137 -3 3.32029e-16 6.6701e-32 1 I I #
+		$-1   $216  // inserted:   -216 edge $-1 741 $-1 $299 -31.8 $306 32.4 $148 $307 forward @7 unknown #
+		$-1   $215  // inserted:   -215 coedge $-1 -1 $-1 $303 $304 $148 $216 reversed $305 0 $-1 #
+		$-1   $148  // inserted:   -148 coedge $-1 -1 $-1 $214 $147 $215 $216 forward $96 0 $-1 #
+		$-1   $563  // inserted:   -563 point $-1 -1 $-1 161 137 321 #
+		$-1   $478  // inserted:   -478 straight-curve $-1 -1 $-1 -2.5 137 321 1 -6.42057e-16 -2.20665e-16 I I #
+		$-1   $393  // inserted:   -393 edge $-1 740 $-1 $306 -15.85 $477 16.35 $389 $478 forward @7 unknown #
+		$-1   $304  // inserted:   -304 coedge $-1 -1 $-1 $215 $392 $389 $393 reversed $305 0 $-1 #
+		$-1   $389  // inserted:   -389 coedge $-1 -1 $-1 $474 $301 $304 $393 forward $375 0 $-1 #
+		$-1   $562  // inserted:   -562 straight-curve $-1 -1 $-1 161 137 -324 -2.21353e-16 -1.37762e-31 -1 I I #
+		$-1   $476  // inserted:   -476 edge $-1 739 $-1 $477 -64.5 $472 -0.3 $475 $562 forward @7 unknown #
+		$-1   $392  // inserted:   -392 coedge $-1 -1 $-1 $304 $303 $475 $476 reversed $305 0 $-1 #
+		$-1   $475  // inserted:   -475 coedge $-1 -1 $-1 $470 $560 $392 $476 forward $555 0 $-1 #
+		$-1   $758  // inserted:   -758 point $-1 -1 $-1 -166 137 -327 #
+		$-1   $660  // inserted:   -660 vertex $-1 -1 $-1 $567 0 $758 #
+		$-1   $759  // inserted:   -759 point $-1 -1 $-1 166 137 -327 #
+		$-1   $661  // inserted:   -661 vertex $-1 -1 $-1 $567 1 $759 #
+		$-1   $662  // inserted:   -662 straight-curve $-1 -1 $-1 2 137 -327 1 -6.42057e-16 -4.17966e-16 I I #
+		$-1   $567  // inserted:   -567 edge $-1 734 $-1 $660 -16.8 $661 16.4 $566 $662 forward @7 unknown #
+		$-1   $566  // inserted:   -566 coedge $-1 -1 $-1 $659 $604 $479 $567 forward $506 0 $-1 #
+		$-1   $1136 // inserted:   -1134 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $913 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 109 -1 4 0 18 0 0 0 0 0 0 0 #
+		$-1   $1137 // inserted:   -1135 edge $933 678 $-1 $874 0 $635 2.6 $870 $653 forward @7 unknown #
+		$-1   $792  // inserted:   -792 straight-curve $-1 -1 $-1 -166 70 -327 -0 -1 0 I I #
+		$-1   $1138 // inserted:   -1136 point $-1 -1 $-1 -166 140 -327 #
+		$-1   $1139 // inserted:   -1137 vertex $-1 -1 $-1 $1138 0 $1136 #
+		$-1   $814  // inserted:   -814 point $-1 -1 $-1 -161 140 -321 #
+		$-1   $872  // inserted:   -872 point $-1 -1 $-1 161 140 -321 #
+		$-1   $1140 // inserted:   -1138 edge $-1 733 $-1 $1137 -7 $660 -6.7 $1139 $792 F @7 unknown #
+		$-1   $1141 // inserted:   -1139 coedge $-1 -1 $-1 $566 $1148 $1115 $1138 F $506 0 $-1 #
+		$-1   $1142 // inserted:   -1140 straight-curve $-1 -1 $-1 2.5 140 -321 1 -1.07009e-16 -4.41331e-16 I I #
+		$-1   $1143 // inserted:   -1141 edge $-1 747 $-1 $713 -16.35 $804 15.85 $1143 $1140 F @7 unknown #
+		$-1   $920  // inserted:   -920 point $-1 -1 $-1 -161 140 321 #
+		$-1   $881  // inserted:   -881 straight-curve $-1 -1 $-1 -161 140 -3 -3.32029e-16 -1.11168e-32 -1 I I #
+		$-1   $813  // inserted:   -813 edge $-1 748 $-1 $880 -32.4 $713 31.8 $711 $881 forward @7 unknown #
+		$-1   $789  // inserted:   -789 coedge $-1 -1 $-1 $862 $696 $711 $813 reversed $602 0 $-1 #
+		$-1   $711  // inserted:   -711 coedge $-1 -1 $-1 $610 $812 $789 $813 forward $647 0 $-1 #
+		$-1   $934  // inserted:   -934 point $-1 -1 $-1 161 140 321 #
+		$-1   $932  // inserted:   -932 straight-curve $-1 -1 $-1 163.5 140 321 -1 1.07009e-16 2.20665e-16 I I #
+		$-1   $909  // inserted:   -909 edge $-1 749 $-1 $914 0.25 $880 32.45 $889 $932 forward @7 unknown #
+		$-1   $862  // inserted:   -862 coedge $-1 -1 $-1 $867 $789 $889 $909 reversed $602 0 $-1 #
+		$-1   $889  // inserted:   -889 coedge $-1 -1 $-1 $878 $882 $862 $909 forward $827 0 $-1 #
+		$-1   $915  // inserted:   -915 straight-curve $-1 -1 $-1 161 140 -324 2.21353e-16 2.29603e-32 1 I I #
+		$-1   $871  // inserted:   -871 edge $-1 750 $-1 $804 0.3 $914 64.5 $800 $915 forward @7 unknown #
+		$-1   $867  // inserted:   -867 coedge $-1 -1 $-1 $793 $862 $800 $871 reversed $602 0 $-1 #
+		$-1   $800  // inserted:   -800 coedge $-1 -1 $-1 $870 $703 $867 $871 forward $802 0 $-1 #
+		$-1   $1144 // inserted:   -1142 coedge $-1 -1 $-1 $789 $867 $1143 $1141 T $1152 0 $-1 #
+		$-1   $1145 // inserted:   -1143 coedge $-1 -1 $-1 $1078 $1079 $1142 $1141 F $1174 0 $-1 #
+		$-1   $1146 // inserted:   -1144 point $-1 -1 $-1 166 140 -327 #
+		$-1   $1147 // inserted:   -1145 vertex $-1 -1 $-1 $1147 0 $1144 #
+		$-1   $1148 // inserted:   -1146 straight-curve $-1 -1 $-1 168 140 -327 -1 1.07009e-16 4.17966e-16 I I #
+		$-1   $1149 // inserted:   -1147 edge $-1 736 $-1 $1145 0.2 $1137 33.4 $1148 $1146 F @7 unknown #
+		$-1   $1150 // inserted:   -1148 coedge $-1 -1 $-1 $1139 $1151 $1118 $1147 F $506 0 $-1 #
+		$-1   $1151 // inserted:   -1149 straight-curve $-1 -1 $-1 166 68.5 -327 0 1 0 I I #
+		$-1   $1152 // inserted:   -1150 edge $-1 735 $-1 $661 6.85 $1145 7.15 $1151 $1149 F @7 unknown #
+		$-1   $305  // inserted:   -305 loop $-1 -1 $-1 $394 $303 $395 #
+		$-1   $713  // inserted:   -713 vertex $-1 -1 $-1 $709 1 $814 #
+		$1153 $300  // updated id: -300 straight-curve $-1 -1 $-1 -161 145 -321 0 -1 0 I I #
+		$1154 $156  // updated id: -156 vertex $230 -1 $-1 $213 1 $231 #
+		$1155 $201  // updated id: -201 coedge $-1 -1 $-1 $133 $214 $135 $205 forward $96 0 $-1 #
+		$1156 $610  // updated id: -610 coedge $-1 -1 $-1 $710 $711 $509 $611 reversed $647 0 $-1 #
+		$1157 $153  // updated id: -153 coedge $-1 -1 $-1 $225 $212 $100 $154 forward $226 0 $-1 #
+		$1158 $1079 // updated id: -1077 face $1080 -1 $-1 $987 $555 $3 $-1 $743 reversed single #
+		$-1   $804  // inserted:   -804 vertex $-1 -1 $-1 $794 0 $872 #
+		$1159 $558  // updated id: -558 straight-curve $-1 -1 $-1 161 145 -321 0 -1 0 I I #
+		$1160 $557  // updated id: -557 vertex $650 -1 $-1 $471 1 $651 #
+		$1161 $554  // updated id: -554 coedge $-1 -1 $-1 $560 $470 $532 $633 forward $555 0 $-1 #
+		$1162 $703  // updated id: -703 coedge $-1 -1 $-1 $800 $801 $606 $704 forward $802 0 $-1 #
+		$1163 $1078 // updated id: -1076 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $1075 $1073 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 109 -1 6 0 20 0 0 0 0 0 0 0 #
+		$-1   $880  // inserted:   -880 vertex $-1 -1 $-1 $813 0 $920 #
+		$1164 $391  // updated id: -391 straight-curve $-1 -1 $-1 -161 145 321 0 -1 0 I I #
+		$1165 $288  // updated id: -288 vertex $379 -1 $-1 $302 1 $380 #
+		$1166 $533  // updated id: -533 coedge $-1 -1 $-1 $543 $474 $450 $534 forward $375 0 $-1 #
+		$1167 $878  // updated id: -878 coedge $-1 -1 $-1 $817 $889 $812 $879 reversed $827 0 $-1 #
+		$1168 $812  // updated id: -812 coedge $-1 -1 $-1 $711 $710 $878 $879 forward $647 0 $-1 #
+		$-1   $914  // inserted:   -914 vertex $-1 -1 $-1 $871 1 $934 #
+		$1169 $653  // updated id: -653 straight-curve $-1 -1 $-1 161 145 321 0 -1 0 I I #
+		$1170 $635  // updated id: -635 vertex $732 -1 $-1 $561 1 $733 #
+		$1171 $870  // updated id: -870 coedge $-1 -1 $-1 $801 $800 $882 $913 reversed $802 0 $-1 #
+		$1172 $882  // updated id: -882 coedge $-1 -1 $-1 $889 $817 $870 $913 forward $827 0 $-1 #
+		$-1   $472  // inserted:   -472 vertex $-1 -1 $-1 $471 0 $559 #
+		$-1   $471  // inserted:   -471 edge $556 754 $-1 $472 0.8 $557 2.6 $470 $558 forward @7 unknown #
+		$-1   $556  // inserted:   -556 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $471 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 109 -1 3 0 18 0 0 0 0 0 0 0 #
+		$-1   $470  // inserted:   -470 coedge $-1 -1 $-1 $554 $475 $386 $471 forward $555 0 $-1 #
+		$-1   $386  // inserted:   -386 coedge $-1 -1 $-1 $297 $469 $470 $471 reversed $226 0 $-1 #
+		$-1   $299  // inserted:   -299 vertex $-1 -1 $-1 $213 0 $388 #
+		$-1   $213  // inserted:   -213 edge $298 757 $-1 $299 0.8 $156 2.6 $147 $300 forward @7 unknown #
+		$-1   $298  // inserted:   -298 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $213 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 109 -1 5 0 18 0 0 0 0 0 0 0 #
+		$-1   $147  // inserted:   -147 coedge $-1 -1 $-1 $148 $95 $212 $213 reversed $96 0 $-1 #
+		$-1   $212  // inserted:   -212 coedge $-1 -1 $-1 $153 $297 $147 $213 forward $226 0 $-1 #
+		$-1   $477  // inserted:   -477 vertex $-1 -1 $-1 $561 0 $563 #
+		$-1   $561  // inserted:   -561 edge $652 755 $-1 $477 0.8 $635 2.6 $560 $653 forward @7 unknown #
+		$-1   $652  // inserted:   -652 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $561 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 109 -1 4 0 18 0 0 0 0 0 0 0 #
+		$-1   $560  // inserted:   -560 coedge $-1 -1 $-1 $475 $554 $474 $561 reversed $555 0 $-1 #
+		$-1   $474  // inserted:   -474 coedge $-1 -1 $-1 $533 $389 $560 $561 forward $375 0 $-1 #
+		$-1   $306  // inserted:   -306 vertex $-1 -1 $-1 $302 0 $396 #
+		$-1   $302  // inserted:   -302 edge $390 756 $-1 $306 0.8 $288 2.6 $301 $391 forward @7 unknown #
+		$-1   $390  // inserted:   -390 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $302 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 109 -1 2 0 18 0 0 0 0 0 0 0 #
+		$-1   $301  // inserted:   -301 coedge $-1 -1 $-1 $389 $285 $214 $302 reversed $375 0 $-1 #
+		$-1   $214  // inserted:   -214 coedge $-1 -1 $-1 $201 $148 $301 $302 forward $96 0 $-1 #
+		$-1   $506  // inserted:   -506 loop $-1 -1 $-1 $-1 $604 $419 #
+		$1173 $1045 // updated id: -1043 loop $-1 -1 $-1 $-1 $780 $485 #
+		$1072 $-1   // deleted:    -1070 vertex $-1 -1 $-1 $152 1 $521 #
+		$-1   $1174 // inserted:   -1172 coedge $-1 -1 $-1 $533 $817 $870 $913 forward $827 0 $-1 #
+		$1175 $1074 // updated id: -1072 loop $-1 -1 $-1 $-1 $1074 $319 #
+		$1176 $319  // updated id: -319 face $415 624 $-1 $149 $226 $3 $-1 $416 reversed single #
+		$1177 $647  // updated id: -647 loop $-1 -1 $-1 $-1 $711 $550 #
+		$1178 $149  // updated id: -149 face $217 625 $-1 $218 $96 $3 $-1 $219 reversed single #
+		$1179 $827  // updated id: -827 loop $-1 -1 $-1 $-1 $889 $742 #
+		$-1   $375  // inserted:   -375 loop $-1 -1 $-1 $-1 $389 $465 #
+		$1073 $-1   // deleted:    -1071 edge $-1 696 $-1 $432 -15.45 $282 46.35 $356 $283 forward @7 unknown #
+		$1180 $555  // updated id: -555 loop $-1 -1 $-1 $-1 $475 $649 #
+		$-1   $802  // inserted:   -802 loop $-1 -1 $-1 $-1 $800 $761 #
+		$1181 $801  // updated id: -801 coedge $-1 -1 $-1 $703 $870 $705 $805 reversed $802 0 $-1 #
+		$1077 $-1   // deleted:    -1075 ATTRIB_CUSTOM-attrib $-1 -1 $1076 $-1 $1073 @28 INV_FEATURE_ORIENTATION_ATTR 1 44 $739 $-1 #
+		$-1   $226  // inserted:   -226 loop $-1 -1 $-1 $-1 $297 $319 #
+		$-1   $96   // inserted:   -96 loop $-1 -1 $-1 $-1 $148 $149 #
+		$1182 $3    // updated id: -3 shell $-1 -1 $-1 $-1 $-1 $4 $-1 $2 #
+		$-1   $1183 // inserted:   -1181 coedge $-1 -1 $-1 $703 $870 $705 $805 reversed $555 0 $-1 #
+		$-1   $1184 // inserted:   -1182 shell $-1 -1 $-1 $-1 $-1 $245 $-1 $2 #
+		$-1   $1185 // inserted:   -1183 face $1185 721 $-1 $245 $1174 $3 $-1 $416 T F #
+		$-1   $550  // inserted:   -550 face $646 720 $-1 $245 $647 $3 $-1 $219 reversed single #
+		$-1   $738  // inserted:   -738 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $646 $550 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 109 -1 9 0 20 0 0 0 0 0 0 0 #
+		$-1   $646  // inserted:   -646 ATTRIB_CUSTOM-attrib $-1 -1 $738 $-1 $550 @28 INV_FEATURE_ORIENTATION_ATTR 1 44 $739 $-1 #
+		$-1   $465  // inserted:   -465 face $549 719 $-1 $550 $375 $3 $-1 $551 reversed single #
+		$-1   $1009 // inserted:   -1007 ATTRIB_CUSTOM-attrib $-1 -1 $1006 $-1 $994 @28 INV_FEATURE_ORIENTATION_ATTR 1 44 $248 $-1 #
+		$-1   $645  // inserted:   -645 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $549 $465 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 109 -1 6 0 20 0 0 0 0 0 0 0 #
+		$-1   $742  // inserted:   -742 face $826 718 $-1 $465 $827 $3 $-1 $551 reversed single #
+		$-1   $922  // inserted:   -922 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $888 $742 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 109 -1 6 0 20 0 0 0 0 0 0 0 #
+		$-1   $888  // inserted:   -888 ATTRIB_CUSTOM-attrib $-1 -1 $922 $826 $742 @28 INV_FEATURE_ORIENTATION_ATTR 1 44 $739 $-1 #
+		$-1   $649  // inserted:   -649 face $741 717 $-1 $742 $555 $3 $-1 $743 reversed single #
+		$-1   $825  // inserted:   -825 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $741 $649 @28 INV_FEATURE_ORIENTATION_ATTR 1 44 $739 $-1 #
+		$-1   $741  // inserted:   -741 ATTRIB_CUSTOM-attrib $-1 -1 $825 $-1 $649 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 109 -1 7 0 20 0 0 0 0 0 0 0 #
+		$-1   $761  // inserted:   -761 face $842 716 $-1 $649 $802 $3 $-1 $743 reversed single #
+		$-1   $898  // inserted:   -898 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $842 $761 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 109 -1 7 0 20 0 0 0 0 0 0 0 #
+		$-1   $842  // inserted:   -842 ATTRIB_CUSTOM-attrib $-1 -1 $898 $-1 $761 @28 INV_FEATURE_ORIENTATION_ATTR 1 44 $739 $-1 #
+		$1081 $-1   // deleted:    -1079 coedge $-1 -1 $-1 $1143 $1074 $610 $611 F $1174 0 $-1 #
+		$1080 $-1   // deleted:    -1078 coedge $-1 -1 $-1 $1074 $1143 $703 $704 T $1174 0 $-1 #
+		$1076 $-1   // deleted:    -1074 coedge $-1 -1 $-1 $1079 $1078 $1084 $1083 T $1174 0 $-1 #
+		$1075 $-1   // deleted:    -1073 face $1075 -1 $-1 $1077 $827 $3 $-1 $551 T F #
+11 delta_state 26 1 0 $13  $9  $11  $-1  0 11
+	BulletinBoard: 2
+		$-1   $245  // inserted:   -245 face $341 619 $-1 $332 $164 $3 $-1 $342 reversed single #
+		$-1   $341  // inserted:   -341 ATTRIB_CUSTOM-attrib $-1 -1 $436 $-1 $245 @28 INV_FEATURE_ORIENTATION_ATTR 1 44 $248 $-1 #
+		$-1   $436  // inserted:   -436 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $341 $245 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 198 -1 8 0 20 0 0 0 0 0 0 0 #
+		$-1   $996  // inserted:   -994 face $1007 622 $-1 $332 $129 $3 $-1 $172 reversed single #
+		$-1   $342  // inserted:   -342 plane-surface $-1 -1 $-1 -149 119 -309 -2.38437e-16 -0 -1 1 -0 -2.38437e-16 forward_v I I I I #
+		$-1   $989  // inserted:   -987 face $1004 626 $-1 $218 $986 $3 $-1 $160 reversed single #
+		$-1   $248  // inserted:   -248 straight-curve $-1 -1 $-1 149 119 309 -0 -1 -0 I I #
+		$-1   $999  // inserted:   -997 shell $-1 -1 $-1 $-1 $-1 $234 $-1 $2 #
+		$-1   $998  // inserted:   -996 face $999 620 $-1 $985 $40 $3 $-1 $113 T F #
+		$-1   $985  // inserted:   -983 coedge $-1 -1 $-1 $140 $68 $136 $141 reversed $40 0 $-1 #
+		$-1   $113  // inserted:   -113 plane-surface $-1 -1 $-1 -149 119 309 -1 0 2.87436e-16 -2.87436e-16 -0 -1 forward_v I I I I #
+		$-1   $40   // inserted:   -40 loop $-1 -1 $-1 $-1 $23 $70 #
+		$-1   $151  // inserted:   -151 coedge $-1 -1 $-1 $107 $222 $99 $152 reversed $164 0 $-1 #
+		$-1   $1001 // inserted:   -999 ATTRIB_CUSTOM-attrib $-1 -1 $998 $-1 $996 @28 INV_FEATURE_ORIENTATION_ATTR 1 44 $248 $-1 #
+		$-1   $1000 // inserted:   -998 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $999 $996 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 198 -1 9 0 20 0 0 0 0 0 0 0 #
+		$-1   $994  // inserted:   -992 face $341 619 $-1 $996 $989 $3 $-1 $342 T F #
+		$-1   $236  // inserted:   -236 plane-surface $-1 -1 $-1 149 119 309 -0 0 1 -1 -0 -0 forward_v I I I I #
+		$-1   $235  // inserted:   -235 loop $-1 -1 $-1 $-1 $329 $159 #
+		$-1   $86   // inserted:   -86 coedge $-1 -1 $-1 $140 $52 $136 $141 reversed $40 0 $-1 #
+		$-1   $243  // inserted:   -243 coedge $-1 -1 $-1 $335 $163 $336 $337 reversed $164 0 $-1 #
+		$-1   $107  // inserted:   -107 coedge $-1 -1 $-1 $163 $151 $68 $108 forward $164 0 $-1 #
+		$-1   $1007 // inserted:   -1005 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $1003 $987 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 109 -1 0 0 12 0 0 0 0 0 0 0 #
+		$-1   $1006 // inserted:   -1004 ATTRIB_CUSTOM-attrib $-1 -1 $1003 $-1 $987 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 411 -1 4 1 #
+		$-1   $172  // inserted:   -172 plane-surface $-1 -1 $-1 149 119 -309 1 0 -1.72462e-16 1.72462e-16 -0 1 forward_v I I I I #
+		$-1   $129  // inserted:   -129 loop $-1 -1 $-1 $-1 $81 $112 #
+		$-1   $364  // inserted:   -364 coedge $-1 -1 $-1 $279 $453 $274 $365 reversed $235 0 $-1 #
+		$-1   $68   // inserted:   -68 coedge $-1 -1 $-1 $39 $106 $107 $108 reversed $40 0 $-1 #
+		$-1   $140  // inserted:   -140 coedge $-1 -1 $-1 $106 $86 $209 $210 forward $40 0 $-1 #
+		$-1   $163  // inserted:   -163 coedge $-1 -1 $-1 $243 $107 $238 $244 forward $164 0 $-1 #
+		$-1   $336  // inserted:   -336 coedge $-1 -1 $-1 $278 $270 $243 $337 forward $129 0 $-1 #
+		$-1   $337  // inserted:   -337 edge $431 689 $-1 $432 0 $339 10.8 $336 $433 forward @7 unknown #
+		$-1   $108  // inserted:   -108 edge $165 687 $-1 $109 0 $166 10.8 $68 $167 forward @7 unknown #
+		$-1   $332  // inserted:   -332 face $427 623 $-1 $319 $239 $3 $-1 $428 reversed single #
+		$-1   $270  // inserted:   -270 coedge $-1 -1 $-1 $336 $186 $356 $362 reversed $129 0 $-1 #
+		$-1   $209  // inserted:   -209 coedge $-1 -1 $-1 $289 $292 $140 $210 reversed $235 0 $-1 #
+		$-1   $279  // inserted:   -279 coedge $-1 -1 $-1 $292 $364 $197 $280 forward $235 0 $-1 #
+		$-1   $106  // inserted:   -106 coedge $-1 -1 $-1 $68 $140 $161 $162 forward $40 0 $-1 #
+		$-1   $210  // inserted:   -210 edge $293 691 $-1 $211 0 $241 10.8 $209 $294 forward @7 unknown #
+		$-1   $238  // inserted:   -238 coedge $-1 -1 $-1 $161 $330 $163 $244 reversed $239 0 $-1 #
+		$-1   $244  // inserted:   -244 edge $338 688 $-1 $166 -29.8 $339 -0 $163 $340 forward @7 unknown #
+		$-1   $278  // inserted:   -278 coedge $-1 -1 $-1 $197 $336 $330 $366 forward $129 0 $-1 #
+		$-1   $431  // inserted:   -431 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $337 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 198 -1 3 0 18 0 0 0 0 0 0 0 #
+		$-1   $339  // inserted:   -339 vertex $434 -1 $-1 $337 1 $435 #
+		$-1   $433  // inserted:   -433 straight-curve $-1 -1 $-1 149 119 -309 0 -1 0 I I #
+		$-1   $165  // inserted:   -165 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $108 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 198 -1 5 0 18 0 0 0 0 0 0 0 #
+		$-1   $166  // inserted:   -166 vertex $246 -1 $-1 $108 1 $247 #
+		$-1   $167  // inserted:   -167 straight-curve $-1 -1 $-1 -149 119 -309 0 -1 0 I I #
+		$-1   $427  // inserted:   -427 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $332 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 198 -1 0 0 12 0 0 0 0 0 0 0 #
+		$-1   $428  // inserted:   -428 plane-surface $-1 -1 $-1 -3.55271e-14 11 -1.06581e-13 0 -1 0 0 0 -1 forward_v I I I I #
+		$-1   $239  // inserted:   -239 loop $-1 -1 $-1 $-1 $330 $332 #
+		$-1   $197  // inserted:   -197 coedge $-1 -1 $-1 $128 $278 $279 $280 reversed $129 0 $-1 #
+		$-1   $292  // inserted:   -292 coedge $-1 -1 $-1 $209 $279 $237 $331 forward $235 0 $-1 #
+		$-1   $280  // inserted:   -280 edge $367 694 $-1 $282 0 $368 10.8 $197 $369 forward @7 unknown #
+		$-1   $161  // inserted:   -161 coedge $-1 -1 $-1 $237 $238 $106 $162 reversed $239 0 $-1 #
+		$-1   $162  // inserted:   -162 edge $240 692 $-1 $241 -61.8 $166 -0 $106 $242 forward @7 unknown #
+		$-1   $293  // inserted:   -293 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $210 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 198 -1 2 0 18 0 0 0 0 0 0 0 #
+		$-1   $241  // inserted:   -241 vertex $333 -1 $-1 $210 1 $334 #
+		$-1   $294  // inserted:   -294 straight-curve $-1 -1 $-1 -149 119 309 0 -1 0 I I #
+		$-1   $330  // inserted:   -330 coedge $-1 -1 $-1 $238 $237 $278 $366 reversed $239 0 $-1 #
+		$-1   $338  // inserted:   -338 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $244 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 198 -1 8 0 10 0 0 0 0 0 0 0 #
+		$-1   $340  // inserted:   -340 straight-curve $-1 -1 $-1 149 11 -309 1 0 -2.38437e-16 I I #
+		$-1   $366  // inserted:   -366 edge $456 697 $-1 $339 -61.8 $368 -0 $278 $457 forward @7 unknown #
+		$-1   $434  // inserted:   -434 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $339 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 198 -1 3 0 9 0 0 0 0 0 0 0 #
+		$-1   $435  // inserted:   -435 point $-1 -1 $-1 149 11 -309 #
+		$-1   $246  // inserted:   -246 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $166 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 198 -1 5 0 9 0 0 0 0 0 0 0 #
+		$-1   $247  // inserted:   -247 point $-1 -1 $-1 -149 11 -309 #
+		$-1   $237  // inserted:   -237 coedge $-1 -1 $-1 $330 $161 $292 $331 reversed $239 0 $-1 #
+		$-1   $331  // inserted:   -331 edge $425 695 $-1 $368 -29.8 $241 -0 $292 $426 forward @7 unknown #
+		$-1   $367  // inserted:   -367 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $280 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 198 -1 4 0 18 0 0 0 0 0 0 0 #
+		$-1   $368  // inserted:   -368 vertex $458 -1 $-1 $280 1 $459 #
+		$-1   $369  // inserted:   -369 straight-curve $-1 -1 $-1 149 119 309 0 -1 0 I I #
+		$-1   $240  // inserted:   -240 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $162 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 198 -1 9 0 10 0 0 0 0 0 0 0 #
+		$-1   $242  // inserted:   -242 straight-curve $-1 -1 $-1 -149 11 -309 -2.87436e-16 -0 -1 I I #
+		$-1   $333  // inserted:   -333 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $241 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 198 -1 2 0 9 0 0 0 0 0 0 0 #
+		$-1   $334  // inserted:   -334 point $-1 -1 $-1 -149 11 309 #
+		$-1   $456  // inserted:   -456 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $366 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 198 -1 7 0 10 0 0 0 0 0 0 0 #
+		$-1   $457  // inserted:   -457 straight-curve $-1 -1 $-1 149 11 309 1.72462e-16 0 1 I I #
+		$-1   $425  // inserted:   -425 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $331 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 198 -1 6 0 10 0 0 0 0 0 0 0 #
+		$-1   $426  // inserted:   -426 straight-curve $-1 -1 $-1 -149 11 309 -1 -0 -0 I I #
+		$-1   $458  // inserted:   -458 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $368 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 198 -1 4 0 9 0 0 0 0 0 0 0 #
+		$-1   $459  // inserted:   -459 point $-1 -1 $-1 149 11 309 #
+		$-1   $168  // inserted:   -168 point $-1 -1 $-1 -149 119 -309 #
+		$-1   $109  // inserted:   -109 vertex $-1 -1 $-1 $152 0 $168 #
+		$-1   $521  // inserted:   -521 point $-1 -1 $-1 149 119 -309 #
+		$-1   $432  // inserted:   -432 vertex $520 -1 $-1 $430 1 $521 #
+		$-1   $224  // inserted:   -224 straight-curve $-1 -1 $-1 -74.5 119 -309 1 0 -2.38437e-16 I I #
+		$-1   $152  // inserted:   -152 edge $-1 686 $-1 $109 -7.45 $223 2.45 $99 $224 forward @7 unknown #
+		$-1   $99   // inserted:   -99 coedge $-1 -1 $-1 $150 $60 $151 $152 forward $62 0 $-1 #
+		$-1   $296  // inserted:   -296 point $-1 -1 $-1 -149 119 309 #
+		$-1   $211  // inserted:   -211 vertex $295 -1 $-1 $141 0 $296 #
+		$-1   $110  // inserted:   -110 straight-curve $-1 -1 $-1 -149 119 154.5 -2.87436e-16 -0 -1 I I #
+		$-1   $141  // inserted:   -141 edge $-1 690 $-1 $211 -15.45 $87 10.45 $136 $110 forward @7 unknown #
+		$-1   $136  // inserted:   -136 coedge $-1 -1 $-1 $84 $206 $86 $141 forward $137 0 $-1 #
+		$-1   $371  // inserted:   -371 point $-1 -1 $-1 149 119 309 #
+		$-1   $282  // inserted:   -282 vertex $370 -1 $-1 $365 0 $371 #
+		$-1   $383  // inserted:   -383 straight-curve $-1 -1 $-1 74.5 119 309 -1 -0 0 I I #
+		$-1   $365  // inserted:   -365 edge $454 693 $-1 $282 -7.45 $455 2.45 $274 $383 forward @7 unknown #
+		$-1   $274  // inserted:   -274 coedge $-1 -1 $-1 $363 $190 $364 $365 forward $191 0 $-1 #
+		$-1   $283  // inserted:   -283 straight-curve $-1 -1 $-1 149 119 -154.5 1.72462e-16 0 1 I I #
+		$-1   $362  // inserted:   -362 edge $449 696 $-1 $432 -15.45 $352 10.45 $356 $283 forward @7 unknown #
+		$-1   $356  // inserted:   -356 coedge $-1 -1 $-1 $263 $429 $270 $362 forward $191 0 $-1 #
+		$-1   $986  // inserted:   -984 loop $-1 -1 $-1 $-1 $364 $985 #
+		$1104 $987  // updated id: -985 face $1001 621 $-1 $994 $235 $3 $-1 $236 reversed single #
+		$1105 $3    // updated id: -3 shell $-1 -1 $-1 $-1 $-1 $4 $-1 $2 #
+9 delta_state 25 1 0 $11  $7  $9  $-1  0 11
+	BulletinBoard: 2
+		$-1   $873  // inserted:   -873 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $805 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 191 -1 16 0 #
+		$1091 $805  // updated id: -805 edge $873 658 $-1 $708 -16.05 $874 48.15 $705 $875 forward @7 unknown #
+		$-1   $918  // inserted:   -918 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $877 $708 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 191 -1 14 1 #
+		$1092 $708  // updated id: -708 vertex $809 -1 $-1 $608 1 $810 #
+		$-1   $940  // inserted:   -940 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $935 $874 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 191 -1 7 1 #
+		$1093 $874  // updated id: -874 vertex $916 -1 $-1 $818 0 $917 #
+		$-1   $1094 // inserted:   -1092 vertex $-1 -1 $-1 $1083 1 $810 #
+		$1095 $1083 // updated id: -1081 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $1080 $1077 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 109 -1 7 0 20 0 0 0 0 0 0 0 #
+		$-1   $887  // inserted:   -887 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $822 $616 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 185 -1 12 1 #
+		$1096 $616  // updated id: -616 vertex $722 -1 $-1 $512 0 $723 #
+		$-1   $877  // inserted:   -877 ATTRIB_CUSTOM-attrib $-1 -1 $918 $809 $708 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 185 -1 14 1 #
+		$-1   $809  // inserted:   -809 ATTRIB_CUSTOM-attrib $-1 -1 $877 $-1 $708 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 181 -1 14 1 #
+		$-1   $819  // inserted:   -819 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $721 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 175 -1 13 0 #
+		$1097 $721  // updated id: -721 edge $819 660 $-1 $820 -16.05 $616 48.15 $615 $821 forward @7 unknown #
+		$-1   $936  // inserted:   -936 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $921 $820 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 175 -1 9 1 #
+		$1098 $820  // updated id: -820 vertex $885 -1 $-1 $721 0 $886 #
+		$-1   $822  // inserted:   -822 ATTRIB_CUSTOM-attrib $-1 -1 $887 $722 $616 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 175 -1 12 1 #
+		$-1   $722  // inserted:   -722 ATTRIB_CUSTOM-attrib $-1 -1 $822 $-1 $616 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 171 -1 12 1 #
+		$-1   $883  // inserted:   -883 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $818 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 165 -1 10 0 #
+		$1099 $818  // updated id: -818 edge $883 659 $-1 $874 -8.05 $820 24.15 $720 $884 forward @7 unknown #
+		$-1   $935  // inserted:   -935 ATTRIB_CUSTOM-attrib $-1 -1 $940 $916 $874 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 165 -1 7 1 #
+		$-1   $921  // inserted:   -921 ATTRIB_CUSTOM-attrib $-1 -1 $936 $885 $820 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 165 -1 9 1 #
+		$-1   $885  // inserted:   -885 ATTRIB_CUSTOM-attrib $-1 -1 $921 $-1 $820 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 161 -1 9 1 #
+		$-1   $916  // inserted:   -916 ATTRIB_CUSTOM-attrib $-1 -1 $935 $-1 $874 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 157 -1 7 1 #
+		$-1   $1003 // inserted:   -1001 ATTRIB_CUSTOM-attrib $-1 -1 $1000 $-1 $985 @28 INV_FEATURE_ORIENTATION_ATTR 1 44 $248 $-1 #
+		$1100 $1005 // updated id: -1003 ATTRIB_CUSTOM-attrib $-1 -1 $1005 $1004 $987 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 130 -1 4 1 #
+		$1101 $987  // updated id: -985 face $1001 621 $-1 $994 $235 $3 $-1 $236 reversed single #
+7 delta_state 24 1 0 $9  $5  $7  $-1  0 11
+	BulletinBoard: 2
+		$-1   $319  // inserted:   -319 face $415 624 $-1 $149 $226 $3 $-1 $416 reversed single #
+		$-1   $1012 // inserted:   -1010 face $1012 624 $-1 $149 $226 $3 $-1 $416 reversed single #
+		$-1   $415  // inserted:   -415 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $319 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 109 -1 8 0 20 0 0 0 0 0 0 0 #
+		$-1   $149  // inserted:   -149 face $217 625 $-1 $218 $96 $3 $-1 $219 reversed single #
+		$-1   $416  // inserted:   -416 plane-surface $-1 -1 $-1 -161 145 -321 -4.41331e-16 -0 -1 1 -0 -4.41331e-16 forward_v I I I I #
+		$-1   $1072 // inserted:   -1070 vertex $-1 -1 $-1 $152 1 $521 #
+		$-1   $739  // inserted:   -739 straight-curve $-1 -1 $-1 161 145 321 -0 -1 -0 I I #
+		$-1   $1014 // inserted:   -1012 ATTRIB_CUSTOM-attrib $-1 -1 $415 $-1 $319 @28 INV_FEATURE_ORIENTATION_ATTR 1 44 $739 $-1 #
+		$-1   $217  // inserted:   -217 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $149 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 109 -1 9 0 20 0 0 0 0 0 0 0 #
+		$-1   $1073 // inserted:   -1071 edge $-1 696 $-1 $432 -15.45 $282 46.35 $356 $283 forward @7 unknown #
+		$-1   $219  // inserted:   -219 plane-surface $-1 -1 $-1 -161 145 321 -1 0 3.32029e-16 -3.32029e-16 -0 -1 forward_v I I I I #
+		$-1   $647  // inserted:   -647 loop $-1 -1 $-1 $-1 $711 $550 #
+		$-1   $1074 // inserted:   -1072 loop $-1 -1 $-1 $-1 $1074 $319 #
+		$-1   $1075 // inserted:   -1073 face $1075 -1 $-1 $1077 $827 $3 $-1 $551 T F #
+		$-1   $1076 // inserted:   -1074 coedge $-1 -1 $-1 $1079 $1078 $1084 $1083 T $1174 0 $-1 #
+		$-1   $1077 // inserted:   -1075 ATTRIB_CUSTOM-attrib $-1 -1 $1076 $-1 $1073 @28 INV_FEATURE_ORIENTATION_ATTR 1 44 $739 $-1 #
+		$-1   $551  // inserted:   -551 plane-surface $-1 -1 $-1 161 145 321 2.20665e-16 0 1 -1 -0 2.20665e-16 forward_v I I I I #
+		$-1   $827  // inserted:   -827 loop $-1 -1 $-1 $-1 $889 $742 #
+		$-1   $710  // inserted:   -710 coedge $-1 -1 $-1 $812 $610 $615 $721 reversed $647 0 $-1 #
+		$-1   $1078 // inserted:   -1076 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $1075 $1073 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 109 -1 6 0 20 0 0 0 0 0 0 0 #
+		$-1   $1079 // inserted:   -1077 face $1080 -1 $-1 $987 $555 $3 $-1 $743 reversed single #
+		$-1   $1080 // inserted:   -1078 coedge $-1 -1 $-1 $1074 $1143 $703 $704 T $1174 0 $-1 #
+		$-1   $1081 // inserted:   -1079 coedge $-1 -1 $-1 $1143 $1074 $610 $611 F $1174 0 $-1 #
+		$-1   $743  // inserted:   -743 plane-surface $-1 -1 $-1 161 145 -321 1 0 -2.21353e-16 2.21353e-16 -0 1 forward_v I I I I #
+		$-1   $555  // inserted:   -555 loop $-1 -1 $-1 $-1 $475 $649 #
+		$-1   $817  // inserted:   -817 coedge $-1 -1 $-1 $882 $878 $720 $818 reversed $827 0 $-1 #
+		$-1   $610  // inserted:   -610 coedge $-1 -1 $-1 $710 $711 $509 $611 reversed $647 0 $-1 #
+		$-1   $812  // inserted:   -812 coedge $-1 -1 $-1 $711 $710 $878 $879 forward $647 0 $-1 #
+		$-1   $153  // inserted:   -153 coedge $-1 -1 $-1 $225 $212 $100 $154 forward $226 0 $-1 #
+		$-1   $703  // inserted:   -703 coedge $-1 -1 $-1 $800 $801 $606 $704 forward $802 0 $-1 #
+		$-1   $704  // inserted:   -704 edge $803 640 $-1 $708 0 $804 0.5 $703 $558 forward @7 unknown #
+		$-1   $611  // inserted:   -611 edge $712 685 $-1 $616 0 $713 0.5 $610 $300 forward @7 unknown #
+		$-1   $987  // inserted:   -985 face $1001 621 $-1 $994 $235 $3 $-1 $236 reversed single #
+		$-1   $801  // inserted:   -801 coedge $-1 -1 $-1 $703 $870 $705 $805 reversed $802 0 $-1 #
+		$-1   $878  // inserted:   -878 coedge $-1 -1 $-1 $817 $889 $812 $879 reversed $827 0 $-1 #
+		$-1   $882  // inserted:   -882 coedge $-1 -1 $-1 $889 $817 $870 $913 forward $827 0 $-1 #
+		$-1   $201  // inserted:   -201 coedge $-1 -1 $-1 $133 $214 $135 $205 forward $96 0 $-1 #
+		$-1   $879  // inserted:   -879 edge $919 682 $-1 $820 0 $880 0.5 $878 $391 forward @7 unknown #
+		$-1   $100  // inserted:   -100 coedge $-1 -1 $-1 $61 $150 $153 $154 reversed $62 0 $-1 #
+		$-1   $154  // inserted:   -154 edge $227 699 $-1 $156 -32.2 $228 -21.1 $153 $229 forward @7 unknown #
+		$-1   $554  // inserted:   -554 coedge $-1 -1 $-1 $560 $470 $532 $633 forward $555 0 $-1 #
+		$-1   $803  // inserted:   -803 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $704 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 109 -1 3 0 18 0 0 0 0 0 0 0 #
+		$-1   $557  // inserted:   -557 vertex $650 -1 $-1 $471 1 $651 #
+		$-1   $558  // inserted:   -558 straight-curve $-1 -1 $-1 161 145 -321 0 -1 0 I I #
+		$-1   $712  // inserted:   -712 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $611 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 109 -1 5 0 18 0 0 0 0 0 0 0 #
+		$-1   $156  // inserted:   -156 vertex $230 -1 $-1 $213 1 $231 #
+		$-1   $300  // inserted:   -300 straight-curve $-1 -1 $-1 -161 145 -321 0 -1 0 I I #
+		$-1   $1005 // inserted:   -1003 ATTRIB_CUSTOM-attrib $-1 -1 $1005 $1004 $987 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 130 -1 4 1 #
+		$-1   $160  // inserted:   -160 plane-surface $-1 -1 $-1 -3.55271e-14 119 -7.10543e-14 0 -1 0 0 0 -1 forward_v I I I I #
+		$-1   $988  // inserted:   -986 loop $-1 -1 $-1 $988 $99 $987 #
+		$-1   $870  // inserted:   -870 coedge $-1 -1 $-1 $801 $800 $882 $913 reversed $802 0 $-1 #
+		$-1   $533  // inserted:   -533 coedge $-1 -1 $-1 $543 $474 $450 $534 forward $375 0 $-1 #
+		$-1   $913  // inserted:   -913 edge $933 678 $-1 $874 0 $914 0.5 $870 $653 forward @7 unknown #
+		$-1   $135  // inserted:   -135 coedge $-1 -1 $-1 $204 $84 $201 $205 reversed $137 0 $-1 #
+		$-1   $205  // inserted:   -205 edge $287 700 $-1 $288 -64.2 $138 -37.1 $201 $157 forward @7 unknown #
+		$-1   $919  // inserted:   -919 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $879 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 109 -1 2 0 18 0 0 0 0 0 0 0 #
+		$-1   $288  // inserted:   -288 vertex $379 -1 $-1 $302 1 $380 #
+		$-1   $391  // inserted:   -391 straight-curve $-1 -1 $-1 -161 145 321 0 -1 0 I I #
+		$-1   $532  // inserted:   -532 coedge $-1 -1 $-1 $552 $450 $554 $633 reversed $191 0 $-1 #
+		$-1   $320  // inserted:   -320 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $227 $154 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 109 -1 8 0 10 0 0 0 0 0 0 0 #
+		$-1   $229  // inserted:   -229 straight-curve $-1 -1 $-1 161 119 -321 1 0 -4.41331e-16 I I #
+		$-1   $633  // inserted:   -633 edge $730 680 $-1 $557 -64.2 $635 -0 $554 $731 forward @7 unknown #
+		$-1   $828  // inserted:   -828 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $744 $557 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 109 -1 3 0 9 0 0 0 0 0 0 0 #
+		$-1   $651  // inserted:   -651 point $-1 -1 $-1 161 119 -321 #
+		$-1   $417  // inserted:   -417 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $322 $156 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 109 -1 5 0 9 0 0 0 0 0 0 0 #
+		$-1   $231  // inserted:   -231 point $-1 -1 $-1 -161 119 -321 #
+		$-1   $450  // inserted:   -450 coedge $-1 -1 $-1 $532 $363 $533 $534 reversed $191 0 $-1 #
+		$-1   $534  // inserted:   -534 edge $634 683 $-1 $635 -32.2 $538 -21.1 $533 $378 forward @7 unknown #
+		$-1   $933  // inserted:   -933 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $913 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 109 -1 4 0 18 0 0 0 0 0 0 0 #
+		$-1   $635  // inserted:   -635 vertex $732 -1 $-1 $561 1 $733 #
+		$-1   $653  // inserted:   -653 straight-curve $-1 -1 $-1 161 145 321 0 -1 0 I I #
+		$-1   $287  // inserted:   -287 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $205 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 109 -1 9 0 10 0 0 0 0 0 0 0 #
+		$-1   $157  // inserted:   -157 straight-curve $-1 -1 $-1 -161 119 -321 -3.32029e-16 -0 -1 I I #
+		$-1   $379  // inserted:   -379 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $288 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 109 -1 2 0 9 0 0 0 0 0 0 0 #
+		$-1   $380  // inserted:   -380 point $-1 -1 $-1 -161 119 321 #
+		$-1   $730  // inserted:   -730 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $633 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 109 -1 7 0 10 0 0 0 0 0 0 0 #
+		$-1   $731  // inserted:   -731 straight-curve $-1 -1 $-1 161 119 321 2.21353e-16 0 1 I I #
+		$-1   $634  // inserted:   -634 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $534 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 109 -1 6 0 10 0 0 0 0 0 0 0 #
+		$-1   $378  // inserted:   -378 straight-curve $-1 -1 $-1 -161 119 321 -1 0 2.20665e-16 I I #
+		$-1   $732  // inserted:   -732 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $635 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 109 -1 4 0 9 0 0 0 0 0 0 0 #
+		$-1   $733  // inserted:   -733 point $-1 -1 $-1 161 119 321 #
+		$-1   $723  // inserted:   -723 point $-1 -1 $-1 -161 145 -321 #
+		$-1   $616  // inserted:   -616 vertex $722 -1 $-1 $512 0 $723 #
+		$-1   $810  // inserted:   -810 point $-1 -1 $-1 161 145 -321 #
+		$-1   $708  // inserted:   -708 vertex $809 -1 $-1 $608 1 $810 #
+		$-1   $1082 // inserted:   -1080 ATTRIB_CUSTOM-attrib $-1 -1 $1081 $-1 $1077 @28 INV_FEATURE_ORIENTATION_ATTR 1 44 $739 $-1 #
+		$-1   $1083 // inserted:   -1081 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $1080 $1077 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 109 -1 7 0 20 0 0 0 0 0 0 0 #
+		$-1   $1084 // inserted:   -1082 straight-curve $-1 -1 $-1 -80.5 145 -321 1 0 -4.41331e-16 I I #
+		$-1   $886  // inserted:   -886 point $-1 -1 $-1 -161 145 321 #
+		$-1   $820  // inserted:   -820 vertex $885 -1 $-1 $721 0 $886 #
+		$-1   $821  // inserted:   -821 straight-curve $-1 -1 $-1 -161 145 160.5 -3.32029e-16 0 -1 I I #
+		$-1   $721  // inserted:   -721 edge $819 660 $-1 $820 -16.05 $616 48.15 $615 $821 forward @7 unknown #
+		$-1   $615  // inserted:   -615 coedge $-1 -1 $-1 $511 $720 $710 $721 forward $577 0 $-1 #
+		$-1   $917  // inserted:   -917 point $-1 -1 $-1 161 145 321 #
+		$-1   $874  // inserted:   -874 vertex $916 -1 $-1 $818 0 $917 #
+		$-1   $884  // inserted:   -884 straight-curve $-1 -1 $-1 80.5 145 321 -1 0 2.20665e-16 I I #
+		$-1   $818  // inserted:   -818 edge $883 659 $-1 $874 -8.05 $820 24.15 $720 $884 forward @7 unknown #
+		$-1   $720  // inserted:   -720 coedge $-1 -1 $-1 $615 $705 $817 $818 forward $577 0 $-1 #
+		$-1   $875  // inserted:   -875 straight-curve $-1 -1 $-1 161 145 -160.5 2.21353e-16 -0 1 I I #
+		$-1   $805  // inserted:   -805 edge $873 658 $-1 $708 -16.05 $874 48.15 $705 $875 forward @7 unknown #
+		$-1   $705  // inserted:   -705 coedge $-1 -1 $-1 $720 $607 $801 $805 forward $577 0 $-1 #
+		$-1   $1085 // inserted:   -1083 edge $1094 661 $-1 $616 -8.05 $708 24.15 $1084 $1082 F @7 unknown #
+		$1086 $485  // updated id: -485 face $575 762 $-1 $576 $577 $3 $-1 $578 forward single #
+		$1087 $3    // updated id: -3 shell $-1 -1 $-1 $-1 $-1 $4 $-1 $2 #
+5 delta_state 23 1 0 $7  $3  $5  $-1  0 11
+	BulletinBoard: 2
+		$-1   $1054 // inserted:   -1052 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $154 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 109 -1 8 0 10 0 0 0 0 0 0 0 #
+		$1055 $1047 // updated id: -1045 face $1067 776 $-1 $400 $506 $3 $-1 $507 forward single #
+		$1056 $1045 // updated id: -1043 loop $-1 -1 $-1 $-1 $780 $485 #
+		$-1   $896  // inserted:   -896 ATTRIB_CUSTOM-attrib $-1 -1 $925 $-1 $839 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 274 -1 28 0 #
+		$1057 $925  // updated id: -925 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $896 $839 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 52 -1 8 0 10 0 0 0 0 0 0 0 #
+		$1058 $839  // updated id: -839 edge $896 650 $-1 $848 0 $840 0.4 $756 $864 forward @7 unknown #
+		$-1   $941  // inserted:   -941 ATTRIB_CUSTOM-attrib $-1 -1 $943 $937 $848 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 274 -1 27 1 #
+		$1059 $943  // updated id: -943 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $941 $848 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 52 -1 3 0 9 0 0 0 0 0 0 0 #
+		$1060 $848  // updated id: -848 vertex $903 -1 $-1 $767 1 $904 #
+		$-1   $942  // inserted:   -942 ATTRIB_CUSTOM-attrib $-1 -1 $944 $938 $775 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 274 -1 24 1 #
+		$1061 $944  // updated id: -944 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $942 $775 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 52 -1 5 0 9 0 0 0 0 0 0 0 #
+		$1062 $775  // updated id: -775 vertex $855 -1 $-1 $675 1 $856 #
+		$-1   $937  // inserted:   -937 ATTRIB_CUSTOM-attrib $-1 -1 $941 $928 $848 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 270 -1 27 1 #
+		$-1   $854  // inserted:   -854 ATTRIB_CUSTOM-attrib $-1 -1 $906 $774 $675 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 262 -1 26 0 #
+		$1063 $906  // updated id: -906 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $854 $675 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 52 -1 5 0 18 0 0 0 0 0 0 0 #
+		$1064 $675  // updated id: -675 edge $774 653 $-1 $678 0 $775 14.5 $674 $776 forward @7 unknown #
+		$-1   $931  // inserted:   -931 ATTRIB_CUSTOM-attrib $-1 -1 $939 $908 $678 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 262 -1 20 1 #
+		$1065 $939  // updated id: -939 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $931 $678 @15 INV_NMX_GEN_TAG 1 44 1 52 -1 5 0 1 #
+		$1066 $678  // updated id: -678 vertex $778 -1 $-1 $777 1 $779 #
+		$-1   $938  // inserted:   -938 ATTRIB_CUSTOM-attrib $-1 -1 $942 $930 $775 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 262 -1 24 1 #
+		$-1   $930  // inserted:   -930 ATTRIB_CUSTOM-attrib $-1 -1 $938 $907 $775 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 258 -1 24 1 #
+		$-1   $908  // inserted:   -908 ATTRIB_CUSTOM-attrib $-1 -1 $931 $859 $678 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 254 -1 20 1 #
+		$-1   $1067 // inserted:   -1065 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $678 @15 INV_NMX_GEN_TAG 1 44 1 52 -1 5 0 1 #
+		$-1   $575  // inserted:   -575 ATTRIB_CUSTOM-attrib $-1 -1 $668 $-1 $485 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 73 -1 2 1 #
+		$1068 $668  // updated id: -668 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $575 $485 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 52 -1 0 0 12 0 0 0 0 0 0 0 #
+		$1069 $485  // updated id: -485 face $575 762 $-1 $576 $577 $3 $-1 $578 forward single #
+3 delta_state 22 1 0 $5  $1  $3  $-1  0 11
+	BulletinBoard: 2
+		$-1   $670  // inserted:   -670 plane-surface $-1 -1 $-1 0 0 7.10543e-14 0 1 0 0 0 1 forward_v I I I I #
+		$-1   $485  // inserted:   -485 face $575 762 $-1 $576 $577 $3 $-1 $578 forward single #
+		$-1   $692  // inserted:   -692 point $-1 -1 $-1 170 0 327 #
+		$-1   $592  // inserted:   -592 vertex $691 -1 $-1 $672 0 $692 #
+		$-1   $851  // inserted:   -851 point $-1 -1 $-1 170 0 -327 #
+		$-1   $769  // inserted:   -769 vertex $850 -1 $-1 $672 1 $851 #
+		$-1   $770  // inserted:   -770 straight-curve $-1 -1 $-1 170 0 327 -1.62969e-16 0 -1 F 0 F 65.4 #
+		$-1   $672  // inserted:   -672 edge $768 705 $-1 $592 0 $769 65.4 $579 $770 forward @7 unknown #
+		$-1   $579  // inserted:   -579 coedge $-1 -1 $-1 $671 $585 $588 $672 forward $486 0 $-1 #
+		$-1   $779  // inserted:   -779 point $-1 -1 $-1 -170 0 -327 #
+		$-1   $678  // inserted:   -678 vertex $778 -1 $-1 $777 1 $779 #
+		$-1   $858  // inserted:   -858 straight-curve $-1 -1 $-1 170 0 -327 -1 0 4.17966e-16 F 0 F 34 #
+		$-1   $777  // inserted:   -777 edge $857 652 $-1 $769 0 $678 34 $773 $858 forward @7 unknown #
+		$-1   $773  // inserted:   -773 coedge $-1 -1 $-1 $674 $766 $676 $777 forward $506 0 $-1 #
+		$-1   $690  // inserted:   -690 point $-1 -1 $-1 -170 0 327 #
+		$-1   $591  // inserted:   -591 vertex $689 -1 $-1 $583 1 $690 #
+		$-1   $679  // inserted:   -679 straight-curve $-1 -1 $-1 -170 0 -327 2.17291e-16 0 1 F 0 F 65.4 #
+		$-1   $583  // inserted:   -583 edge $677 704 $-1 $678 0 $591 65.4 $488 $679 forward @7 unknown #
+		$-1   $488  // inserted:   -488 coedge $-1 -1 $-1 $580 $581 $582 $583 forward $401 0 $-1 #
+		$-1   $593  // inserted:   -593 straight-curve $-1 -1 $-1 -170 0 327 1 0 0 F 0 F 34 #
+		$-1   $492  // inserted:   -492 edge $590 701 $-1 $591 0 $592 34 $403 $593 forward @7 unknown #
+		$-1   $403  // inserted:   -403 coedge $-1 -1 $-1 $489 $490 $491 $492 forward $310 0 $-1 #
+		$-1   $1043 // inserted:   -1041 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $211 @22 INV_NMX_MATCHED_ATTRIB 1 44 1 448 -1 41 1 #
+		$-1   $691  // inserted:   -691 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $592 @15 INV_NMX_GEN_TAG 1 44 1 52 -1 4 0 1 #
+		$-1   $929  // inserted:   -929 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $905 $769 @15 INV_NMX_GEN_TAG 1 44 1 52 -1 3 0 1 #
+		$-1   $768  // inserted:   -768 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $672 @15 INV_NMX_GEN_TAG 1 44 1 52 -1 7 0 2 #
+		$-1   $939  // inserted:   -939 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $931 $678 @15 INV_NMX_GEN_TAG 1 44 1 52 -1 5 0 1 #
+		$-1   $857  // inserted:   -857 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $777 @15 INV_NMX_GEN_TAG 1 44 1 52 -1 8 0 2 #
+		$-1   $689  // inserted:   -689 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $591 @15 INV_NMX_GEN_TAG 1 44 1 52 -1 2 0 1 #
+		$-1   $677  // inserted:   -677 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $583 @15 INV_NMX_GEN_TAG 1 44 1 52 -1 9 0 2 #
+		$-1   $590  // inserted:   -590 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $492 @15 INV_NMX_GEN_TAG 1 44 1 52 -1 6 0 2 #
+		$-1   $3    // inserted:   -3 shell $-1 -1 $-1 $-1 $-1 $4 $-1 $2 #
+		$-1   $2    // inserted:   -2 lump $-1 -1 $-1 $-1 $3 $1 #
+		$-1   $1    // inserted:   -1 body $-1 601 $-1 $2 $-1 $-1 #
+		$-1   $576  // inserted:   -576 face $669 630 $-1 $-1 $589 $3 $-1 $670 reversed single #
+		$-1   $588  // inserted:   -588 coedge $-1 -1 $-1 $491 $676 $579 $672 reversed $589 0 $-1 #
+		$-1   $676  // inserted:   -676 coedge $-1 -1 $-1 $588 $582 $773 $777 reversed $589 0 $-1 #
+		$-1   $582  // inserted:   -582 coedge $-1 -1 $-1 $676 $491 $488 $583 reversed $589 0 $-1 #
+		$-1   $491  // inserted:   -491 coedge $-1 -1 $-1 $582 $588 $403 $492 reversed $589 0 $-1 #
+		$-1   $589  // inserted:   -589 loop $-1 -1 $-1 $-1 $588 $576 #
+		$-1   $785  // inserted:   -785 point $-1 -1 $-1 170 145 327 #
+		$-1   $684  // inserted:   -684 vertex $784 -1 $-1 $586 1 $785 #
+		$-1   $685  // inserted:   -685 straight-curve $-1 -1 $-1 170 0 327 0 1 0 I I #
+		$-1   $586  // inserted:   -586 edge $683 702 $-1 $592 0 $684 14.5 $585 $685 forward @7 unknown #
+		$-1   $904  // inserted:   -904 point $-1 -1 $-1 170 145 -327 #
+		$-1   $848  // inserted:   -848 vertex $903 -1 $-1 $767 1 $904 #
+		$-1   $849  // inserted:   -849 straight-curve $-1 -1 $-1 170 0 -327 0 1 0 I I #
+		$-1   $767  // inserted:   -767 edge $847 651 $-1 $769 0 $848 14.5 $671 $849 forward @7 unknown #
+		$-1   $856  // inserted:   -856 point $-1 -1 $-1 -170 145 -327 #
+		$-1   $775  // inserted:   -775 vertex $855 -1 $-1 $675 1 $856 #
+		$-1   $776  // inserted:   -776 straight-curve $-1 -1 $-1 -170 0 -327 0 1 0 I I #
+		$-1   $675  // inserted:   -675 edge $774 653 $-1 $678 0 $775 14.5 $674 $776 forward @7 unknown #
+		$-1   $787  // inserted:   -787 point $-1 -1 $-1 -170 145 327 #
+		$-1   $687  // inserted:   -687 vertex $786 -1 $-1 $587 1 $787 #
+		$-1   $688  // inserted:   -688 straight-curve $-1 -1 $-1 -170 0 327 0 1 0 I I #
+		$-1   $587  // inserted:   -587 edge $686 703 $-1 $591 0 $687 14.5 $580 $688 forward @7 unknown #
+		$-1   $861  // inserted:   -861 straight-curve $-1 -1 $-1 170 145 327 -1.62969e-16 0 -1 I I #
+		$-1   $783  // inserted:   -783 edge $860 657 $-1 $684 0 $848 65.4 $682 $861 forward @7 unknown #
+		$-1   $671  // inserted:   -671 coedge $-1 -1 $-1 $682 $579 $766 $767 forward $486 0 $-1 #
+		$-1   $682  // inserted:   -682 coedge $-1 -1 $-1 $585 $671 $780 $783 reversed $486 0 $-1 #
+		$-1   $585  // inserted:   -585 coedge $-1 -1 $-1 $579 $682 $489 $586 reversed $486 0 $-1 #
+		$-1   $486  // inserted:   -486 loop $-1 -1 $-1 $-1 $579 $400 #
+		$-1   $487  // inserted:   -487 plane-surface $-1 -1 $-1 170 0 327 1 0 -1.62969e-16 -1.62969e-16 0 -1 forward_v I I I I #
+		$-1   $400  // inserted:   -400 face $484 629 $-1 $485 $486 $3 $-1 $487 forward single #
+		$-1   $864  // inserted:   -864 straight-curve $-1 -1 $-1 170 145 -327 -1 0 4.17966e-16 I I #
+		$-1   $839  // inserted:   -839 edge $896 650 $-1 $848 0 $840 0.4 $756 $864 forward @7 unknown #
+		$-1   $674  // inserted:   -674 coedge $-1 -1 $-1 $697 $773 $581 $675 forward $506 0 $-1 #
+		$-1   $756  // inserted:   -756 coedge $-1 -1 $-1 $766 $659 $806 $839 reversed $506 0 $-1 #
+		$-1   $766  // inserted:   -766 coedge $-1 -1 $-1 $773 $756 $671 $767 reversed $506 0 $-1 #
+		$-1   $1044 // inserted:   -1042 vertex $1041 -1 $-1 $141 0 $296 #
+		$-1   $507  // inserted:   -507 plane-surface $-1 -1 $-1 170 0 -327 -4.17966e-16 0 -1 -1 0 4.17966e-16 forward_v I I I I #
+		$-1   $1045 // inserted:   -1043 loop $-1 -1 $-1 $-1 $780 $485 #
+		$-1   $853  // inserted:   -853 straight-curve $-1 -1 $-1 -170 145 -327 2.17291e-16 0 1 I I #
+		$-1   $772  // inserted:   -772 edge $852 655 $-1 $775 0 $687 65.4 $673 $853 forward @7 unknown #
+		$-1   $580  // inserted:   -580 coedge $-1 -1 $-1 $673 $488 $490 $587 forward $401 0 $-1 #
+		$-1   $673  // inserted:   -673 coedge $-1 -1 $-1 $581 $580 $771 $772 reversed $401 0 $-1 #
+		$-1   $581  // inserted:   -581 coedge $-1 -1 $-1 $488 $673 $674 $675 reversed $401 0 $-1 #
+		$-1   $401  // inserted:   -401 loop $-1 -1 $-1 $-1 $488 $309 #
+		$-1   $402  // inserted:   -402 plane-surface $-1 -1 $-1 -170 0 -327 -1 0 2.17291e-16 2.17291e-16 0 1 forward_v I I I I #
+		$-1   $309  // inserted:   -309 face $399 628 $-1 $400 $401 $3 $-1 $402 forward single #
+		$-1   $782  // inserted:   -782 straight-curve $-1 -1 $-1 -170 145 327 1 0 0 I I #
+		$-1   $681  // inserted:   -681 edge $781 656 $-1 $687 0 $684 34 $584 $782 forward @7 unknown #
+		$-1   $489  // inserted:   -489 coedge $-1 -1 $-1 $584 $403 $585 $586 forward $310 0 $-1 #
+		$-1   $584  // inserted:   -584 coedge $-1 -1 $-1 $490 $489 $680 $681 reversed $310 0 $-1 #
+		$-1   $490  // inserted:   -490 coedge $-1 -1 $-1 $403 $584 $580 $587 reversed $310 0 $-1 #
+		$-1   $310  // inserted:   -310 loop $-1 -1 $-1 $-1 $403 $218 #
+		$-1   $311  // inserted:   -311 plane-surface $-1 -1 $-1 -170 0 327 0 0 1 1 0 0 forward_v I I I I #
+		$-1   $218  // inserted:   -218 face $308 627 $-1 $309 $310 $3 $-1 $311 forward single #
+		$-1   $780  // inserted:   -780 coedge $-1 -1 $-1 $806 $680 $682 $783 forward $577 0 $-1 #
+		$-1   $806  // inserted:   -806 coedge $-1 -1 $-1 $706 $780 $756 $839 forward $577 0 $-1 #
+		$-1   $771  // inserted:   -771 coedge $-1 -1 $-1 $680 $718 $673 $772 forward $577 0 $-1 #
+		$-1   $680  // inserted:   -680 coedge $-1 -1 $-1 $780 $771 $584 $681 forward $577 0 $-1 #
+		$-1   $578  // inserted:   -578 plane-surface $-1 -1 $-1 0 145 7.10543e-14 0 1 0 0 0 1 forward_v I I I I #
+		$-1   $574  // inserted:   -574 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $484 $400 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 52 -1 7 0 20 0 0 0 0 0 0 0 #
+		$-1   $1046 // inserted:   -1044 loop $-1 -1 $-1 $-1 $773 $1045 #
+		$-1   $483  // inserted:   -483 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $399 $309 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 52 -1 9 0 20 0 0 0 0 0 0 0 #
+		$-1   $397  // inserted:   -397 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $308 $218 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 52 -1 6 0 20 0 0 0 0 0 0 0 #
+		$-1   $669  // inserted:   -669 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $576 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 52 -1 0 0 4 0 0 0 0 0 0 0 #
+		$-1   $668  // inserted:   -668 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $575 $485 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 52 -1 0 0 12 0 0 0 0 0 0 0 #
+		$-1   $683  // inserted:   -683 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $586 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 52 -1 4 0 18 0 0 0 0 0 0 0 #
+		$-1   $902  // inserted:   -902 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $847 $767 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 52 -1 3 0 18 0 0 0 0 0 0 0 #
+		$-1   $906  // inserted:   -906 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $854 $675 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 52 -1 5 0 18 0 0 0 0 0 0 0 #
+		$-1   $686  // inserted:   -686 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $587 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 52 -1 2 0 18 0 0 0 0 0 0 0 #
+		$-1   $860  // inserted:   -860 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $783 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 52 -1 7 0 10 0 0 0 0 0 0 0 #
+		$-1   $925  // inserted:   -925 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $896 $839 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 52 -1 8 0 10 0 0 0 0 0 0 0 #
+		$-1   $852  // inserted:   -852 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $772 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 52 -1 9 0 10 0 0 0 0 0 0 0 #
+		$-1   $781  // inserted:   -781 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $681 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 52 -1 6 0 10 0 0 0 0 0 0 0 #
+		$-1   $784  // inserted:   -784 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $684 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 52 -1 4 0 9 0 0 0 0 0 0 0 #
+		$-1   $943  // inserted:   -943 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $941 $848 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 52 -1 3 0 9 0 0 0 0 0 0 0 #
+		$-1   $944  // inserted:   -944 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $942 $775 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 52 -1 5 0 9 0 0 0 0 0 0 0 #
+		$-1   $786  // inserted:   -786 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $687 @26 INV_NMX_SWEEPGENERATED_TAG 1 44 1 52 -1 2 0 9 0 0 0 0 0 0 0 #
+		$-1   $398  // inserted:   -398 straight-curve $-1 -1 $-1 170 0 327 0 1 0 I I #
+		$-1   $308  // inserted:   -308 ATTRIB_CUSTOM-attrib $-1 -1 $397 $-1 $218 @28 INV_FEATURE_ORIENTATION_ATTR 1 44 $398 $-1 #
+		$-1   $399  // inserted:   -399 ATTRIB_CUSTOM-attrib $-1 -1 $483 $-1 $309 @28 INV_FEATURE_ORIENTATION_ATTR 1 44 $398 $-1 #
+		$-1   $1047 // inserted:   -1045 face $1067 776 $-1 $400 $506 $3 $-1 $507 forward single #
+		$-1   $484  // inserted:   -484 ATTRIB_CUSTOM-attrib $-1 -1 $574 $-1 $400 @28 INV_FEATURE_ORIENTATION_ATTR 1 44 $398 $-1 #
+1 delta_state 2 1 0 $3  $-1  $1  $-1  0 11

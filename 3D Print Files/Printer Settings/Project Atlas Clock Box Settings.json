@@ -1,0 +1,33 @@
+{
+    "enable_arc_fitting": "0",
+    "enable_support": "1",
+    "from": "User",
+    "independent_support_layer_height": "0",
+    "inherits": "0.20mm Standard @BBL H2C",
+    "name": "Project Atlas Clock Box Settings",
+    "print_extruder_id": [
+        "1",
+        "1",
+        "1",
+        "2",
+        "2"
+    ],
+    "print_extruder_variant": [
+        "Direct Drive Standard",
+        "Direct Drive High Flow",
+        "Direct Drive E3D High Flow",
+        "Direct Drive Standard",
+        "Direct Drive High Flow"
+    ],
+    "print_settings_id": "Project Atlas Clock Box Settings",
+    "skeleton_infill_density": "10%",
+    "skin_infill_density": "10%",
+    "sparse_infill_density": "10%",
+    "support_critical_regions_only": "1",
+    "support_interface_filament": "2",
+    "support_interface_pattern": "rectilinear_interlaced",
+    "support_interface_spacing": "0",
+    "support_top_z_distance": "0",
+    "support_type": "normal(auto)",
+    "version": "2.8.0.6"
+}

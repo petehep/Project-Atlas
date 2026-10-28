@@ -18,3 +18,5 @@ __pycache__/
 
 # SQLite temp files
 *.db-journal
+# Agent workspace files
+.agent/

@@ -1,0 +1,309 @@
+SAT history_stream: 2 2 0 829 $-1  $0  $0  -1:
+0 delta_state 2 1 0 $-1  $-1  $0  $-1  0 11
+	BulletinBoard: 0
+		$-1   $38   // inserted:   -38 plane-surface $-1 -1 $-1 0 0 7.10543e-14 0 1 0 0 0 1 forward_v I I I I #
+		$-1   $1    // inserted:   -1 body $-1 445 $-1 $10 $-1 $-1 #
+		$-1   $19   // inserted:   -19 shell $-1 -1 $-1 $-1 $-1 $28 $-1 $10 #
+		$-1   $10   // inserted:   -10 lump $-1 -1 $-1 $-1 $19 $1 #
+		$-1   $162  // inserted:   -162 point $-1 -1 $-1 170 0 327 #
+		$-1   $95   // inserted:   -95 vertex $161 -1 $-1 $66 0 $162 #
+		$-1   $164  // inserted:   -164 point $-1 -1 $-1 170 0 -327 #
+		$-1   $96   // inserted:   -96 vertex $163 -1 $-1 $66 1 $164 #
+		$-1   $66   // inserted:   -66 edge $94 -1 $-1 $95 0 $96 65.4 $55 $97 forward @7 unknown #
+		$-1   $55   // inserted:   -55 coedge $-1 -1 $-1 $64 $65 $-1 $66 forward $37 0 $-1 #
+		$-1   $256  // inserted:   -256 point $-1 -1 $-1 -170 0 -327 #
+		$-1   $156  // inserted:   -156 vertex $255 -1 $-1 $92 1 $256 #
+		$-1   $92   // inserted:   -92 edge $155 -1 $-1 $96 0 $156 34 $64 $157 forward @7 unknown #
+		$-1   $64   // inserted:   -64 coedge $-1 -1 $-1 $91 $55 $-1 $92 forward $37 0 $-1 #
+		$-1   $258  // inserted:   -258 point $-1 -1 $-1 -170 0 327 #
+		$-1   $159  // inserted:   -159 vertex $257 -1 $-1 $154 1 $258 #
+		$-1   $154  // inserted:   -154 edge $253 -1 $-1 $156 0 $159 65.4 $91 $254 forward @7 unknown #
+		$-1   $91   // inserted:   -91 coedge $-1 -1 $-1 $65 $64 $-1 $154 forward $37 0 $-1 #
+		$-1   $93   // inserted:   -93 edge $158 -1 $-1 $159 0 $95 34 $65 $160 forward @7 unknown #
+		$-1   $65   // inserted:   -65 coedge $-1 -1 $-1 $55 $91 $-1 $93 forward $37 0 $-1 #
+		$-1   $37   // inserted:   -37 loop $-1 -1 $-1 $-1 $55 $28 #
+		$-1   $28   // inserted:   -28 face $-1 -1 $-1 $-1 $37 $19 $-1 $38 forward single #
+		$-1   $94   // inserted:   -94 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $66 @15 INV_NMX_GEN_TAG 1 44 0 7 0 2 #
+		$-1   $161  // inserted:   -161 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $95 @15 INV_NMX_GEN_TAG 1 44 0 4 0 1 #
+		$-1   $163  // inserted:   -163 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $96 @15 INV_NMX_GEN_TAG 1 44 0 3 0 1 #
+		$-1   $155  // inserted:   -155 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $92 @15 INV_NMX_GEN_TAG 1 44 0 8 0 2 #
+		$-1   $255  // inserted:   -255 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $156 @15 INV_NMX_GEN_TAG 1 44 0 5 0 1 #
+		$-1   $253  // inserted:   -253 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $154 @15 INV_NMX_GEN_TAG 1 44 0 9 0 2 #
+		$-1   $257  // inserted:   -257 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $159 @15 INV_NMX_GEN_TAG 1 44 0 2 0 1 #
+		$-1   $158  // inserted:   -158 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $93 @15 INV_NMX_GEN_TAG 1 44 0 6 0 2 #
+		$-1   $97   // inserted:   -97 straight-curve $-1 -1 $-1 170 0 327 -1.62969e-16 0 -1 F 0 F 65.4 #
+		$-1   $157  // inserted:   -157 straight-curve $-1 -1 $-1 170 0 -327 -1 0 4.17966e-16 F 0 F 34 #
+		$-1   $254  // inserted:   -254 straight-curve $-1 -1 $-1 -170 0 -327 2.17291e-16 0 1 F 0 F 65.4 #
+		$-1   $160  // inserted:   -160 straight-curve $-1 -1 $-1 -170 0 327 1 0 0 F 0 F 34 #
+		$-1   $40   // inserted:   -40 plane-surface $-1 -1 $-1 -3.55271e-14 145 -7.10543e-14 0 1 0 0 0 1 forward_v I I I I #
+		$-1   $2    // inserted:   -2 body $-1 448 $-1 $11 $-1 $-1 #
+		$-1   $20   // inserted:   -20 shell $-1 -1 $-1 $-1 $-1 $29 $-1 $11 #
+		$-1   $11   // inserted:   -11 lump $-1 -1 $-1 $-1 $20 $2 #
+		$-1   $173  // inserted:   -173 point $-1 -1 $-1 161 145 321 #
+		$-1   $102  // inserted:   -102 vertex $172 -1 $-1 $69 0 $173 #
+		$-1   $175  // inserted:   -175 point $-1 -1 $-1 161 145 -321 #
+		$-1   $103  // inserted:   -103 vertex $174 -1 $-1 $69 1 $175 #
+		$-1   $69   // inserted:   -69 edge $101 -1 $-1 $102 0 $103 64.2 $56 $104 forward @7 unknown #
+		$-1   $56   // inserted:   -56 coedge $-1 -1 $-1 $67 $68 $-1 $69 forward $39 0 $-1 #
+		$-1   $262  // inserted:   -262 point $-1 -1 $-1 -161 145 -321 #
+		$-1   $167  // inserted:   -167 vertex $261 -1 $-1 $99 1 $262 #
+		$-1   $99   // inserted:   -99 edge $166 -1 $-1 $103 0 $167 32.2 $67 $168 forward @7 unknown #
+		$-1   $67   // inserted:   -67 coedge $-1 -1 $-1 $98 $56 $-1 $99 forward $39 0 $-1 #
+		$-1   $264  // inserted:   -264 point $-1 -1 $-1 -161 145 321 #
+		$-1   $170  // inserted:   -170 vertex $263 -1 $-1 $165 1 $264 #
+		$-1   $165  // inserted:   -165 edge $259 -1 $-1 $167 0 $170 64.2 $98 $260 forward @7 unknown #
+		$-1   $98   // inserted:   -98 coedge $-1 -1 $-1 $68 $67 $-1 $165 forward $39 0 $-1 #
+		$-1   $100  // inserted:   -100 edge $169 -1 $-1 $170 0 $102 32.2 $68 $171 forward @7 unknown #
+		$-1   $68   // inserted:   -68 coedge $-1 -1 $-1 $56 $98 $-1 $100 forward $39 0 $-1 #
+		$-1   $39   // inserted:   -39 loop $-1 -1 $-1 $-1 $56 $29 #
+		$-1   $29   // inserted:   -29 face $-1 -1 $-1 $-1 $39 $20 $-1 $40 forward single #
+		$-1   $101  // inserted:   -101 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $69 @15 INV_NMX_GEN_TAG 1 44 0 7 0 2 #
+		$-1   $172  // inserted:   -172 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $102 @15 INV_NMX_GEN_TAG 1 44 0 4 0 1 #
+		$-1   $174  // inserted:   -174 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $103 @15 INV_NMX_GEN_TAG 1 44 0 3 0 1 #
+		$-1   $166  // inserted:   -166 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $99 @15 INV_NMX_GEN_TAG 1 44 0 8 0 2 #
+		$-1   $261  // inserted:   -261 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $167 @15 INV_NMX_GEN_TAG 1 44 0 5 0 1 #
+		$-1   $259  // inserted:   -259 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $165 @15 INV_NMX_GEN_TAG 1 44 0 9 0 2 #
+		$-1   $263  // inserted:   -263 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $170 @15 INV_NMX_GEN_TAG 1 44 0 2 0 1 #
+		$-1   $169  // inserted:   -169 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $100 @15 INV_NMX_GEN_TAG 1 44 0 6 0 2 #
+		$-1   $104  // inserted:   -104 straight-curve $-1 -1 $-1 161 145 321 -2.21353e-16 0 -1 F 0 F 64.2 #
+		$-1   $168  // inserted:   -168 straight-curve $-1 -1 $-1 161 145 -321 -1 0 4.41331e-16 F 0 F 32.2 #
+		$-1   $260  // inserted:   -260 straight-curve $-1 -1 $-1 -161 145 -321 3.32029e-16 0 1 F 0 F 64.2 #
+		$-1   $171  // inserted:   -171 straight-curve $-1 -1 $-1 -161 145 321 1 0 -2.20665e-16 F 0 F 32.2 #
+		$-1   $42   // inserted:   -42 plane-surface $-1 -1 $-1 -3.55271e-14 119 -1.06581e-13 0 1 0 0 0 1 forward_v I I I I #
+		$-1   $3    // inserted:   -3 body $-1 449 $-1 $12 $-1 $-1 #
+		$-1   $21   // inserted:   -21 shell $-1 -1 $-1 $-1 $-1 $30 $-1 $12 #
+		$-1   $12   // inserted:   -12 lump $-1 -1 $-1 $-1 $21 $3 #
+		$-1   $184  // inserted:   -184 point $-1 -1 $-1 149 119 309 #
+		$-1   $109  // inserted:   -109 vertex $183 -1 $-1 $72 0 $184 #
+		$-1   $186  // inserted:   -186 point $-1 -1 $-1 149 119 -309 #
+		$-1   $110  // inserted:   -110 vertex $185 -1 $-1 $72 1 $186 #
+		$-1   $72   // inserted:   -72 edge $108 -1 $-1 $109 0 $110 61.8 $57 $111 forward @7 unknown #
+		$-1   $57   // inserted:   -57 coedge $-1 -1 $-1 $70 $71 $-1 $72 forward $41 0 $-1 #
+		$-1   $268  // inserted:   -268 point $-1 -1 $-1 -149 119 -309 #
+		$-1   $178  // inserted:   -178 vertex $267 -1 $-1 $106 1 $268 #
+		$-1   $106  // inserted:   -106 edge $177 -1 $-1 $110 0 $178 29.8 $70 $179 forward @7 unknown #
+		$-1   $70   // inserted:   -70 coedge $-1 -1 $-1 $105 $57 $-1 $106 forward $41 0 $-1 #
+		$-1   $270  // inserted:   -270 point $-1 -1 $-1 -149 119 309 #
+		$-1   $181  // inserted:   -181 vertex $269 -1 $-1 $176 1 $270 #
+		$-1   $176  // inserted:   -176 edge $265 -1 $-1 $178 0 $181 61.8 $105 $266 forward @7 unknown #
+		$-1   $105  // inserted:   -105 coedge $-1 -1 $-1 $71 $70 $-1 $176 forward $41 0 $-1 #
+		$-1   $107  // inserted:   -107 edge $180 -1 $-1 $181 0 $109 29.8 $71 $182 forward @7 unknown #
+		$-1   $71   // inserted:   -71 coedge $-1 -1 $-1 $57 $105 $-1 $107 forward $41 0 $-1 #
+		$-1   $41   // inserted:   -41 loop $-1 -1 $-1 $-1 $57 $30 #
+		$-1   $30   // inserted:   -30 face $-1 -1 $-1 $-1 $41 $21 $-1 $42 forward single #
+		$-1   $108  // inserted:   -108 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $72 @15 INV_NMX_GEN_TAG 1 44 0 7 0 2 #
+		$-1   $183  // inserted:   -183 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $109 @15 INV_NMX_GEN_TAG 1 44 0 4 0 1 #
+		$-1   $185  // inserted:   -185 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $110 @15 INV_NMX_GEN_TAG 1 44 0 3 0 1 #
+		$-1   $177  // inserted:   -177 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $106 @15 INV_NMX_GEN_TAG 1 44 0 8 0 2 #
+		$-1   $267  // inserted:   -267 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $178 @15 INV_NMX_GEN_TAG 1 44 0 5 0 1 #
+		$-1   $265  // inserted:   -265 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $176 @15 INV_NMX_GEN_TAG 1 44 0 9 0 2 #
+		$-1   $269  // inserted:   -269 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $181 @15 INV_NMX_GEN_TAG 1 44 0 2 0 1 #
+		$-1   $180  // inserted:   -180 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $107 @15 INV_NMX_GEN_TAG 1 44 0 6 0 2 #
+		$-1   $111  // inserted:   -111 straight-curve $-1 -1 $-1 149 119 309 -1.72462e-16 0 -1 F 0 F 61.8 #
+		$-1   $179  // inserted:   -179 straight-curve $-1 -1 $-1 149 119 -309 -1 0 2.38437e-16 F 0 F 29.8 #
+		$-1   $266  // inserted:   -266 straight-curve $-1 -1 $-1 -149 119 -309 2.87436e-16 0 1 F 0 F 61.8 #
+		$-1   $182  // inserted:   -182 straight-curve $-1 -1 $-1 -149 119 309 1 0 0 F 0 F 29.8 #
+		$-1   $44   // inserted:   -44 plane-surface $-1 -1 $-1 -3.55271e-14 138.5 -327 -4.17966e-16 0 -1 -1 0 4.17966e-16 forward_v I I I I #
+		$-1   $4    // inserted:   -4 body $-1 450 $-1 $13 $-1 $-1 #
+		$-1   $22   // inserted:   -22 shell $-1 -1 $-1 $-1 $-1 $31 $-1 $13 #
+		$-1   $13   // inserted:   -13 lump $-1 -1 $-1 $-1 $22 $4 #
+		$-1   $195  // inserted:   -195 point $-1 -1 $-1 166 140 -327 #
+		$-1   $116  // inserted:   -116 vertex $194 -1 $-1 $75 0 $195 #
+		$-1   $197  // inserted:   -197 point $-1 -1 $-1 166 137 -327 #
+		$-1   $117  // inserted:   -117 vertex $196 -1 $-1 $75 1 $197 #
+		$-1   $75   // inserted:   -75 edge $115 -1 $-1 $116 0 $117 0.3 $58 $118 forward @7 unknown #
+		$-1   $58   // inserted:   -58 coedge $-1 -1 $-1 $73 $74 $-1 $75 forward $43 0 $-1 #
+		$-1   $274  // inserted:   -274 point $-1 -1 $-1 -166 137 -327 #
+		$-1   $189  // inserted:   -189 vertex $273 -1 $-1 $113 1 $274 #
+		$-1   $113  // inserted:   -113 edge $188 -1 $-1 $117 0 $189 33.2 $73 $190 forward @7 unknown #
+		$-1   $73   // inserted:   -73 coedge $-1 -1 $-1 $112 $58 $-1 $113 forward $43 0 $-1 #
+		$-1   $276  // inserted:   -276 point $-1 -1 $-1 -166 140 -327 #
+		$-1   $192  // inserted:   -192 vertex $275 -1 $-1 $187 1 $276 #
+		$-1   $187  // inserted:   -187 edge $271 -1 $-1 $189 0 $192 0.3 $112 $272 forward @7 unknown #
+		$-1   $112  // inserted:   -112 coedge $-1 -1 $-1 $74 $73 $-1 $187 forward $43 0 $-1 #
+		$-1   $114  // inserted:   -114 edge $191 -1 $-1 $192 0 $116 33.2 $74 $193 forward @7 unknown #
+		$-1   $74   // inserted:   -74 coedge $-1 -1 $-1 $58 $112 $-1 $114 forward $43 0 $-1 #
+		$-1   $43   // inserted:   -43 loop $-1 -1 $-1 $-1 $58 $31 #
+		$-1   $31   // inserted:   -31 face $-1 -1 $-1 $-1 $43 $22 $-1 $44 forward single #
+		$-1   $115  // inserted:   -115 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $75 @15 INV_NMX_GEN_TAG 1 44 0 7 0 2 #
+		$-1   $194  // inserted:   -194 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $116 @15 INV_NMX_GEN_TAG 1 44 0 4 0 1 #
+		$-1   $196  // inserted:   -196 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $117 @15 INV_NMX_GEN_TAG 1 44 0 3 0 1 #
+		$-1   $188  // inserted:   -188 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $113 @15 INV_NMX_GEN_TAG 1 44 0 8 0 2 #
+		$-1   $273  // inserted:   -273 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $189 @15 INV_NMX_GEN_TAG 1 44 0 5 0 1 #
+		$-1   $271  // inserted:   -271 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $187 @15 INV_NMX_GEN_TAG 1 44 0 9 0 2 #
+		$-1   $275  // inserted:   -275 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $192 @15 INV_NMX_GEN_TAG 1 44 0 2 0 1 #
+		$-1   $191  // inserted:   -191 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $114 @15 INV_NMX_GEN_TAG 1 44 0 6 0 2 #
+		$-1   $118  // inserted:   -118 straight-curve $-1 -1 $-1 166 140 -327 -0 -1 0 F 0 F 0.3 #
+		$-1   $190  // inserted:   -190 straight-curve $-1 -1 $-1 166 137 -327 -1 6.42057e-16 4.17966e-16 F 0 F 33.2 #
+		$-1   $272  // inserted:   -272 straight-curve $-1 -1 $-1 -166 137 -327 0 1 0 F 0 F 0.3 #
+		$-1   $193  // inserted:   -193 straight-curve $-1 -1 $-1 -166 140 -327 1 -1.07009e-16 -4.17966e-16 F 0 F 33.2 #
+		$-1   $46   // inserted:   -46 plane-surface $-1 -1 $-1 -6.59435e-45 142.933 -327 -4.17966e-16 0 -1 -1 0 4.17966e-16 forward_v I I I I #
+		$-1   $5    // inserted:   -5 body $-1 555 $-1 $14 $-1 $-1 #
+		$-1   $23   // inserted:   -23 shell $-1 -1 $-1 $-1 $-1 $32 $-1 $14 #
+		$-1   $14   // inserted:   -14 lump $-1 -1 $-1 $-1 $23 $5 #
+		$-1   $206  // inserted:   -206 point $-1 -1 $-1 166 138.29 -327 #
+		$-1   $123  // inserted:   -123 vertex $205 -1 $-1 $78 0 $206 #
+		$-1   $208  // inserted:   -208 point $-1 -1 $-1 -166 138.29 -327 #
+		$-1   $124  // inserted:   -124 vertex $207 -1 $-1 $78 1 $208 #
+		$-1   $78   // inserted:   -78 edge $122 -1 $-1 $123 0 $124 33.2 $59 $125 forward @7 unknown #
+		$-1   $59   // inserted:   -59 coedge $-1 -1 $-1 $76 $77 $-1 $78 forward $45 0 $-1 #
+		$-1   $280  // inserted:   -280 point $-1 -1 $-1 -166 147.577 -327 #
+		$-1   $200  // inserted:   -200 vertex $279 -1 $-1 $120 1 $280 #
+		$-1   $120  // inserted:   -120 edge $199 -1 $-1 $124 0 $200 0.928684 $76 $201 forward @7 unknown #
+		$-1   $76   // inserted:   -76 coedge $-1 -1 $-1 $119 $59 $-1 $120 forward $45 0 $-1 #
+		$-1   $282  // inserted:   -282 point $-1 -1 $-1 166 147.577 -327 #
+		$-1   $203  // inserted:   -203 vertex $281 -1 $-1 $198 1 $282 #
+		$-1   $198  // inserted:   -198 edge $277 -1 $-1 $200 0 $203 33.2 $119 $278 forward @7 unknown #
+		$-1   $119  // inserted:   -119 coedge $-1 -1 $-1 $77 $76 $-1 $198 forward $45 0 $-1 #
+		$-1   $121  // inserted:   -121 edge $202 -1 $-1 $203 0 $123 0.928684 $77 $204 forward @7 unknown #
+		$-1   $77   // inserted:   -77 coedge $-1 -1 $-1 $59 $119 $-1 $121 forward $45 0 $-1 #
+		$-1   $45   // inserted:   -45 loop $-1 -1 $-1 $-1 $59 $32 #
+		$-1   $32   // inserted:   -32 face $-1 -1 $-1 $-1 $45 $23 $-1 $46 forward single #
+		$-1   $122  // inserted:   -122 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $78 @15 INV_NMX_GEN_TAG 1 44 0 8 0 2 #
+		$-1   $205  // inserted:   -205 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $123 @15 INV_NMX_GEN_TAG 1 44 0 5 0 1 #
+		$-1   $207  // inserted:   -207 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $124 @15 INV_NMX_GEN_TAG 1 44 0 3 0 1 #
+		$-1   $199  // inserted:   -199 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $120 @15 INV_NMX_GEN_TAG 1 44 0 7 0 2 #
+		$-1   $279  // inserted:   -279 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $200 @15 INV_NMX_GEN_TAG 1 44 0 4 0 1 #
+		$-1   $277  // inserted:   -277 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $198 @15 INV_NMX_GEN_TAG 1 44 0 6 0 2 #
+		$-1   $281  // inserted:   -281 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $203 @15 INV_NMX_GEN_TAG 1 44 0 2 0 1 #
+		$-1   $202  // inserted:   -202 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $121 @15 INV_NMX_GEN_TAG 1 44 0 9 0 2 #
+		$-1   $125  // inserted:   -125 straight-curve $-1 -1 $-1 166 138.29 -327 -1 1.07009e-16 4.17966e-16 F 0 F 33.2 #
+		$-1   $201  // inserted:   -201 straight-curve $-1 -1 $-1 -166 138.29 -327 0 1 -0 F 0 F 0.928684 #
+		$-1   $278  // inserted:   -278 straight-curve $-1 -1 $-1 -166 147.577 -327 1 -3.74533e-16 -4.17966e-16 F 0 F 33.2 #
+		$-1   $204  // inserted:   -204 straight-curve $-1 -1 $-1 166 147.577 -327 -2.39096e-16 -1 9.99341e-32 F 0 F 0.928684 #
+		$-1   $48   // inserted:   -48 plane-surface $-1 -1 $-1 -5.32907e-14 119 -312.159 0 1 0 0 0 1 forward_v I I I I #
+		$-1   $6    // inserted:   -6 body $-1 825 $-1 $15 $-1 $-1 #
+		$-1   $24   // inserted:   -24 shell $-1 -1 $-1 $-1 $-1 $33 $-1 $15 #
+		$-1   $15   // inserted:   -15 lump $-1 -1 $-1 $-1 $24 $6 #
+		$-1   $217  // inserted:   -217 point $-1 -1 $-1 50 119 -303.318 #
+		$-1   $130  // inserted:   -130 vertex $216 -1 $-1 $81 0 $217 #
+		$-1   $219  // inserted:   -219 point $-1 -1 $-1 50 119 -321 #
+		$-1   $131  // inserted:   -131 vertex $218 -1 $-1 $81 1 $219 #
+		$-1   $81   // inserted:   -81 edge $129 -1 $-1 $130 -0 $131 1.76822 $60 $132 forward @7 unknown #
+		$-1   $60   // inserted:   -60 coedge $-1 -1 $-1 $79 $80 $-1 $81 forward $47 0 $-1 #
+		$-1   $286  // inserted:   -286 point $-1 -1 $-1 -50 119 -321 #
+		$-1   $211  // inserted:   -211 vertex $285 -1 $-1 $127 1 $286 #
+		$-1   $127  // inserted:   -127 edge $210 -1 $-1 $131 11.1 $211 21.1 $79 $212 forward @7 unknown #
+		$-1   $79   // inserted:   -79 coedge $-1 -1 $-1 $126 $60 $-1 $127 forward $47 0 $-1 #
+		$-1   $288  // inserted:   -288 point $-1 -1 $-1 -50 119 -303.318 #
+		$-1   $214  // inserted:   -214 vertex $287 -1 $-1 $209 1 $288 #
+		$-1   $209  // inserted:   -209 edge $283 -1 $-1 $211 0 $214 1.76822 $126 $284 forward @7 unknown #
+		$-1   $126  // inserted:   -126 coedge $-1 -1 $-1 $80 $79 $-1 $209 forward $47 0 $-1 #
+		$-1   $128  // inserted:   -128 edge $213 -1 $-1 $214 0 $130 10 $80 $215 forward @7 unknown #
+		$-1   $80   // inserted:   -80 coedge $-1 -1 $-1 $60 $126 $-1 $128 forward $47 0 $-1 #
+		$-1   $47   // inserted:   -47 loop $-1 -1 $-1 $-1 $60 $33 #
+		$-1   $33   // inserted:   -33 face $-1 -1 $-1 $-1 $47 $24 $-1 $48 forward single #
+		$-1   $129  // inserted:   -129 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $81 @15 INV_NMX_GEN_TAG 1 44 0 31 0 2 #
+		$-1   $216  // inserted:   -216 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $130 @15 INV_NMX_GEN_TAG 1 44 0 27 0 1 #
+		$-1   $218  // inserted:   -218 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $131 @15 INV_NMX_GEN_TAG 1 44 0 42 0 1 #
+		$-1   $210  // inserted:   -210 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $127 @15 INV_NMX_GEN_TAG 1 44 0 26 0 2 #
+		$-1   $285  // inserted:   -285 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $211 @15 INV_NMX_GEN_TAG 1 44 0 23 0 1 #
+		$-1   $283  // inserted:   -283 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $209 @15 INV_NMX_GEN_TAG 1 44 0 33 0 2 #
+		$-1   $287  // inserted:   -287 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $214 @15 INV_NMX_GEN_TAG 1 44 0 29 0 1 #
+		$-1   $213  // inserted:   -213 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $128 @15 INV_NMX_GEN_TAG 1 44 0 32 0 2 #
+		$-1   $132  // inserted:   -132 straight-curve $-1 -1 $-1 50 119 -303.318 -0 -0 -1 F -0 F 1.76822 #
+		$-1   $212  // inserted:   -212 straight-curve $-1 -1 $-1 161 119 -321 -1 -0 4.41331e-16 F 11.1 F 21.1 #
+		$-1   $284  // inserted:   -284 straight-curve $-1 -1 $-1 -50 119 -321 -0 -0 1 F 0 F 1.76822 #
+		$-1   $215  // inserted:   -215 straight-curve $-1 -1 $-1 -50 119 -303.318 1 -0 -0 F 0 F 10 #
+		$-1   $50   // inserted:   -50 plane-surface $-1 -1 $-1 -151 119 0 0 1 0 0 0 1 forward_v I I I I #
+		$-1   $7    // inserted:   -7 body $-1 826 $-1 $16 $-1 $-1 #
+		$-1   $25   // inserted:   -25 shell $-1 -1 $-1 $-1 $-1 $34 $-1 $16 #
+		$-1   $16   // inserted:   -16 lump $-1 -1 $-1 $-1 $25 $7 #
+		$-1   $228  // inserted:   -228 point $-1 -1 $-1 -141 119 50 #
+		$-1   $137  // inserted:   -137 vertex $227 -1 $-1 $84 0 $228 #
+		$-1   $230  // inserted:   -230 point $-1 -1 $-1 -141 119 -50 #
+		$-1   $138  // inserted:   -138 vertex $229 -1 $-1 $84 1 $230 #
+		$-1   $84   // inserted:   -84 edge $136 -1 $-1 $137 0 $138 10 $61 $139 forward @7 unknown #
+		$-1   $61   // inserted:   -61 coedge $-1 -1 $-1 $82 $83 $-1 $84 forward $49 0 $-1 #
+		$-1   $292  // inserted:   -292 point $-1 -1 $-1 -161 119 -50 #
+		$-1   $222  // inserted:   -222 vertex $291 -1 $-1 $134 1 $292 #
+		$-1   $134  // inserted:   -134 edge $221 -1 $-1 $138 0 $222 2 $82 $223 forward @7 unknown #
+		$-1   $82   // inserted:   -82 coedge $-1 -1 $-1 $133 $61 $-1 $134 forward $49 0 $-1 #
+		$-1   $294  // inserted:   -294 point $-1 -1 $-1 -161 119 50 #
+		$-1   $225  // inserted:   -225 vertex $293 -1 $-1 $220 1 $294 #
+		$-1   $220  // inserted:   -220 edge $289 -1 $-1 $222 0 $225 10 $133 $290 forward @7 unknown #
+		$-1   $133  // inserted:   -133 coedge $-1 -1 $-1 $83 $82 $-1 $220 forward $49 0 $-1 #
+		$-1   $135  // inserted:   -135 edge $224 -1 $-1 $225 0 $137 2 $83 $226 forward @7 unknown #
+		$-1   $83   // inserted:   -83 coedge $-1 -1 $-1 $61 $133 $-1 $135 forward $49 0 $-1 #
+		$-1   $49   // inserted:   -49 loop $-1 -1 $-1 $-1 $61 $34 #
+		$-1   $34   // inserted:   -34 face $-1 -1 $-1 $-1 $49 $25 $-1 $50 forward single #
+		$-1   $136  // inserted:   -136 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $84 @15 INV_NMX_GEN_TAG 1 44 0 39 0 2 #
+		$-1   $227  // inserted:   -227 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $137 @15 INV_NMX_GEN_TAG 1 44 0 36 0 1 #
+		$-1   $229  // inserted:   -229 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $138 @15 INV_NMX_GEN_TAG 1 44 0 35 0 1 #
+		$-1   $221  // inserted:   -221 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $134 @15 INV_NMX_GEN_TAG 1 44 0 40 0 2 #
+		$-1   $291  // inserted:   -291 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $222 @15 INV_NMX_GEN_TAG 1 44 0 37 0 1 #
+		$-1   $289  // inserted:   -289 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $220 @15 INV_NMX_GEN_TAG 1 44 0 41 0 2 #
+		$-1   $293  // inserted:   -293 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $225 @15 INV_NMX_GEN_TAG 1 44 0 34 0 1 #
+		$-1   $224  // inserted:   -224 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $135 @15 INV_NMX_GEN_TAG 1 44 0 38 0 2 #
+		$-1   $139  // inserted:   -139 straight-curve $-1 -1 $-1 -141 119 50 -1.77636e-16 0 -1 F 0 F 10 #
+		$-1   $223  // inserted:   -223 straight-curve $-1 -1 $-1 -141 119 -50 -1 0 0 F 0 F 2 #
+		$-1   $290  // inserted:   -290 straight-curve $-1 -1 $-1 -161 119 -50 3.55271e-16 0 1 F 0 F 10 #
+		$-1   $226  // inserted:   -226 straight-curve $-1 -1 $-1 -161 119 50 1 0 0 F 0 F 2 #
+		$-1   $52   // inserted:   -52 plane-surface $-1 -1 $-1 150.997 119 -8.88178e-15 0 1 0 0 0 1 forward_v I I I I #
+		$-1   $8    // inserted:   -8 body $-1 827 $-1 $17 $-1 $-1 #
+		$-1   $26   // inserted:   -26 shell $-1 -1 $-1 $-1 $-1 $35 $-1 $17 #
+		$-1   $17   // inserted:   -17 lump $-1 -1 $-1 $-1 $26 $8 #
+		$-1   $239  // inserted:   -239 point $-1 -1 $-1 160.997 119 -50 #
+		$-1   $144  // inserted:   -144 vertex $238 -1 $-1 $87 0 $239 #
+		$-1   $241  // inserted:   -241 point $-1 -1 $-1 140.997 119 -50 #
+		$-1   $145  // inserted:   -145 vertex $240 -1 $-1 $87 1 $241 #
+		$-1   $87   // inserted:   -87 edge $143 -1 $-1 $144 0 $145 2 $62 $146 forward @7 unknown #
+		$-1   $62   // inserted:   -62 coedge $-1 -1 $-1 $85 $86 $-1 $87 forward $51 0 $-1 #
+		$-1   $298  // inserted:   -298 point $-1 -1 $-1 140.997 119 50 #
+		$-1   $233  // inserted:   -233 vertex $297 -1 $-1 $141 1 $298 #
+		$-1   $141  // inserted:   -141 edge $232 -1 $-1 $145 0 $233 10 $85 $234 forward @7 unknown #
+		$-1   $85   // inserted:   -85 coedge $-1 -1 $-1 $140 $62 $-1 $141 forward $51 0 $-1 #
+		$-1   $300  // inserted:   -300 point $-1 -1 $-1 160.997 119 50 #
+		$-1   $236  // inserted:   -236 vertex $299 -1 $-1 $231 1 $300 #
+		$-1   $231  // inserted:   -231 edge $295 -1 $-1 $233 0 $236 2 $140 $296 forward @7 unknown #
+		$-1   $140  // inserted:   -140 coedge $-1 -1 $-1 $86 $85 $-1 $231 forward $51 0 $-1 #
+		$-1   $142  // inserted:   -142 edge $235 -1 $-1 $236 -0 $144 10 $86 $237 forward @7 unknown #
+		$-1   $86   // inserted:   -86 coedge $-1 -1 $-1 $62 $140 $-1 $142 forward $51 0 $-1 #
+		$-1   $51   // inserted:   -51 loop $-1 -1 $-1 $-1 $62 $35 #
+		$-1   $35   // inserted:   -35 face $-1 -1 $-1 $-1 $51 $26 $-1 $52 forward single #
+		$-1   $143  // inserted:   -143 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $87 @15 INV_NMX_GEN_TAG 1 44 0 21 0 2 #
+		$-1   $238  // inserted:   -238 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $144 @15 INV_NMX_GEN_TAG 1 44 0 18 0 1 #
+		$-1   $240  // inserted:   -240 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $145 @15 INV_NMX_GEN_TAG 1 44 0 16 0 1 #
+		$-1   $232  // inserted:   -232 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $141 @15 INV_NMX_GEN_TAG 1 44 0 20 0 2 #
+		$-1   $297  // inserted:   -297 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $233 @15 INV_NMX_GEN_TAG 1 44 0 17 0 1 #
+		$-1   $295  // inserted:   -295 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $231 @15 INV_NMX_GEN_TAG 1 44 0 19 0 2 #
+		$-1   $299  // inserted:   -299 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $236 @15 INV_NMX_GEN_TAG 1 44 0 13 0 1 #
+		$-1   $235  // inserted:   -235 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $142 @15 INV_NMX_GEN_TAG 1 44 0 22 0 2 #
+		$-1   $146  // inserted:   -146 straight-curve $-1 -1 $-1 160.997 119 -50 -1 -0 4.44089e-16 F 0 F 2 #
+		$-1   $234  // inserted:   -234 straight-curve $-1 -1 $-1 140.997 119 -50 -0 -0 1 F 0 F 10 #
+		$-1   $296  // inserted:   -296 straight-curve $-1 -1 $-1 140.997 119 50 1 -0 4.44089e-16 F 0 F 2 #
+		$-1   $237  // inserted:   -237 straight-curve $-1 -1 $-1 160.997 119 50 -0 -0 -1 F -0 F 10 #
+		$-1   $54   // inserted:   -54 plane-surface $-1 -1 $-1 9.76996e-14 119 311 0 1 0 0 0 1 forward_v I I I I #
+		$-1   $9    // inserted:   -9 body $-1 828 $-1 $18 $-1 $-1 #
+		$-1   $27   // inserted:   -27 shell $-1 -1 $-1 $-1 $-1 $36 $-1 $18 #
+		$-1   $18   // inserted:   -18 lump $-1 -1 $-1 $-1 $27 $9 #
+		$-1   $250  // inserted:   -250 point $-1 -1 $-1 50 119 321 #
+		$-1   $151  // inserted:   -151 vertex $249 -1 $-1 $90 0 $250 #
+		$-1   $252  // inserted:   -252 point $-1 -1 $-1 50 119 301 #
+		$-1   $152  // inserted:   -152 vertex $251 -1 $-1 $90 1 $252 #
+		$-1   $90   // inserted:   -90 edge $150 -1 $-1 $151 0 $152 2 $63 $153 forward @7 unknown #
+		$-1   $63   // inserted:   -63 coedge $-1 -1 $-1 $88 $89 $-1 $90 forward $53 0 $-1 #
+		$-1   $304  // inserted:   -304 point $-1 -1 $-1 -50 119 301 #
+		$-1   $244  // inserted:   -244 vertex $303 -1 $-1 $148 1 $304 #
+		$-1   $148  // inserted:   -148 edge $243 -1 $-1 $152 0 $244 10 $88 $245 forward @7 unknown #
+		$-1   $88   // inserted:   -88 coedge $-1 -1 $-1 $147 $63 $-1 $148 forward $53 0 $-1 #
+		$-1   $306  // inserted:   -306 point $-1 -1 $-1 -50 119 321 #
+		$-1   $247  // inserted:   -247 vertex $305 -1 $-1 $242 1 $306 #
+		$-1   $242  // inserted:   -242 edge $301 -1 $-1 $244 0 $247 2 $147 $302 forward @7 unknown #
+		$-1   $147  // inserted:   -147 coedge $-1 -1 $-1 $89 $88 $-1 $242 forward $53 0 $-1 #
+		$-1   $149  // inserted:   -149 edge $246 -1 $-1 $247 0 $151 10 $89 $248 forward @7 unknown #
+		$-1   $89   // inserted:   -89 coedge $-1 -1 $-1 $63 $147 $-1 $149 forward $53 0 $-1 #
+		$-1   $53   // inserted:   -53 loop $-1 -1 $-1 $-1 $63 $36 #
+		$-1   $36   // inserted:   -36 face $-1 -1 $-1 $-1 $53 $27 $-1 $54 forward single #
+		$-1   $150  // inserted:   -150 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $90 @15 INV_NMX_GEN_TAG 1 44 0 7 0 2 #
+		$-1   $249  // inserted:   -249 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $151 @15 INV_NMX_GEN_TAG 1 44 0 4 0 1 #
+		$-1   $251  // inserted:   -251 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $152 @15 INV_NMX_GEN_TAG 1 44 0 3 0 1 #
+		$-1   $243  // inserted:   -243 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $148 @15 INV_NMX_GEN_TAG 1 44 0 8 0 2 #
+		$-1   $303  // inserted:   -303 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $244 @15 INV_NMX_GEN_TAG 1 44 0 5 0 1 #
+		$-1   $301  // inserted:   -301 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $242 @15 INV_NMX_GEN_TAG 1 44 0 9 0 2 #
+		$-1   $305  // inserted:   -305 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $247 @15 INV_NMX_GEN_TAG 1 44 0 2 0 1 #
+		$-1   $246  // inserted:   -246 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $149 @15 INV_NMX_GEN_TAG 1 44 0 6 0 2 #
+		$-1   $153  // inserted:   -153 straight-curve $-1 -1 $-1 50 119 321 0 0 -1 F 0 F 2 #
+		$-1   $245  // inserted:   -245 straight-curve $-1 -1 $-1 50 119 301 -1 0 0 F 0 F 10 #
+		$-1   $302  // inserted:   -302 straight-curve $-1 -1 $-1 -50 119 301 0 0 1 F 0 F 2 #
+		$-1   $248  // inserted:   -248 straight-curve $-1 -1 $-1 -50 119 321 1 0 0 F 0 F 10 #

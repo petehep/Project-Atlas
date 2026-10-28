@@ -1,0 +1,314 @@
+22900 0 10 3
+8 Inventor 20 ASM 229.3.0.65535 NT 24 Thu Sep 17 20:28:52 2026
+10 1e-06 1e-10
+-0 asmheader $-1 -1 @13 229.3.0.65535 #
+-1 body $-1 445 $-1 $10 $-1 $-1 #
+-2 body $-1 448 $-1 $11 $-1 $-1 #
+-3 body $-1 449 $-1 $12 $-1 $-1 #
+-4 body $-1 450 $-1 $13 $-1 $-1 #
+-5 body $-1 555 $-1 $14 $-1 $-1 #
+-6 body $-1 825 $-1 $15 $-1 $-1 #
+-7 body $-1 826 $-1 $16 $-1 $-1 #
+-8 body $-1 827 $-1 $17 $-1 $-1 #
+-9 body $-1 828 $-1 $18 $-1 $-1 #
+-10 lump $-1 -1 $-1 $-1 $19 $1 #
+-11 lump $-1 -1 $-1 $-1 $20 $2 #
+-12 lump $-1 -1 $-1 $-1 $21 $3 #
+-13 lump $-1 -1 $-1 $-1 $22 $4 #
+-14 lump $-1 -1 $-1 $-1 $23 $5 #
+-15 lump $-1 -1 $-1 $-1 $24 $6 #
+-16 lump $-1 -1 $-1 $-1 $25 $7 #
+-17 lump $-1 -1 $-1 $-1 $26 $8 #
+-18 lump $-1 -1 $-1 $-1 $27 $9 #
+-19 shell $-1 -1 $-1 $-1 $-1 $28 $-1 $10 #
+-20 shell $-1 -1 $-1 $-1 $-1 $29 $-1 $11 #
+-21 shell $-1 -1 $-1 $-1 $-1 $30 $-1 $12 #
+-22 shell $-1 -1 $-1 $-1 $-1 $31 $-1 $13 #
+-23 shell $-1 -1 $-1 $-1 $-1 $32 $-1 $14 #
+-24 shell $-1 -1 $-1 $-1 $-1 $33 $-1 $15 #
+-25 shell $-1 -1 $-1 $-1 $-1 $34 $-1 $16 #
+-26 shell $-1 -1 $-1 $-1 $-1 $35 $-1 $17 #
+-27 shell $-1 -1 $-1 $-1 $-1 $36 $-1 $18 #
+-28 face $-1 -1 $-1 $-1 $37 $19 $-1 $38 forward single #
+-29 face $-1 -1 $-1 $-1 $39 $20 $-1 $40 forward single #
+-30 face $-1 -1 $-1 $-1 $41 $21 $-1 $42 forward single #
+-31 face $-1 -1 $-1 $-1 $43 $22 $-1 $44 forward single #
+-32 face $-1 -1 $-1 $-1 $45 $23 $-1 $46 forward single #
+-33 face $-1 -1 $-1 $-1 $47 $24 $-1 $48 forward single #
+-34 face $-1 -1 $-1 $-1 $49 $25 $-1 $50 forward single #
+-35 face $-1 -1 $-1 $-1 $51 $26 $-1 $52 forward single #
+-36 face $-1 -1 $-1 $-1 $53 $27 $-1 $54 forward single #
+-37 loop $-1 -1 $-1 $-1 $55 $28 #
+-38 plane-surface $-1 -1 $-1 0 0 7.10543e-14 0 1 0 0 0 1 forward_v I I I I #
+-39 loop $-1 -1 $-1 $-1 $56 $29 #
+-40 plane-surface $-1 -1 $-1 -3.55271e-14 145 -7.10543e-14 0 1 0 0 0 1 forward_v I I I I #
+-41 loop $-1 -1 $-1 $-1 $57 $30 #
+-42 plane-surface $-1 -1 $-1 -3.55271e-14 119 -1.06581e-13 0 1 0 0 0 1 forward_v I I I I #
+-43 loop $-1 -1 $-1 $-1 $58 $31 #
+-44 plane-surface $-1 -1 $-1 -3.55271e-14 138.5 -327 -4.17966e-16 0 -1 -1 0 4.17966e-16 forward_v I I I I #
+-45 loop $-1 -1 $-1 $-1 $59 $32 #
+-46 plane-surface $-1 -1 $-1 -6.59435e-45 142.933 -327 -4.17966e-16 0 -1 -1 0 4.17966e-16 forward_v I I I I #
+-47 loop $-1 -1 $-1 $-1 $60 $33 #
+-48 plane-surface $-1 -1 $-1 -5.32907e-14 119 -312.159 0 1 0 0 0 1 forward_v I I I I #
+-49 loop $-1 -1 $-1 $-1 $61 $34 #
+-50 plane-surface $-1 -1 $-1 -151 119 0 0 1 0 0 0 1 forward_v I I I I #
+-51 loop $-1 -1 $-1 $-1 $62 $35 #
+-52 plane-surface $-1 -1 $-1 150.997 119 -8.88178e-15 0 1 0 0 0 1 forward_v I I I I #
+-53 loop $-1 -1 $-1 $-1 $63 $36 #
+-54 plane-surface $-1 -1 $-1 9.76996e-14 119 311 0 1 0 0 0 1 forward_v I I I I #
+-55 coedge $-1 -1 $-1 $64 $65 $-1 $66 forward $37 0 $-1 #
+-56 coedge $-1 -1 $-1 $67 $68 $-1 $69 forward $39 0 $-1 #
+-57 coedge $-1 -1 $-1 $70 $71 $-1 $72 forward $41 0 $-1 #
+-58 coedge $-1 -1 $-1 $73 $74 $-1 $75 forward $43 0 $-1 #
+-59 coedge $-1 -1 $-1 $76 $77 $-1 $78 forward $45 0 $-1 #
+-60 coedge $-1 -1 $-1 $79 $80 $-1 $81 forward $47 0 $-1 #
+-61 coedge $-1 -1 $-1 $82 $83 $-1 $84 forward $49 0 $-1 #
+-62 coedge $-1 -1 $-1 $85 $86 $-1 $87 forward $51 0 $-1 #
+-63 coedge $-1 -1 $-1 $88 $89 $-1 $90 forward $53 0 $-1 #
+-64 coedge $-1 -1 $-1 $91 $55 $-1 $92 forward $37 0 $-1 #
+-65 coedge $-1 -1 $-1 $55 $91 $-1 $93 forward $37 0 $-1 #
+-66 edge $94 -1 $-1 $95 0 $96 65.4 $55 $97 forward @7 unknown #
+-67 coedge $-1 -1 $-1 $98 $56 $-1 $99 forward $39 0 $-1 #
+-68 coedge $-1 -1 $-1 $56 $98 $-1 $100 forward $39 0 $-1 #
+-69 edge $101 -1 $-1 $102 0 $103 64.2 $56 $104 forward @7 unknown #
+-70 coedge $-1 -1 $-1 $105 $57 $-1 $106 forward $41 0 $-1 #
+-71 coedge $-1 -1 $-1 $57 $105 $-1 $107 forward $41 0 $-1 #
+-72 edge $108 -1 $-1 $109 0 $110 61.8 $57 $111 forward @7 unknown #
+-73 coedge $-1 -1 $-1 $112 $58 $-1 $113 forward $43 0 $-1 #
+-74 coedge $-1 -1 $-1 $58 $112 $-1 $114 forward $43 0 $-1 #
+-75 edge $115 -1 $-1 $116 0 $117 0.3 $58 $118 forward @7 unknown #
+-76 coedge $-1 -1 $-1 $119 $59 $-1 $120 forward $45 0 $-1 #
+-77 coedge $-1 -1 $-1 $59 $119 $-1 $121 forward $45 0 $-1 #
+-78 edge $122 -1 $-1 $123 0 $124 33.2 $59 $125 forward @7 unknown #
+-79 coedge $-1 -1 $-1 $126 $60 $-1 $127 forward $47 0 $-1 #
+-80 coedge $-1 -1 $-1 $60 $126 $-1 $128 forward $47 0 $-1 #
+-81 edge $129 -1 $-1 $130 -0 $131 1.76822 $60 $132 forward @7 unknown #
+-82 coedge $-1 -1 $-1 $133 $61 $-1 $134 forward $49 0 $-1 #
+-83 coedge $-1 -1 $-1 $61 $133 $-1 $135 forward $49 0 $-1 #
+-84 edge $136 -1 $-1 $137 0 $138 10 $61 $139 forward @7 unknown #
+-85 coedge $-1 -1 $-1 $140 $62 $-1 $141 forward $51 0 $-1 #
+-86 coedge $-1 -1 $-1 $62 $140 $-1 $142 forward $51 0 $-1 #
+-87 edge $143 -1 $-1 $144 0 $145 2 $62 $146 forward @7 unknown #
+-88 coedge $-1 -1 $-1 $147 $63 $-1 $148 forward $53 0 $-1 #
+-89 coedge $-1 -1 $-1 $63 $147 $-1 $149 forward $53 0 $-1 #
+-90 edge $150 -1 $-1 $151 0 $152 2 $63 $153 forward @7 unknown #
+-91 coedge $-1 -1 $-1 $65 $64 $-1 $154 forward $37 0 $-1 #
+-92 edge $155 -1 $-1 $96 0 $156 34 $64 $157 forward @7 unknown #
+-93 edge $158 -1 $-1 $159 0 $95 34 $65 $160 forward @7 unknown #
+-94 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $66 @15 INV_NMX_GEN_TAG 1 44 0 7 0 2 #
+-95 vertex $161 -1 $-1 $66 0 $162 #
+-96 vertex $163 -1 $-1 $66 1 $164 #
+-97 straight-curve $-1 -1 $-1 170 0 327 -1.62969e-16 0 -1 F 0 F 65.4 #
+-98 coedge $-1 -1 $-1 $68 $67 $-1 $165 forward $39 0 $-1 #
+-99 edge $166 -1 $-1 $103 0 $167 32.2 $67 $168 forward @7 unknown #
+-100 edge $169 -1 $-1 $170 0 $102 32.2 $68 $171 forward @7 unknown #
+-101 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $69 @15 INV_NMX_GEN_TAG 1 44 0 7 0 2 #
+-102 vertex $172 -1 $-1 $69 0 $173 #
+-103 vertex $174 -1 $-1 $69 1 $175 #
+-104 straight-curve $-1 -1 $-1 161 145 321 -2.21353e-16 0 -1 F 0 F 64.2 #
+-105 coedge $-1 -1 $-1 $71 $70 $-1 $176 forward $41 0 $-1 #
+-106 edge $177 -1 $-1 $110 0 $178 29.8 $70 $179 forward @7 unknown #
+-107 edge $180 -1 $-1 $181 0 $109 29.8 $71 $182 forward @7 unknown #
+-108 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $72 @15 INV_NMX_GEN_TAG 1 44 0 7 0 2 #
+-109 vertex $183 -1 $-1 $72 0 $184 #
+-110 vertex $185 -1 $-1 $72 1 $186 #
+-111 straight-curve $-1 -1 $-1 149 119 309 -1.72462e-16 0 -1 F 0 F 61.8 #
+-112 coedge $-1 -1 $-1 $74 $73 $-1 $187 forward $43 0 $-1 #
+-113 edge $188 -1 $-1 $117 0 $189 33.2 $73 $190 forward @7 unknown #
+-114 edge $191 -1 $-1 $192 0 $116 33.2 $74 $193 forward @7 unknown #
+-115 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $75 @15 INV_NMX_GEN_TAG 1 44 0 7 0 2 #
+-116 vertex $194 -1 $-1 $75 0 $195 #
+-117 vertex $196 -1 $-1 $75 1 $197 #
+-118 straight-curve $-1 -1 $-1 166 140 -327 -0 -1 0 F 0 F 0.3 #
+-119 coedge $-1 -1 $-1 $77 $76 $-1 $198 forward $45 0 $-1 #
+-120 edge $199 -1 $-1 $124 0 $200 0.928684 $76 $201 forward @7 unknown #
+-121 edge $202 -1 $-1 $203 0 $123 0.928684 $77 $204 forward @7 unknown #
+-122 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $78 @15 INV_NMX_GEN_TAG 1 44 0 8 0 2 #
+-123 vertex $205 -1 $-1 $78 0 $206 #
+-124 vertex $207 -1 $-1 $78 1 $208 #
+-125 straight-curve $-1 -1 $-1 166 138.29 -327 -1 1.07009e-16 4.17966e-16 F 0 F 33.2 #
+-126 coedge $-1 -1 $-1 $80 $79 $-1 $209 forward $47 0 $-1 #
+-127 edge $210 -1 $-1 $131 11.1 $211 21.1 $79 $212 forward @7 unknown #
+-128 edge $213 -1 $-1 $214 0 $130 10 $80 $215 forward @7 unknown #
+-129 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $81 @15 INV_NMX_GEN_TAG 1 44 0 31 0 2 #
+-130 vertex $216 -1 $-1 $81 0 $217 #
+-131 vertex $218 -1 $-1 $81 1 $219 #
+-132 straight-curve $-1 -1 $-1 50 119 -303.318 -0 -0 -1 F -0 F 1.76822 #
+-133 coedge $-1 -1 $-1 $83 $82 $-1 $220 forward $49 0 $-1 #
+-134 edge $221 -1 $-1 $138 0 $222 2 $82 $223 forward @7 unknown #
+-135 edge $224 -1 $-1 $225 0 $137 2 $83 $226 forward @7 unknown #
+-136 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $84 @15 INV_NMX_GEN_TAG 1 44 0 39 0 2 #
+-137 vertex $227 -1 $-1 $84 0 $228 #
+-138 vertex $229 -1 $-1 $84 1 $230 #
+-139 straight-curve $-1 -1 $-1 -141 119 50 -1.77636e-16 0 -1 F 0 F 10 #
+-140 coedge $-1 -1 $-1 $86 $85 $-1 $231 forward $51 0 $-1 #
+-141 edge $232 -1 $-1 $145 0 $233 10 $85 $234 forward @7 unknown #
+-142 edge $235 -1 $-1 $236 -0 $144 10 $86 $237 forward @7 unknown #
+-143 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $87 @15 INV_NMX_GEN_TAG 1 44 0 21 0 2 #
+-144 vertex $238 -1 $-1 $87 0 $239 #
+-145 vertex $240 -1 $-1 $87 1 $241 #
+-146 straight-curve $-1 -1 $-1 160.997 119 -50 -1 -0 4.44089e-16 F 0 F 2 #
+-147 coedge $-1 -1 $-1 $89 $88 $-1 $242 forward $53 0 $-1 #
+-148 edge $243 -1 $-1 $152 0 $244 10 $88 $245 forward @7 unknown #
+-149 edge $246 -1 $-1 $247 0 $151 10 $89 $248 forward @7 unknown #
+-150 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $90 @15 INV_NMX_GEN_TAG 1 44 0 7 0 2 #
+-151 vertex $249 -1 $-1 $90 0 $250 #
+-152 vertex $251 -1 $-1 $90 1 $252 #
+-153 straight-curve $-1 -1 $-1 50 119 321 0 0 -1 F 0 F 2 #
+-154 edge $253 -1 $-1 $156 0 $159 65.4 $91 $254 forward @7 unknown #
+-155 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $92 @15 INV_NMX_GEN_TAG 1 44 0 8 0 2 #
+-156 vertex $255 -1 $-1 $92 1 $256 #
+-157 straight-curve $-1 -1 $-1 170 0 -327 -1 0 4.17966e-16 F 0 F 34 #
+-158 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $93 @15 INV_NMX_GEN_TAG 1 44 0 6 0 2 #
+-159 vertex $257 -1 $-1 $154 1 $258 #
+-160 straight-curve $-1 -1 $-1 -170 0 327 1 0 0 F 0 F 34 #
+-161 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $95 @15 INV_NMX_GEN_TAG 1 44 0 4 0 1 #
+-162 point $-1 -1 $-1 170 0 327 #
+-163 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $96 @15 INV_NMX_GEN_TAG 1 44 0 3 0 1 #
+-164 point $-1 -1 $-1 170 0 -327 #
+-165 edge $259 -1 $-1 $167 0 $170 64.2 $98 $260 forward @7 unknown #
+-166 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $99 @15 INV_NMX_GEN_TAG 1 44 0 8 0 2 #
+-167 vertex $261 -1 $-1 $99 1 $262 #
+-168 straight-curve $-1 -1 $-1 161 145 -321 -1 0 4.41331e-16 F 0 F 32.2 #
+-169 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $100 @15 INV_NMX_GEN_TAG 1 44 0 6 0 2 #
+-170 vertex $263 -1 $-1 $165 1 $264 #
+-171 straight-curve $-1 -1 $-1 -161 145 321 1 0 -2.20665e-16 F 0 F 32.2 #
+-172 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $102 @15 INV_NMX_GEN_TAG 1 44 0 4 0 1 #
+-173 point $-1 -1 $-1 161 145 321 #
+-174 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $103 @15 INV_NMX_GEN_TAG 1 44 0 3 0 1 #
+-175 point $-1 -1 $-1 161 145 -321 #
+-176 edge $265 -1 $-1 $178 0 $181 61.8 $105 $266 forward @7 unknown #
+-177 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $106 @15 INV_NMX_GEN_TAG 1 44 0 8 0 2 #
+-178 vertex $267 -1 $-1 $106 1 $268 #
+-179 straight-curve $-1 -1 $-1 149 119 -309 -1 0 2.38437e-16 F 0 F 29.8 #
+-180 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $107 @15 INV_NMX_GEN_TAG 1 44 0 6 0 2 #
+-181 vertex $269 -1 $-1 $176 1 $270 #
+-182 straight-curve $-1 -1 $-1 -149 119 309 1 0 0 F 0 F 29.8 #
+-183 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $109 @15 INV_NMX_GEN_TAG 1 44 0 4 0 1 #
+-184 point $-1 -1 $-1 149 119 309 #
+-185 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $110 @15 INV_NMX_GEN_TAG 1 44 0 3 0 1 #
+-186 point $-1 -1 $-1 149 119 -309 #
+-187 edge $271 -1 $-1 $189 0 $192 0.3 $112 $272 forward @7 unknown #
+-188 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $113 @15 INV_NMX_GEN_TAG 1 44 0 8 0 2 #
+-189 vertex $273 -1 $-1 $113 1 $274 #
+-190 straight-curve $-1 -1 $-1 166 137 -327 -1 6.42057e-16 4.17966e-16 F 0 F 33.2 #
+-191 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $114 @15 INV_NMX_GEN_TAG 1 44 0 6 0 2 #
+-192 vertex $275 -1 $-1 $187 1 $276 #
+-193 straight-curve $-1 -1 $-1 -166 140 -327 1 -1.07009e-16 -4.17966e-16 F 0 F 33.2 #
+-194 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $116 @15 INV_NMX_GEN_TAG 1 44 0 4 0 1 #
+-195 point $-1 -1 $-1 166 140 -327 #
+-196 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $117 @15 INV_NMX_GEN_TAG 1 44 0 3 0 1 #
+-197 point $-1 -1 $-1 166 137 -327 #
+-198 edge $277 -1 $-1 $200 0 $203 33.2 $119 $278 forward @7 unknown #
+-199 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $120 @15 INV_NMX_GEN_TAG 1 44 0 7 0 2 #
+-200 vertex $279 -1 $-1 $120 1 $280 #
+-201 straight-curve $-1 -1 $-1 -166 138.29 -327 0 1 -0 F 0 F 0.928684 #
+-202 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $121 @15 INV_NMX_GEN_TAG 1 44 0 9 0 2 #
+-203 vertex $281 -1 $-1 $198 1 $282 #
+-204 straight-curve $-1 -1 $-1 166 147.577 -327 -2.39096e-16 -1 9.99341e-32 F 0 F 0.928684 #
+-205 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $123 @15 INV_NMX_GEN_TAG 1 44 0 5 0 1 #
+-206 point $-1 -1 $-1 166 138.29 -327 #
+-207 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $124 @15 INV_NMX_GEN_TAG 1 44 0 3 0 1 #
+-208 point $-1 -1 $-1 -166 138.29 -327 #
+-209 edge $283 -1 $-1 $211 0 $214 1.76822 $126 $284 forward @7 unknown #
+-210 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $127 @15 INV_NMX_GEN_TAG 1 44 0 26 0 2 #
+-211 vertex $285 -1 $-1 $127 1 $286 #
+-212 straight-curve $-1 -1 $-1 161 119 -321 -1 -0 4.41331e-16 F 11.1 F 21.1 #
+-213 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $128 @15 INV_NMX_GEN_TAG 1 44 0 32 0 2 #
+-214 vertex $287 -1 $-1 $209 1 $288 #
+-215 straight-curve $-1 -1 $-1 -50 119 -303.318 1 -0 -0 F 0 F 10 #
+-216 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $130 @15 INV_NMX_GEN_TAG 1 44 0 27 0 1 #
+-217 point $-1 -1 $-1 50 119 -303.318 #
+-218 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $131 @15 INV_NMX_GEN_TAG 1 44 0 42 0 1 #
+-219 point $-1 -1 $-1 50 119 -321 #
+-220 edge $289 -1 $-1 $222 0 $225 10 $133 $290 forward @7 unknown #
+-221 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $134 @15 INV_NMX_GEN_TAG 1 44 0 40 0 2 #
+-222 vertex $291 -1 $-1 $134 1 $292 #
+-223 straight-curve $-1 -1 $-1 -141 119 -50 -1 0 0 F 0 F 2 #
+-224 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $135 @15 INV_NMX_GEN_TAG 1 44 0 38 0 2 #
+-225 vertex $293 -1 $-1 $220 1 $294 #
+-226 straight-curve $-1 -1 $-1 -161 119 50 1 0 0 F 0 F 2 #
+-227 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $137 @15 INV_NMX_GEN_TAG 1 44 0 36 0 1 #
+-228 point $-1 -1 $-1 -141 119 50 #
+-229 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $138 @15 INV_NMX_GEN_TAG 1 44 0 35 0 1 #
+-230 point $-1 -1 $-1 -141 119 -50 #
+-231 edge $295 -1 $-1 $233 0 $236 2 $140 $296 forward @7 unknown #
+-232 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $141 @15 INV_NMX_GEN_TAG 1 44 0 20 0 2 #
+-233 vertex $297 -1 $-1 $141 1 $298 #
+-234 straight-curve $-1 -1 $-1 140.997 119 -50 -0 -0 1 F 0 F 10 #
+-235 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $142 @15 INV_NMX_GEN_TAG 1 44 0 22 0 2 #
+-236 vertex $299 -1 $-1 $231 1 $300 #
+-237 straight-curve $-1 -1 $-1 160.997 119 50 -0 -0 -1 F -0 F 10 #
+-238 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $144 @15 INV_NMX_GEN_TAG 1 44 0 18 0 1 #
+-239 point $-1 -1 $-1 160.997 119 -50 #
+-240 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $145 @15 INV_NMX_GEN_TAG 1 44 0 16 0 1 #
+-241 point $-1 -1 $-1 140.997 119 -50 #
+-242 edge $301 -1 $-1 $244 0 $247 2 $147 $302 forward @7 unknown #
+-243 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $148 @15 INV_NMX_GEN_TAG 1 44 0 8 0 2 #
+-244 vertex $303 -1 $-1 $148 1 $304 #
+-245 straight-curve $-1 -1 $-1 50 119 301 -1 0 0 F 0 F 10 #
+-246 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $149 @15 INV_NMX_GEN_TAG 1 44 0 6 0 2 #
+-247 vertex $305 -1 $-1 $242 1 $306 #
+-248 straight-curve $-1 -1 $-1 -50 119 321 1 0 0 F 0 F 10 #
+-249 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $151 @15 INV_NMX_GEN_TAG 1 44 0 4 0 1 #
+-250 point $-1 -1 $-1 50 119 321 #
+-251 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $152 @15 INV_NMX_GEN_TAG 1 44 0 3 0 1 #
+-252 point $-1 -1 $-1 50 119 301 #
+-253 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $154 @15 INV_NMX_GEN_TAG 1 44 0 9 0 2 #
+-254 straight-curve $-1 -1 $-1 -170 0 -327 2.17291e-16 0 1 F 0 F 65.4 #
+-255 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $156 @15 INV_NMX_GEN_TAG 1 44 0 5 0 1 #
+-256 point $-1 -1 $-1 -170 0 -327 #
+-257 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $159 @15 INV_NMX_GEN_TAG 1 44 0 2 0 1 #
+-258 point $-1 -1 $-1 -170 0 327 #
+-259 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $165 @15 INV_NMX_GEN_TAG 1 44 0 9 0 2 #
+-260 straight-curve $-1 -1 $-1 -161 145 -321 3.32029e-16 0 1 F 0 F 64.2 #
+-261 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $167 @15 INV_NMX_GEN_TAG 1 44 0 5 0 1 #
+-262 point $-1 -1 $-1 -161 145 -321 #
+-263 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $170 @15 INV_NMX_GEN_TAG 1 44 0 2 0 1 #
+-264 point $-1 -1 $-1 -161 145 321 #
+-265 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $176 @15 INV_NMX_GEN_TAG 1 44 0 9 0 2 #
+-266 straight-curve $-1 -1 $-1 -149 119 -309 2.87436e-16 0 1 F 0 F 61.8 #
+-267 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $178 @15 INV_NMX_GEN_TAG 1 44 0 5 0 1 #
+-268 point $-1 -1 $-1 -149 119 -309 #
+-269 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $181 @15 INV_NMX_GEN_TAG 1 44 0 2 0 1 #
+-270 point $-1 -1 $-1 -149 119 309 #
+-271 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $187 @15 INV_NMX_GEN_TAG 1 44 0 9 0 2 #
+-272 straight-curve $-1 -1 $-1 -166 137 -327 0 1 0 F 0 F 0.3 #
+-273 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $189 @15 INV_NMX_GEN_TAG 1 44 0 5 0 1 #
+-274 point $-1 -1 $-1 -166 137 -327 #
+-275 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $192 @15 INV_NMX_GEN_TAG 1 44 0 2 0 1 #
+-276 point $-1 -1 $-1 -166 140 -327 #
+-277 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $198 @15 INV_NMX_GEN_TAG 1 44 0 6 0 2 #
+-278 straight-curve $-1 -1 $-1 -166 147.577 -327 1 -3.74533e-16 -4.17966e-16 F 0 F 33.2 #
+-279 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $200 @15 INV_NMX_GEN_TAG 1 44 0 4 0 1 #
+-280 point $-1 -1 $-1 -166 147.577 -327 #
+-281 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $203 @15 INV_NMX_GEN_TAG 1 44 0 2 0 1 #
+-282 point $-1 -1 $-1 166 147.577 -327 #
+-283 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $209 @15 INV_NMX_GEN_TAG 1 44 0 33 0 2 #
+-284 straight-curve $-1 -1 $-1 -50 119 -321 -0 -0 1 F 0 F 1.76822 #
+-285 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $211 @15 INV_NMX_GEN_TAG 1 44 0 23 0 1 #
+-286 point $-1 -1 $-1 -50 119 -321 #
+-287 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $214 @15 INV_NMX_GEN_TAG 1 44 0 29 0 1 #
+-288 point $-1 -1 $-1 -50 119 -303.318 #
+-289 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $220 @15 INV_NMX_GEN_TAG 1 44 0 41 0 2 #
+-290 straight-curve $-1 -1 $-1 -161 119 -50 3.55271e-16 0 1 F 0 F 10 #
+-291 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $222 @15 INV_NMX_GEN_TAG 1 44 0 37 0 1 #
+-292 point $-1 -1 $-1 -161 119 -50 #
+-293 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $225 @15 INV_NMX_GEN_TAG 1 44 0 34 0 1 #
+-294 point $-1 -1 $-1 -161 119 50 #
+-295 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $231 @15 INV_NMX_GEN_TAG 1 44 0 19 0 2 #
+-296 straight-curve $-1 -1 $-1 140.997 119 50 1 -0 4.44089e-16 F 0 F 2 #
+-297 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $233 @15 INV_NMX_GEN_TAG 1 44 0 17 0 1 #
+-298 point $-1 -1 $-1 140.997 119 50 #
+-299 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $236 @15 INV_NMX_GEN_TAG 1 44 0 13 0 1 #
+-300 point $-1 -1 $-1 160.997 119 50 #
+-301 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $242 @15 INV_NMX_GEN_TAG 1 44 0 9 0 2 #
+-302 straight-curve $-1 -1 $-1 -50 119 301 0 0 1 F 0 F 2 #
+-303 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $244 @15 INV_NMX_GEN_TAG 1 44 0 5 0 1 #
+-304 point $-1 -1 $-1 -50 119 301 #
+-305 ATTRIB_CUSTOM-attrib $-1 -1 $-1 $-1 $247 @15 INV_NMX_GEN_TAG 1 44 0 2 0 1 #
+-306 point $-1 -1 $-1 -50 119 321 #
+
+
+
+End-of-ACIS-data
