@@ -40,7 +40,10 @@ It presents a **6-row display** that walks pilots through each heat:
 
 ## Deployment context
 - Standalone "appliance" at a flying field, visible to pilots at distance.
-- **Dev machine:** MacBook Air (macOS Sequoia), user `petehep`.
+- **Development & test machine:** Apple **Mac Mini M4** (macOS), user `petehep`.
+  All code is written and tested here.
+- **Production / execution machine:** a **Windows PC** — the software is built
+  and tested on the Mac, but will be **installed and run on Windows** in the field.
 - **Target deployment hardware:** Windows PC (Intel NUC) driving physical LED
   panels via HDMI → NovaStar TB40 → HUB75 (P10 panels).
 - Currently a software **simulator** renders the LED matrix on screen; physical

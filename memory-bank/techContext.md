@@ -11,6 +11,14 @@
 | Config | SQLite `settings` table (authoritative); legacy JSON vestigial |
 | VCS | Git / GitHub (`petehep/project_atlas`) |
 
+## Development vs deployment environment — IMPORTANT
+- **Created & tested on:** Apple **Mac Mini M4** (macOS), user `petehep`.
+- **Installed & executed on:** a **Windows PC** in the field.
+- Treat both as first-class: anything added on the Mac (dev) must also run on
+  Windows (production). Watch cross-platform concerns — absolute vs relative
+  paths, path separators, line endings (CRLF vs LF), Qt platform plugins, and
+  launcher scripts (`run_atlas.sh` vs `run_atlas.bat`/`.ps1`).
+
 ## Python version — IMPORTANT ambiguity
 - `README.md` says **Python 3.13**.
 - The handover dossier and `SETUP_WINDOWS.md` say **Python 3.12**.
