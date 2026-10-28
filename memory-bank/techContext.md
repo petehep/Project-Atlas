@@ -71,3 +71,7 @@ uv pip install --python .venv/bin/python -r requirements.txt
   64×32 px window for the TB40 to capture.
 - **Power:** 200 Ah Lithium + DC-DC converters.
 - CAD/STL files for the physical clock enclosure live in `3D Print Files/`.
+
+## Workflow notes
+- **User-provided images/screenshots** live in **`/Users/petehep/images/`** (`~/images`).
+  When the owner says "I'll put images in petehep/images", look there first.
