@@ -32,15 +32,16 @@
   - `Windows/windows_packages/pyside6_addons-6.11.1-cp310-abi3-win_amd64.whl` (161 MB)
   - `Windows/windows_packages/pyside6_essentials-6.11.1-cp310-abi3-win_amd64.whl` (74 MB)
   These are now `.gitignore`d and were purged from history with `git filter-repo`
-  (history rewritten + force-pushed). The files remain on disk (backup copy in
-  `/tmp/atlas-large-backup/`) and should be hosted externally / in GitHub Releases.
+  (history rewritten + force-pushed). The files remain on disk locally and are
+  **backed up to the owner's Google Drive** (external host).
 - Broken git ref `"main 2"` deleted.
 - Git identity + `gh` CLI installed; everything pushed to GitHub.
 
 ## Next steps / open threads
-- [ ] Authenticate `gh` (`gh auth login`) to enable GitHub API (issues/PRs/releases).
-- [ ] Host the three large binaries externally (GitHub Releases, Drive, etc.) and
-      update `Windows/SETUP_WINDOWS.md` + deployment docs to point at them.
+- [x] Authenticate `gh` (done — logged in as `petehep`, scopes: repo/read:org/workflow).
+- [x] Host the three large binaries externally (done — copied to Google Drive).
+- [ ] Optionally add a Google Drive link to `Windows/SETUP_WINDOWS.md` +
+      deployment docs so the offline installers can be re-fetched.
 - [ ] Verify Windows setup on an actual Windows PC.
 - [ ] Physical LED hardware integration (P5/P10 panels, HUB75 / NovaStar TB40).
 - [ ] macOS LaunchAgent for appliance-mode auto-start.
