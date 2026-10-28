@@ -1,11 +1,15 @@
 import sys
 import os
 from PySide6.QtWidgets import QApplication, QStyleFactory
+from PySide6.QtNetwork import QLocalServer, QLocalSocket
 from core.database import AtlasDatabase
 from core.engine import AtlasEngine
 from gui.windows import OperatorWindow
 from gui.led_simulator import AtlasLEDSimulator
 from gui.lcd_display import AtlasLCDDisplay, AtlasHDMIOutput
+
+# Unique name for the single-instance local socket.
+SERVER_NAME = "project-atlas-clock"
 
 # Simple data class to mimic our old JSON config
 class DisplayConfig:
@@ -36,6 +40,25 @@ def main():
     # Force Fusion style for cross-platform consistency (especially macOS tabs)
     app.setStyle(QStyleFactory.create("Fusion"))
 
+    # ---- Single-instance guard -------------------------------------------
+    # If another copy of Atlas is already running, ask it to come to the
+    # foreground and then exit this new instance. This stops multiple LED
+    # windows from piling up at the top-left of the screen.
+    probe = QLocalSocket()
+    probe.connectToServer(SERVER_NAME)
+    if probe.waitForConnected(200):
+        probe.write(b"show")
+        probe.flush()
+        probe.waitForBytesWritten(200)
+        probe.disconnectFromServer()
+        return
+
+    server = QLocalServer()
+    server.removeServer(SERVER_NAME)  # clear any stale socket from a crash
+    if not server.listen(SERVER_NAME):
+        # Another instance grabbed the name in a race — just exit.
+        return
+
     # Initialize Database
     db = AtlasDatabase()
     
@@ -54,6 +77,7 @@ def main():
     engine.model_updated.connect(display.update_model)
     engine.brightness_changed.connect(display.set_brightness)
 
+    operator_win = None
     if auto_boot:
         # Clock mode: show only the display window (no operator console).
         display.show()
@@ -64,6 +88,24 @@ def main():
         operator_win = OperatorWindow(engine)
         operator_win.show()
         display.show()
+
+    # When a second launch connects, bring this instance to the foreground.
+    def _bring_to_front():
+        if operator_win is not None:
+            operator_win.show()
+            operator_win.raise_()
+            operator_win.activateWindow()
+        display.show()
+        display.raise_()
+        display.activateWindow()
+
+    def _on_new_connection():
+        conn = server.nextPendingConnection()
+        if conn is not None:
+            conn.deleteLater()
+        _bring_to_front()
+
+    server.newConnection.connect(_on_new_connection)
 
     sys.exit(app.exec())
 
