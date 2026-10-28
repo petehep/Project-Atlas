@@ -20,3 +20,9 @@ __pycache__/
 *.db-journal
 # Agent workspace files
 .agent/
+
+# Large binaries (>50 MB) — excluded from git (GitHub rejects files >100 MB).
+# These are third-party installers/tools, host them externally or in GitHub Releases.
+tools/NovaLCT V5.5.0.zip
+Windows/windows_packages/pyside6_addons-6.11.1-cp310-abi3-win_amd64.whl
+Windows/windows_packages/pyside6_essentials-6.11.1-cp310-abi3-win_amd64.whl
