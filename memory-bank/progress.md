@@ -41,11 +41,15 @@
 ## Known issues / gaps
 - **No physical LED hardware integration yet** (simulator + HDMI capture only).
 - **Windows setup not yet verified** on real hardware.
-- Uncommitted doc reorganisation (`docs/` → `docs/Development Documentation/`).
-- `main` is 18 commits ahead of `origin/main` (not pushed).
-- Broken git ref `main 2`.
+- **Three large binaries are hosted outside git** (NovaLCT zip + 2 PySide6 wheels
+  were removed from history on 2026-10-28); they still need an external host and
+  doc updates pointing to it.
+- `gh` CLI installed but not yet authenticated.
 - Legacy dead code (see systemPatterns.md) not yet cleaned up.
 - `fonts.py` missing `'X'` glyph; `led_simulator.py` has duplicate `_draw_char`.
+
+> Resolved 2026-10-28: docs reorganisation committed; `main` pushed to GitHub
+> (force-push after `git filter-repo`); broken `main 2` ref removed.
 
 ## Roadmap (future)
 - Physical LED integration (P5/P10, HUB75, NovaStar TB40).
