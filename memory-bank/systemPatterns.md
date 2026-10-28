@@ -33,6 +33,13 @@ them without other changes:
 - `update_model(model)`
 - `set_brightness(value)`
 
+### App lifecycle (single instance + clean shutdown)
+- `main.py` uses a `QLocalServer`/`QLocalSocket` guard (`SERVER_NAME =
+  "project-atlas-clock"`): a second launch signals the running instance to bring
+  itself to the foreground and then exits — only one copy ever runs.
+- Closing the operator console calls `QApplication.quit()` in `closeEvent`, so the
+  whole app (including the separate LED output window) shuts down together.
+
 ### Display backends (selected via `display_backend` setting)
 | id | class | notes |
 |----|-------|-------|
