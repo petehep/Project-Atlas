@@ -221,8 +221,8 @@ class AtlasHDMIOutput(QWidget):
         return c
 
     def _text_width(self, text):
-        """Width in pixels of text at scale=1 (6px per character)."""
-        return len(text) * 6
+        """Width in pixels of text (4px per char: 3px glyph + 1px gap)."""
+        return len(text) * 4
 
     def _draw_centered(self, p, y, text, color_hex):
         """Draw bitmap text centred horizontally in the 64-col grid."""
@@ -235,19 +235,19 @@ class AtlasHDMIOutput(QWidget):
         cur_x = x
         for char in text:
             self._draw_char(p, cur_x, y, char)
-            cur_x += 6
+            cur_x += 4
 
     def _draw_char(self, p, x, y, char):
-        bitmap = AtlasBitmapFont.FONT_5x7.get(
-            char.upper(), AtlasBitmapFont.FONT_5x7[' '])
+        bitmap = AtlasBitmapFont.FONT_3x5.get(
+            char.upper(), AtlasBitmapFont.FONT_3x5[' '])
         for col_idx, col_data in enumerate(bitmap):
-            for row_idx in range(7):
+            for row_idx in range(5):
                 if col_data & (1 << row_idx):
                     p.drawRect(x + col_idx, y + row_idx, 1, 1)
 
     # ── painting ─────────────────────────────────────────────────────────────
     #
-    # Layout (64 cols × 32 rows, 5×7 bitmap font at scale=1):
+    # Layout (64 cols × 32 rows, 3×5 bitmap font):
     #
     #   Full 64-col width is used for text (no side bars).
     #
@@ -255,14 +255,14 @@ class AtlasHDMIOutput(QWidget):
     #   y= 8  Row 2 — heat + direction  (yellow)  /  WAIT when unarmed
     #   y=16  Row 3 — phase label       (phase colour)
     #   y=24  Row 4 — primary timer     (phase colour)
-    #                                    font is 7px → ends at y=30, fits in 32
+    #                                    font is 5px → ends at y=28, fits in 32
     #
     TEXT_X     = 0   # first usable text column
     TEXT_COLS  = 64  # columns available for text (full 64-col width)
 
     def _draw_text_centered(self, p, y, text, color_hex):
         """Centre text inside the full 64-col text area."""
-        text_w = len(text) * 6
+        text_w = len(text) * 4
         x = self.TEXT_X + max(0, (self.TEXT_COLS - text_w) // 2)
         self._draw_string(p, x, y, text, color_hex)
 
