@@ -1,7 +1,8 @@
 from PySide6.QtWidgets import (QMainWindow, QLabel, QVBoxLayout, QHBoxLayout, 
                     QWidget, QPushButton, QTimeEdit, QLineEdit, 
                     QFormLayout, QFrame, QTableWidget, QTableWidgetItem, 
-                    QHeaderView, QMessageBox, QStackedWidget, QComboBox)
+                    QHeaderView, QMessageBox, QStackedWidget, QComboBox,
+                    QApplication)
 from PySide6.QtCore import Qt, QDateTime
 from gui.themes import AtlasTheme
 from core.models import HeatConfig
@@ -31,6 +32,10 @@ class OperatorWindow(QMainWindow):
         # Professional Cleanup
         print("Atlas System: Initiating graceful shutdown...")
         # If we had hardware connected, we'd send 'Clear Screen' here: HARDWARE - Send CLEAR/OFFLINE frame to LED panels here before exit
+        # Quit the WHOLE app (not just this window) — otherwise the separate
+        # frameless LED output window stays open and covers the screen.
+        QApplication.quit()
+        event.accept()
 
 
 
