@@ -160,6 +160,28 @@ Atlas expects the database at `data\atlas.db` relative to the project root. If y
 
 ---
 
+## Offline Installer Packages (`windows_packages`)
+
+For machines **without internet access**, the `windows_packages\` folder contains
+offline installers (the Python 3.12 installer + pip `.whl` wheels).
+
+> ⚠️ **Three large artifacts are NOT stored in this repository.** GitHub rejects
+> files over 100 MB, so these are hosted on the **owner's Google Drive** instead:
+
+| File | Size | Where to get it |
+|------|------|-----------------|
+| `pyside6_addons-6.11.1-cp310-abi3-win_amd64.whl` | 161 MB | Owner's Google Drive |
+| `pyside6_essentials-6.11.1-cp310-abi3-win_amd64.whl` | 74 MB | Owner's Google Drive |
+| `NovaLCT V5.5.0.zip` (LED panel config tool) | 271 MB | Owner's Google Drive |
+
+To perform a fully-offline install, copy these three files back into the project
+— the two `.whl` files into `windows_packages\`, and `NovaLCT V5.5.0.zip` into
+`tools\` — before running the install steps above.
+
+> _Share link: (paste the Google Drive link here)_
+
+---
+
 ## Notes for Field Deployment
 
 - The `atlas.db` database file lives in `project_atlas\data\`. Back this up before any update.
