@@ -40,6 +40,14 @@ them without other changes:
 | `lcd` | `AtlasLCDDisplay` | anti-aliased full-res monitor view |
 | `hdmi` | `AtlasHDMIOutput` | frameless 64×32 px window, 1:1 for NovaStar TB40 → P10 panels |
 
+### Display content (6-row layout)
+- Row 2 shows the heat identity as **`RD{round} HT{heat} GP{group} {arrow}`**, where
+  the thermalling direction is rendered as a `←`/`→` arrow (glyphs added to the
+  5×7 bitmap font). e.g. `RD1 HT2 GPA ←`.
+- The vertical status-colour side bars were **removed** (Oct 2026); the HDMI
+  output now uses the full 64-col width for text. Phase is still communicated via
+  text colour on the label/timer rows.
+
 ### Engine phase logic (1 Hz `tick()`)
 1. No active heat → find next `READY` heat with `track_close` in the future.
    - If it opens within 900 s → auto-`ACTIVE`.
@@ -55,7 +63,7 @@ them without other changes:
 
 ### Persistence (raw `sqlite3`, NOT SQLAlchemy)
 Two tables in `data/atlas.db`:
-- `heats(id, heat_number, thermalling_dir, track_open, track_close, heat_end, status)`
+- `heats(id, round_number, heat_number, group_letter, thermalling_dir, track_open, track_close, heat_end, status)`
 - `settings(key, value)` — flat key/value store (all values stored as strings).
 
 Known settings: `display_backend`, `auto_boot_enabled`, `display_width`,
