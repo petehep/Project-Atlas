@@ -288,11 +288,11 @@ class AtlasHDMIOutput(QWidget):
 
         # ── Row 3  y=16 : Phase label — phase colour ─────────────────────────
         label_short = {
-            "TRACK OPENS IN":     "GTE OPN IN",
+            "TRACK OPENS IN":     "GATE OPEN IN",
             "ENTER NOW":          "GATE OPEN",
             "HEAT TIME REMAINING": "HEAT ENDS",
         }.get(self.model.primary_timer_label,
-              self.model.primary_timer_label)[:10]
+              self.model.primary_timer_label)
         self._draw_text_centered(p, 16, label_short,
                                  self.model.primary_timer_color)
 
