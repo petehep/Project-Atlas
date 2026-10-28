@@ -37,8 +37,7 @@ class AtlasEngine(QObject):
                     # It's more than 15 mins away. 
                     # We show WHAT is coming, but stay in WAITING mode.
                     self.model.is_armed = True
-                    self.model.heat_number = next_heat['heat_number']
-                    self.model.thermalling_dir = next_heat['thermalling_dir']
+                    self._set_heat_identity(next_heat)
                     self.model.primary_timer_label = "WAITING"
                     self.model.primary_timer = "--:--"
                     self.model.primary_timer_color = "#444444"
@@ -52,8 +51,7 @@ class AtlasEngine(QObject):
         # Phase 2: Handle the ACTIVE heat
         h = active_heat
         self.model.is_armed = True
-        self.model.heat_number = h['heat_number']
-        self.model.thermalling_dir = h['thermalling_dir']
+        self._set_heat_identity(h)
         
         # We need these formatted for the LED simulator/Public Display
         self.model.planned_open = time.strftime("%H:%M", time.localtime(h['track_open']))
@@ -81,6 +79,16 @@ class AtlasEngine(QObject):
             # Time's up! Complete this heat.
             self.db.set_heat_status(h['id'], 'COMPLETED')
             self.model.is_armed = False
+
+    def _set_heat_identity(self, h):
+        """Populate round / heat / group / direction fields on the display model."""
+        self.model.round_number = h.get('round_number') or "--"
+        self.model.heat_number = h.get('heat_number') or "--"
+        self.model.group_letter = h.get('group_letter') or "-"
+        self.model.thermalling_dir = h.get('thermalling_dir') or "---"
+        d = str(self.model.thermalling_dir).strip().upper()
+        self.model.direction_arrow = ("←" if d.startswith("L") else
+                                      "→" if d.startswith("R") else "-")
 
     def cancel_active_heat(self):
         self.db.cancel_active_heat()

@@ -90,8 +90,8 @@ class AtlasLCDDisplay(QWidget):
             p.drawText(self.rect(), Qt.AlignCenter, "WAITING")
             return
 
-        # Row 2: Heat + thermalling direction (yellow).
-        heat_txt = f"HEAT {self.model.heat_number}   {self.model.thermalling_dir}"
+        # Row 2: Round / Heat / Group + direction arrow (yellow).
+        heat_txt = f"RD{self.model.round_number}   HT{self.model.heat_number}   GP{self.model.group_letter}   {self.model.direction_arrow}"
         p.setPen(self._dim("#FFFF00"))
         p.setFont(self._font(unit * 10))
         p.drawText(0, int(unit * 20), w, int(unit * 12),
@@ -249,8 +249,7 @@ class AtlasHDMIOutput(QWidget):
     #
     # Layout (64 cols × 32 rows, 5×7 bitmap font at scale=1):
     #
-    #   Cols 0-1  and  62-63 : vertical status-colour bars (full height)
-    #   Cols 2-61             : 60-col text area
+    #   Full 64-col width is used for text (no side bars).
     #
     #   y= 0  Row 1 — local time        (cyan)
     #   y= 8  Row 2 — heat + direction  (yellow)  /  WAIT when unarmed
@@ -258,11 +257,11 @@ class AtlasHDMIOutput(QWidget):
     #   y=24  Row 4 — primary timer     (phase colour)
     #                                    font is 7px → ends at y=30, fits in 32
     #
-    TEXT_X     = 2   # first usable text column
-    TEXT_COLS  = 60  # columns available for text (cols 2..61)
+    TEXT_X     = 0   # first usable text column
+    TEXT_COLS  = 64  # columns available for text (full 64-col width)
 
     def _draw_text_centered(self, p, y, text, color_hex):
-        """Centre text inside the 60-col text area (cols 2..61)."""
+        """Centre text inside the full 64-col text area."""
         text_w = len(text) * 6
         x = self.TEXT_X + max(0, (self.TEXT_COLS - text_w) // 2)
         self._draw_string(p, x, y, text, color_hex)
@@ -275,11 +274,6 @@ class AtlasHDMIOutput(QWidget):
         if not self.model:
             return
 
-        # ── Status-colour vertical bars: cols 0-1 and 62-63 ─────────────────
-        band = self._apply_brightness(self.model.band_color)
-        p.fillRect(0,              0, 2, self.ROWS, band)  # left bar
-        p.fillRect(self.COLS - 2,  0, 2, self.ROWS, band)  # right bar
-
         # ── Row 1  y=0 : Local time — cyan ───────────────────────────────────
         self._draw_text_centered(p, 0, self.model.local_time, "#00FFFF")
 
@@ -288,18 +282,15 @@ class AtlasHDMIOutput(QWidget):
             self._draw_text_centered(p, 13, "WAIT", "#888888")
             return
 
-        # ── Row 2  y=8 : Heat number + short direction — yellow ──────────────
-        dir_short = str(self.model.thermalling_dir).strip().upper()
-        dir_short = ("L" if dir_short.startswith("L") else
-                     "R" if dir_short.startswith("R") else dir_short[:1])
-        heat_txt = f"H{self.model.heat_number} {dir_short}"
+        # ── Row 2  y=8 : Round / Heat / Group + direction arrow — yellow ────
+        heat_txt = f"RD{self.model.round_number} HT{self.model.heat_number} GP{self.model.group_letter} {self.model.direction_arrow}"
         self._draw_text_centered(p, 8, heat_txt, "#FFFF00")
 
         # ── Row 3  y=16 : Phase label — phase colour ─────────────────────────
         label_short = {
-            "TRACK OPENS IN":     "OPEN IN",
-            "ENTER NOW":          "ENTER",
-            "HEAT TIME REMAINING": "HEAT LFT",
+            "TRACK OPENS IN":     "GTE OPN IN",
+            "ENTER NOW":          "GATE OPEN",
+            "HEAT TIME REMAINING": "HEAT ENDS",
         }.get(self.model.primary_timer_label,
               self.model.primary_timer_label)[:10]
         self._draw_text_centered(p, 16, label_short,

@@ -35,7 +35,9 @@ class AtlasDatabase:
             conn.execute("""
                 CREATE TABLE IF NOT EXISTS heats (
                     id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    round_number TEXT,
                     heat_number TEXT,
+                    group_letter TEXT,
                     thermalling_dir TEXT,
                     track_open INTEGER,
                     track_close INTEGER,
@@ -43,6 +45,12 @@ class AtlasDatabase:
                     status TEXT DEFAULT 'READY'
                 )
             """)
+            # Migration: add new columns to databases created before round/group existed.
+            existing_cols = {row[1] for row in conn.execute("PRAGMA table_info(heats)")}
+            if 'round_number' not in existing_cols:
+                conn.execute("ALTER TABLE heats ADD COLUMN round_number TEXT")
+            if 'group_letter' not in existing_cols:
+                conn.execute("ALTER TABLE heats ADD COLUMN group_letter TEXT")
             conn.execute("""
                 CREATE TABLE IF NOT EXISTS settings (
                     key TEXT PRIMARY KEY,
@@ -60,17 +68,20 @@ class AtlasDatabase:
         with sqlite3.connect(self.db_path) as conn:
             if config.id:
                 conn.execute("""
-                    UPDATE heats SET heat_number=?, thermalling_dir=?, 
+                    UPDATE heats SET round_number=?, heat_number=?, group_letter=?, thermalling_dir=?, 
                     track_open=?, track_close=?, heat_end=? 
                     WHERE id=?
-                """, (config.heat_number, config.thermalling_dir, 
-                    config.track_open, config.track_close, config.heat_end, config.id))
+                """, (config.round_number, config.heat_number, config.group_letter,
+                    config.thermalling_dir, config.track_open, config.track_close,
+                    config.heat_end, config.id))
             else:
                 conn.execute("""
-                    INSERT INTO heats (heat_number, thermalling_dir, track_open, track_close, heat_end, status)
-                    VALUES (?, ?, ?, ?, ?, 'READY')
-                """, (config.heat_number, config.thermalling_dir, 
-                    config.track_open, config.track_close, config.heat_end))
+                    INSERT INTO heats (round_number, heat_number, group_letter, thermalling_dir,
+                                       track_open, track_close, heat_end, status)
+                    VALUES (?, ?, ?, ?, ?, ?, ?, 'READY')
+                """, (config.round_number, config.heat_number, config.group_letter,
+                    config.thermalling_dir, config.track_open, config.track_close,
+                    config.heat_end))
 
     def get_todays_schedule(self):
         with sqlite3.connect(self.db_path) as conn:

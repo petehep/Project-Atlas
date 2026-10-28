@@ -41,8 +41,8 @@ class AtlasLEDSimulator(QWidget):
         self._draw_string(p, 40, 2, self.model.local_time, "#00FFFF")
 
         if self.model.is_armed:
-            # Row 2: Heat Info
-            heat_txt = f"H{self.model.heat_number} {self.model.thermalling_dir}"
+            # Row 2: Round / Heat / Group + direction arrow
+            heat_txt = f"RD{self.model.round_number} HT{self.model.heat_number} GP{self.model.group_letter} {self.model.direction_arrow}"
             self._draw_string(p, 40, 12, heat_txt, "#FFFF00")
 
             # Row 3: Window
@@ -81,8 +81,7 @@ class AtlasLEDSimulator(QWidget):
         self._draw_centered_string(p, 2, self.model.local_time, "#00FFFF")
 
         if self.model.is_armed:
-            direction = self._format_direction(self.model.thermalling_dir)
-            heat_txt = f"H{self.model.heat_number} {direction}"
+            heat_txt = f"RD{self.model.round_number} HT{self.model.heat_number} GP{self.model.group_letter} {self.model.direction_arrow}"
             self._draw_centered_string(p, 12, heat_txt, "#FFFF00")
 
             open_txt = f"O {self.model.planned_open}"
