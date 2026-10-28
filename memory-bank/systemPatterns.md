@@ -42,8 +42,11 @@ them without other changes:
 
 ### Display content (6-row layout)
 - Row 2 shows the heat identity as **`RD{round} HT{heat} GP{group} {arrow}`**, where
-  the thermalling direction is rendered as a `←`/`→` arrow (glyphs added to the
-  5×7 bitmap font). e.g. `RD1 HT2 GPA ←`.
+  the thermalling direction is rendered as a `←`/`→` arrow. e.g. `RD1 HT3 GPA ←`.
+- **Two bitmap fonts** exist in `fonts.py`: `FONT_5x7` (used by the LED simulator
+  and LCD) and `FONT_3x5` (used by the 64-col HDMI/LED output). The 3×5 font was
+  added because `RD HT GP ←` doesn't fit 64 columns at 5×7; at 3×5 (4px advance)
+  it is 52px wide and fits. Arrow glyphs (`←`/`→`) are present in both fonts.
 - The vertical status-colour side bars were **removed** (Oct 2026); the HDMI
   output now uses the full 64-col width for text. Phase is still communicated via
   text colour on the label/timer rows.
