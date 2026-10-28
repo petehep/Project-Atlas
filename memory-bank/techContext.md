@@ -19,13 +19,23 @@
   paths, path separators, line endings (CRLF vs LF), Qt platform plugins, and
   launcher scripts (`run_atlas.sh` vs `run_atlas.bat`/`.ps1`).
 
-## Python version — IMPORTANT ambiguity
-- `README.md` says **Python 3.13**.
-- The handover dossier and `SETUP_WINDOWS.md` say **Python 3.12**.
-- `__pycache__` artifacts exist for **3.12 and 3.14**.
+## Python version — RESOLVED (was ambiguous)
+- **Current interpreter: Python 3.13.18**, managed by **`uv`** (not Homebrew).
+- History: README said 3.13, handover said 3.12, an old `.venv` was built on
+  Homebrew Python 3.14. **Homebrew was later removed from the Mac**, which left
+  `.venv/bin/python3` as a dangling symlink and broke the app.
+- **Fix (done 2026-10-28):** rebuilt the venv with uv at 3.13.18.
 - `requirements.txt` pins `PySide6==6.11.1` (abi3 wheels work across versions).
-- **Action for future work:** confirm the actual interpreter (e.g. `python3 --version`
-  inside `.venv`) before changing tooling. Windows wheels cached are `cp312` (3.12).
+- Windows wheels cached are `cp312` (3.12).
+
+## Rebuilding the macOS venv (if it breaks again)
+```bash
+cd ~/project_atlas
+rm -rf .venv
+uv venv .venv --python 3.13
+uv pip install --python .venv/bin/python -r requirements.txt
+```
+(`uv` is installed at `~/.local/bin/uv`; it auto-downloads CPython as needed.)
 
 ## Dependencies (`requirements.txt`)
 - `PySide6`, `PySide6_Addons`, `PySide6_Essentials`, `shiboken6` == 6.11.1
