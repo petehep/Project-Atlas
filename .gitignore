@@ -26,3 +26,6 @@ __pycache__/
 tools/NovaLCT V5.5.0.zip
 Windows/windows_packages/pyside6_addons-6.11.1-cp310-abi3-win_amd64.whl
 Windows/windows_packages/pyside6_essentials-6.11.1-cp310-abi3-win_amd64.whl
+
+# Local GPS receiver drivers/software (kept off git)
+GPS Software/

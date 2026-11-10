@@ -52,6 +52,8 @@
 > (force-push after `git filter-repo`); broken `main 2` ref removed.
 
 ## Roadmap (future)
+- **GPS time-sync** — use a GPS receiver to keep the PC clock accurate (critical
+  for a master timing clock). Drivers/software live in `GPS Software/` (kept off git).
 - Physical LED integration (P5/P10, HUB75, NovaStar TB40).
 - macOS LaunchAgent for appliance auto-start.
 - Additional backends (Artnet DMX, Serial/UART).
