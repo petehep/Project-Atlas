@@ -9,7 +9,7 @@
 | Persistence | **raw `sqlite3`** (SQLAlchemy is in requirements but *unused* in code) |
 | Fonts / LED glyphs | Custom 5×7 bitmap font (`gui/fonts.py`) |
 | Config | SQLite `settings` table (authoritative); legacy JSON vestigial |
-| VCS | Git / GitHub (`petehep/project_atlas`) |
+| VCS | Git / GitHub (`petehep/Project-Atlas`) |
 
 ## Development vs deployment environment — IMPORTANT
 - **Created & tested on:** Apple **Mac Mini M4** (macOS), user `petehep`.
@@ -50,6 +50,36 @@ uv pip install --python .venv/bin/python -r requirements.txt
 - **Windows:** `windows/run_atlas.bat` (double-click) or `windows/run_atlas.ps1`.
   Offline wheel cache lives in `windows/windows_packages/`.
 - `src/main.py` forces **Fusion** style for cross-platform consistency.
+
+## Setting up on a second machine (dev Mac)
+VS Code **Settings Sync** transfers the editor config (settings, keybindings,
+extensions — including the Cline extension) between the owner's Macs. It does
+**NOT** transfer secrets, project files, or the venv.
+
+**Carries over automatically:**
+- Cline extension + other VS Code extensions
+- VS Code settings / keybindings
+
+**Does NOT carry over — redo these on machine 2:**
+1. **Cline API key (DeepSeek)** — stored in the macOS Keychain (SecretStorage),
+   deliberately not synced. Open Cline and paste the key once.
+2. **Project files** — `~/project_atlas/` is not synced. Clone from GitHub:
+   ```bash
+   git clone https://github.com/petehep/Project-Atlas.git ~/project_atlas
+   ```
+3. **`.venv`** — gitignored + not synced. Rebuild with `uv`:
+   ```bash
+   cd ~/project_atlas
+   uv venv .venv --python 3.13
+   uv pip install --python .venv/bin/python -r requirements.txt
+   ```
+   (Install `uv` first if needed: `curl -LsSf https://astral.sh/uv/install.sh | sh`.)
+4. **`data/atlas.db`** — runtime data; a fresh DB is auto-created on first launch.
+5. **Desktop launcher `ATLAS.app`** — created manually on the Desktop (not in git);
+   recreate it, or just run `./run_atlas.sh`.
+
+The **memory bank** (`memory-bank/`) is committed to the repo, so it clones along
+with the code.
 
 ## Environment constraints / gotchas
 1. **iCloud corrupts PySide6.** Do NOT keep the project (or `.venv`) under
